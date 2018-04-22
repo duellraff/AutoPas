@@ -1,0 +1,1 @@
+../../bin/xsd cxx-tree --std c++11 --hxx-suffix .h --cxx-suffix .cpp --generate-serialization particle_input.xsd

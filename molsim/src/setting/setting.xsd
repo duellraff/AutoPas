@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="thermo_target_t">
+  <xs:annotation>
+    <xs:documentation>
+      Defines that the temperature changes
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:sequence>
+
+    <xs:element name="target" type="xs:float">
+      <xs:annotation>
+        <xs:documentation>
+	  target temperature
+        </xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="temperature_step" type="xs:float">
+      <xs:annotation>
+        <xs:documentation>
+	  step size in which the temperature
+	  should be changed
+        </xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="timestep" type="xs:int">
+      <xs:annotation>
+        <xs:documentation>
+	  number of timesteps after which the temperature
+	  is changed
+        </xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+  </xs:sequence>
+
+  </xs:complexType>
+
+  <xs:complexType name="thermo_t">
+    <xs:annotation>
+      <xs:documentation>
+        Defines a thermostat to regulate temperature
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:sequence>
+
+      <xs:element name="initial" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            inital temperature
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="timestep" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            number of timesteps after which the thermostat
+            is applied
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="heating" type="thermo_target_t" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+             Defines that the temperature changes
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="ignoreY" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+             true if the thermostat does not affect the y-component of the velocity
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+    </xs:sequence>
+    
+  </xs:complexType>
+
+  <xs:complexType name="setting_t">
+
+    <xs:annotation>
+      <xs:documentation>
+        The setting_t type consists of configuration needed
+	to run MolSim
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:sequence>
+
+      <xs:element name="outputname" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            Base name of the output files
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="endfile" type="xs:string" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+             optional: save last particle states into a new xml file
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="frequency" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            Write frequency of the output files
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="profileFile" type="xs:string" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+             optional: Write profile of y-velocity in this file
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="profileBucketsX" type="xs:int" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+             optional: Number of divisions in x-direction to profile y-velocity
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="delta_t" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            The time step between iterations
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="t_end" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            The end time
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="b_factor" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            Factor for Maxwell-Boltzmann Distribution
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="g_grav_x" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            Acceleration due to gravity in x-direction
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="g_grav_y" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            Acceleration due to gravity in y-direction
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="g_grav_z" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            Acceleration due to gravity in z-direction
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="domainX" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            X-Dimension of domain
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="domainY" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            Y-Dimension of domain
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="domainZ" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            Z-Dimension of domain
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="r_cutoff" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            Cutoff radius
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="ContainerType" type="xs:int" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+             Define the used Algorithms: 0 DirectSum, 1 LinkedCells(standard), 2 VerletLists
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="ForceComputationMethod" type="xs:int" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+             Define the method to compute the force: 0 no interactions, 1 LennardJones Potential(standard), 2 Gravity
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>	
+
+      <xs:element name="bc_left" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            Set the boundary condition to the left: 1 is reflecting boundaries, 2 is periodic boundaries, else it is an outflow
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+
+      <xs:element name="bc_upper" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            Set the boundary condition to the upper: 1 is reflecting boundaries, 2 is periodic boundaries, else it is an outflow
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+
+      <xs:element name="bc_right" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+             Set the boundary condition to the right: 1 is reflecting boundaries, 2 is periodic boundaries, else it is an outflow
+         </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+
+      <xs:element name="bc_lower" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            Set the boundary condition to the lower: 1 is reflecting boundaries, 2 is periodic boundaries, else it is an outflow
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="bc_front" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            Set the boundary condition to the front: 1 is reflecting boundaries, 2 is periodic boundaries, else it is an outflow
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="bc_back" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            Set the boundary condition to the back: 1 is reflecting boundaries, 2 is periodic boundaries, else it is an outflow
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="inputfiles" type="xs:string" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            Input files and specification of cuboids or spheres
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="thermostat" type="thermo_t" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+             thermostat to regulate temperature
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="setting" type="setting_t">
+    <xs:annotation>
+      <xs:documentation>
+        The setting element is a root of the Setting XML vocabulary.
+        Every conforming document should start with this element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+</xs:schema>

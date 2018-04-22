@@ -1,0 +1,108 @@
+\hypertarget{LinkedCellsContainer_8cpp}{}\section{src/\+Linked\+Cells\+Container.cpp File Reference}
+\label{LinkedCellsContainer_8cpp}\index{src/\+Linked\+Cells\+Container.\+cpp@{src/\+Linked\+Cells\+Container.\+cpp}}
+{\ttfamily \#include \char`\"{}Linked\+Cells\+Container.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Maxwell\+Boltzmann\+Distribution.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$omp.\+h$>$}\\*
+{\ttfamily \#include $<$log4cxx/logger.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{LinkedCellsContainer_8cpp_a53902a8665e4f89276b415365653728f}{Dimensions}~3
+\item 
+\#define \hyperlink{LinkedCellsContainer_8cpp_a13ce4f696dd4ff83d9dc30232a1a3501}{I\+N\+D\+EX}(x,  y,  z)~((z)$\ast$Ncells\+XY + (y)$\ast$NcellsX + (x))
+\item 
+\#define \hyperlink{LinkedCellsContainer_8cpp_ae6a1f2581e4633815fc25f9183c09eaf}{I\+N\+D\+E\+X\+\_\+X}(i)~(i \% NcellsX)
+\item 
+\#define \hyperlink{LinkedCellsContainer_8cpp_a0e631ea1760431a27d341b8d8509cffc}{I\+N\+D\+E\+X\+\_\+Y}(i)~((i / NcellsX) \% NcellsY)
+\item 
+\#define \hyperlink{LinkedCellsContainer_8cpp_ab810666f01c37d301437cb1b886fb318}{I\+N\+D\+E\+X\+\_\+Z}(i)~(i / Ncells\+XY)
+\item 
+\#define \hyperlink{LinkedCellsContainer_8cpp_afd2267e70d75fe93b12ec7af43fa9d82}{G\+E\+T\+\_\+X}(x)~(std\+::floor((x -\/ lowerleft\mbox{[}0\mbox{]}) / HcellsX) + 1);
+\item 
+\#define \hyperlink{LinkedCellsContainer_8cpp_a8c812bbf1715ac7d63cda7b3442f9891}{G\+E\+T\+\_\+Y}(y)~(std\+::floor((y -\/ lowerleft\mbox{[}1\mbox{]}) / HcellsY) + 1);
+\item 
+\#define \hyperlink{LinkedCellsContainer_8cpp_a722e93d0583dc367a01dd106bbe08c40}{G\+E\+T\+\_\+Z}(z)~(std\+::floor((z -\/ lowerleft\mbox{[}2\mbox{]}) / HcellsZ) + 1);
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Logger\+Ptr \hyperlink{LinkedCellsContainer_8cpp_a7812be9f8a555b96c99291fbac785752}{logger} (Logger\+::get\+Logger(\char`\"{}Linked\+Cells\char`\"{}))
+\item 
+void \hyperlink{LinkedCellsContainer_8cpp_ac8d687efe0a38e32ee532c2408265546}{Fill\+Pointer} (std\+::vector$<$ \hyperlink{classParticle}{Particle} $\ast$ $>$ \&pointers, std\+::list$<$ \hyperlink{classParticle}{Particle} $>$ \&particles)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}!Dimensions@{Dimensions}}
+\index{Dimensions@{Dimensions}!Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}}
+\subsubsection[{\texorpdfstring{Dimensions}{Dimensions}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Dimensions~3}\hypertarget{LinkedCellsContainer_8cpp_a53902a8665e4f89276b415365653728f}{}\label{LinkedCellsContainer_8cpp_a53902a8665e4f89276b415365653728f}
+\index{Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}!G\+E\+T\+\_\+X@{G\+E\+T\+\_\+X}}
+\index{G\+E\+T\+\_\+X@{G\+E\+T\+\_\+X}!Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}}
+\subsubsection[{\texorpdfstring{G\+E\+T\+\_\+X}{GET_X}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T\+\_\+X(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(std\+::floor((x -\/ lowerleft\mbox{[}0\mbox{]}) / HcellsX) + 1);}\hypertarget{LinkedCellsContainer_8cpp_afd2267e70d75fe93b12ec7af43fa9d82}{}\label{LinkedCellsContainer_8cpp_afd2267e70d75fe93b12ec7af43fa9d82}
+\index{Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}!G\+E\+T\+\_\+Y@{G\+E\+T\+\_\+Y}}
+\index{G\+E\+T\+\_\+Y@{G\+E\+T\+\_\+Y}!Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}}
+\subsubsection[{\texorpdfstring{G\+E\+T\+\_\+Y}{GET_Y}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T\+\_\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{y}
+\end{DoxyParamCaption}
+)~(std\+::floor((y -\/ lowerleft\mbox{[}1\mbox{]}) / HcellsY) + 1);}\hypertarget{LinkedCellsContainer_8cpp_a8c812bbf1715ac7d63cda7b3442f9891}{}\label{LinkedCellsContainer_8cpp_a8c812bbf1715ac7d63cda7b3442f9891}
+\index{Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}!G\+E\+T\+\_\+Z@{G\+E\+T\+\_\+Z}}
+\index{G\+E\+T\+\_\+Z@{G\+E\+T\+\_\+Z}!Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}}
+\subsubsection[{\texorpdfstring{G\+E\+T\+\_\+Z}{GET_Z}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T\+\_\+Z(
+\begin{DoxyParamCaption}
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~(std\+::floor((z -\/ lowerleft\mbox{[}2\mbox{]}) / HcellsZ) + 1);}\hypertarget{LinkedCellsContainer_8cpp_a722e93d0583dc367a01dd106bbe08c40}{}\label{LinkedCellsContainer_8cpp_a722e93d0583dc367a01dd106bbe08c40}
+\index{Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}!I\+N\+D\+EX@{I\+N\+D\+EX}}
+\index{I\+N\+D\+EX@{I\+N\+D\+EX}!Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}}
+\subsubsection[{\texorpdfstring{I\+N\+D\+EX}{INDEX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+D\+EX(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{z}
+\end{DoxyParamCaption}
+)~((z)$\ast$Ncells\+XY + (y)$\ast$NcellsX + (x))}\hypertarget{LinkedCellsContainer_8cpp_a13ce4f696dd4ff83d9dc30232a1a3501}{}\label{LinkedCellsContainer_8cpp_a13ce4f696dd4ff83d9dc30232a1a3501}
+\index{Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}!I\+N\+D\+E\+X\+\_\+X@{I\+N\+D\+E\+X\+\_\+X}}
+\index{I\+N\+D\+E\+X\+\_\+X@{I\+N\+D\+E\+X\+\_\+X}!Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}}
+\subsubsection[{\texorpdfstring{I\+N\+D\+E\+X\+\_\+X}{INDEX_X}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+D\+E\+X\+\_\+X(
+\begin{DoxyParamCaption}
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~(i \% NcellsX)}\hypertarget{LinkedCellsContainer_8cpp_ae6a1f2581e4633815fc25f9183c09eaf}{}\label{LinkedCellsContainer_8cpp_ae6a1f2581e4633815fc25f9183c09eaf}
+\index{Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}!I\+N\+D\+E\+X\+\_\+Y@{I\+N\+D\+E\+X\+\_\+Y}}
+\index{I\+N\+D\+E\+X\+\_\+Y@{I\+N\+D\+E\+X\+\_\+Y}!Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}}
+\subsubsection[{\texorpdfstring{I\+N\+D\+E\+X\+\_\+Y}{INDEX_Y}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+D\+E\+X\+\_\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~((i / NcellsX) \% NcellsY)}\hypertarget{LinkedCellsContainer_8cpp_a0e631ea1760431a27d341b8d8509cffc}{}\label{LinkedCellsContainer_8cpp_a0e631ea1760431a27d341b8d8509cffc}
+\index{Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}!I\+N\+D\+E\+X\+\_\+Z@{I\+N\+D\+E\+X\+\_\+Z}}
+\index{I\+N\+D\+E\+X\+\_\+Z@{I\+N\+D\+E\+X\+\_\+Z}!Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}}
+\subsubsection[{\texorpdfstring{I\+N\+D\+E\+X\+\_\+Z}{INDEX_Z}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+D\+E\+X\+\_\+Z(
+\begin{DoxyParamCaption}
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~(i / Ncells\+XY)}\hypertarget{LinkedCellsContainer_8cpp_ab810666f01c37d301437cb1b886fb318}{}\label{LinkedCellsContainer_8cpp_ab810666f01c37d301437cb1b886fb318}
+
+
+\subsection{Function Documentation}
+\index{Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}!Fill\+Pointer@{Fill\+Pointer}}
+\index{Fill\+Pointer@{Fill\+Pointer}!Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}}
+\subsubsection[{\texorpdfstring{Fill\+Pointer(std\+::vector$<$ Particle $\ast$ $>$ \&pointers, std\+::list$<$ Particle $>$ \&particles)}{FillPointer(std::vector< Particle * > &pointers, std::list< Particle > &particles)}}]{\setlength{\rightskip}{0pt plus 5cm}void Fill\+Pointer (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Particle} $\ast$ $>$ \&}]{pointers, }
+\item[{std\+::list$<$ {\bf Particle} $>$ \&}]{particles}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{LinkedCellsContainer_8cpp_ac8d687efe0a38e32ee532c2408265546}{}\label{LinkedCellsContainer_8cpp_ac8d687efe0a38e32ee532c2408265546}
+\index{Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}!logger@{logger}}
+\index{logger@{logger}!Linked\+Cells\+Container.\+cpp@{Linked\+Cells\+Container.\+cpp}}
+\subsubsection[{\texorpdfstring{logger(\+Logger\+::get\+Logger(""Linked\+Cells""))}{logger(Logger::getLogger("LinkedCells"))}}]{\setlength{\rightskip}{0pt plus 5cm}static Logger\+Ptr logger (
+\begin{DoxyParamCaption}
+\item[{Logger\+::get\+Logger(\char`\"{}Linked\+Cells\char`\"{})}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{LinkedCellsContainer_8cpp_a7812be9f8a555b96c99291fbac785752}{}\label{LinkedCellsContainer_8cpp_a7812be9f8a555b96c99291fbac785752}

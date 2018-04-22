@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<setting>
+
+  <outputname>output/MD_vtk</outputname>
+  <inputfiles>input/flow.xml</inputfiles>
+  <frequency>1000</frequency>
+  <profileFile>output/flow</profileFile>
+  <profileBucketsX>50</profileBucketsX>
+  <delta_t>0.0005</delta_t>
+  <t_end>500</t_end>
+  <b_factor>0.1</b_factor>
+  <g_grav_x>0</g_grav_x>
+  <g_grav_y>-0.8</g_grav_y>
+  <g_grav_z>0</g_grav_z>
+  <domainX>35</domainX>
+  <domainY>25.25</domainY>
+  <domainZ>10</domainZ>
+  <r_cutoff>2.5</r_cutoff>
+  <ContainerType>1</ContainerType>
+  <ForceComputationMethod>1</ForceComputationMethod>
+  <bc_left>0</bc_left>
+  <bc_lower>2</bc_lower>
+  <bc_upper>2</bc_upper>
+  <bc_right>0</bc_right>
+  <bc_front>2</bc_front>
+  <bc_back>2</bc_back>
+
+  <thermostat>
+    <initial>40</initial>
+    <timestep>10</timestep>
+    <ignoreY>true</ignoreY>
+  </thermostat>
+  
+</setting>

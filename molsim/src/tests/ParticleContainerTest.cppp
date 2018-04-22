@@ -1,0 +1,133 @@
+/*
+ * ParticleContainerTest.cpp
+ *
+ *  Created on: Nov 13, 2017
+ *      Author: raffi
+ */
+
+#include "ParticleContainerTest.h"
+#include "../mdutils.h"
+#include "ParticleMS.h"
+#include "utils/Vector.h"
+#include <math.h>
+
+ParticleContainerTest::ParticleContainerTest() {
+	// TODO Auto-generated constructor stub
+
+}
+
+ParticleContainerTest::~ParticleContainerTest() {
+	// TODO Auto-generated destructor stub
+}
+
+void ParticleContainerTest::setUp()
+{
+	ParticleType::setType(0, 1, 5, 1, 3.0, false);
+	ParticleType::setType(1, 1, 5, 1, 3.0, false);
+}
+
+void ParticleContainerTest::addParticleTest(){
+	ParticleContainer testContainer(ParticleContainer::LennardJones);
+	Particle testPart(0);
+	testContainer.addParticle(testPart);
+	CPPUNIT_ASSERT(testContainer.getAll().size()==1);
+	testContainer.addParticle(testPart);
+	CPPUNIT_ASSERT(testContainer.getAll().size()==1);
+
+}
+void ParticleContainerTest::deleteParticleTest(){
+	ParticleContainer testContainer(ParticleContainer::LennardJones);
+
+	//create 2 particles test and desd
+	Particle testPart(1);
+	Particle desdPart(2);
+
+	//add them both to the Container
+	testContainer.addParticle(testPart);
+	testContainer.addParticle(desdPart);
+
+	//delete test
+	testContainer.deleteParticle(testPart);
+
+	CPPUNIT_ASSERT(testContainer.getAll().size()==1);
+
+	//delete test again
+	testContainer.deleteParticle(testPart);
+	CPPUNIT_ASSERT(testContainer.getAll().size()==1);
+
+	//now delete desd
+	testContainer.deleteParticle(desdPart);
+	CPPUNIT_ASSERT(testContainer.getAll().size()==0);
+
+}
+void ParticleContainerTest::fclearTest(){
+	ParticleContainer testContainer(ParticleContainer::LennardJones);
+
+	//create 2 particles test and desd
+	Particle testPart(0);
+	Particle desdPart(1);
+
+	//set their forces
+	testPart.getF()=12.3;
+	desdPart.getF()=32.1;
+
+	// add to container
+	testContainer.addParticle(testPart);
+	testContainer.addParticle(desdPart);
+
+	//try it!!
+	testContainer.fReset();
+
+	// refresh references
+	std::list<Particle>::iterator it = testContainer.getAll().begin();
+	testPart = *it;
+	desdPart = *(++it);
+
+	CPPUNIT_ASSERT(testPart.getF() == 0.0);
+	CPPUNIT_ASSERT(testPart.getOldF() == 12.3);
+	CPPUNIT_ASSERT(desdPart.getF() == 0.0);
+	CPPUNIT_ASSERT(desdPart.getOldF() == 32.1);
+
+}
+void ParticleContainerTest::calculateFTest(){
+	ParticleContainer testContainer(ParticleContainer::LennardJones);
+	testContainer.setGravity(utils::Vector<double, 3>(0.0));
+
+	//create 2 particles test and desd
+	Particle testPart(0);
+	Particle desdPart(1);
+
+	//set their positions
+	testPart.getX() = 0.0;
+	desdPart.getX() = 1.0;
+
+	// add to container
+	testContainer.addParticle(testPart);
+	testContainer.addParticle(desdPart);
+
+	//compute force
+	int epsilon = 5;
+	int sigma = 1;
+	utils::Vector<double,3> r = testPart.getX()-desdPart.getX();
+	utils::Vector<double,3> f = -24*epsilon/(pow(r.L2Norm(),2))*(pow(sigma/r.L2Norm(),6)-2*pow(sigma/r.L2Norm(),12))*r;
+	testContainer.calculateF();
+
+	// refresh references
+	std::list<Particle>::iterator it = testContainer.getAll().begin();
+	testPart = *it;
+	desdPart = *(++it);
+
+	//test it
+	CPPUNIT_ASSERT((testPart.getF()+desdPart.getF()).L2Norm() == 0);
+	CPPUNIT_ASSERT((testPart.getF() - f).L2Norm() < 0.001);
+
+
+}
+
+void ParticleContainerTest::GenerateCuboidTest(){
+	ParticleContainer testContainer(ParticleContainer::LennardJones);
+
+	testContainer.generateCuboid(0, 0.0, 3, 1000, 0.0);
+	CPPUNIT_ASSERT(testContainer.getAll().size() == 27);
+
+}

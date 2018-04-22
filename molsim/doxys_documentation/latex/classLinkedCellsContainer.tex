@@ -1,0 +1,490 @@
+\hypertarget{classLinkedCellsContainer}{}\section{Linked\+Cells\+Container Class Reference}
+\label{classLinkedCellsContainer}\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+
+
+Class to hold cells containing a set of particles.  
+
+
+
+
+{\ttfamily \#include $<$Linked\+Cells\+Container.\+h$>$}
+
+Inheritance diagram for Linked\+Cells\+Container\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLinkedCellsContainer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLinkedCellsContainer_ac2f170bf35d853298ca749527178de04}{Linked\+Cells\+Container} (\hyperlink{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8}{Force\+Method} \hyperlink{classParticleContainer_a839c3ff474bfece04fcbb0ca3fe9a0f8}{fm}, double timestep, double \hyperlink{classParticleContainer_a64e8a768554b5b6126755e8a8e85f2f5}{Brownian\+Factor}, double Rcutoff, double domainX, double domainY, double domainZ, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ int, 6 $>$ boundary, int threads=1)
+\item 
+virtual \hyperlink{classLinkedCellsContainer_aa59abdf61f50d80dc4b1a71fd727c3a9}{$\sim$\+Linked\+Cells\+Container} ()
+\item 
+void \hyperlink{classLinkedCellsContainer_a25d0ac927ce692ae3bf944a67f86682a}{set\+Gravity} (\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ g)
+\item 
+void \hyperlink{classLinkedCellsContainer_a968810914751bbc961b5c7ec33fab740}{set\+Domain} (double domainX, double domainY, double domainZ)
+\item 
+void \hyperlink{classLinkedCellsContainer_aad66003287011660d24817371eff4801}{set\+Mesh} (double Rcut, double domainX, double domainY, double domainZ)
+\item 
+void \hyperlink{classLinkedCellsContainer_a831a33f6b4f90f71396474a99f985575}{set\+Membrane} (double stiff, double r\+\_\+zero, bool status, double tend)
+\item 
+void \hyperlink{classLinkedCellsContainer_a0c54230125a031821a99fc39b15e6d60}{set\+List} (std\+::list$<$ \hyperlink{classParticle}{Particle} $>$ plist)
+\item 
+\hyperlink{classParticle}{Particle} $\ast$ \hyperlink{classLinkedCellsContainer_ac1987c930d49b2300a0f3509e282f2f1}{add\+Particle} (\hyperlink{classParticle}{Particle} \&p)
+\item 
+void \hyperlink{classLinkedCellsContainer_a6466835bf54973f4c7ec916c9b1f089b}{delete\+Particle} (\hyperlink{classParticle}{Particle} \&p)
+\item 
+std\+::list$<$ \hyperlink{classParticle}{Particle} $>$ \& \hyperlink{classLinkedCellsContainer_a33feabbd2ffc9f8cb34ec237e057b7bc}{get\+All} ()
+\item 
+virtual std\+::list$<$ \hyperlink{classParticle}{Particle} $\ast$ $>$ \hyperlink{classLinkedCellsContainer_a0b3b6c216a529189b58b05991079bb21}{get\+All\+Pointer} ()
+\item 
+std\+::list$<$ \hyperlink{classParticle}{Particle} $>$ \& \hyperlink{classLinkedCellsContainer_a89ebab6da4722ca5883899470183d7a3}{get\+Boundary} ()
+\item 
+std\+::list$<$ \hyperlink{classParticle}{Particle} $>$ \& \hyperlink{classLinkedCellsContainer_aaa470883e748eecb3f2409564402209d}{get\+Halo} ()
+\item 
+void \hyperlink{classLinkedCellsContainer_af8379a82b6aee0e2bc8b96db3a64f1fd}{clear\+Halo} ()
+\item 
+void \hyperlink{classLinkedCellsContainer_ae2ebc865c7e07122e2ab5985182d82bc}{f\+Reset} ()
+\item 
+void \hyperlink{classLinkedCellsContainer_a0dc45c921ad11aa2424b49ada44a0dfe}{test\+Force\+End} (double time)
+\item 
+void \hyperlink{classLinkedCellsContainer_a015b29c42c42a296b80775c225789f34}{Harmonic\+Potential} ()
+\item 
+void \hyperlink{classLinkedCellsContainer_a1975cb0083366555de77a734c0180125}{Reflecting\+Boundary} (\hyperlink{classParticle}{Particle} \&p, int i)
+\item 
+void \hyperlink{classLinkedCellsContainer_a0631cf4c5fbcf26b2f283634cbe0003b}{Periodic\+Boundary} ()
+\item 
+void \hyperlink{classLinkedCellsContainer_aaccb110aaed18cb2986a51e970e86fa4}{calculateF} ()
+\item 
+void \hyperlink{classLinkedCellsContainer_abacc626c54d71416ed4def4378fe74c4}{calculate\+Force\+For\+Cell} (int x, int y, int z)
+\item 
+void \hyperlink{classLinkedCellsContainer_ad2862569c3377347adfc06964ab7d966}{calculateX} ()
+\item 
+void \hyperlink{classLinkedCellsContainer_a5b9a6d9b726bda76160aaf7fbaffa821}{calculateV} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classLinkedCellsContainer_a7e6ba97fe863d6dbcac93055f0945afc}{NcellsX}
+\item 
+int \hyperlink{classLinkedCellsContainer_a5d2caeb5e18c7691a7069d6d21ffb8f2}{NcellsY}
+\item 
+int \hyperlink{classLinkedCellsContainer_a422564396900533ee91d18fb9ead2c97}{NcellsZ}
+\item 
+int \hyperlink{classLinkedCellsContainer_a1e3adae4412e9e0e868dec802002d5ca}{Ncells\+XY}
+\item 
+int \hyperlink{classLinkedCellsContainer_a36307e254b1de62d27bbea099c244987}{Ncells\+Tot}
+\item 
+int \hyperlink{classLinkedCellsContainer_aa4b41b08627320b31ea4af06367901d1}{Max\+Dim}
+\item 
+int \hyperlink{classLinkedCellsContainer_ac8ae53015a3e5ed5bf413677dc3b506c}{Num\+Threads}
+\item 
+double \hyperlink{classLinkedCellsContainer_a6bf86e59ebe06054d1d118db261c2069}{HcellsX}
+\item 
+double \hyperlink{classLinkedCellsContainer_aa3c791c560dc1f5d3a5c8b48e0f93766}{HcellsY}
+\item 
+double \hyperlink{classLinkedCellsContainer_a5cd84e8209277710280e71becbaf7f65}{HcellsZ}
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classLinkedCellsContainer_a9fed9ed73581f98ddc3cd3769b306937}{lowerleft}
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classLinkedCellsContainer_a81d492dc2e1948839a6a45b0b1fe463f}{upperright}
+\item 
+std\+::vector$<$ \hyperlink{classParticleContainer}{Particle\+Container} $>$ \hyperlink{classLinkedCellsContainer_a71ab828ce5a0300256ce9d263dd03b71}{celllist}
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ int, 6 $>$ \hyperlink{classLinkedCellsContainer_a0f3e5cc44b3f152a4199c54e43b40d57}{Bound\+Cond}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class to hold cells containing a set of particles. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{Linked\+Cells\+Container(\+Force\+Method fm, double timestep, double Brownian\+Factor, double Rcutoff, double domain\+X, double domain\+Y, double domain\+Z, utils\+::\+Vector$<$ int, 6 $>$ boundary, int threads=1)}{LinkedCellsContainer(ForceMethod fm, double timestep, double BrownianFactor, double Rcutoff, double domainX, double domainY, double domainZ, utils::Vector< int, 6 > boundary, int threads=1)}}]{\setlength{\rightskip}{0pt plus 5cm}Linked\+Cells\+Container\+::\+Linked\+Cells\+Container (
+\begin{DoxyParamCaption}
+\item[{enum {\bf Particle\+Container\+::\+Force\+Method}}]{fm, }
+\item[{double}]{timestep, }
+\item[{double}]{Brownian\+Factor, }
+\item[{double}]{Rcutoff, }
+\item[{double}]{domainX, }
+\item[{double}]{domainY, }
+\item[{double}]{domainZ, }
+\item[{{\bf utils\+::\+Vector}$<$ int, 6 $>$}]{boundary, }
+\item[{int}]{threads = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedCellsContainer_ac2f170bf35d853298ca749527178de04}{}\label{classLinkedCellsContainer_ac2f170bf35d853298ca749527178de04}
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em f} & Function function to calculate the force between two particles \\
+\hline
+{\em timestep} & time betweech each step \\
+\hline
+{\em Rcutoff} & only calculate forces between two particles if the distance is smaller than Rcutoff \\
+\hline
+{\em domainX} & x dimension of domain \\
+\hline
+{\em domainY} & y dimension of domain \\
+\hline
+{\em domainZ} & z dimension of domain \\
+\hline
+{\em boundary} & boundary conditions to be applied \\
+\hline
+{\em threads} & number of threads used for calculation \\
+\hline
+\end{DoxyParams}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!````~Linked\+Cells\+Container@{$\sim$\+Linked\+Cells\+Container}}
+\index{````~Linked\+Cells\+Container@{$\sim$\+Linked\+Cells\+Container}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{$\sim$\+Linked\+Cells\+Container()}{~LinkedCellsContainer()}}]{\setlength{\rightskip}{0pt plus 5cm}Linked\+Cells\+Container\+::$\sim$\+Linked\+Cells\+Container (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_aa59abdf61f50d80dc4b1a71fd727c3a9}{}\label{classLinkedCellsContainer_aa59abdf61f50d80dc4b1a71fd727c3a9}
+
+
+\subsection{Member Function Documentation}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!add\+Particle@{add\+Particle}}
+\index{add\+Particle@{add\+Particle}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{add\+Particle(\+Particle \&p)}{addParticle(Particle &p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Particle} $\ast$ Linked\+Cells\+Container\+::add\+Particle (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_ac1987c930d49b2300a0f3509e282f2f1}{}\label{classLinkedCellsContainer_ac1987c930d49b2300a0f3509e282f2f1}
+add one particle to the container 
+\begin{DoxyParams}{Parameters}
+{\em p} & the particle to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the particle 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classParticleContainer_a13b860c91defffff1404e8e3c12766a8}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!calculateF@{calculateF}}
+\index{calculateF@{calculateF}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{calculate\+F()}{calculateF()}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::calculateF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_aaccb110aaed18cb2986a51e970e86fa4}{}\label{classLinkedCellsContainer_aaccb110aaed18cb2986a51e970e86fa4}
+calculate the force for all particles 
+
+Reimplemented from \hyperlink{classParticleContainer_a329f1c21166cb9722553a1845f9be4d0}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!calculate\+Force\+For\+Cell@{calculate\+Force\+For\+Cell}}
+\index{calculate\+Force\+For\+Cell@{calculate\+Force\+For\+Cell}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{calculate\+Force\+For\+Cell(int x, int y, int z)}{calculateForceForCell(int x, int y, int z)}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::calculate\+Force\+For\+Cell (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedCellsContainer_abacc626c54d71416ed4def4378fe74c4}{}\label{classLinkedCellsContainer_abacc626c54d71416ed4def4378fe74c4}
+calculate the force for given cell 
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coord of cell \\
+\hline
+{\em y} & y-\/coord of cell \\
+\hline
+{\em z} & z-\/coord of cell \\
+\hline
+\end{DoxyParams}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!calculateV@{calculateV}}
+\index{calculateV@{calculateV}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{calculate\+V()}{calculateV()}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::calculateV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_a5b9a6d9b726bda76160aaf7fbaffa821}{}\label{classLinkedCellsContainer_a5b9a6d9b726bda76160aaf7fbaffa821}
+calculate the position for all particles using the Velocity-\/\+Stoermer-\/\+Verlet-\/\+Algorithm 
+
+Reimplemented from \hyperlink{classParticleContainer_a7b436c3226f9eb05e86d895a7eab8b41}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!calculateX@{calculateX}}
+\index{calculateX@{calculateX}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{calculate\+X()}{calculateX()}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::calculateX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_ad2862569c3377347adfc06964ab7d966}{}\label{classLinkedCellsContainer_ad2862569c3377347adfc06964ab7d966}
+calculate the position for all particles using the Velocity-\/\+Stoermer-\/\+Verlet-\/\+Algorithm 
+
+Reimplemented from \hyperlink{classParticleContainer_abfe567934c1e3319a03377ebf7da2369}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!clear\+Halo@{clear\+Halo}}
+\index{clear\+Halo@{clear\+Halo}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{clear\+Halo()}{clearHalo()}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::clear\+Halo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedCellsContainer_af8379a82b6aee0e2bc8b96db3a64f1fd}{}\label{classLinkedCellsContainer_af8379a82b6aee0e2bc8b96db3a64f1fd}
+delete all particles in halo \index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!delete\+Particle@{delete\+Particle}}
+\index{delete\+Particle@{delete\+Particle}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{delete\+Particle(\+Particle \&p)}{deleteParticle(Particle &p)}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::delete\+Particle (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_a6466835bf54973f4c7ec916c9b1f089b}{}\label{classLinkedCellsContainer_a6466835bf54973f4c7ec916c9b1f089b}
+remove a particle from the container 
+\begin{DoxyParams}{Parameters}
+{\em p} & the particle to remove \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classParticleContainer_a27c73f4106a4e38382dbf461e03bb5f1}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!f\+Reset@{f\+Reset}}
+\index{f\+Reset@{f\+Reset}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{f\+Reset()}{fReset()}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::f\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_ae2ebc865c7e07122e2ab5985182d82bc}{}\label{classLinkedCellsContainer_ae2ebc865c7e07122e2ab5985182d82bc}
+set the force to all particles according to gravity force 
+
+Reimplemented from \hyperlink{classParticleContainer_af5626526d41510605c20161df34de71b}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!get\+All@{get\+All}}
+\index{get\+All@{get\+All}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{get\+All()}{getAll()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ {\bf Particle} $>$ \& Linked\+Cells\+Container\+::get\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_a33feabbd2ffc9f8cb34ec237e057b7bc}{}\label{classLinkedCellsContainer_a33feabbd2ffc9f8cb34ec237e057b7bc}
+get a list of all particle in the container \begin{DoxyReturn}{Returns}
+list of all particles 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classParticleContainer_a5b96e023a5b3c2507766cefa8f006c65}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!get\+All\+Pointer@{get\+All\+Pointer}}
+\index{get\+All\+Pointer@{get\+All\+Pointer}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{get\+All\+Pointer()}{getAllPointer()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ {\bf Particle} $\ast$ $>$ Linked\+Cells\+Container\+::get\+All\+Pointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_a0b3b6c216a529189b58b05991079bb21}{}\label{classLinkedCellsContainer_a0b3b6c216a529189b58b05991079bb21}
+get a list of pointer to all particle in the container \begin{DoxyReturn}{Returns}
+list of all particles 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classParticleContainer_a52ebfc06d0daa96fbeef945b43e4fe00}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!get\+Boundary@{get\+Boundary}}
+\index{get\+Boundary@{get\+Boundary}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{get\+Boundary()}{getBoundary()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ {\bf Particle} $>$ \& Linked\+Cells\+Container\+::get\+Boundary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedCellsContainer_a89ebab6da4722ca5883899470183d7a3}{}\label{classLinkedCellsContainer_a89ebab6da4722ca5883899470183d7a3}
+get a list of all particle in the boundary \begin{DoxyReturn}{Returns}
+list of all particles 
+\end{DoxyReturn}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!get\+Halo@{get\+Halo}}
+\index{get\+Halo@{get\+Halo}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{get\+Halo()}{getHalo()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ {\bf Particle} $>$ \& Linked\+Cells\+Container\+::get\+Halo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedCellsContainer_aaa470883e748eecb3f2409564402209d}{}\label{classLinkedCellsContainer_aaa470883e748eecb3f2409564402209d}
+get a list of all particle in the halo \begin{DoxyReturn}{Returns}
+list of all particles 
+\end{DoxyReturn}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!Harmonic\+Potential@{Harmonic\+Potential}}
+\index{Harmonic\+Potential@{Harmonic\+Potential}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{Harmonic\+Potential()}{HarmonicPotential()}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::\+Harmonic\+Potential (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedCellsContainer_a015b29c42c42a296b80775c225789f34}{}\label{classLinkedCellsContainer_a015b29c42c42a296b80775c225789f34}
+computes the forces in a membrane \index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!Periodic\+Boundary@{Periodic\+Boundary}}
+\index{Periodic\+Boundary@{Periodic\+Boundary}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{Periodic\+Boundary()}{PeriodicBoundary()}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::\+Periodic\+Boundary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedCellsContainer_a0631cf4c5fbcf26b2f283634cbe0003b}{}\label{classLinkedCellsContainer_a0631cf4c5fbcf26b2f283634cbe0003b}
+creates halo particle for particles on the boundary \index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!Reflecting\+Boundary@{Reflecting\+Boundary}}
+\index{Reflecting\+Boundary@{Reflecting\+Boundary}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{Reflecting\+Boundary(\+Particle \&p, int i)}{ReflectingBoundary(Particle &p, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::\+Reflecting\+Boundary (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{p, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedCellsContainer_a1975cb0083366555de77a734c0180125}{}\label{classLinkedCellsContainer_a1975cb0083366555de77a734c0180125}
+applies the reflecting boundary condition 
+\begin{DoxyParams}{Parameters}
+{\em p} & the particle near the border \\
+\hline
+{\em i} & the cell index of the current cell \\
+\hline
+\end{DoxyParams}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!set\+Domain@{set\+Domain}}
+\index{set\+Domain@{set\+Domain}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{set\+Domain(double domain\+X, double domain\+Y, double domain\+Z)}{setDomain(double domainX, double domainY, double domainZ)}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::set\+Domain (
+\begin{DoxyParamCaption}
+\item[{double}]{domainX, }
+\item[{double}]{domainY, }
+\item[{double}]{domainZ}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedCellsContainer_a968810914751bbc961b5c7ec33fab740}{}\label{classLinkedCellsContainer_a968810914751bbc961b5c7ec33fab740}
+set domain 
+\begin{DoxyParams}{Parameters}
+{\em x} & position vector of the lower left front-\/side corner \\
+\hline
+{\em domainX} & X-\/size of the domain \\
+\hline
+{\em domainY} & Y-\/size of the domain \\
+\hline
+\end{DoxyParams}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!set\+Gravity@{set\+Gravity}}
+\index{set\+Gravity@{set\+Gravity}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{set\+Gravity(utils\+::\+Vector$<$ double, 3 $>$ g)}{setGravity(utils::Vector< double, 3 > g)}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::set\+Gravity (
+\begin{DoxyParamCaption}
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_a25d0ac927ce692ae3bf944a67f86682a}{}\label{classLinkedCellsContainer_a25d0ac927ce692ae3bf944a67f86682a}
+set the gravitational force along the z-\/axis 
+\begin{DoxyParams}{Parameters}
+{\em g} & the gravitational acceleration \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classParticleContainer_af7fe938fddd10136945f99625e141149}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!set\+List@{set\+List}}
+\index{set\+List@{set\+List}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{set\+List(std\+::list$<$ Particle $>$ plist)}{setList(std::list< Particle > plist)}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::set\+List (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ {\bf Particle} $>$}]{plist}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_a0c54230125a031821a99fc39b15e6d60}{}\label{classLinkedCellsContainer_a0c54230125a031821a99fc39b15e6d60}
+define all particles in the container 
+\begin{DoxyParams}{Parameters}
+{\em plist} & the list to fill container \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classParticleContainer_ae3f61f4d99b06782cfd978779ccc13bf}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!set\+Membrane@{set\+Membrane}}
+\index{set\+Membrane@{set\+Membrane}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{set\+Membrane(double stiff, double r\+\_\+zero, bool status, double tend)}{setMembrane(double stiff, double r_zero, bool status, double tend)}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::set\+Membrane (
+\begin{DoxyParamCaption}
+\item[{double}]{stiff, }
+\item[{double}]{r\+\_\+zero, }
+\item[{bool}]{status, }
+\item[{double}]{tend}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_a831a33f6b4f90f71396474a99f985575}{}\label{classLinkedCellsContainer_a831a33f6b4f90f71396474a99f985575}
+sets he membrane parameters to all cells 
+\begin{DoxyParams}{Parameters}
+{\em stiff} & membrane stiffness \\
+\hline
+{\em r\+\_\+ero} & average bond lenght \\
+\hline
+{\em status} & whether the membrane is active or not \\
+\hline
+{\em tend} & membrane t\+\_\+end \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classParticleContainer_abdd289393fe11f1192a9eb79b01b2680}{Particle\+Container}.
+
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!set\+Mesh@{set\+Mesh}}
+\index{set\+Mesh@{set\+Mesh}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{set\+Mesh(double Rcut, double domain\+X, double domain\+Y, double domain\+Z)}{setMesh(double Rcut, double domainX, double domainY, double domainZ)}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::set\+Mesh (
+\begin{DoxyParamCaption}
+\item[{double}]{Rcut, }
+\item[{double}]{domainX, }
+\item[{double}]{domainY, }
+\item[{double}]{domainZ}
+\end{DoxyParamCaption}
+)}\hypertarget{classLinkedCellsContainer_aad66003287011660d24817371eff4801}{}\label{classLinkedCellsContainer_aad66003287011660d24817371eff4801}
+set the cell mesh 
+\begin{DoxyParams}{Parameters}
+{\em Rcutoff} & the cut-\/off radius in the simulation \\
+\hline
+{\em Domain} & the domain for our simulation \\
+\hline
+\end{DoxyParams}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!test\+Force\+End@{test\+Force\+End}}
+\index{test\+Force\+End@{test\+Force\+End}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{test\+Force\+End(double time)}{testForceEnd(double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void Linked\+Cells\+Container\+::test\+Force\+End (
+\begin{DoxyParamCaption}
+\item[{double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classLinkedCellsContainer_a0dc45c921ad11aa2424b49ada44a0dfe}{}\label{classLinkedCellsContainer_a0dc45c921ad11aa2424b49ada44a0dfe}
+tests if the force up should be switched of 
+\begin{DoxyParams}{Parameters}
+{\em time} & current simulation time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classParticleContainer_ae132e846bb2763712d4acca3095bcbfc}{Particle\+Container}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!Bound\+Cond@{Bound\+Cond}}
+\index{Bound\+Cond@{Bound\+Cond}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{Bound\+Cond}{BoundCond}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$int,6$>$ Linked\+Cells\+Container\+::\+Bound\+Cond\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a0f3e5cc44b3f152a4199c54e43b40d57}{}\label{classLinkedCellsContainer_a0f3e5cc44b3f152a4199c54e43b40d57}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!celllist@{celllist}}
+\index{celllist@{celllist}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{celllist}{celllist}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Particle\+Container}$>$ Linked\+Cells\+Container\+::celllist\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a71ab828ce5a0300256ce9d263dd03b71}{}\label{classLinkedCellsContainer_a71ab828ce5a0300256ce9d263dd03b71}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!HcellsX@{HcellsX}}
+\index{HcellsX@{HcellsX}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{HcellsX}{HcellsX}}]{\setlength{\rightskip}{0pt plus 5cm}double Linked\+Cells\+Container\+::\+HcellsX\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a6bf86e59ebe06054d1d118db261c2069}{}\label{classLinkedCellsContainer_a6bf86e59ebe06054d1d118db261c2069}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!HcellsY@{HcellsY}}
+\index{HcellsY@{HcellsY}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{HcellsY}{HcellsY}}]{\setlength{\rightskip}{0pt plus 5cm}double Linked\+Cells\+Container\+::\+HcellsY\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_aa3c791c560dc1f5d3a5c8b48e0f93766}{}\label{classLinkedCellsContainer_aa3c791c560dc1f5d3a5c8b48e0f93766}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!HcellsZ@{HcellsZ}}
+\index{HcellsZ@{HcellsZ}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{HcellsZ}{HcellsZ}}]{\setlength{\rightskip}{0pt plus 5cm}double Linked\+Cells\+Container\+::\+HcellsZ\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a5cd84e8209277710280e71becbaf7f65}{}\label{classLinkedCellsContainer_a5cd84e8209277710280e71becbaf7f65}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!lowerleft@{lowerleft}}
+\index{lowerleft@{lowerleft}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{lowerleft}{lowerleft}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$double,3$>$ Linked\+Cells\+Container\+::lowerleft\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a9fed9ed73581f98ddc3cd3769b306937}{}\label{classLinkedCellsContainer_a9fed9ed73581f98ddc3cd3769b306937}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!Max\+Dim@{Max\+Dim}}
+\index{Max\+Dim@{Max\+Dim}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{Max\+Dim}{MaxDim}}]{\setlength{\rightskip}{0pt plus 5cm}int Linked\+Cells\+Container\+::\+Max\+Dim\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_aa4b41b08627320b31ea4af06367901d1}{}\label{classLinkedCellsContainer_aa4b41b08627320b31ea4af06367901d1}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!Ncells\+Tot@{Ncells\+Tot}}
+\index{Ncells\+Tot@{Ncells\+Tot}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{Ncells\+Tot}{NcellsTot}}]{\setlength{\rightskip}{0pt plus 5cm}int Linked\+Cells\+Container\+::\+Ncells\+Tot\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a36307e254b1de62d27bbea099c244987}{}\label{classLinkedCellsContainer_a36307e254b1de62d27bbea099c244987}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!NcellsX@{NcellsX}}
+\index{NcellsX@{NcellsX}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{NcellsX}{NcellsX}}]{\setlength{\rightskip}{0pt plus 5cm}int Linked\+Cells\+Container\+::\+NcellsX\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a7e6ba97fe863d6dbcac93055f0945afc}{}\label{classLinkedCellsContainer_a7e6ba97fe863d6dbcac93055f0945afc}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!Ncells\+XY@{Ncells\+XY}}
+\index{Ncells\+XY@{Ncells\+XY}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{Ncells\+XY}{NcellsXY}}]{\setlength{\rightskip}{0pt plus 5cm}int Linked\+Cells\+Container\+::\+Ncells\+XY\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a1e3adae4412e9e0e868dec802002d5ca}{}\label{classLinkedCellsContainer_a1e3adae4412e9e0e868dec802002d5ca}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!NcellsY@{NcellsY}}
+\index{NcellsY@{NcellsY}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{NcellsY}{NcellsY}}]{\setlength{\rightskip}{0pt plus 5cm}int Linked\+Cells\+Container\+::\+NcellsY\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a5d2caeb5e18c7691a7069d6d21ffb8f2}{}\label{classLinkedCellsContainer_a5d2caeb5e18c7691a7069d6d21ffb8f2}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!NcellsZ@{NcellsZ}}
+\index{NcellsZ@{NcellsZ}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{NcellsZ}{NcellsZ}}]{\setlength{\rightskip}{0pt plus 5cm}int Linked\+Cells\+Container\+::\+NcellsZ\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a422564396900533ee91d18fb9ead2c97}{}\label{classLinkedCellsContainer_a422564396900533ee91d18fb9ead2c97}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!Num\+Threads@{Num\+Threads}}
+\index{Num\+Threads@{Num\+Threads}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{Num\+Threads}{NumThreads}}]{\setlength{\rightskip}{0pt plus 5cm}int Linked\+Cells\+Container\+::\+Num\+Threads\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_ac8ae53015a3e5ed5bf413677dc3b506c}{}\label{classLinkedCellsContainer_ac8ae53015a3e5ed5bf413677dc3b506c}
+\index{Linked\+Cells\+Container@{Linked\+Cells\+Container}!upperright@{upperright}}
+\index{upperright@{upperright}!Linked\+Cells\+Container@{Linked\+Cells\+Container}}
+\subsubsection[{\texorpdfstring{upperright}{upperright}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$double,3$>$ Linked\+Cells\+Container\+::upperright\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classLinkedCellsContainer_a81d492dc2e1948839a6a45b0b1fe463f}{}\label{classLinkedCellsContainer_a81d492dc2e1948839a6a45b0b1fe463f}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{LinkedCellsContainer_8h}{Linked\+Cells\+Container.\+h}\item 
+src/\hyperlink{LinkedCellsContainer_8cpp}{Linked\+Cells\+Container.\+cpp}\end{DoxyCompactItemize}

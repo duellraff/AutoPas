@@ -1,0 +1,168 @@
+\hypertarget{classPointData}{}\section{Point\+Data Class Reference}
+\label{classPointData}\index{Point\+Data@{Point\+Data}}
+
+
+{\ttfamily \#include $<$vtk-\/unstructured.\+h$>$}
+
+Inheritance diagram for Point\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPointData}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+::\hyperlink{classDataArray__t}{Data\+Array\+\_\+t} \hyperlink{classPointData_a249ad018361c7a9d61f42e1fc8af717f}{Data\+Array\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ \hyperlink{classPointData_a249ad018361c7a9d61f42e1fc8af717f}{Data\+Array\+\_\+type} $>$ \hyperlink{classPointData_acd882fa412789571fcaa2599ad2b2c71}{Data\+Array\+\_\+sequence}
+\item 
+typedef Data\+Array\+\_\+sequence\+::iterator \hyperlink{classPointData_afb66f793f2a65ca38e3cd8fa21eef701}{Data\+Array\+\_\+iterator}
+\item 
+typedef Data\+Array\+\_\+sequence\+::const\+\_\+iterator \hyperlink{classPointData_a6bd3313479b6a109e24bc9e7b306831b}{Data\+Array\+\_\+const\+\_\+iterator}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classPointData_a249ad018361c7a9d61f42e1fc8af717f}{Data\+Array\+\_\+type}, char $>$ \hyperlink{classPointData_ae9066a14984b6f7aa938ba2d58244055}{Data\+Array\+\_\+traits}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classPointData_acd882fa412789571fcaa2599ad2b2c71}{Data\+Array\+\_\+sequence} \& \hyperlink{classPointData_ac4d75ba2976d6acdaceb0b69f574e895}{Data\+Array} () const 
+\item 
+\hyperlink{classPointData_acd882fa412789571fcaa2599ad2b2c71}{Data\+Array\+\_\+sequence} \& \hyperlink{classPointData_aa8ff7ad5b2c1d99794d4b96e481138d2}{Data\+Array} ()
+\item 
+void \hyperlink{classPointData_a207059b73203faf8b3fec8659a9104e5}{Data\+Array} (const \hyperlink{classPointData_acd882fa412789571fcaa2599ad2b2c71}{Data\+Array\+\_\+sequence} \&s)
+\item 
+\hyperlink{classPointData_add74ef42ae2c48850449cd59e216111f}{Point\+Data} ()
+\item 
+\hyperlink{classPointData_ae0d2a9251b2690a28a04a96105874e45}{Point\+Data} (const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+\hyperlink{classPointData_a552557267dd3178a8e76be436b0709bc}{Point\+Data} (const \hyperlink{classPointData}{Point\+Data} \&x,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+virtual \hyperlink{classPointData}{Point\+Data} $\ast$ \hyperlink{classPointData_aeb33ffedc35f8abc9ffd0d2f053c68ac}{\+\_\+clone} (\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0) const 
+\item 
+\hyperlink{classPointData}{Point\+Data} \& \hyperlink{classPointData_a3e175cdff950d602a53f4511df54abfd}{operator=} (const \hyperlink{classPointData}{Point\+Data} \&x)
+\item 
+virtual \hyperlink{classPointData_a53f701fd5abdb6105900c13f8282305e}{$\sim$\+Point\+Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPointData_a67ad25c5798d484eb8169a90fda2eac5}{parse} (\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPointData_acd882fa412789571fcaa2599ad2b2c71}{Data\+Array\+\_\+sequence} \hyperlink{classPointData_ac8eb59ecb308a38ccd18bd6185e32a92}{Data\+Array\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{Point\+Data@{Point\+Data}!Data\+Array\+\_\+const\+\_\+iterator@{Data\+Array\+\_\+const\+\_\+iterator}}
+\index{Data\+Array\+\_\+const\+\_\+iterator@{Data\+Array\+\_\+const\+\_\+iterator}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Data\+Array\+\_\+const\+\_\+iterator}{DataArray_const_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Data\+Array\+\_\+sequence\+::const\+\_\+iterator {\bf Point\+Data\+::\+Data\+Array\+\_\+const\+\_\+iterator}}\hypertarget{classPointData_a6bd3313479b6a109e24bc9e7b306831b}{}\label{classPointData_a6bd3313479b6a109e24bc9e7b306831b}
+\index{Point\+Data@{Point\+Data}!Data\+Array\+\_\+iterator@{Data\+Array\+\_\+iterator}}
+\index{Data\+Array\+\_\+iterator@{Data\+Array\+\_\+iterator}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Data\+Array\+\_\+iterator}{DataArray_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef Data\+Array\+\_\+sequence\+::iterator {\bf Point\+Data\+::\+Data\+Array\+\_\+iterator}}\hypertarget{classPointData_afb66f793f2a65ca38e3cd8fa21eef701}{}\label{classPointData_afb66f793f2a65ca38e3cd8fa21eef701}
+\index{Point\+Data@{Point\+Data}!Data\+Array\+\_\+sequence@{Data\+Array\+\_\+sequence}}
+\index{Data\+Array\+\_\+sequence@{Data\+Array\+\_\+sequence}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Data\+Array\+\_\+sequence}{DataArray_sequence}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ {\bf Data\+Array\+\_\+type} $>$ {\bf Point\+Data\+::\+Data\+Array\+\_\+sequence}}\hypertarget{classPointData_acd882fa412789571fcaa2599ad2b2c71}{}\label{classPointData_acd882fa412789571fcaa2599ad2b2c71}
+\index{Point\+Data@{Point\+Data}!Data\+Array\+\_\+traits@{Data\+Array\+\_\+traits}}
+\index{Data\+Array\+\_\+traits@{Data\+Array\+\_\+traits}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Data\+Array\+\_\+traits}{DataArray_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf Data\+Array\+\_\+type}, char $>$ {\bf Point\+Data\+::\+Data\+Array\+\_\+traits}}\hypertarget{classPointData_ae9066a14984b6f7aa938ba2d58244055}{}\label{classPointData_ae9066a14984b6f7aa938ba2d58244055}
+\index{Point\+Data@{Point\+Data}!Data\+Array\+\_\+type@{Data\+Array\+\_\+type}}
+\index{Data\+Array\+\_\+type@{Data\+Array\+\_\+type}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Data\+Array\+\_\+type}{DataArray_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf Data\+Array\+\_\+t} {\bf Point\+Data\+::\+Data\+Array\+\_\+type}}\hypertarget{classPointData_a249ad018361c7a9d61f42e1fc8af717f}{}\label{classPointData_a249ad018361c7a9d61f42e1fc8af717f}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Point\+Data@{Point\+Data}!Point\+Data@{Point\+Data}}
+\index{Point\+Data@{Point\+Data}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Point\+Data()}{PointData()}}]{\setlength{\rightskip}{0pt plus 5cm}Point\+Data\+::\+Point\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPointData_add74ef42ae2c48850449cd59e216111f}{}\label{classPointData_add74ef42ae2c48850449cd59e216111f}
+\index{Point\+Data@{Point\+Data}!Point\+Data@{Point\+Data}}
+\index{Point\+Data@{Point\+Data}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Point\+Data(const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{PointData(const ::xercesc::DOMElement &e,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Point\+Data\+::\+Point\+Data (
+\begin{DoxyParamCaption}
+\item[{const \+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classPointData_ae0d2a9251b2690a28a04a96105874e45}{}\label{classPointData_ae0d2a9251b2690a28a04a96105874e45}
+\index{Point\+Data@{Point\+Data}!Point\+Data@{Point\+Data}}
+\index{Point\+Data@{Point\+Data}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Point\+Data(const Point\+Data \&x,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{PointData(const PointData &x,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Point\+Data\+::\+Point\+Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point\+Data} \&}]{x, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classPointData_a552557267dd3178a8e76be436b0709bc}{}\label{classPointData_a552557267dd3178a8e76be436b0709bc}
+\index{Point\+Data@{Point\+Data}!````~Point\+Data@{$\sim$\+Point\+Data}}
+\index{````~Point\+Data@{$\sim$\+Point\+Data}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{$\sim$\+Point\+Data()}{~PointData()}}]{\setlength{\rightskip}{0pt plus 5cm}Point\+Data\+::$\sim$\+Point\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPointData_a53f701fd5abdb6105900c13f8282305e}{}\label{classPointData_a53f701fd5abdb6105900c13f8282305e}
+
+
+\subsection{Member Function Documentation}
+\index{Point\+Data@{Point\+Data}!\+\_\+clone@{\+\_\+clone}}
+\index{\+\_\+clone@{\+\_\+clone}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{\+\_\+clone(\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0) const }{_clone(::xml_schema::flags f=0,::xml_schema::container *c=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point\+Data} $\ast$ Point\+Data\+::\+\_\+clone (
+\begin{DoxyParamCaption}
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classPointData_aeb33ffedc35f8abc9ffd0d2f053c68ac}{}\label{classPointData_aeb33ffedc35f8abc9ffd0d2f053c68ac}
+\index{Point\+Data@{Point\+Data}!Data\+Array@{Data\+Array}}
+\index{Data\+Array@{Data\+Array}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Data\+Array() const }{DataArray() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Point\+Data\+::\+Data\+Array\+\_\+sequence} \& Point\+Data\+::\+Data\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classPointData_ac4d75ba2976d6acdaceb0b69f574e895}{}\label{classPointData_ac4d75ba2976d6acdaceb0b69f574e895}
+\index{Point\+Data@{Point\+Data}!Data\+Array@{Data\+Array}}
+\index{Data\+Array@{Data\+Array}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Data\+Array()}{DataArray()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point\+Data\+::\+Data\+Array\+\_\+sequence} \& Point\+Data\+::\+Data\+Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPointData_aa8ff7ad5b2c1d99794d4b96e481138d2}{}\label{classPointData_aa8ff7ad5b2c1d99794d4b96e481138d2}
+\index{Point\+Data@{Point\+Data}!Data\+Array@{Data\+Array}}
+\index{Data\+Array@{Data\+Array}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Data\+Array(const Data\+Array\+\_\+sequence \&s)}{DataArray(const DataArray_sequence &s)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+Data\+::\+Data\+Array (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data\+Array\+\_\+sequence} \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classPointData_a207059b73203faf8b3fec8659a9104e5}{}\label{classPointData_a207059b73203faf8b3fec8659a9104e5}
+\index{Point\+Data@{Point\+Data}!operator=@{operator=}}
+\index{operator=@{operator=}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{operator=(const Point\+Data \&x)}{operator=(const PointData &x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point\+Data} \& Point\+Data\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Point\+Data} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classPointData_a3e175cdff950d602a53f4511df54abfd}{}\label{classPointData_a3e175cdff950d602a53f4511df54abfd}
+\index{Point\+Data@{Point\+Data}!parse@{parse}}
+\index{parse@{parse}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{parse(\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::xml\+\_\+schema\+::flags)}{parse(::xsd::cxx::xml::dom::parser< char > &,::xml_schema::flags)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+Data\+::parse (
+\begin{DoxyParamCaption}
+\item[{\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&}]{p, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPointData_a67ad25c5798d484eb8169a90fda2eac5}{}\label{classPointData_a67ad25c5798d484eb8169a90fda2eac5}
+
+
+\subsection{Member Data Documentation}
+\index{Point\+Data@{Point\+Data}!Data\+Array\+\_\+@{Data\+Array\+\_\+}}
+\index{Data\+Array\+\_\+@{Data\+Array\+\_\+}!Point\+Data@{Point\+Data}}
+\subsubsection[{\texorpdfstring{Data\+Array\+\_\+}{DataArray_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data\+Array\+\_\+sequence} Point\+Data\+::\+Data\+Array\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classPointData_ac8eb59ecb308a38ccd18bd6185e32a92}{}\label{classPointData_ac8eb59ecb308a38ccd18bd6185e32a92}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/output\+Writer/\hyperlink{vtk-unstructured_8h}{vtk-\/unstructured.\+h}\item 
+src/output\+Writer/\hyperlink{vtk-unstructured_8cpp}{vtk-\/unstructured.\+cpp}\end{DoxyCompactItemize}

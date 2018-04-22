@@ -1,0 +1,365 @@
+\hypertarget{classcuboid__t}{}\section{cuboid\+\_\+t Class Reference}
+\label{classcuboid__t}\index{cuboid\+\_\+t@{cuboid\+\_\+t}}
+
+
+{\ttfamily \#include $<$particle\+\_\+input.\+h$>$}
+
+Inheritance diagram for cuboid\+\_\+t\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcuboid__t}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+::\hyperlink{classvector__t}{vector\+\_\+t} \hyperlink{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}{coord\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}{coord\+\_\+type}, char $>$ \hyperlink{classcuboid__t_a9aa6a75493e47a7f976c08e9be597b54}{coord\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classint__vector__t}{int\+\_\+vector\+\_\+t} \hyperlink{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}{dimension\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}{dimension\+\_\+type}, char $>$ \hyperlink{classcuboid__t_aed028730d651f8447c9243431c31b176}{dimension\+\_\+traits}
+\item 
+typedef \+::\hyperlink{namespacexml__schema_ad7e04ab17bba0b3fdde43fb79ef6ed87}{xml\+\_\+schema\+::float\+\_\+} \hyperlink{classcuboid__t_a48025da79e9243b8b1e34e696c22e06d}{mesh\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classcuboid__t_a48025da79e9243b8b1e34e696c22e06d}{mesh\+\_\+type}, char $>$ \hyperlink{classcuboid__t_a67db60662cfd845bfe24613ab89f75bb}{mesh\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classvector__t}{vector\+\_\+t} \hyperlink{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}{velocity\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}{velocity\+\_\+type}, char $>$ \hyperlink{classcuboid__t_ae9e44d76c104412fa2f0fb02e0b8b6f2}{velocity\+\_\+traits}
+\item 
+typedef \+::\hyperlink{namespacexml__schema_acfa24ac68e1a188e7f44c36f7a158bf4}{xml\+\_\+schema\+::int\+\_\+} \hyperlink{classcuboid__t_a6fb75392e8d31d56062e18b6aa2adc8a}{type\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classcuboid__t_a6fb75392e8d31d56062e18b6aa2adc8a}{type\+\_\+type}, char $>$ \hyperlink{classcuboid__t_af1801e353fa239baa79a76f6942f40f9}{type\+\_\+traits}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}{coord\+\_\+type} \& \hyperlink{classcuboid__t_aa59d1259b69308fc019bd515501ce9c5}{coord} () const 
+\item 
+\hyperlink{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}{coord\+\_\+type} \& \hyperlink{classcuboid__t_a08bd56077bd7a5fa0b3a675db1ffb599}{coord} ()
+\item 
+void \hyperlink{classcuboid__t_afc00b4b51e918a973044a6dbf149e83b}{coord} (const \hyperlink{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}{coord\+\_\+type} \&x)
+\item 
+void \hyperlink{classcuboid__t_a5b52cff02eedff7b6e09753cde98add2}{coord} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}{coord\+\_\+type} $>$ p)
+\item 
+const \hyperlink{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}{dimension\+\_\+type} \& \hyperlink{classcuboid__t_a26f2220ad94483e4b94a930cf1983d9f}{dimension} () const 
+\item 
+\hyperlink{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}{dimension\+\_\+type} \& \hyperlink{classcuboid__t_aea33ff632180a4a3e6d6610f51d0877b}{dimension} ()
+\item 
+void \hyperlink{classcuboid__t_a3410f77c6419273a2b2205af00778432}{dimension} (const \hyperlink{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}{dimension\+\_\+type} \&x)
+\item 
+void \hyperlink{classcuboid__t_aa193e0ba063d2df2555a0c5ddaf775c2}{dimension} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}{dimension\+\_\+type} $>$ p)
+\item 
+const \hyperlink{classcuboid__t_a48025da79e9243b8b1e34e696c22e06d}{mesh\+\_\+type} \& \hyperlink{classcuboid__t_ab342d2b7cefd9e06ba5071c8154e2d06}{mesh} () const 
+\item 
+\hyperlink{classcuboid__t_a48025da79e9243b8b1e34e696c22e06d}{mesh\+\_\+type} \& \hyperlink{classcuboid__t_a25e6df90635b65b85ecbf068ba917885}{mesh} ()
+\item 
+void \hyperlink{classcuboid__t_acafe29403b610ef652d69291bc1640c5}{mesh} (const \hyperlink{classcuboid__t_a48025da79e9243b8b1e34e696c22e06d}{mesh\+\_\+type} \&x)
+\item 
+const \hyperlink{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}{velocity\+\_\+type} \& \hyperlink{classcuboid__t_a0a63a4f09fcc1006371cd5074aa5daa1}{velocity} () const 
+\item 
+\hyperlink{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}{velocity\+\_\+type} \& \hyperlink{classcuboid__t_ac6f84c9ffb3b3bd15ef46dfe9f7488aa}{velocity} ()
+\item 
+void \hyperlink{classcuboid__t_a5792df33b443ebb4567d6065e7220e55}{velocity} (const \hyperlink{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}{velocity\+\_\+type} \&x)
+\item 
+void \hyperlink{classcuboid__t_aa94c0a4c68e70db1bd5e966b2ceb4795}{velocity} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}{velocity\+\_\+type} $>$ p)
+\item 
+const \hyperlink{classcuboid__t_a6fb75392e8d31d56062e18b6aa2adc8a}{type\+\_\+type} \& \hyperlink{classcuboid__t_a55195bf6362bb4a82c568d6561a4a00d}{type} () const 
+\item 
+\hyperlink{classcuboid__t_a6fb75392e8d31d56062e18b6aa2adc8a}{type\+\_\+type} \& \hyperlink{classcuboid__t_a1e4471fb01f14bb97ef46d94f4cc22e9}{type} ()
+\item 
+void \hyperlink{classcuboid__t_ae312cc3a069b53e3c09c5bdca5279ef1}{type} (const \hyperlink{classcuboid__t_a6fb75392e8d31d56062e18b6aa2adc8a}{type\+\_\+type} \&x)
+\item 
+\hyperlink{classcuboid__t_a806788c361e57c13e1d5f59637ebcdce}{cuboid\+\_\+t} (const \hyperlink{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}{coord\+\_\+type} \&, const \hyperlink{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}{dimension\+\_\+type} \&, const \hyperlink{classcuboid__t_a48025da79e9243b8b1e34e696c22e06d}{mesh\+\_\+type} \&, const \hyperlink{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}{velocity\+\_\+type} \&, const \hyperlink{classcuboid__t_a6fb75392e8d31d56062e18b6aa2adc8a}{type\+\_\+type} \&)
+\item 
+\hyperlink{classcuboid__t_a22c19e96f12141bafd1b6ad465a1f1f3}{cuboid\+\_\+t} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}{coord\+\_\+type} $>$,\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}{dimension\+\_\+type} $>$, const \hyperlink{classcuboid__t_a48025da79e9243b8b1e34e696c22e06d}{mesh\+\_\+type} \&,\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}{velocity\+\_\+type} $>$, const \hyperlink{classcuboid__t_a6fb75392e8d31d56062e18b6aa2adc8a}{type\+\_\+type} \&)
+\item 
+\hyperlink{classcuboid__t_afa1b7588ca19d8c5d00fb8c5dcf92bc8}{cuboid\+\_\+t} (const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+\hyperlink{classcuboid__t_a1574d539277176b5fff09a374c142c90}{cuboid\+\_\+t} (const \hyperlink{classcuboid__t}{cuboid\+\_\+t} \&x,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+virtual \hyperlink{classcuboid__t}{cuboid\+\_\+t} $\ast$ \hyperlink{classcuboid__t_aa31bc17c300c78f7c15b08d60bbdefbf}{\+\_\+clone} (\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0) const 
+\item 
+\hyperlink{classcuboid__t}{cuboid\+\_\+t} \& \hyperlink{classcuboid__t_a63f90f88f500fa731186f53d2c668552}{operator=} (const \hyperlink{classcuboid__t}{cuboid\+\_\+t} \&x)
+\item 
+virtual \hyperlink{classcuboid__t_ad45791533f3643e2e2f565801c0ca20a}{$\sim$cuboid\+\_\+t} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcuboid__t_ab79e4219bf9a205aff7cbbda1207d138}{parse} (\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}{coord\+\_\+type} $>$ \hyperlink{classcuboid__t_ac230bff6b6def0f5d6aabaacc3538d38}{coord\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}{dimension\+\_\+type} $>$ \hyperlink{classcuboid__t_a12a329c151427b69ab165a23ce32ed26}{dimension\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classcuboid__t_a48025da79e9243b8b1e34e696c22e06d}{mesh\+\_\+type} $>$ \hyperlink{classcuboid__t_aaac49c075536283060216167d0e71e80}{mesh\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}{velocity\+\_\+type} $>$ \hyperlink{classcuboid__t_a38590de341c9a52a3cced988ea26d891}{velocity\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classcuboid__t_a6fb75392e8d31d56062e18b6aa2adc8a}{type\+\_\+type} $>$ \hyperlink{classcuboid__t_a950799bbd14b31cd020481cba9092eb8}{type\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!coord\+\_\+traits@{coord\+\_\+traits}}
+\index{coord\+\_\+traits@{coord\+\_\+traits}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+traits}{coord_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf coord\+\_\+type}, char $>$ {\bf cuboid\+\_\+t\+::coord\+\_\+traits}}\hypertarget{classcuboid__t_a9aa6a75493e47a7f976c08e9be597b54}{}\label{classcuboid__t_a9aa6a75493e47a7f976c08e9be597b54}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!coord\+\_\+type@{coord\+\_\+type}}
+\index{coord\+\_\+type@{coord\+\_\+type}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+type}{coord_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf vector\+\_\+t} {\bf cuboid\+\_\+t\+::coord\+\_\+type}}\hypertarget{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}{}\label{classcuboid__t_aa3c19ea94c59ed982641ca39a420a041}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!dimension\+\_\+traits@{dimension\+\_\+traits}}
+\index{dimension\+\_\+traits@{dimension\+\_\+traits}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension\+\_\+traits}{dimension_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf dimension\+\_\+type}, char $>$ {\bf cuboid\+\_\+t\+::dimension\+\_\+traits}}\hypertarget{classcuboid__t_aed028730d651f8447c9243431c31b176}{}\label{classcuboid__t_aed028730d651f8447c9243431c31b176}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!dimension\+\_\+type@{dimension\+\_\+type}}
+\index{dimension\+\_\+type@{dimension\+\_\+type}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension\+\_\+type}{dimension_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf int\+\_\+vector\+\_\+t} {\bf cuboid\+\_\+t\+::dimension\+\_\+type}}\hypertarget{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}{}\label{classcuboid__t_a0992ec1724eb71e76babf752bbe9189b}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!mesh\+\_\+traits@{mesh\+\_\+traits}}
+\index{mesh\+\_\+traits@{mesh\+\_\+traits}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh\+\_\+traits}{mesh_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf mesh\+\_\+type}, char $>$ {\bf cuboid\+\_\+t\+::mesh\+\_\+traits}}\hypertarget{classcuboid__t_a67db60662cfd845bfe24613ab89f75bb}{}\label{classcuboid__t_a67db60662cfd845bfe24613ab89f75bb}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!mesh\+\_\+type@{mesh\+\_\+type}}
+\index{mesh\+\_\+type@{mesh\+\_\+type}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh\+\_\+type}{mesh_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf xml\+\_\+schema\+::float\+\_\+} {\bf cuboid\+\_\+t\+::mesh\+\_\+type}}\hypertarget{classcuboid__t_a48025da79e9243b8b1e34e696c22e06d}{}\label{classcuboid__t_a48025da79e9243b8b1e34e696c22e06d}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!type\+\_\+traits@{type\+\_\+traits}}
+\index{type\+\_\+traits@{type\+\_\+traits}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{type\+\_\+traits}{type_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf type\+\_\+type}, char $>$ {\bf cuboid\+\_\+t\+::type\+\_\+traits}}\hypertarget{classcuboid__t_af1801e353fa239baa79a76f6942f40f9}{}\label{classcuboid__t_af1801e353fa239baa79a76f6942f40f9}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!type\+\_\+type@{type\+\_\+type}}
+\index{type\+\_\+type@{type\+\_\+type}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{type\+\_\+type}{type_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf xml\+\_\+schema\+::int\+\_\+} {\bf cuboid\+\_\+t\+::type\+\_\+type}}\hypertarget{classcuboid__t_a6fb75392e8d31d56062e18b6aa2adc8a}{}\label{classcuboid__t_a6fb75392e8d31d56062e18b6aa2adc8a}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!velocity\+\_\+traits@{velocity\+\_\+traits}}
+\index{velocity\+\_\+traits@{velocity\+\_\+traits}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity\+\_\+traits}{velocity_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf velocity\+\_\+type}, char $>$ {\bf cuboid\+\_\+t\+::velocity\+\_\+traits}}\hypertarget{classcuboid__t_ae9e44d76c104412fa2f0fb02e0b8b6f2}{}\label{classcuboid__t_ae9e44d76c104412fa2f0fb02e0b8b6f2}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!velocity\+\_\+type@{velocity\+\_\+type}}
+\index{velocity\+\_\+type@{velocity\+\_\+type}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity\+\_\+type}{velocity_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf vector\+\_\+t} {\bf cuboid\+\_\+t\+::velocity\+\_\+type}}\hypertarget{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}{}\label{classcuboid__t_a71c58ac42113feacf576245bc43d8dde}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+t(const coord\+\_\+type \&, const dimension\+\_\+type \&, const mesh\+\_\+type \&, const velocity\+\_\+type \&, const type\+\_\+type \&)}{cuboid_t(const coord_type &, const dimension_type &, const mesh_type &, const velocity_type &, const type_type &)}}]{\setlength{\rightskip}{0pt plus 5cm}cuboid\+\_\+t\+::cuboid\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const {\bf coord\+\_\+type} \&}]{coord, }
+\item[{const {\bf dimension\+\_\+type} \&}]{dimension, }
+\item[{const {\bf mesh\+\_\+type} \&}]{mesh, }
+\item[{const {\bf velocity\+\_\+type} \&}]{velocity, }
+\item[{const {\bf type\+\_\+type} \&}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_a806788c361e57c13e1d5f59637ebcdce}{}\label{classcuboid__t_a806788c361e57c13e1d5f59637ebcdce}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+t(\+::std\+::unique\+\_\+ptr$<$ coord\+\_\+type $>$,\+::std\+::unique\+\_\+ptr$<$ dimension\+\_\+type $>$, const mesh\+\_\+type \&,\+::std\+::unique\+\_\+ptr$<$ velocity\+\_\+type $>$, const type\+\_\+type \&)}{cuboid_t(::std::unique_ptr< coord_type >,::std::unique_ptr< dimension_type >, const mesh_type &,::std::unique_ptr< velocity_type >, const type_type &)}}]{\setlength{\rightskip}{0pt plus 5cm}cuboid\+\_\+t\+::cuboid\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf coord\+\_\+type} $>$}]{coord, }
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf dimension\+\_\+type} $>$}]{dimension, }
+\item[{const {\bf mesh\+\_\+type} \&}]{mesh, }
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf velocity\+\_\+type} $>$}]{velocity, }
+\item[{const {\bf type\+\_\+type} \&}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_a22c19e96f12141bafd1b6ad465a1f1f3}{}\label{classcuboid__t_a22c19e96f12141bafd1b6ad465a1f1f3}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+t(const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{cuboid_t(const ::xercesc::DOMElement &e,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}cuboid\+\_\+t\+::cuboid\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const \+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_afa1b7588ca19d8c5d00fb8c5dcf92bc8}{}\label{classcuboid__t_afa1b7588ca19d8c5d00fb8c5dcf92bc8}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+t(const cuboid\+\_\+t \&x,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{cuboid_t(const cuboid_t &x,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}cuboid\+\_\+t\+::cuboid\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const {\bf cuboid\+\_\+t} \&}]{x, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_a1574d539277176b5fff09a374c142c90}{}\label{classcuboid__t_a1574d539277176b5fff09a374c142c90}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!````~cuboid\+\_\+t@{$\sim$cuboid\+\_\+t}}
+\index{````~cuboid\+\_\+t@{$\sim$cuboid\+\_\+t}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{$\sim$cuboid\+\_\+t()}{~cuboid_t()}}]{\setlength{\rightskip}{0pt plus 5cm}cuboid\+\_\+t\+::$\sim$cuboid\+\_\+t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classcuboid__t_ad45791533f3643e2e2f565801c0ca20a}{}\label{classcuboid__t_ad45791533f3643e2e2f565801c0ca20a}
+
+
+\subsection{Member Function Documentation}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!\+\_\+clone@{\+\_\+clone}}
+\index{\+\_\+clone@{\+\_\+clone}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{\+\_\+clone(\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0) const }{_clone(::xml_schema::flags f=0,::xml_schema::container *c=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cuboid\+\_\+t} $\ast$ cuboid\+\_\+t\+::\+\_\+clone (
+\begin{DoxyParamCaption}
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classcuboid__t_aa31bc17c300c78f7c15b08d60bbdefbf}{}\label{classcuboid__t_aa31bc17c300c78f7c15b08d60bbdefbf}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!coord@{coord}}
+\index{coord@{coord}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord() const }{coord() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf cuboid\+\_\+t\+::coord\+\_\+type} \& cuboid\+\_\+t\+::coord (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classcuboid__t_aa59d1259b69308fc019bd515501ce9c5}{}\label{classcuboid__t_aa59d1259b69308fc019bd515501ce9c5}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!coord@{coord}}
+\index{coord@{coord}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord()}{coord()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cuboid\+\_\+t\+::coord\+\_\+type} \& cuboid\+\_\+t\+::coord (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_a08bd56077bd7a5fa0b3a675db1ffb599}{}\label{classcuboid__t_a08bd56077bd7a5fa0b3a675db1ffb599}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!coord@{coord}}
+\index{coord@{coord}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord(const coord\+\_\+type \&x)}{coord(const coord_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void cuboid\+\_\+t\+::coord (
+\begin{DoxyParamCaption}
+\item[{const {\bf coord\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_afc00b4b51e918a973044a6dbf149e83b}{}\label{classcuboid__t_afc00b4b51e918a973044a6dbf149e83b}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!coord@{coord}}
+\index{coord@{coord}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord(\+::std\+::unique\+\_\+ptr$<$ coord\+\_\+type $>$ p)}{coord(::std::unique_ptr< coord_type > p)}}]{\setlength{\rightskip}{0pt plus 5cm}void cuboid\+\_\+t\+::coord (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf coord\+\_\+type} $>$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_a5b52cff02eedff7b6e09753cde98add2}{}\label{classcuboid__t_a5b52cff02eedff7b6e09753cde98add2}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!dimension@{dimension}}
+\index{dimension@{dimension}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension() const }{dimension() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf cuboid\+\_\+t\+::dimension\+\_\+type} \& cuboid\+\_\+t\+::dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classcuboid__t_a26f2220ad94483e4b94a930cf1983d9f}{}\label{classcuboid__t_a26f2220ad94483e4b94a930cf1983d9f}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!dimension@{dimension}}
+\index{dimension@{dimension}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension()}{dimension()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cuboid\+\_\+t\+::dimension\+\_\+type} \& cuboid\+\_\+t\+::dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_aea33ff632180a4a3e6d6610f51d0877b}{}\label{classcuboid__t_aea33ff632180a4a3e6d6610f51d0877b}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!dimension@{dimension}}
+\index{dimension@{dimension}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension(const dimension\+\_\+type \&x)}{dimension(const dimension_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void cuboid\+\_\+t\+::dimension (
+\begin{DoxyParamCaption}
+\item[{const {\bf dimension\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_a3410f77c6419273a2b2205af00778432}{}\label{classcuboid__t_a3410f77c6419273a2b2205af00778432}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!dimension@{dimension}}
+\index{dimension@{dimension}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension(\+::std\+::unique\+\_\+ptr$<$ dimension\+\_\+type $>$ p)}{dimension(::std::unique_ptr< dimension_type > p)}}]{\setlength{\rightskip}{0pt plus 5cm}void cuboid\+\_\+t\+::dimension (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf dimension\+\_\+type} $>$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_aa193e0ba063d2df2555a0c5ddaf775c2}{}\label{classcuboid__t_aa193e0ba063d2df2555a0c5ddaf775c2}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!mesh@{mesh}}
+\index{mesh@{mesh}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh() const }{mesh() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf cuboid\+\_\+t\+::mesh\+\_\+type} \& cuboid\+\_\+t\+::mesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classcuboid__t_ab342d2b7cefd9e06ba5071c8154e2d06}{}\label{classcuboid__t_ab342d2b7cefd9e06ba5071c8154e2d06}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!mesh@{mesh}}
+\index{mesh@{mesh}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh()}{mesh()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cuboid\+\_\+t\+::mesh\+\_\+type} \& cuboid\+\_\+t\+::mesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_a25e6df90635b65b85ecbf068ba917885}{}\label{classcuboid__t_a25e6df90635b65b85ecbf068ba917885}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!mesh@{mesh}}
+\index{mesh@{mesh}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh(const mesh\+\_\+type \&x)}{mesh(const mesh_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void cuboid\+\_\+t\+::mesh (
+\begin{DoxyParamCaption}
+\item[{const {\bf mesh\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_acafe29403b610ef652d69291bc1640c5}{}\label{classcuboid__t_acafe29403b610ef652d69291bc1640c5}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!operator=@{operator=}}
+\index{operator=@{operator=}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{operator=(const cuboid\+\_\+t \&x)}{operator=(const cuboid_t &x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cuboid\+\_\+t} \& cuboid\+\_\+t\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf cuboid\+\_\+t} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_a63f90f88f500fa731186f53d2c668552}{}\label{classcuboid__t_a63f90f88f500fa731186f53d2c668552}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!parse@{parse}}
+\index{parse@{parse}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{parse(\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::xml\+\_\+schema\+::flags)}{parse(::xsd::cxx::xml::dom::parser< char > &,::xml_schema::flags)}}]{\setlength{\rightskip}{0pt plus 5cm}void cuboid\+\_\+t\+::parse (
+\begin{DoxyParamCaption}
+\item[{\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&}]{p, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcuboid__t_ab79e4219bf9a205aff7cbbda1207d138}{}\label{classcuboid__t_ab79e4219bf9a205aff7cbbda1207d138}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!type@{type}}
+\index{type@{type}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{type() const }{type() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf cuboid\+\_\+t\+::type\+\_\+type} \& cuboid\+\_\+t\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classcuboid__t_a55195bf6362bb4a82c568d6561a4a00d}{}\label{classcuboid__t_a55195bf6362bb4a82c568d6561a4a00d}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!type@{type}}
+\index{type@{type}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{type()}{type()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cuboid\+\_\+t\+::type\+\_\+type} \& cuboid\+\_\+t\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_a1e4471fb01f14bb97ef46d94f4cc22e9}{}\label{classcuboid__t_a1e4471fb01f14bb97ef46d94f4cc22e9}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!type@{type}}
+\index{type@{type}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{type(const type\+\_\+type \&x)}{type(const type_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void cuboid\+\_\+t\+::type (
+\begin{DoxyParamCaption}
+\item[{const {\bf type\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_ae312cc3a069b53e3c09c5bdca5279ef1}{}\label{classcuboid__t_ae312cc3a069b53e3c09c5bdca5279ef1}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!velocity@{velocity}}
+\index{velocity@{velocity}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity() const }{velocity() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf cuboid\+\_\+t\+::velocity\+\_\+type} \& cuboid\+\_\+t\+::velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classcuboid__t_a0a63a4f09fcc1006371cd5074aa5daa1}{}\label{classcuboid__t_a0a63a4f09fcc1006371cd5074aa5daa1}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!velocity@{velocity}}
+\index{velocity@{velocity}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity()}{velocity()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cuboid\+\_\+t\+::velocity\+\_\+type} \& cuboid\+\_\+t\+::velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_ac6f84c9ffb3b3bd15ef46dfe9f7488aa}{}\label{classcuboid__t_ac6f84c9ffb3b3bd15ef46dfe9f7488aa}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!velocity@{velocity}}
+\index{velocity@{velocity}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity(const velocity\+\_\+type \&x)}{velocity(const velocity_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void cuboid\+\_\+t\+::velocity (
+\begin{DoxyParamCaption}
+\item[{const {\bf velocity\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_a5792df33b443ebb4567d6065e7220e55}{}\label{classcuboid__t_a5792df33b443ebb4567d6065e7220e55}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!velocity@{velocity}}
+\index{velocity@{velocity}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity(\+::std\+::unique\+\_\+ptr$<$ velocity\+\_\+type $>$ p)}{velocity(::std::unique_ptr< velocity_type > p)}}]{\setlength{\rightskip}{0pt plus 5cm}void cuboid\+\_\+t\+::velocity (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf velocity\+\_\+type} $>$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classcuboid__t_aa94c0a4c68e70db1bd5e966b2ceb4795}{}\label{classcuboid__t_aa94c0a4c68e70db1bd5e966b2ceb4795}
+
+
+\subsection{Member Data Documentation}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!coord\+\_\+@{coord\+\_\+}}
+\index{coord\+\_\+@{coord\+\_\+}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+}{coord_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf coord\+\_\+type} $>$ cuboid\+\_\+t\+::coord\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcuboid__t_ac230bff6b6def0f5d6aabaacc3538d38}{}\label{classcuboid__t_ac230bff6b6def0f5d6aabaacc3538d38}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!dimension\+\_\+@{dimension\+\_\+}}
+\index{dimension\+\_\+@{dimension\+\_\+}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension\+\_\+}{dimension_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf dimension\+\_\+type} $>$ cuboid\+\_\+t\+::dimension\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcuboid__t_a12a329c151427b69ab165a23ce32ed26}{}\label{classcuboid__t_a12a329c151427b69ab165a23ce32ed26}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!mesh\+\_\+@{mesh\+\_\+}}
+\index{mesh\+\_\+@{mesh\+\_\+}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh\+\_\+}{mesh_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf mesh\+\_\+type} $>$ cuboid\+\_\+t\+::mesh\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcuboid__t_aaac49c075536283060216167d0e71e80}{}\label{classcuboid__t_aaac49c075536283060216167d0e71e80}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!type\+\_\+@{type\+\_\+}}
+\index{type\+\_\+@{type\+\_\+}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{type\+\_\+}{type_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf type\+\_\+type} $>$ cuboid\+\_\+t\+::type\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcuboid__t_a950799bbd14b31cd020481cba9092eb8}{}\label{classcuboid__t_a950799bbd14b31cd020481cba9092eb8}
+\index{cuboid\+\_\+t@{cuboid\+\_\+t}!velocity\+\_\+@{velocity\+\_\+}}
+\index{velocity\+\_\+@{velocity\+\_\+}!cuboid\+\_\+t@{cuboid\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity\+\_\+}{velocity_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf velocity\+\_\+type} $>$ cuboid\+\_\+t\+::velocity\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classcuboid__t_a38590de341c9a52a3cced988ea26d891}{}\label{classcuboid__t_a38590de341c9a52a3cced988ea26d891}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/input/\hyperlink{particle__input_8h}{particle\+\_\+input.\+h}\item 
+src/input/\hyperlink{particle__input_8cpp}{particle\+\_\+input.\+cpp}\end{DoxyCompactItemize}

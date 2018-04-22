@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="vector_t">
+    <xs:sequence>
+      <xs:element name="x" type="xs:float"/>
+      <xs:element name="y" type="xs:float"/>
+      <xs:element name="z" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="int_vector_t">
+    <xs:sequence>
+      <xs:element name="x" type="xs:int"/>
+      <xs:element name="y" type="xs:int"/>
+      <xs:element name="z" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+<xs:complexType name="particletype_t">
+    <xs:annotation>
+      <xs:documentation>
+        The particletype_t type defines properties
+        of given id
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:sequence>
+
+      <xs:element name="id" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            unique id of type
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="mass" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            mass of the particle
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="sigma" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            Sigma for Lennard-Jones
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+
+      <xs:element name="epsilon" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            Epsilon for Lennard-Jones
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="fixed" type="xs:boolean" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            true if particle cannot be moved
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="RtruncLJ" type="xs:double" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            distance at which the Lennard-Jones force calculation should be truncated, if not specified, it will be set to Rcutoff
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+    </xs:sequence>
+    
+  </xs:complexType>
+
+  <xs:complexType name="single_t">
+    <xs:annotation>
+      <xs:documentation>
+        The single_t type consists of information to
+        generate a single particle
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:sequence>
+
+      <xs:element name="coord" type="vector_t">
+        <xs:annotation>
+          <xs:documentation>
+            xyz-coordinates of the particle
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="force" type="vector_t" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            optional xyz-force acting on the particle
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="velocity" type="vector_t">
+        <xs:annotation>
+          <xs:documentation>
+            xyz-velocity the particles
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="type" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            type of particle
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+    </xs:sequence>
+    
+  </xs:complexType>
+
+  <xs:complexType name="cuboid_t">
+    <xs:annotation>
+      <xs:documentation>
+        The cuboid_t type consists of information to
+        generate a cuboid of particles
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:sequence>
+
+      <xs:element name="coord" type="vector_t">
+        <xs:annotation>
+          <xs:documentation>
+            xyz-coordinates of lower left front-side corner
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="dimension" type="int_vector_t">
+        <xs:annotation>
+          <xs:documentation>
+            xyz-dimensions number of particles
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="mesh" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            mesh width
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="velocity" type="vector_t">
+        <xs:annotation>
+          <xs:documentation>
+            mean xyz-velocity of particles
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="type" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            type of each particle
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+    </xs:sequence>
+    
+  </xs:complexType>
+
+
+
+  <xs:complexType name="membrane_t">
+    <xs:annotation>
+      <xs:documentation>
+        The membrane_t type consists of information to
+        generate a cuboid of particles with a harmonic potential
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:sequence>
+
+      <xs:element name="stiffness" type="xs:double">
+        <xs:annotation>
+          <xs:documentation>
+            stiffness k of the membrane
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="r_zero" type="xs:double">
+        <xs:annotation>
+          <xs:documentation>
+            average bond length of a molecule pair
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+	<xs:element name="force" type="vector_t" minOccurs="0" maxOccurs="1">
+          <xs:annotation>  
+            <xs:documentation>
+              optional force which acts on certain molecules
+            </xs:documentation>
+          </xs:annotation>
+	</xs:element>
+	
+      <xs:element name="t_end_force" type="xs:double" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            optional time when the optional force stops to act
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+        
+	<xs:sequence minOccurs="0" maxOccurs="unbounded"> 
+	  <xs:element name="coord_force" type="int_vector_t">
+	    <xs:annotation>
+	      <xs:documentation>
+	        mesh coordinates of the particles where the force acts
+	      </xs:documentation>
+	    </xs:annotation>	 
+          </xs:element>
+	</xs:sequence>
+
+	 	 
+      <xs:element name="coord" type="vector_t">
+        <xs:annotation>
+          <xs:documentation>
+            xyz-coordinates of lower left front-side corner
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="dimension" type="int_vector_t">
+        <xs:annotation>
+          <xs:documentation>
+            xyz-dimensions number of particles
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="mesh" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            mesh width
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="velocity" type="vector_t">
+        <xs:annotation>
+          <xs:documentation>
+            mean xyz-velocity of particles
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="type" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            type of each particle
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+
+    </xs:sequence>
+    
+  </xs:complexType>
+
+
+  <xs:complexType name="sphere_t">
+    <xs:annotation>
+      <xs:documentation>
+        The sphere_t type consists of information to
+        generate a sphere of particles
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:sequence>
+
+      <xs:element name="coord" type="vector_t">
+        <xs:annotation>
+          <xs:documentation>
+            xyz-coordinates of the center of the sphere
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="radius" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            number of particles as radius
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="mesh" type="xs:float">
+        <xs:annotation>
+          <xs:documentation>
+            mesh width
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="velocity" type="vector_t">
+        <xs:annotation>
+          <xs:documentation>
+            mean xyz-velocity of particles
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+      <xs:element name="type" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>
+            type of each particle
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+
+    </xs:sequence>
+    
+  </xs:complexType>
+
+  <xs:complexType name="input_t">
+    <xs:annotation>
+      <xs:documentation>
+        The input_t type consists of information to
+        generate particles
+      </xs:documentation>
+    </xs:annotation>
+
+    <xs:sequence>
+      <xs:element name="types_input" type="particletype_t" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:choice minOccurs="1" maxOccurs="unbounded">
+        <xs:element name="single_input" type="single_t"/>
+        <xs:element name="cuboid_input" type="cuboid_t"/>
+	<xs:element name="membrane_input" type="membrane_t"/>
+        <xs:element name="sphere_input" type="sphere_t"/>
+      </xs:choice>
+    </xs:sequence>
+    
+  </xs:complexType>
+
+  <xs:element name="particle_input" type="input_t">
+    <xs:annotation>
+      <xs:documentation>
+        The input element is a root of the Input XML vocabulary.
+        Every conforming document should start with this element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+</xs:schema>

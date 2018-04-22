@@ -1,0 +1,436 @@
+\hypertarget{vtk-unstructured_8cpp}{}\section{src/output\+Writer/vtk-\/unstructured.cpp File Reference}
+\label{vtk-unstructured_8cpp}\index{src/output\+Writer/vtk-\/unstructured.\+cpp@{src/output\+Writer/vtk-\/unstructured.\+cpp}}
+{\ttfamily \#include $<$xsd/cxx/pre.\+hxx$>$}\\*
+{\ttfamily \#include \char`\"{}vtk-\/unstructured.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$xsd/cxx/xml/dom/parsing-\/source.\+hxx$>$}\\*
+{\ttfamily \#include $<$istream$>$}\\*
+{\ttfamily \#include $<$xsd/cxx/xml/sax/std-\/input-\/source.\+hxx$>$}\\*
+{\ttfamily \#include $<$xsd/cxx/tree/error-\/handler.\+hxx$>$}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+{\ttfamily \#include $<$xsd/cxx/xml/dom/serialization-\/source.\+hxx$>$}\\*
+{\ttfamily \#include $<$xsd/cxx/post.\+hxx$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_a53e5a643323b19b93ad61791fc3211e4}{V\+T\+K\+File} (const \+::std\+::string \&u,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_aafb21bb7e4b24eaca2f23c17eae1c4ac}{V\+T\+K\+File} (const \+::std\+::string \&u,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_a0245d6a373d7792e5bfcba0b04995d88}{V\+T\+K\+File} (const \+::std\+::string \&u,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_ad6708dd1d3370c80f0cd9a2e5e01b872}{V\+T\+K\+File} (\+::std\+::istream \&is,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_af37b2f35560b60f7570030b38d92e4ac}{V\+T\+K\+File} (\+::std\+::istream \&is,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_a50bb1ef8363f1e5f5dddc30db324fc61}{V\+T\+K\+File} (\+::std\+::istream \&is,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_aed990627cca589fcd4097c0fec18afa5}{V\+T\+K\+File} (\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_a1ed17d438cd94527354fc46ab87d8309}{V\+T\+K\+File} (\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_a23aa086a56e887698a2d6a8cbf5a37a5}{V\+T\+K\+File} (\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_af1614d51c76e60f3baa84ecd4debc345}{V\+T\+K\+File} (\+::xercesc\+::\+Input\+Source \&i,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_a9416751c118590b52f5eef00b3e279f4}{V\+T\+K\+File} (\+::xercesc\+::\+Input\+Source \&i,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_aa061a6ed30d48ee41e5afe4aaf0ad5e9}{V\+T\+K\+File} (\+::xercesc\+::\+Input\+Source \&i,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_a2a3d3d83c62a34394c30b3d5779aacc5}{V\+T\+K\+File} (const \+::xercesc\+::\+D\+O\+M\+Document \&doc,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} $>$ \hyperlink{vtk-unstructured_8cpp_aedf3353c8a0b2d2ef7ea1c2e94fe0ea6}{V\+T\+K\+File} (\+::xml\+\_\+schema\+::dom\+::unique\+\_\+ptr$<$ \+::xercesc\+::\+D\+O\+M\+Document $>$ d,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a61ab4b44692dc25fbed88bd01294b3a6}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classDataArrayList__t}{Data\+Array\+List\+\_\+t} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a7630c2ebfb09fec59ec9744ab4de05a1}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Attr \&a, const \hyperlink{classDataArrayList__t}{Data\+Array\+List\+\_\+t} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a15e37609fa21b26bacce23662c522124}{operator$<$$<$} (\+::\hyperlink{namespacexml__schema_a840728106ddd08800e62729d4eddbbc8}{xml\+\_\+schema\+::list\+\_\+stream} \&l, const \hyperlink{classDataArrayList__t}{Data\+Array\+List\+\_\+t} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a90ac4d883593f3e71cc24b0c8a53f745}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classDataArray__t}{Data\+Array\+\_\+t} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a145ab456a0b4837b55ff6755514fd7d4}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classPieceUnstructuredGrid__t}{Piece\+Unstructured\+Grid\+\_\+t} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a53b72fe6aa7e7f479b37e10e807fe4f4}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classUnstructuredGrid__t}{Unstructured\+Grid\+\_\+t} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_abece001f0a506ac3847ede9a0a72d81d}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classPolyData__t}{Poly\+Data\+\_\+t} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_ac655f285f1cdc6fc044b7d58a7596a6a}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a60fc47cfc610f6c31dfd3b0c12892e49}{V\+T\+K\+File} (\+::std\+::ostream \&o, const \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} \&s, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_abe499904eca404dadf8429281c88a3a2}{V\+T\+K\+File} (\+::std\+::ostream \&o, const \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} \&s,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_af6a299b24ebe8c1465bc6164376a10bc}{V\+T\+K\+File} (\+::std\+::ostream \&o, const \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} \&s,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_aa29105a5170680695be352fa0e00341d}{V\+T\+K\+File} (\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} \&s, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_ab09b4a244a093deff01c76e0d066b039}{V\+T\+K\+File} (\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} \&s,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a08394e720690e6ac839c4c06f06fe1c7}{V\+T\+K\+File} (\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} \&s,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a5303826a26dc8b0981ea314365205514}{V\+T\+K\+File} (\+::xercesc\+::\+D\+O\+M\+Document \&d, const \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} \&s,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags})
+\item 
+\+::xml\+\_\+schema\+::dom\+::unique\+\_\+ptr$<$ \+::xercesc\+::\+D\+O\+M\+Document $>$ \hyperlink{vtk-unstructured_8cpp_a187ca2ef68f36ed0ff9970728665f8f6}{V\+T\+K\+File} (const \+::\hyperlink{classVTKFile__t}{V\+T\+K\+File\+\_\+t} \&s, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a39982a892c5c712b9ceaf5451fc6f4ad}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classtype}{type} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a4fb8d54838ba8178be88528f342c8b27}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Attr \&a, const \hyperlink{classtype}{type} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_abc84c964f7011b68cb249e0dd527a052}{operator$<$$<$} (\+::\hyperlink{namespacexml__schema_a840728106ddd08800e62729d4eddbbc8}{xml\+\_\+schema\+::list\+\_\+stream} \&l, const \hyperlink{classtype}{type} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a03c700ca3f77780311236cfbb43b28a6}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classPointData}{Point\+Data} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a9000f9f93a0e3f8c8a2d0de1ddae77c8}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classCellData}{Cell\+Data} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a155fa88f0f3a3fb5f55f06539205ef01}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classPoints}{Points} \&i)
+\item 
+void \hyperlink{vtk-unstructured_8cpp_a043b0bbda942e0878ce7a8f63ddefe79}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classCells}{Cells} \&i)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const Data\+Array\+List\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const DataArrayList_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf Data\+Array\+List\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a61ab4b44692dc25fbed88bd01294b3a6}{}\label{vtk-unstructured_8cpp_a61ab4b44692dc25fbed88bd01294b3a6}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Attr \&a, const Data\+Array\+List\+\_\+t \&i)}{operator<<(::xercesc::DOMAttr &a, const DataArrayList_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Attr \&}]{a, }
+\item[{const {\bf Data\+Array\+List\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a7630c2ebfb09fec59ec9744ab4de05a1}{}\label{vtk-unstructured_8cpp_a7630c2ebfb09fec59ec9744ab4de05a1}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xml\+\_\+schema\+::list\+\_\+stream \&l, const Data\+Array\+List\+\_\+t \&i)}{operator<<(::xml_schema::list_stream &l, const DataArrayList_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::{\bf xml\+\_\+schema\+::list\+\_\+stream} \&}]{l, }
+\item[{const {\bf Data\+Array\+List\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a15e37609fa21b26bacce23662c522124}{}\label{vtk-unstructured_8cpp_a15e37609fa21b26bacce23662c522124}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const Data\+Array\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const DataArray_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf Data\+Array\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a90ac4d883593f3e71cc24b0c8a53f745}{}\label{vtk-unstructured_8cpp_a90ac4d883593f3e71cc24b0c8a53f745}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const Piece\+Unstructured\+Grid\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const PieceUnstructuredGrid_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf Piece\+Unstructured\+Grid\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a145ab456a0b4837b55ff6755514fd7d4}{}\label{vtk-unstructured_8cpp_a145ab456a0b4837b55ff6755514fd7d4}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const Unstructured\+Grid\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const UnstructuredGrid_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf Unstructured\+Grid\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a53b72fe6aa7e7f479b37e10e807fe4f4}{}\label{vtk-unstructured_8cpp_a53b72fe6aa7e7f479b37e10e807fe4f4}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const Poly\+Data\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const PolyData_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf Poly\+Data\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_abece001f0a506ac3847ede9a0a72d81d}{}\label{vtk-unstructured_8cpp_abece001f0a506ac3847ede9a0a72d81d}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const V\+T\+K\+File\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const VTKFile_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf V\+T\+K\+File\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_ac655f285f1cdc6fc044b7d58a7596a6a}{}\label{vtk-unstructured_8cpp_ac655f285f1cdc6fc044b7d58a7596a6a}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const type \&i)}{operator<<(::xercesc::DOMElement &e, const type &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf type} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a39982a892c5c712b9ceaf5451fc6f4ad}{}\label{vtk-unstructured_8cpp_a39982a892c5c712b9ceaf5451fc6f4ad}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Attr \&a, const type \&i)}{operator<<(::xercesc::DOMAttr &a, const type &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Attr \&}]{a, }
+\item[{const {\bf type} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a4fb8d54838ba8178be88528f342c8b27}{}\label{vtk-unstructured_8cpp_a4fb8d54838ba8178be88528f342c8b27}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xml\+\_\+schema\+::list\+\_\+stream \&l, const type \&i)}{operator<<(::xml_schema::list_stream &l, const type &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::{\bf xml\+\_\+schema\+::list\+\_\+stream} \&}]{l, }
+\item[{const {\bf type} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_abc84c964f7011b68cb249e0dd527a052}{}\label{vtk-unstructured_8cpp_abc84c964f7011b68cb249e0dd527a052}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const Point\+Data \&i)}{operator<<(::xercesc::DOMElement &e, const PointData &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf Point\+Data} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a03c700ca3f77780311236cfbb43b28a6}{}\label{vtk-unstructured_8cpp_a03c700ca3f77780311236cfbb43b28a6}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const Cell\+Data \&i)}{operator<<(::xercesc::DOMElement &e, const CellData &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf Cell\+Data} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a9000f9f93a0e3f8c8a2d0de1ddae77c8}{}\label{vtk-unstructured_8cpp_a9000f9f93a0e3f8c8a2d0de1ddae77c8}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const Points \&i)}{operator<<(::xercesc::DOMElement &e, const Points &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf Points} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a155fa88f0f3a3fb5f55f06539205ef01}{}\label{vtk-unstructured_8cpp_a155fa88f0f3a3fb5f55f06539205ef01}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const Cells \&i)}{operator<<(::xercesc::DOMElement &e, const Cells &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf Cells} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a043b0bbda942e0878ce7a8f63ddefe79}{}\label{vtk-unstructured_8cpp_a043b0bbda942e0878ce7a8f63ddefe79}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(const \+::std\+::string \&u,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(const ::std::string &u,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{const \+::std\+::string \&}]{u, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a53e5a643323b19b93ad61791fc3211e4}{}\label{vtk-unstructured_8cpp_a53e5a643323b19b93ad61791fc3211e4}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(const \+::std\+::string \&u,\+::xml\+\_\+schema\+::error\+\_\+handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(const ::std::string &u,::xml_schema::error_handler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{const \+::std\+::string \&}]{u, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_aafb21bb7e4b24eaca2f23c17eae1c4ac}{}\label{vtk-unstructured_8cpp_aafb21bb7e4b24eaca2f23c17eae1c4ac}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(const \+::std\+::string \&u,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(const ::std::string &u,::xercesc::DOMErrorHandler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{const \+::std\+::string \&}]{u, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a0245d6a373d7792e5bfcba0b04995d88}{}\label{vtk-unstructured_8cpp_a0245d6a373d7792e5bfcba0b04995d88}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::std\+::istream \&is,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(::std::istream &is,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_ad6708dd1d3370c80f0cd9a2e5e01b872}{}\label{vtk-unstructured_8cpp_ad6708dd1d3370c80f0cd9a2e5e01b872}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::std\+::istream \&is,\+::xml\+\_\+schema\+::error\+\_\+handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(::std::istream &is,::xml_schema::error_handler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_af37b2f35560b60f7570030b38d92e4ac}{}\label{vtk-unstructured_8cpp_af37b2f35560b60f7570030b38d92e4ac}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::std\+::istream \&is,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(::std::istream &is,::xercesc::DOMErrorHandler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a50bb1ef8363f1e5f5dddc30db324fc61}{}\label{vtk-unstructured_8cpp_a50bb1ef8363f1e5f5dddc30db324fc61}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(::std::istream &is, const ::std::string &sid,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{const \+::std\+::string \&}]{sid, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_aed990627cca589fcd4097c0fec18afa5}{}\label{vtk-unstructured_8cpp_aed990627cca589fcd4097c0fec18afa5}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::xml\+\_\+schema\+::error\+\_\+handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(::std::istream &is, const ::std::string &sid,::xml_schema::error_handler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{const \+::std\+::string \&}]{sid, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a1ed17d438cd94527354fc46ab87d8309}{}\label{vtk-unstructured_8cpp_a1ed17d438cd94527354fc46ab87d8309}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(::std::istream &is, const ::std::string &sid,::xercesc::DOMErrorHandler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{const \+::std\+::string \&}]{sid, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a23aa086a56e887698a2d6a8cbf5a37a5}{}\label{vtk-unstructured_8cpp_a23aa086a56e887698a2d6a8cbf5a37a5}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::xercesc\+::\+Input\+Source \&i,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(::xercesc::InputSource &i,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+Input\+Source \&}]{i, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_af1614d51c76e60f3baa84ecd4debc345}{}\label{vtk-unstructured_8cpp_af1614d51c76e60f3baa84ecd4debc345}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::xercesc\+::\+Input\+Source \&i,\+::xml\+\_\+schema\+::error\+\_\+handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(::xercesc::InputSource &i,::xml_schema::error_handler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+Input\+Source \&}]{i, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a9416751c118590b52f5eef00b3e279f4}{}\label{vtk-unstructured_8cpp_a9416751c118590b52f5eef00b3e279f4}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::xercesc\+::\+Input\+Source \&i,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(::xercesc::InputSource &i,::xercesc::DOMErrorHandler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+Input\+Source \&}]{i, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_aa061a6ed30d48ee41e5afe4aaf0ad5e9}{}\label{vtk-unstructured_8cpp_aa061a6ed30d48ee41e5afe4aaf0ad5e9}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(const \+::xercesc\+::\+D\+O\+M\+Document \&doc,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{VTKFile(const ::xercesc::DOMDocument &doc,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{const \+::xercesc\+::\+D\+O\+M\+Document \&}]{doc, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a2a3d3d83c62a34394c30b3d5779aacc5}{}\label{vtk-unstructured_8cpp_a2a3d3d83c62a34394c30b3d5779aacc5}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::xml\+\_\+schema\+::dom\+::unique\+\_\+ptr$<$ \+::xercesc\+::\+D\+O\+M\+Document $>$ d,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&)}{VTKFile(::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,::xml_schema::flags f, const ::xml_schema::properties &)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf V\+T\+K\+File\+\_\+t} $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::xml\+\_\+schema\+::dom\+::unique\+\_\+ptr$<$ \+::xercesc\+::\+D\+O\+M\+Document $>$}]{d, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_aedf3353c8a0b2d2ef7ea1c2e94fe0ea6}{}\label{vtk-unstructured_8cpp_aedf3353c8a0b2d2ef7ea1c2e94fe0ea6}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::std\+::ostream \&o, const \+::\+V\+T\+K\+File\+\_\+t \&s, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{VTKFile(::std::ostream &o, const ::VTKFile_t &s, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream \&}]{o, }
+\item[{const \+::{\bf V\+T\+K\+File\+\_\+t} \&}]{s, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a60fc47cfc610f6c31dfd3b0c12892e49}{}\label{vtk-unstructured_8cpp_a60fc47cfc610f6c31dfd3b0c12892e49}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::std\+::ostream \&o, const \+::\+V\+T\+K\+File\+\_\+t \&s,\+::xml\+\_\+schema\+::error\+\_\+handler \&h, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{VTKFile(::std::ostream &o, const ::VTKFile_t &s,::xml_schema::error_handler &h, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream \&}]{o, }
+\item[{const \+::{\bf V\+T\+K\+File\+\_\+t} \&}]{s, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_abe499904eca404dadf8429281c88a3a2}{}\label{vtk-unstructured_8cpp_abe499904eca404dadf8429281c88a3a2}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::std\+::ostream \&o, const \+::\+V\+T\+K\+File\+\_\+t \&s,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{VTKFile(::std::ostream &o, const ::VTKFile_t &s,::xercesc::DOMErrorHandler &h, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream \&}]{o, }
+\item[{const \+::{\bf V\+T\+K\+File\+\_\+t} \&}]{s, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_af6a299b24ebe8c1465bc6164376a10bc}{}\label{vtk-unstructured_8cpp_af6a299b24ebe8c1465bc6164376a10bc}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::\+V\+T\+K\+File\+\_\+t \&s, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{VTKFile(::xercesc::XMLFormatTarget &t, const ::VTKFile_t &s, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+X\+M\+L\+Format\+Target \&}]{t, }
+\item[{const \+::{\bf V\+T\+K\+File\+\_\+t} \&}]{s, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_aa29105a5170680695be352fa0e00341d}{}\label{vtk-unstructured_8cpp_aa29105a5170680695be352fa0e00341d}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::\+V\+T\+K\+File\+\_\+t \&s,\+::xml\+\_\+schema\+::error\+\_\+handler \&h, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{VTKFile(::xercesc::XMLFormatTarget &t, const ::VTKFile_t &s,::xml_schema::error_handler &h, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+X\+M\+L\+Format\+Target \&}]{t, }
+\item[{const \+::{\bf V\+T\+K\+File\+\_\+t} \&}]{s, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_ab09b4a244a093deff01c76e0d066b039}{}\label{vtk-unstructured_8cpp_ab09b4a244a093deff01c76e0d066b039}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::\+V\+T\+K\+File\+\_\+t \&s,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{VTKFile(::xercesc::XMLFormatTarget &t, const ::VTKFile_t &s,::xercesc::DOMErrorHandler &h, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+X\+M\+L\+Format\+Target \&}]{t, }
+\item[{const \+::{\bf V\+T\+K\+File\+\_\+t} \&}]{s, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a08394e720690e6ac839c4c06f06fe1c7}{}\label{vtk-unstructured_8cpp_a08394e720690e6ac839c4c06f06fe1c7}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(\+::xercesc\+::\+D\+O\+M\+Document \&d, const \+::\+V\+T\+K\+File\+\_\+t \&s,\+::xml\+\_\+schema\+::flags)}{VTKFile(::xercesc::DOMDocument &d, const ::VTKFile_t &s,::xml_schema::flags)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Document \&}]{d, }
+\item[{const \+::{\bf V\+T\+K\+File\+\_\+t} \&}]{s, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a5303826a26dc8b0981ea314365205514}{}\label{vtk-unstructured_8cpp_a5303826a26dc8b0981ea314365205514}
+\index{vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}!V\+T\+K\+File@{V\+T\+K\+File}}
+\index{V\+T\+K\+File@{V\+T\+K\+File}!vtk-\/unstructured.\+cpp@{vtk-\/unstructured.\+cpp}}
+\subsubsection[{\texorpdfstring{V\+T\+K\+File(const \+::\+V\+T\+K\+File\+\_\+t \&s, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m,\+::xml\+\_\+schema\+::flags f)}{VTKFile(const ::VTKFile_t &s, const ::xml_schema::namespace_infomap &m,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xml\+\_\+schema\+::dom\+::unique\+\_\+ptr$<$ \+::xercesc\+::\+D\+O\+M\+Document $>$ V\+T\+K\+File (
+\begin{DoxyParamCaption}
+\item[{const \+::{\bf V\+T\+K\+File\+\_\+t} \&}]{s, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{vtk-unstructured_8cpp_a187ca2ef68f36ed0ff9970728665f8f6}{}\label{vtk-unstructured_8cpp_a187ca2ef68f36ed0ff9970728665f8f6}

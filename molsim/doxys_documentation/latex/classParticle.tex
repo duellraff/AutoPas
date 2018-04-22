@@ -1,0 +1,277 @@
+\hypertarget{classParticle}{}\section{Particle Class Reference}
+\label{classParticle}\index{Particle@{Particle}}
+
+
+{\ttfamily \#include $<$Particle.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classParticle_a866812d3dfb9c539e5e24593e596a8c9}{Particle} (int \hyperlink{classtype}{type}=0)
+\item 
+\hyperlink{classParticle_a24b04cb7c6f7ea4242d25c410f44ae56}{Particle} (const \hyperlink{classParticle}{Particle} \&other)
+\item 
+\hyperlink{classParticle_a7e4fe63e27ca0f024f94c0f7ce84697b}{Particle} (\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ x\+\_\+arg, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ v\+\_\+arg, int \hyperlink{classtype}{type}=0)
+\item 
+virtual \hyperlink{classParticle_ad030d0fe7b88cf81744b127c99244ff4}{$\sim$\+Particle} ()
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \& \hyperlink{classParticle_ab7ade5dc156dfa0234aa0323564e46ed}{getX} ()
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \& \hyperlink{classParticle_acd84c445e2bd5f5280a00e76cfe73fe0}{getF} ()
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \& \hyperlink{classParticle_a1204435fc08c697b0fea230616d1bbdf}{get\+OldF} ()
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \& \hyperlink{classParticle_add1f32d038d9fe65061168448b2b829e}{get\+ConstF} ()
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \& \hyperlink{classParticle_aaf3ecbc6e1e31b259fe239461ba13dbd}{getV} ()
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \& \hyperlink{classParticle_ac7ecd12061cccf37016558df2352329d}{get\+Grav} ()
+\item 
+void \hyperlink{classParticle_ad819812671e952af4aa2dc98b098586d}{actualise\+Neighbours} (\hyperlink{classParticle}{Particle} $\ast$newptr)
+\item 
+double \hyperlink{classParticle_aa1ca800f9be9dd4bd6c604f608095b24}{getM} ()
+\item 
+double \hyperlink{classParticle_a13b42f0d0766cd6f391962476033ee19}{get\+Hpart} ()
+\item 
+double \hyperlink{classParticle_af17968125ecd630dae78f90b88d0c339}{get\+Sigma} ()
+\item 
+double \hyperlink{classParticle_a700c3731f59f6865b4722849ce0a9243}{get\+Rtrunc\+LJ} ()
+\item 
+bool \hyperlink{classParticle_a50aaa2fc7f45ebabb09ec34e4501f45a}{get\+Fixed} ()
+\item 
+int \hyperlink{classParticle_a0581d7b629eb17ac5bef8e934852ca8b}{get\+Type} ()
+\item 
+int \hyperlink{classParticle_ad857b786f746a84e6cb19bbdadf8d404}{get\+Type\+ID} ()
+\item 
+std\+::array$<$ \hyperlink{classParticle}{Particle} $\ast$, 4 $>$ \& \hyperlink{classParticle_ab4c173183a5304a22dda80e03c50298a}{get\+Direct\+Neighbours} ()
+\item 
+std\+::array$<$ \hyperlink{classParticle}{Particle} $\ast$, 4 $>$ \& \hyperlink{classParticle_aefd56a4dcc71d75227203566d5deb566}{get\+Diagonal\+Neighbours} ()
+\item 
+bool \hyperlink{classParticle_a5034babb77618a56e00927d8891afabe}{operator==} (\hyperlink{classParticle}{Particle} \&other)
+\item 
+std\+::string \hyperlink{classParticle_a07d071a0f91f8ce7413201a6db3afe7b}{to\+String} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classParticle_a3789900d6fe19a75d3a82cd5e9622c4c}{x}
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classParticle_ac3669e50d83d8608d522965b9acd1d8b}{v}
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classParticle_ad9aa3e171ea950b2cff1b4825e67845b}{f}
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classParticle_ad9281e33474f23f7261f28848affc4a4}{old\+\_\+f}
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classParticle_a03ea7cdc9189a6ceb7c7829d03d578f3}{const\+\_\+f}
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classParticle_a8b248fe4a6231594ebb6c80ceb36338c}{ggrav}
+\item 
+std\+::array$<$ \hyperlink{classParticle}{Particle} $\ast$, 4 $>$ \hyperlink{classParticle_a1f69cc0e44588388ceeb8a2d43d7f9ea}{direct\+\_\+neighbours}
+\item 
+std\+::array$<$ \hyperlink{classParticle}{Particle} $\ast$, 4 $>$ \hyperlink{classParticle_a42ab275988974162ae197d7c089b387d}{diagonal\+\_\+neighbours}
+\item 
+int \hyperlink{classParticle_a2b73dd42bcd56ba2e7ffeb0a5515a866}{type}
+\item 
+int \hyperlink{classParticle_ab532eb4253f0ab3b3e7ac1cb0257b3de}{type\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Particle@{Particle}!Particle@{Particle}}
+\index{Particle@{Particle}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{Particle(int type=0)}{Particle(int type=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Particle\+::\+Particle (
+\begin{DoxyParamCaption}
+\item[{int}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticle_a866812d3dfb9c539e5e24593e596a8c9}{}\label{classParticle_a866812d3dfb9c539e5e24593e596a8c9}
+\index{Particle@{Particle}!Particle@{Particle}}
+\index{Particle@{Particle}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{Particle(const Particle \&other)}{Particle(const Particle &other)}}]{\setlength{\rightskip}{0pt plus 5cm}Particle\+::\+Particle (
+\begin{DoxyParamCaption}
+\item[{const {\bf Particle} \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticle_a24b04cb7c6f7ea4242d25c410f44ae56}{}\label{classParticle_a24b04cb7c6f7ea4242d25c410f44ae56}
+\index{Particle@{Particle}!Particle@{Particle}}
+\index{Particle@{Particle}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{Particle(utils\+::\+Vector$<$ double, 3 $>$ x\+\_\+arg, utils\+::\+Vector$<$ double, 3 $>$ v\+\_\+arg, int type=0)}{Particle(utils::Vector< double, 3 > x_arg, utils::Vector< double, 3 > v_arg, int type=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Particle\+::\+Particle (
+\begin{DoxyParamCaption}
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{x\+\_\+arg, }
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{v\+\_\+arg, }
+\item[{int}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticle_a7e4fe63e27ca0f024f94c0f7ce84697b}{}\label{classParticle_a7e4fe63e27ca0f024f94c0f7ce84697b}
+\index{Particle@{Particle}!````~Particle@{$\sim$\+Particle}}
+\index{````~Particle@{$\sim$\+Particle}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{$\sim$\+Particle()}{~Particle()}}]{\setlength{\rightskip}{0pt plus 5cm}Particle\+::$\sim$\+Particle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticle_ad030d0fe7b88cf81744b127c99244ff4}{}\label{classParticle_ad030d0fe7b88cf81744b127c99244ff4}
+
+
+\subsection{Member Function Documentation}
+\index{Particle@{Particle}!actualise\+Neighbours@{actualise\+Neighbours}}
+\index{actualise\+Neighbours@{actualise\+Neighbours}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{actualise\+Neighbours(\+Particle $\ast$newptr)}{actualiseNeighbours(Particle *newptr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+::actualise\+Neighbours (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} $\ast$}]{newptr}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticle_ad819812671e952af4aa2dc98b098586d}{}\label{classParticle_ad819812671e952af4aa2dc98b098586d}
+\index{Particle@{Particle}!get\+ConstF@{get\+ConstF}}
+\index{get\+ConstF@{get\+ConstF}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Const\+F()}{getConstF()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$ double, 3 $>$ \& Particle\+::get\+ConstF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_add1f32d038d9fe65061168448b2b829e}{}\label{classParticle_add1f32d038d9fe65061168448b2b829e}
+\index{Particle@{Particle}!get\+Diagonal\+Neighbours@{get\+Diagonal\+Neighbours}}
+\index{get\+Diagonal\+Neighbours@{get\+Diagonal\+Neighbours}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Diagonal\+Neighbours()}{getDiagonalNeighbours()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::array$<$ {\bf Particle} $\ast$, 4 $>$ \& Particle\+::get\+Diagonal\+Neighbours (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_aefd56a4dcc71d75227203566d5deb566}{}\label{classParticle_aefd56a4dcc71d75227203566d5deb566}
+\index{Particle@{Particle}!get\+Direct\+Neighbours@{get\+Direct\+Neighbours}}
+\index{get\+Direct\+Neighbours@{get\+Direct\+Neighbours}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Direct\+Neighbours()}{getDirectNeighbours()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::array$<$ {\bf Particle} $\ast$, 4 $>$ \& Particle\+::get\+Direct\+Neighbours (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_ab4c173183a5304a22dda80e03c50298a}{}\label{classParticle_ab4c173183a5304a22dda80e03c50298a}
+\index{Particle@{Particle}!getF@{getF}}
+\index{getF@{getF}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+F()}{getF()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$ double, 3 $>$ \& Particle\+::getF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_acd84c445e2bd5f5280a00e76cfe73fe0}{}\label{classParticle_acd84c445e2bd5f5280a00e76cfe73fe0}
+\index{Particle@{Particle}!get\+Fixed@{get\+Fixed}}
+\index{get\+Fixed@{get\+Fixed}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Fixed()}{getFixed()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Particle\+::get\+Fixed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_a50aaa2fc7f45ebabb09ec34e4501f45a}{}\label{classParticle_a50aaa2fc7f45ebabb09ec34e4501f45a}
+\index{Particle@{Particle}!get\+Grav@{get\+Grav}}
+\index{get\+Grav@{get\+Grav}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Grav()}{getGrav()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$ double, 3 $>$ \& Particle\+::get\+Grav (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_ac7ecd12061cccf37016558df2352329d}{}\label{classParticle_ac7ecd12061cccf37016558df2352329d}
+\index{Particle@{Particle}!get\+Hpart@{get\+Hpart}}
+\index{get\+Hpart@{get\+Hpart}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Hpart()}{getHpart()}}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\+::get\+Hpart (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_a13b42f0d0766cd6f391962476033ee19}{}\label{classParticle_a13b42f0d0766cd6f391962476033ee19}
+\index{Particle@{Particle}!getM@{getM}}
+\index{getM@{getM}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+M()}{getM()}}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\+::getM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_aa1ca800f9be9dd4bd6c604f608095b24}{}\label{classParticle_aa1ca800f9be9dd4bd6c604f608095b24}
+\index{Particle@{Particle}!get\+OldF@{get\+OldF}}
+\index{get\+OldF@{get\+OldF}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Old\+F()}{getOldF()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$ double, 3 $>$ \& Particle\+::get\+OldF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_a1204435fc08c697b0fea230616d1bbdf}{}\label{classParticle_a1204435fc08c697b0fea230616d1bbdf}
+\index{Particle@{Particle}!get\+Rtrunc\+LJ@{get\+Rtrunc\+LJ}}
+\index{get\+Rtrunc\+LJ@{get\+Rtrunc\+LJ}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Rtrunc\+L\+J()}{getRtruncLJ()}}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\+::get\+Rtrunc\+LJ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_a700c3731f59f6865b4722849ce0a9243}{}\label{classParticle_a700c3731f59f6865b4722849ce0a9243}
+\index{Particle@{Particle}!get\+Sigma@{get\+Sigma}}
+\index{get\+Sigma@{get\+Sigma}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Sigma()}{getSigma()}}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\+::get\+Sigma (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_af17968125ecd630dae78f90b88d0c339}{}\label{classParticle_af17968125ecd630dae78f90b88d0c339}
+\index{Particle@{Particle}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Type()}{getType()}}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_a0581d7b629eb17ac5bef8e934852ca8b}{}\label{classParticle_a0581d7b629eb17ac5bef8e934852ca8b}
+\index{Particle@{Particle}!get\+Type\+ID@{get\+Type\+ID}}
+\index{get\+Type\+ID@{get\+Type\+ID}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+Type\+I\+D()}{getTypeID()}}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\+::get\+Type\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_ad857b786f746a84e6cb19bbdadf8d404}{}\label{classParticle_ad857b786f746a84e6cb19bbdadf8d404}
+\index{Particle@{Particle}!getV@{getV}}
+\index{getV@{getV}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+V()}{getV()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$ double, 3 $>$ \& Particle\+::getV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_aaf3ecbc6e1e31b259fe239461ba13dbd}{}\label{classParticle_aaf3ecbc6e1e31b259fe239461ba13dbd}
+\index{Particle@{Particle}!getX@{getX}}
+\index{getX@{getX}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{get\+X()}{getX()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$ double, 3 $>$ \& Particle\+::getX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticle_ab7ade5dc156dfa0234aa0323564e46ed}{}\label{classParticle_ab7ade5dc156dfa0234aa0323564e46ed}
+\index{Particle@{Particle}!operator==@{operator==}}
+\index{operator==@{operator==}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{operator==(\+Particle \&other)}{operator==(Particle &other)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Particle\+::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticle_a5034babb77618a56e00927d8891afabe}{}\label{classParticle_a5034babb77618a56e00927d8891afabe}
+\index{Particle@{Particle}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{to\+String()}{toString()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Particle\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticle_a07d071a0f91f8ce7413201a6db3afe7b}{}\label{classParticle_a07d071a0f91f8ce7413201a6db3afe7b}
+
+
+\subsection{Member Data Documentation}
+\index{Particle@{Particle}!const\+\_\+f@{const\+\_\+f}}
+\index{const\+\_\+f@{const\+\_\+f}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{const\+\_\+f}{const_f}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$double, 3$>$ Particle\+::const\+\_\+f\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParticle_a03ea7cdc9189a6ceb7c7829d03d578f3}{}\label{classParticle_a03ea7cdc9189a6ceb7c7829d03d578f3}
+a constant force always effective on this particle \index{Particle@{Particle}!diagonal\+\_\+neighbours@{diagonal\+\_\+neighbours}}
+\index{diagonal\+\_\+neighbours@{diagonal\+\_\+neighbours}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{diagonal\+\_\+neighbours}{diagonal_neighbours}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::array$<${\bf Particle}$\ast$,4$>$ Particle\+::diagonal\+\_\+neighbours\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParticle_a42ab275988974162ae197d7c089b387d}{}\label{classParticle_a42ab275988974162ae197d7c089b387d}
+\index{Particle@{Particle}!direct\+\_\+neighbours@{direct\+\_\+neighbours}}
+\index{direct\+\_\+neighbours@{direct\+\_\+neighbours}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{direct\+\_\+neighbours}{direct_neighbours}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::array$<${\bf Particle}$\ast$,4$>$ Particle\+::direct\+\_\+neighbours\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParticle_a1f69cc0e44588388ceeb8a2d43d7f9ea}{}\label{classParticle_a1f69cc0e44588388ceeb8a2d43d7f9ea}
+list of pointers to all neighbouring particles \index{Particle@{Particle}!f@{f}}
+\index{f@{f}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{f}{f}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$double, 3$>$ Particle\+::f\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParticle_ad9aa3e171ea950b2cff1b4825e67845b}{}\label{classParticle_ad9aa3e171ea950b2cff1b4825e67845b}
+the force effective on this particle \index{Particle@{Particle}!ggrav@{ggrav}}
+\index{ggrav@{ggrav}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{ggrav}{ggrav}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$double, 3$>$ Particle\+::ggrav\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParticle_a8b248fe4a6231594ebb6c80ceb36338c}{}\label{classParticle_a8b248fe4a6231594ebb6c80ceb36338c}
+the gravity acting on the particle \index{Particle@{Particle}!old\+\_\+f@{old\+\_\+f}}
+\index{old\+\_\+f@{old\+\_\+f}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{old\+\_\+f}{old_f}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$double, 3$>$ Particle\+::old\+\_\+f\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParticle_ad9281e33474f23f7261f28848affc4a4}{}\label{classParticle_ad9281e33474f23f7261f28848affc4a4}
+the force which was effective on this particle \index{Particle@{Particle}!type@{type}}
+\index{type@{type}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{type}{type}}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\+::type\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParticle_a2b73dd42bcd56ba2e7ffeb0a5515a866}{}\label{classParticle_a2b73dd42bcd56ba2e7ffeb0a5515a866}
+type of the particle. Use it for whatever you want (e.\+g. to seperate molecules belonging to different bodies, matters, and so on) \index{Particle@{Particle}!type\+\_\+id@{type\+\_\+id}}
+\index{type\+\_\+id@{type\+\_\+id}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{type\+\_\+id}{type_id}}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\+::type\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParticle_ab532eb4253f0ab3b3e7ac1cb0257b3de}{}\label{classParticle_ab532eb4253f0ab3b3e7ac1cb0257b3de}
+\index{Particle@{Particle}!v@{v}}
+\index{v@{v}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{v}{v}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$double, 3$>$ Particle\+::v\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParticle_ac3669e50d83d8608d522965b9acd1d8b}{}\label{classParticle_ac3669e50d83d8608d522965b9acd1d8b}
+the velocity of the particle \index{Particle@{Particle}!x@{x}}
+\index{x@{x}!Particle@{Particle}}
+\subsubsection[{\texorpdfstring{x}{x}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$double, 3$>$ Particle\+::x\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classParticle_a3789900d6fe19a75d3a82cd5e9622c4c}{}\label{classParticle_a3789900d6fe19a75d3a82cd5e9622c4c}
+the position of the particle 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Particle_8h}{Particle.\+h}\item 
+src/\hyperlink{Particle_8cpp}{Particle.\+cpp}\end{DoxyCompactItemize}

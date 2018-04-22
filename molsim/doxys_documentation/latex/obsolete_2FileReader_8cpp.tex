@@ -1,0 +1,58 @@
+\hypertarget{obsolete_2FileReader_8cpp}{}\section{obsolete/\+File\+Reader.cpp File Reference}
+\label{obsolete_2FileReader_8cpp}\index{obsolete/\+File\+Reader.\+cpp@{obsolete/\+File\+Reader.\+cpp}}
+{\ttfamily \#include \char`\"{}File\+Reader.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils/\+Vector.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$log4cxx/logger.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Logger\+Ptr \hyperlink{obsolete_2FileReader_8cpp_a51b9b8c68aa915273fc0bb4d2c8f1216}{logger} (Logger\+::get\+Logger(\char`\"{}Mol\+Sim.\+File\+Reader\char`\"{}))
+\item 
+void \hyperlink{obsolete_2FileReader_8cpp_a73897690c3fcba790563d92d3a2a50fc}{read\+Single\+Particle} (\hyperlink{classParticleContainer}{Particle\+Container} $\ast$particles, std\+::ifstream \&input\+\_\+file)
+\item 
+void \hyperlink{obsolete_2FileReader_8cpp_aec04f7cc848ae4196549153e24edf443}{read\+Cuboid} (\hyperlink{classParticleContainer}{Particle\+Container} $\ast$particles, std\+::ifstream \&input\+\_\+file)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{obsolete/\+File\+Reader.\+cpp@{obsolete/\+File\+Reader.\+cpp}!logger@{logger}}
+\index{logger@{logger}!obsolete/\+File\+Reader.\+cpp@{obsolete/\+File\+Reader.\+cpp}}
+\subsubsection[{\texorpdfstring{logger(\+Logger\+::get\+Logger(""Mol\+Sim.\+File\+Reader""))}{logger(Logger::getLogger("MolSim.FileReader"))}}]{\setlength{\rightskip}{0pt plus 5cm}static Logger\+Ptr logger (
+\begin{DoxyParamCaption}
+\item[{Logger\+::get\+Logger(\char`\"{}Mol\+Sim.\+File\+Reader\char`\"{})}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{obsolete_2FileReader_8cpp_a51b9b8c68aa915273fc0bb4d2c8f1216}{}\label{obsolete_2FileReader_8cpp_a51b9b8c68aa915273fc0bb4d2c8f1216}
+\index{obsolete/\+File\+Reader.\+cpp@{obsolete/\+File\+Reader.\+cpp}!read\+Cuboid@{read\+Cuboid}}
+\index{read\+Cuboid@{read\+Cuboid}!obsolete/\+File\+Reader.\+cpp@{obsolete/\+File\+Reader.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+Cuboid(\+Particle\+Container $\ast$particles, std\+::ifstream \&input\+\_\+file)}{readCuboid(ParticleContainer *particles, std::ifstream &input_file)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Cuboid (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle\+Container} $\ast$}]{particles, }
+\item[{std\+::ifstream \&}]{input\+\_\+file}
+\end{DoxyParamCaption}
+)}\hypertarget{obsolete_2FileReader_8cpp_aec04f7cc848ae4196549153e24edf443}{}\label{obsolete_2FileReader_8cpp_aec04f7cc848ae4196549153e24edf443}
+Read cuboids of particles from a file 
+\begin{DoxyParams}{Parameters}
+{\em particles} & the container to add the particles \\
+\hline
+{\em input\+\_\+file} & stream containing information to generate the particles \\
+\hline
+\end{DoxyParams}
+\index{obsolete/\+File\+Reader.\+cpp@{obsolete/\+File\+Reader.\+cpp}!read\+Single\+Particle@{read\+Single\+Particle}}
+\index{read\+Single\+Particle@{read\+Single\+Particle}!obsolete/\+File\+Reader.\+cpp@{obsolete/\+File\+Reader.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+Single\+Particle(\+Particle\+Container $\ast$particles, std\+::ifstream \&input\+\_\+file)}{readSingleParticle(ParticleContainer *particles, std::ifstream &input_file)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Single\+Particle (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle\+Container} $\ast$}]{particles, }
+\item[{std\+::ifstream \&}]{input\+\_\+file}
+\end{DoxyParamCaption}
+)}\hypertarget{obsolete_2FileReader_8cpp_a73897690c3fcba790563d92d3a2a50fc}{}\label{obsolete_2FileReader_8cpp_a73897690c3fcba790563d92d3a2a50fc}
+Read single particles from a file 
+\begin{DoxyParams}{Parameters}
+{\em particles} & the container to add the particles \\
+\hline
+{\em input\+\_\+file} & stream containing information to generate the particles \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,366 @@
+\hypertarget{particle__input_8cpp}{}\section{src/input/particle\+\_\+input.cpp File Reference}
+\label{particle__input_8cpp}\index{src/input/particle\+\_\+input.\+cpp@{src/input/particle\+\_\+input.\+cpp}}
+{\ttfamily \#include $<$xsd/cxx/pre.\+hxx$>$}\\*
+{\ttfamily \#include \char`\"{}particle\+\_\+input.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$xsd/cxx/xml/dom/parsing-\/source.\+hxx$>$}\\*
+{\ttfamily \#include $<$istream$>$}\\*
+{\ttfamily \#include $<$xsd/cxx/xml/sax/std-\/input-\/source.\+hxx$>$}\\*
+{\ttfamily \#include $<$xsd/cxx/tree/error-\/handler.\+hxx$>$}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+{\ttfamily \#include $<$xsd/cxx/xml/dom/serialization-\/source.\+hxx$>$}\\*
+{\ttfamily \#include $<$xsd/cxx/post.\+hxx$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a9ffcdd10b0eaf28940f473f4bd8e6a19}{particle\+\_\+input} (const \+::std\+::string \&u,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a757099d6789ae8d97e37be4c50be5ad0}{particle\+\_\+input} (const \+::std\+::string \&u,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a95cbebd67d03505fc942ebe173c57cc2}{particle\+\_\+input} (const \+::std\+::string \&u,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a11973ecb4c7bd22c57be8064bd4179de}{particle\+\_\+input} (\+::std\+::istream \&is,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a4cf814a1f710d1318db1e8f55d5affef}{particle\+\_\+input} (\+::std\+::istream \&is,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a86e6d89b865b30eac6c295257548dcb4}{particle\+\_\+input} (\+::std\+::istream \&is,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a5999325db5a25b1d94495091738c7912}{particle\+\_\+input} (\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_aad2f5a343fccd323005fc0e41052de38}{particle\+\_\+input} (\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a1bbaf15a8a5dd50636ed94efe2f6a1b7}{particle\+\_\+input} (\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a7c8e5f1e6c6e9efd3e1ee9d6eadc72f8}{particle\+\_\+input} (\+::xercesc\+::\+Input\+Source \&i,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a9a78c67ffe1cfd3504fb384b9b97e17a}{particle\+\_\+input} (\+::xercesc\+::\+Input\+Source \&i,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_a6e02f55005c94bc463b671f21836781e}{particle\+\_\+input} (\+::xercesc\+::\+Input\+Source \&i,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_af28d2e51515494017d237880b697987e}{particle\+\_\+input} (const \+::xercesc\+::\+D\+O\+M\+Document \&doc,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&p)
+\item 
+\+::std\+::unique\+\_\+ptr$<$ \+::\hyperlink{classinput__t}{input\+\_\+t} $>$ \hyperlink{particle__input_8cpp_adcf5e26b17c994fcf88eb3391a6d2447}{particle\+\_\+input} (\+::xml\+\_\+schema\+::dom\+::unique\+\_\+ptr$<$ \+::xercesc\+::\+D\+O\+M\+Document $>$ d,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f, const \+::\hyperlink{namespacexml__schema_a1a8ebac679580b41baebd62c7d641c1d}{xml\+\_\+schema\+::properties} \&)
+\item 
+void \hyperlink{particle__input_8cpp_a0252e6baad148243016a30ebd5629ad7}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classvector__t}{vector\+\_\+t} \&i)
+\item 
+void \hyperlink{particle__input_8cpp_a2bbc8f981425db6ae248df0814b4422d}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classint__vector__t}{int\+\_\+vector\+\_\+t} \&i)
+\item 
+void \hyperlink{particle__input_8cpp_aa4dcc37b0077bd2eccdc396f7760c9ff}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classparticletype__t}{particletype\+\_\+t} \&i)
+\item 
+void \hyperlink{particle__input_8cpp_ab7aed5e3dc4320e7ef993a68b5d185b2}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classsingle__t}{single\+\_\+t} \&i)
+\item 
+void \hyperlink{particle__input_8cpp_ab70e32e12051e60fa582795960cdfe70}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classcuboid__t}{cuboid\+\_\+t} \&i)
+\item 
+void \hyperlink{particle__input_8cpp_a30ca4e5d38b16db5604837ad1b3d9aae}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classmembrane__t}{membrane\+\_\+t} \&i)
+\item 
+void \hyperlink{particle__input_8cpp_abb14c33ec516e966c66b18a5e201e4c5}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classsphere__t}{sphere\+\_\+t} \&i)
+\item 
+void \hyperlink{particle__input_8cpp_af8a1783a478113f1ccbbb1278a2dccf8}{operator$<$$<$} (\+::xercesc\+::\+D\+O\+M\+Element \&e, const \hyperlink{classinput__t}{input\+\_\+t} \&i)
+\item 
+void \hyperlink{particle__input_8cpp_a392f59c3c4e10c7a05ace516999a4e50}{particle\+\_\+input} (\+::std\+::ostream \&o, const \+::\hyperlink{classinput__t}{input\+\_\+t} \&s, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{particle__input_8cpp_a976ed1344e41e02a52afdc3da5a1ada8}{particle\+\_\+input} (\+::std\+::ostream \&o, const \+::\hyperlink{classinput__t}{input\+\_\+t} \&s,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{particle__input_8cpp_aede2024856bacc55995c97d2c9a37118}{particle\+\_\+input} (\+::std\+::ostream \&o, const \+::\hyperlink{classinput__t}{input\+\_\+t} \&s,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{particle__input_8cpp_a58cddeeb39f2fca1a2131de412bda82e}{particle\+\_\+input} (\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::\hyperlink{classinput__t}{input\+\_\+t} \&s, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{particle__input_8cpp_a6bd7a633acb7b8d35aa36815e0357581}{particle\+\_\+input} (\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::\hyperlink{classinput__t}{input\+\_\+t} \&s,\+::\hyperlink{namespacexml__schema_a0a5d9528e9175cedf199984a8bb64d62}{xml\+\_\+schema\+::error\+\_\+handler} \&h, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{particle__input_8cpp_a88404c4a52bc3968dcad922fbfd1c28a}{particle\+\_\+input} (\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::\hyperlink{classinput__t}{input\+\_\+t} \&s,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m, const \+::std\+::string \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\item 
+void \hyperlink{particle__input_8cpp_aac5432a2841d282b057e165844233c7f}{particle\+\_\+input} (\+::xercesc\+::\+D\+O\+M\+Document \&d, const \+::\hyperlink{classinput__t}{input\+\_\+t} \&s,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags})
+\item 
+\+::xml\+\_\+schema\+::dom\+::unique\+\_\+ptr$<$ \+::xercesc\+::\+D\+O\+M\+Document $>$ \hyperlink{particle__input_8cpp_ac63a99646f4715f656cdf154ecffb2ba}{particle\+\_\+input} (const \+::\hyperlink{classinput__t}{input\+\_\+t} \&s, const \+::\hyperlink{namespacexml__schema_a17712c8260e03226f0a9e4d21ab78f42}{xml\+\_\+schema\+::namespace\+\_\+infomap} \&m,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const vector\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const vector_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf vector\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a0252e6baad148243016a30ebd5629ad7}{}\label{particle__input_8cpp_a0252e6baad148243016a30ebd5629ad7}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const int\+\_\+vector\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const int_vector_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf int\+\_\+vector\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a2bbc8f981425db6ae248df0814b4422d}{}\label{particle__input_8cpp_a2bbc8f981425db6ae248df0814b4422d}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const particletype\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const particletype_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf particletype\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_aa4dcc37b0077bd2eccdc396f7760c9ff}{}\label{particle__input_8cpp_aa4dcc37b0077bd2eccdc396f7760c9ff}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const single\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const single_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf single\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_ab7aed5e3dc4320e7ef993a68b5d185b2}{}\label{particle__input_8cpp_ab7aed5e3dc4320e7ef993a68b5d185b2}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const cuboid\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const cuboid_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf cuboid\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_ab70e32e12051e60fa582795960cdfe70}{}\label{particle__input_8cpp_ab70e32e12051e60fa582795960cdfe70}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const membrane\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const membrane_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf membrane\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a30ca4e5d38b16db5604837ad1b3d9aae}{}\label{particle__input_8cpp_a30ca4e5d38b16db5604837ad1b3d9aae}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const sphere\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const sphere_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf sphere\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_abb14c33ec516e966c66b18a5e201e4c5}{}\label{particle__input_8cpp_abb14c33ec516e966c66b18a5e201e4c5}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+::xercesc\+::\+D\+O\+M\+Element \&e, const input\+\_\+t \&i)}{operator<<(::xercesc::DOMElement &e, const input_t &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{const {\bf input\+\_\+t} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_af8a1783a478113f1ccbbb1278a2dccf8}{}\label{particle__input_8cpp_af8a1783a478113f1ccbbb1278a2dccf8}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(const \+::std\+::string \&u,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(const ::std::string &u,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const \+::std\+::string \&}]{u, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a9ffcdd10b0eaf28940f473f4bd8e6a19}{}\label{particle__input_8cpp_a9ffcdd10b0eaf28940f473f4bd8e6a19}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(const \+::std\+::string \&u,\+::xml\+\_\+schema\+::error\+\_\+handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(const ::std::string &u,::xml_schema::error_handler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const \+::std\+::string \&}]{u, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a757099d6789ae8d97e37be4c50be5ad0}{}\label{particle__input_8cpp_a757099d6789ae8d97e37be4c50be5ad0}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(const \+::std\+::string \&u,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(const ::std::string &u,::xercesc::DOMErrorHandler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const \+::std\+::string \&}]{u, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a95cbebd67d03505fc942ebe173c57cc2}{}\label{particle__input_8cpp_a95cbebd67d03505fc942ebe173c57cc2}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::std\+::istream \&is,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(::std::istream &is,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a11973ecb4c7bd22c57be8064bd4179de}{}\label{particle__input_8cpp_a11973ecb4c7bd22c57be8064bd4179de}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::std\+::istream \&is,\+::xml\+\_\+schema\+::error\+\_\+handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(::std::istream &is,::xml_schema::error_handler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a4cf814a1f710d1318db1e8f55d5affef}{}\label{particle__input_8cpp_a4cf814a1f710d1318db1e8f55d5affef}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::std\+::istream \&is,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(::std::istream &is,::xercesc::DOMErrorHandler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a86e6d89b865b30eac6c295257548dcb4}{}\label{particle__input_8cpp_a86e6d89b865b30eac6c295257548dcb4}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(::std::istream &is, const ::std::string &sid,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{const \+::std\+::string \&}]{sid, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a5999325db5a25b1d94495091738c7912}{}\label{particle__input_8cpp_a5999325db5a25b1d94495091738c7912}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::xml\+\_\+schema\+::error\+\_\+handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(::std::istream &is, const ::std::string &sid,::xml_schema::error_handler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{const \+::std\+::string \&}]{sid, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_aad2f5a343fccd323005fc0e41052de38}{}\label{particle__input_8cpp_aad2f5a343fccd323005fc0e41052de38}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::std\+::istream \&is, const \+::std\+::string \&sid,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(::std::istream &is, const ::std::string &sid,::xercesc::DOMErrorHandler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::istream \&}]{is, }
+\item[{const \+::std\+::string \&}]{sid, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a1bbaf15a8a5dd50636ed94efe2f6a1b7}{}\label{particle__input_8cpp_a1bbaf15a8a5dd50636ed94efe2f6a1b7}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::xercesc\+::\+Input\+Source \&i,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(::xercesc::InputSource &i,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+Input\+Source \&}]{i, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a7c8e5f1e6c6e9efd3e1ee9d6eadc72f8}{}\label{particle__input_8cpp_a7c8e5f1e6c6e9efd3e1ee9d6eadc72f8}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::xercesc\+::\+Input\+Source \&i,\+::xml\+\_\+schema\+::error\+\_\+handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(::xercesc::InputSource &i,::xml_schema::error_handler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+Input\+Source \&}]{i, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a9a78c67ffe1cfd3504fb384b9b97e17a}{}\label{particle__input_8cpp_a9a78c67ffe1cfd3504fb384b9b97e17a}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::xercesc\+::\+Input\+Source \&i,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(::xercesc::InputSource &i,::xercesc::DOMErrorHandler &h,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+Input\+Source \&}]{i, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a6e02f55005c94bc463b671f21836781e}{}\label{particle__input_8cpp_a6e02f55005c94bc463b671f21836781e}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(const \+::xercesc\+::\+D\+O\+M\+Document \&doc,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&p)}{particle_input(const ::xercesc::DOMDocument &doc,::xml_schema::flags f, const ::xml_schema::properties &p)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const \+::xercesc\+::\+D\+O\+M\+Document \&}]{doc, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_af28d2e51515494017d237880b697987e}{}\label{particle__input_8cpp_af28d2e51515494017d237880b697987e}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::xml\+\_\+schema\+::dom\+::unique\+\_\+ptr$<$ \+::xercesc\+::\+D\+O\+M\+Document $>$ d,\+::xml\+\_\+schema\+::flags f, const \+::xml\+\_\+schema\+::properties \&)}{particle_input(::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,::xml_schema::flags f, const ::xml_schema::properties &)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::unique\+\_\+ptr$<$ \+::{\bf input\+\_\+t} $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::xml\+\_\+schema\+::dom\+::unique\+\_\+ptr$<$ \+::xercesc\+::\+D\+O\+M\+Document $>$}]{d, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f, }
+\item[{const \+::{\bf xml\+\_\+schema\+::properties} \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_adcf5e26b17c994fcf88eb3391a6d2447}{}\label{particle__input_8cpp_adcf5e26b17c994fcf88eb3391a6d2447}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::std\+::ostream \&o, const \+::input\+\_\+t \&s, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{particle_input(::std::ostream &o, const ::input_t &s, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream \&}]{o, }
+\item[{const \+::{\bf input\+\_\+t} \&}]{s, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a392f59c3c4e10c7a05ace516999a4e50}{}\label{particle__input_8cpp_a392f59c3c4e10c7a05ace516999a4e50}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::std\+::ostream \&o, const \+::input\+\_\+t \&s,\+::xml\+\_\+schema\+::error\+\_\+handler \&h, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{particle_input(::std::ostream &o, const ::input_t &s,::xml_schema::error_handler &h, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream \&}]{o, }
+\item[{const \+::{\bf input\+\_\+t} \&}]{s, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a976ed1344e41e02a52afdc3da5a1ada8}{}\label{particle__input_8cpp_a976ed1344e41e02a52afdc3da5a1ada8}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::std\+::ostream \&o, const \+::input\+\_\+t \&s,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{particle_input(::std::ostream &o, const ::input_t &s,::xercesc::DOMErrorHandler &h, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream \&}]{o, }
+\item[{const \+::{\bf input\+\_\+t} \&}]{s, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_aede2024856bacc55995c97d2c9a37118}{}\label{particle__input_8cpp_aede2024856bacc55995c97d2c9a37118}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::input\+\_\+t \&s, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{particle_input(::xercesc::XMLFormatTarget &t, const ::input_t &s, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+X\+M\+L\+Format\+Target \&}]{t, }
+\item[{const \+::{\bf input\+\_\+t} \&}]{s, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a58cddeeb39f2fca1a2131de412bda82e}{}\label{particle__input_8cpp_a58cddeeb39f2fca1a2131de412bda82e}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::input\+\_\+t \&s,\+::xml\+\_\+schema\+::error\+\_\+handler \&h, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{particle_input(::xercesc::XMLFormatTarget &t, const ::input_t &s,::xml_schema::error_handler &h, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+X\+M\+L\+Format\+Target \&}]{t, }
+\item[{const \+::{\bf input\+\_\+t} \&}]{s, }
+\item[{\+::{\bf xml\+\_\+schema\+::error\+\_\+handler} \&}]{h, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a6bd7a633acb7b8d35aa36815e0357581}{}\label{particle__input_8cpp_a6bd7a633acb7b8d35aa36815e0357581}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::xercesc\+::\+X\+M\+L\+Format\+Target \&t, const \+::input\+\_\+t \&s,\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&h, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m, const \+::std\+::string \&e,\+::xml\+\_\+schema\+::flags f)}{particle_input(::xercesc::XMLFormatTarget &t, const ::input_t &s,::xercesc::DOMErrorHandler &h, const ::xml_schema::namespace_infomap &m, const ::std::string &e,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}void particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+X\+M\+L\+Format\+Target \&}]{t, }
+\item[{const \+::{\bf input\+\_\+t} \&}]{s, }
+\item[{\+::xercesc\+::\+D\+O\+M\+Error\+Handler \&}]{h, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{const \+::std\+::string \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_a88404c4a52bc3968dcad922fbfd1c28a}{}\label{particle__input_8cpp_a88404c4a52bc3968dcad922fbfd1c28a}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(\+::xercesc\+::\+D\+O\+M\+Document \&d, const \+::input\+\_\+t \&s,\+::xml\+\_\+schema\+::flags)}{particle_input(::xercesc::DOMDocument &d, const ::input_t &s,::xml_schema::flags)}}]{\setlength{\rightskip}{0pt plus 5cm}void particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{\+::xercesc\+::\+D\+O\+M\+Document \&}]{d, }
+\item[{const \+::{\bf input\+\_\+t} \&}]{s, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_aac5432a2841d282b057e165844233c7f}{}\label{particle__input_8cpp_aac5432a2841d282b057e165844233c7f}
+\index{particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}!particle\+\_\+input@{particle\+\_\+input}}
+\index{particle\+\_\+input@{particle\+\_\+input}!particle\+\_\+input.\+cpp@{particle\+\_\+input.\+cpp}}
+\subsubsection[{\texorpdfstring{particle\+\_\+input(const \+::input\+\_\+t \&s, const \+::xml\+\_\+schema\+::namespace\+\_\+infomap \&m,\+::xml\+\_\+schema\+::flags f)}{particle_input(const ::input_t &s, const ::xml_schema::namespace_infomap &m,::xml_schema::flags f)}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xml\+\_\+schema\+::dom\+::unique\+\_\+ptr$<$ \+::xercesc\+::\+D\+O\+M\+Document $>$ particle\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const \+::{\bf input\+\_\+t} \&}]{s, }
+\item[{const \+::{\bf xml\+\_\+schema\+::namespace\+\_\+infomap} \&}]{m, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)}\hypertarget{particle__input_8cpp_ac63a99646f4715f656cdf154ecffb2ba}{}\label{particle__input_8cpp_ac63a99646f4715f656cdf154ecffb2ba}

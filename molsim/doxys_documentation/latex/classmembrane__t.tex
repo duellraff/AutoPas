@@ -1,0 +1,631 @@
+\hypertarget{classmembrane__t}{}\section{membrane\+\_\+t Class Reference}
+\label{classmembrane__t}\index{membrane\+\_\+t@{membrane\+\_\+t}}
+
+
+{\ttfamily \#include $<$particle\+\_\+input.\+h$>$}
+
+Inheritance diagram for membrane\+\_\+t\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmembrane__t}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+::\hyperlink{namespacexml__schema_aac2d3d3483d3a20e8d96d2e8e5b3a470}{xml\+\_\+schema\+::double\+\_\+} \hyperlink{classmembrane__t_a9e55619d3d02a55660849deaa0ca4338}{stiffness\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classmembrane__t_a9e55619d3d02a55660849deaa0ca4338}{stiffness\+\_\+type}, char,\+::xsd\+::cxx\+::tree\+::schema\+\_\+type\+::double\+\_\+ $>$ \hyperlink{classmembrane__t_a90e2a51b2f18f88127057a926cce542a}{stiffness\+\_\+traits}
+\item 
+typedef \+::\hyperlink{namespacexml__schema_aac2d3d3483d3a20e8d96d2e8e5b3a470}{xml\+\_\+schema\+::double\+\_\+} \hyperlink{classmembrane__t_ab1e0c179101c4b2916059925d73468ff}{r\+\_\+zero\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classmembrane__t_ab1e0c179101c4b2916059925d73468ff}{r\+\_\+zero\+\_\+type}, char,\+::xsd\+::cxx\+::tree\+::schema\+\_\+type\+::double\+\_\+ $>$ \hyperlink{classmembrane__t_aebe5eb10f95c19f95c3946d3bbb9adb8}{r\+\_\+zero\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classvector__t}{vector\+\_\+t} \hyperlink{classmembrane__t_ab4d91a3ba331c16adbf69418f876f849}{force\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::optional$<$ \hyperlink{classmembrane__t_ab4d91a3ba331c16adbf69418f876f849}{force\+\_\+type} $>$ \hyperlink{classmembrane__t_a558422b23faa72b3e4cbc060f9ff8ea3}{force\+\_\+optional}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classmembrane__t_ab4d91a3ba331c16adbf69418f876f849}{force\+\_\+type}, char $>$ \hyperlink{classmembrane__t_a2b6b177c77d6eddf152913810d47f7f7}{force\+\_\+traits}
+\item 
+typedef \+::\hyperlink{namespacexml__schema_aac2d3d3483d3a20e8d96d2e8e5b3a470}{xml\+\_\+schema\+::double\+\_\+} \hyperlink{classmembrane__t_a9c464d55e3d8162b6bb521d9dd6d761d}{t\+\_\+end\+\_\+force\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::optional$<$ \hyperlink{classmembrane__t_a9c464d55e3d8162b6bb521d9dd6d761d}{t\+\_\+end\+\_\+force\+\_\+type} $>$ \hyperlink{classmembrane__t_a7725d61ae95e124d402a8d9db7a08376}{t\+\_\+end\+\_\+force\+\_\+optional}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classmembrane__t_a9c464d55e3d8162b6bb521d9dd6d761d}{t\+\_\+end\+\_\+force\+\_\+type}, char,\+::xsd\+::cxx\+::tree\+::schema\+\_\+type\+::double\+\_\+ $>$ \hyperlink{classmembrane__t_a6e52d2cbbfa0781d7ce3aec95ce1a7ab}{t\+\_\+end\+\_\+force\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classint__vector__t}{int\+\_\+vector\+\_\+t} \hyperlink{classmembrane__t_a8866c2084ca9b88e98340080008777e5}{coord\+\_\+force\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ \hyperlink{classmembrane__t_a8866c2084ca9b88e98340080008777e5}{coord\+\_\+force\+\_\+type} $>$ \hyperlink{classmembrane__t_a2825c9df8bf471f2c5053a826cf6fcb0}{coord\+\_\+force\+\_\+sequence}
+\item 
+typedef coord\+\_\+force\+\_\+sequence\+::iterator \hyperlink{classmembrane__t_adb487c2f17c0b6197225dbc0beb9990c}{coord\+\_\+force\+\_\+iterator}
+\item 
+typedef coord\+\_\+force\+\_\+sequence\+::const\+\_\+iterator \hyperlink{classmembrane__t_a558f9ccc1036a61e199e93fe08646cec}{coord\+\_\+force\+\_\+const\+\_\+iterator}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classmembrane__t_a8866c2084ca9b88e98340080008777e5}{coord\+\_\+force\+\_\+type}, char $>$ \hyperlink{classmembrane__t_a5edce7be5d85743cf318cbc01750134e}{coord\+\_\+force\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classvector__t}{vector\+\_\+t} \hyperlink{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}{coord\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}{coord\+\_\+type}, char $>$ \hyperlink{classmembrane__t_ad5ae6696a73759a2dacbed6d33371fbf}{coord\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classint__vector__t}{int\+\_\+vector\+\_\+t} \hyperlink{classmembrane__t_afdd0310501689ebab285ec39821c5b76}{dimension\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classmembrane__t_afdd0310501689ebab285ec39821c5b76}{dimension\+\_\+type}, char $>$ \hyperlink{classmembrane__t_aa3e274a54801b84c5dae45b44bfe86a0}{dimension\+\_\+traits}
+\item 
+typedef \+::\hyperlink{namespacexml__schema_ad7e04ab17bba0b3fdde43fb79ef6ed87}{xml\+\_\+schema\+::float\+\_\+} \hyperlink{classmembrane__t_a259dfb54e3d4a66cdd72b5b0831f4188}{mesh\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classmembrane__t_a259dfb54e3d4a66cdd72b5b0831f4188}{mesh\+\_\+type}, char $>$ \hyperlink{classmembrane__t_a6b611201cacd05e394dc2d6750a33ff9}{mesh\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classvector__t}{vector\+\_\+t} \hyperlink{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}{velocity\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}{velocity\+\_\+type}, char $>$ \hyperlink{classmembrane__t_aa9cbbb0853e5efae969241a0bfe951b6}{velocity\+\_\+traits}
+\item 
+typedef \+::\hyperlink{namespacexml__schema_acfa24ac68e1a188e7f44c36f7a158bf4}{xml\+\_\+schema\+::int\+\_\+} \hyperlink{classmembrane__t_a13eb0ee51a5a6018151503690e28e2fb}{type\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classmembrane__t_a13eb0ee51a5a6018151503690e28e2fb}{type\+\_\+type}, char $>$ \hyperlink{classmembrane__t_ac54c3884b125d2a162ce454e82f4da69}{type\+\_\+traits}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classmembrane__t_a9e55619d3d02a55660849deaa0ca4338}{stiffness\+\_\+type} \& \hyperlink{classmembrane__t_a798d5aac4ed960e2ad95d675c89e27a2}{stiffness} () const 
+\item 
+\hyperlink{classmembrane__t_a9e55619d3d02a55660849deaa0ca4338}{stiffness\+\_\+type} \& \hyperlink{classmembrane__t_a3f9153cf9ac73898479bf5722b6531ef}{stiffness} ()
+\item 
+void \hyperlink{classmembrane__t_ae30350a7d27308cd43ebdef96e3a159c}{stiffness} (const \hyperlink{classmembrane__t_a9e55619d3d02a55660849deaa0ca4338}{stiffness\+\_\+type} \&x)
+\item 
+const \hyperlink{classmembrane__t_ab1e0c179101c4b2916059925d73468ff}{r\+\_\+zero\+\_\+type} \& \hyperlink{classmembrane__t_aa2e292d4f0aa5c09a75596c85c373ec3}{r\+\_\+zero} () const 
+\item 
+\hyperlink{classmembrane__t_ab1e0c179101c4b2916059925d73468ff}{r\+\_\+zero\+\_\+type} \& \hyperlink{classmembrane__t_a859cf64e389832eada24f2776501e879}{r\+\_\+zero} ()
+\item 
+void \hyperlink{classmembrane__t_aca35bd2dc12a569910c52e9b4b5a4b53}{r\+\_\+zero} (const \hyperlink{classmembrane__t_ab1e0c179101c4b2916059925d73468ff}{r\+\_\+zero\+\_\+type} \&x)
+\item 
+const \hyperlink{classmembrane__t_a558422b23faa72b3e4cbc060f9ff8ea3}{force\+\_\+optional} \& \hyperlink{classmembrane__t_a0746bbae2169a7afca45b7e2d10db24d}{force} () const 
+\item 
+\hyperlink{classmembrane__t_a558422b23faa72b3e4cbc060f9ff8ea3}{force\+\_\+optional} \& \hyperlink{classmembrane__t_a6f0d435bd62b2b8b436589fcb5c1b7fb}{force} ()
+\item 
+void \hyperlink{classmembrane__t_ac6e5247264e0fb528a1e804b66782ff8}{force} (const \hyperlink{classmembrane__t_ab4d91a3ba331c16adbf69418f876f849}{force\+\_\+type} \&x)
+\item 
+void \hyperlink{classmembrane__t_aae94af1cb55045583a9fa0d471c64cc4}{force} (const \hyperlink{classmembrane__t_a558422b23faa72b3e4cbc060f9ff8ea3}{force\+\_\+optional} \&x)
+\item 
+void \hyperlink{classmembrane__t_a6bc29b3af98820be7dd1187c0c736e4d}{force} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classmembrane__t_ab4d91a3ba331c16adbf69418f876f849}{force\+\_\+type} $>$ p)
+\item 
+const \hyperlink{classmembrane__t_a7725d61ae95e124d402a8d9db7a08376}{t\+\_\+end\+\_\+force\+\_\+optional} \& \hyperlink{classmembrane__t_ad3d07daa7aaa84cac85479dea684a281}{t\+\_\+end\+\_\+force} () const 
+\item 
+\hyperlink{classmembrane__t_a7725d61ae95e124d402a8d9db7a08376}{t\+\_\+end\+\_\+force\+\_\+optional} \& \hyperlink{classmembrane__t_a937765794f5b3841397d876dfe433e45}{t\+\_\+end\+\_\+force} ()
+\item 
+void \hyperlink{classmembrane__t_a9a35db0433da0b52cbe1c6a7d71cd064}{t\+\_\+end\+\_\+force} (const \hyperlink{classmembrane__t_a9c464d55e3d8162b6bb521d9dd6d761d}{t\+\_\+end\+\_\+force\+\_\+type} \&x)
+\item 
+void \hyperlink{classmembrane__t_aaec36e48218d3eb6503c623038621f06}{t\+\_\+end\+\_\+force} (const \hyperlink{classmembrane__t_a7725d61ae95e124d402a8d9db7a08376}{t\+\_\+end\+\_\+force\+\_\+optional} \&x)
+\item 
+const \hyperlink{classmembrane__t_a2825c9df8bf471f2c5053a826cf6fcb0}{coord\+\_\+force\+\_\+sequence} \& \hyperlink{classmembrane__t_a28c155d2af14f466f6cadd4ad2be09b6}{coord\+\_\+force} () const 
+\item 
+\hyperlink{classmembrane__t_a2825c9df8bf471f2c5053a826cf6fcb0}{coord\+\_\+force\+\_\+sequence} \& \hyperlink{classmembrane__t_a5ecc300d611f56ad4c4aef1963a891fd}{coord\+\_\+force} ()
+\item 
+void \hyperlink{classmembrane__t_a1500c28ae9c1483bfcfa922b1cd1f895}{coord\+\_\+force} (const \hyperlink{classmembrane__t_a2825c9df8bf471f2c5053a826cf6fcb0}{coord\+\_\+force\+\_\+sequence} \&s)
+\item 
+const \hyperlink{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}{coord\+\_\+type} \& \hyperlink{classmembrane__t_ae1af37f1ad61d584c7c937f714eb2143}{coord} () const 
+\item 
+\hyperlink{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}{coord\+\_\+type} \& \hyperlink{classmembrane__t_a3f3bba04ce2e3ef4377c22438aceffa3}{coord} ()
+\item 
+void \hyperlink{classmembrane__t_a371848cd38b967da540276a508738d14}{coord} (const \hyperlink{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}{coord\+\_\+type} \&x)
+\item 
+void \hyperlink{classmembrane__t_a82711d526f1a5be0f38d0158adb1f977}{coord} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}{coord\+\_\+type} $>$ p)
+\item 
+const \hyperlink{classmembrane__t_afdd0310501689ebab285ec39821c5b76}{dimension\+\_\+type} \& \hyperlink{classmembrane__t_a7e32345fb2d04840937a5943ac7a7070}{dimension} () const 
+\item 
+\hyperlink{classmembrane__t_afdd0310501689ebab285ec39821c5b76}{dimension\+\_\+type} \& \hyperlink{classmembrane__t_a279eb1c9154bcfa88346391dee4d2cc8}{dimension} ()
+\item 
+void \hyperlink{classmembrane__t_aac3e97b8eab6473296ad03b6ee871e9a}{dimension} (const \hyperlink{classmembrane__t_afdd0310501689ebab285ec39821c5b76}{dimension\+\_\+type} \&x)
+\item 
+void \hyperlink{classmembrane__t_a63a682a09f95a84f2e068c77e031b190}{dimension} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classmembrane__t_afdd0310501689ebab285ec39821c5b76}{dimension\+\_\+type} $>$ p)
+\item 
+const \hyperlink{classmembrane__t_a259dfb54e3d4a66cdd72b5b0831f4188}{mesh\+\_\+type} \& \hyperlink{classmembrane__t_afdf7f5ae5b5b1057e7c0cda79b33fbde}{mesh} () const 
+\item 
+\hyperlink{classmembrane__t_a259dfb54e3d4a66cdd72b5b0831f4188}{mesh\+\_\+type} \& \hyperlink{classmembrane__t_a9f1158a643e80ed0e813bd480fc8036a}{mesh} ()
+\item 
+void \hyperlink{classmembrane__t_a3e9a65ce4a1891a7e3abd889f9b812be}{mesh} (const \hyperlink{classmembrane__t_a259dfb54e3d4a66cdd72b5b0831f4188}{mesh\+\_\+type} \&x)
+\item 
+const \hyperlink{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}{velocity\+\_\+type} \& \hyperlink{classmembrane__t_a304ff6c1a44d26042b5920b9db085c38}{velocity} () const 
+\item 
+\hyperlink{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}{velocity\+\_\+type} \& \hyperlink{classmembrane__t_a3699033c38dadaccfa27d0e2eec4e7c5}{velocity} ()
+\item 
+void \hyperlink{classmembrane__t_a793c74f8dfc98659f4a470320b745825}{velocity} (const \hyperlink{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}{velocity\+\_\+type} \&x)
+\item 
+void \hyperlink{classmembrane__t_afae91c26c573ff1d2b5990ff58e461c7}{velocity} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}{velocity\+\_\+type} $>$ p)
+\item 
+const \hyperlink{classmembrane__t_a13eb0ee51a5a6018151503690e28e2fb}{type\+\_\+type} \& \hyperlink{classmembrane__t_a18d695a7e6ec11e6e8ce2d3d3802a8bf}{type} () const 
+\item 
+\hyperlink{classmembrane__t_a13eb0ee51a5a6018151503690e28e2fb}{type\+\_\+type} \& \hyperlink{classmembrane__t_a3b77e8dc34f8b537c242ef10b4d3cf61}{type} ()
+\item 
+void \hyperlink{classmembrane__t_a29a71237a98bcfe60c1e851ab4e15b55}{type} (const \hyperlink{classmembrane__t_a13eb0ee51a5a6018151503690e28e2fb}{type\+\_\+type} \&x)
+\item 
+\hyperlink{classmembrane__t_a9c2ab017a39b33ae616845439d7c3ff5}{membrane\+\_\+t} (const \hyperlink{classmembrane__t_a9e55619d3d02a55660849deaa0ca4338}{stiffness\+\_\+type} \&, const \hyperlink{classmembrane__t_ab1e0c179101c4b2916059925d73468ff}{r\+\_\+zero\+\_\+type} \&, const \hyperlink{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}{coord\+\_\+type} \&, const \hyperlink{classmembrane__t_afdd0310501689ebab285ec39821c5b76}{dimension\+\_\+type} \&, const \hyperlink{classmembrane__t_a259dfb54e3d4a66cdd72b5b0831f4188}{mesh\+\_\+type} \&, const \hyperlink{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}{velocity\+\_\+type} \&, const \hyperlink{classmembrane__t_a13eb0ee51a5a6018151503690e28e2fb}{type\+\_\+type} \&)
+\item 
+\hyperlink{classmembrane__t_a8f5dcc9b15d78f2fa80c1c83399c2d8a}{membrane\+\_\+t} (const \hyperlink{classmembrane__t_a9e55619d3d02a55660849deaa0ca4338}{stiffness\+\_\+type} \&, const \hyperlink{classmembrane__t_ab1e0c179101c4b2916059925d73468ff}{r\+\_\+zero\+\_\+type} \&,\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}{coord\+\_\+type} $>$,\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classmembrane__t_afdd0310501689ebab285ec39821c5b76}{dimension\+\_\+type} $>$, const \hyperlink{classmembrane__t_a259dfb54e3d4a66cdd72b5b0831f4188}{mesh\+\_\+type} \&,\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}{velocity\+\_\+type} $>$, const \hyperlink{classmembrane__t_a13eb0ee51a5a6018151503690e28e2fb}{type\+\_\+type} \&)
+\item 
+\hyperlink{classmembrane__t_a5af5a8814d8386b7b24464e3d9bb29e4}{membrane\+\_\+t} (const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+\hyperlink{classmembrane__t_abf44e0aac152377e8cc2624b7560bcda}{membrane\+\_\+t} (const \hyperlink{classmembrane__t}{membrane\+\_\+t} \&x,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+virtual \hyperlink{classmembrane__t}{membrane\+\_\+t} $\ast$ \hyperlink{classmembrane__t_a53cbb200e281a93e71cf736cc46c7b5a}{\+\_\+clone} (\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0) const 
+\item 
+\hyperlink{classmembrane__t}{membrane\+\_\+t} \& \hyperlink{classmembrane__t_ac3c55ad3e5298f4b30d32f10bf56eb64}{operator=} (const \hyperlink{classmembrane__t}{membrane\+\_\+t} \&x)
+\item 
+virtual \hyperlink{classmembrane__t_a68d8b32d034e0d0fac195b59a0408ef1}{$\sim$membrane\+\_\+t} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classmembrane__t_a159c8038fabf26e70fd5b0f41949c56c}{parse} (\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classmembrane__t_a9e55619d3d02a55660849deaa0ca4338}{stiffness\+\_\+type} $>$ \hyperlink{classmembrane__t_a7f034ef7743e351cf39eebc4e91609ca}{stiffness\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classmembrane__t_ab1e0c179101c4b2916059925d73468ff}{r\+\_\+zero\+\_\+type} $>$ \hyperlink{classmembrane__t_adfd88126f59646de24e2f7cbd181cdc6}{r\+\_\+zero\+\_\+}
+\item 
+\hyperlink{classmembrane__t_a558422b23faa72b3e4cbc060f9ff8ea3}{force\+\_\+optional} \hyperlink{classmembrane__t_a40f545e373f2c8625b14f77b1485221d}{force\+\_\+}
+\item 
+\hyperlink{classmembrane__t_a7725d61ae95e124d402a8d9db7a08376}{t\+\_\+end\+\_\+force\+\_\+optional} \hyperlink{classmembrane__t_ac71b2beba26a9e7c9b69faf4da0de697}{t\+\_\+end\+\_\+force\+\_\+}
+\item 
+\hyperlink{classmembrane__t_a2825c9df8bf471f2c5053a826cf6fcb0}{coord\+\_\+force\+\_\+sequence} \hyperlink{classmembrane__t_a4452b21f0eec366b16aeb3ffd5ef49a8}{coord\+\_\+force\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}{coord\+\_\+type} $>$ \hyperlink{classmembrane__t_a994d9dbd6a74611dbcf464f77ffcf413}{coord\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classmembrane__t_afdd0310501689ebab285ec39821c5b76}{dimension\+\_\+type} $>$ \hyperlink{classmembrane__t_aa5fb7d3fefa37bd360d24cc7849bfea1}{dimension\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classmembrane__t_a259dfb54e3d4a66cdd72b5b0831f4188}{mesh\+\_\+type} $>$ \hyperlink{classmembrane__t_ae5676c4d93bd425bebd47c9649defe45}{mesh\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}{velocity\+\_\+type} $>$ \hyperlink{classmembrane__t_a22505f185660ba42d5fad386d6e1483e}{velocity\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classmembrane__t_a13eb0ee51a5a6018151503690e28e2fb}{type\+\_\+type} $>$ \hyperlink{classmembrane__t_ad8a6936861e18527605ef23e0fe44939}{type\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+force\+\_\+const\+\_\+iterator@{coord\+\_\+force\+\_\+const\+\_\+iterator}}
+\index{coord\+\_\+force\+\_\+const\+\_\+iterator@{coord\+\_\+force\+\_\+const\+\_\+iterator}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+force\+\_\+const\+\_\+iterator}{coord_force_const_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef coord\+\_\+force\+\_\+sequence\+::const\+\_\+iterator {\bf membrane\+\_\+t\+::coord\+\_\+force\+\_\+const\+\_\+iterator}}\hypertarget{classmembrane__t_a558f9ccc1036a61e199e93fe08646cec}{}\label{classmembrane__t_a558f9ccc1036a61e199e93fe08646cec}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+force\+\_\+iterator@{coord\+\_\+force\+\_\+iterator}}
+\index{coord\+\_\+force\+\_\+iterator@{coord\+\_\+force\+\_\+iterator}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+force\+\_\+iterator}{coord_force_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef coord\+\_\+force\+\_\+sequence\+::iterator {\bf membrane\+\_\+t\+::coord\+\_\+force\+\_\+iterator}}\hypertarget{classmembrane__t_adb487c2f17c0b6197225dbc0beb9990c}{}\label{classmembrane__t_adb487c2f17c0b6197225dbc0beb9990c}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+force\+\_\+sequence@{coord\+\_\+force\+\_\+sequence}}
+\index{coord\+\_\+force\+\_\+sequence@{coord\+\_\+force\+\_\+sequence}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+force\+\_\+sequence}{coord_force_sequence}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ {\bf coord\+\_\+force\+\_\+type} $>$ {\bf membrane\+\_\+t\+::coord\+\_\+force\+\_\+sequence}}\hypertarget{classmembrane__t_a2825c9df8bf471f2c5053a826cf6fcb0}{}\label{classmembrane__t_a2825c9df8bf471f2c5053a826cf6fcb0}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+force\+\_\+traits@{coord\+\_\+force\+\_\+traits}}
+\index{coord\+\_\+force\+\_\+traits@{coord\+\_\+force\+\_\+traits}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+force\+\_\+traits}{coord_force_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf coord\+\_\+force\+\_\+type}, char $>$ {\bf membrane\+\_\+t\+::coord\+\_\+force\+\_\+traits}}\hypertarget{classmembrane__t_a5edce7be5d85743cf318cbc01750134e}{}\label{classmembrane__t_a5edce7be5d85743cf318cbc01750134e}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+force\+\_\+type@{coord\+\_\+force\+\_\+type}}
+\index{coord\+\_\+force\+\_\+type@{coord\+\_\+force\+\_\+type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+force\+\_\+type}{coord_force_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf int\+\_\+vector\+\_\+t} {\bf membrane\+\_\+t\+::coord\+\_\+force\+\_\+type}}\hypertarget{classmembrane__t_a8866c2084ca9b88e98340080008777e5}{}\label{classmembrane__t_a8866c2084ca9b88e98340080008777e5}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+traits@{coord\+\_\+traits}}
+\index{coord\+\_\+traits@{coord\+\_\+traits}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+traits}{coord_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf coord\+\_\+type}, char $>$ {\bf membrane\+\_\+t\+::coord\+\_\+traits}}\hypertarget{classmembrane__t_ad5ae6696a73759a2dacbed6d33371fbf}{}\label{classmembrane__t_ad5ae6696a73759a2dacbed6d33371fbf}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+type@{coord\+\_\+type}}
+\index{coord\+\_\+type@{coord\+\_\+type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+type}{coord_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf vector\+\_\+t} {\bf membrane\+\_\+t\+::coord\+\_\+type}}\hypertarget{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}{}\label{classmembrane__t_a0841f5bafc269d612a4b6fefcce1d73f}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!dimension\+\_\+traits@{dimension\+\_\+traits}}
+\index{dimension\+\_\+traits@{dimension\+\_\+traits}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension\+\_\+traits}{dimension_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf dimension\+\_\+type}, char $>$ {\bf membrane\+\_\+t\+::dimension\+\_\+traits}}\hypertarget{classmembrane__t_aa3e274a54801b84c5dae45b44bfe86a0}{}\label{classmembrane__t_aa3e274a54801b84c5dae45b44bfe86a0}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!dimension\+\_\+type@{dimension\+\_\+type}}
+\index{dimension\+\_\+type@{dimension\+\_\+type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension\+\_\+type}{dimension_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf int\+\_\+vector\+\_\+t} {\bf membrane\+\_\+t\+::dimension\+\_\+type}}\hypertarget{classmembrane__t_afdd0310501689ebab285ec39821c5b76}{}\label{classmembrane__t_afdd0310501689ebab285ec39821c5b76}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!force\+\_\+optional@{force\+\_\+optional}}
+\index{force\+\_\+optional@{force\+\_\+optional}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{force\+\_\+optional}{force_optional}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::optional$<$ {\bf force\+\_\+type} $>$ {\bf membrane\+\_\+t\+::force\+\_\+optional}}\hypertarget{classmembrane__t_a558422b23faa72b3e4cbc060f9ff8ea3}{}\label{classmembrane__t_a558422b23faa72b3e4cbc060f9ff8ea3}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!force\+\_\+traits@{force\+\_\+traits}}
+\index{force\+\_\+traits@{force\+\_\+traits}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{force\+\_\+traits}{force_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf force\+\_\+type}, char $>$ {\bf membrane\+\_\+t\+::force\+\_\+traits}}\hypertarget{classmembrane__t_a2b6b177c77d6eddf152913810d47f7f7}{}\label{classmembrane__t_a2b6b177c77d6eddf152913810d47f7f7}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!force\+\_\+type@{force\+\_\+type}}
+\index{force\+\_\+type@{force\+\_\+type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{force\+\_\+type}{force_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf vector\+\_\+t} {\bf membrane\+\_\+t\+::force\+\_\+type}}\hypertarget{classmembrane__t_ab4d91a3ba331c16adbf69418f876f849}{}\label{classmembrane__t_ab4d91a3ba331c16adbf69418f876f849}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!mesh\+\_\+traits@{mesh\+\_\+traits}}
+\index{mesh\+\_\+traits@{mesh\+\_\+traits}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh\+\_\+traits}{mesh_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf mesh\+\_\+type}, char $>$ {\bf membrane\+\_\+t\+::mesh\+\_\+traits}}\hypertarget{classmembrane__t_a6b611201cacd05e394dc2d6750a33ff9}{}\label{classmembrane__t_a6b611201cacd05e394dc2d6750a33ff9}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!mesh\+\_\+type@{mesh\+\_\+type}}
+\index{mesh\+\_\+type@{mesh\+\_\+type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh\+\_\+type}{mesh_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf xml\+\_\+schema\+::float\+\_\+} {\bf membrane\+\_\+t\+::mesh\+\_\+type}}\hypertarget{classmembrane__t_a259dfb54e3d4a66cdd72b5b0831f4188}{}\label{classmembrane__t_a259dfb54e3d4a66cdd72b5b0831f4188}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!r\+\_\+zero\+\_\+traits@{r\+\_\+zero\+\_\+traits}}
+\index{r\+\_\+zero\+\_\+traits@{r\+\_\+zero\+\_\+traits}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{r\+\_\+zero\+\_\+traits}{r_zero_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf r\+\_\+zero\+\_\+type}, char, \+::xsd\+::cxx\+::tree\+::schema\+\_\+type\+::double\+\_\+ $>$ {\bf membrane\+\_\+t\+::r\+\_\+zero\+\_\+traits}}\hypertarget{classmembrane__t_aebe5eb10f95c19f95c3946d3bbb9adb8}{}\label{classmembrane__t_aebe5eb10f95c19f95c3946d3bbb9adb8}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!r\+\_\+zero\+\_\+type@{r\+\_\+zero\+\_\+type}}
+\index{r\+\_\+zero\+\_\+type@{r\+\_\+zero\+\_\+type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{r\+\_\+zero\+\_\+type}{r_zero_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf xml\+\_\+schema\+::double\+\_\+} {\bf membrane\+\_\+t\+::r\+\_\+zero\+\_\+type}}\hypertarget{classmembrane__t_ab1e0c179101c4b2916059925d73468ff}{}\label{classmembrane__t_ab1e0c179101c4b2916059925d73468ff}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!stiffness\+\_\+traits@{stiffness\+\_\+traits}}
+\index{stiffness\+\_\+traits@{stiffness\+\_\+traits}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{stiffness\+\_\+traits}{stiffness_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf stiffness\+\_\+type}, char, \+::xsd\+::cxx\+::tree\+::schema\+\_\+type\+::double\+\_\+ $>$ {\bf membrane\+\_\+t\+::stiffness\+\_\+traits}}\hypertarget{classmembrane__t_a90e2a51b2f18f88127057a926cce542a}{}\label{classmembrane__t_a90e2a51b2f18f88127057a926cce542a}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!stiffness\+\_\+type@{stiffness\+\_\+type}}
+\index{stiffness\+\_\+type@{stiffness\+\_\+type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{stiffness\+\_\+type}{stiffness_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf xml\+\_\+schema\+::double\+\_\+} {\bf membrane\+\_\+t\+::stiffness\+\_\+type}}\hypertarget{classmembrane__t_a9e55619d3d02a55660849deaa0ca4338}{}\label{classmembrane__t_a9e55619d3d02a55660849deaa0ca4338}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!t\+\_\+end\+\_\+force\+\_\+optional@{t\+\_\+end\+\_\+force\+\_\+optional}}
+\index{t\+\_\+end\+\_\+force\+\_\+optional@{t\+\_\+end\+\_\+force\+\_\+optional}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{t\+\_\+end\+\_\+force\+\_\+optional}{t_end_force_optional}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::optional$<$ {\bf t\+\_\+end\+\_\+force\+\_\+type} $>$ {\bf membrane\+\_\+t\+::t\+\_\+end\+\_\+force\+\_\+optional}}\hypertarget{classmembrane__t_a7725d61ae95e124d402a8d9db7a08376}{}\label{classmembrane__t_a7725d61ae95e124d402a8d9db7a08376}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!t\+\_\+end\+\_\+force\+\_\+traits@{t\+\_\+end\+\_\+force\+\_\+traits}}
+\index{t\+\_\+end\+\_\+force\+\_\+traits@{t\+\_\+end\+\_\+force\+\_\+traits}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{t\+\_\+end\+\_\+force\+\_\+traits}{t_end_force_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf t\+\_\+end\+\_\+force\+\_\+type}, char, \+::xsd\+::cxx\+::tree\+::schema\+\_\+type\+::double\+\_\+ $>$ {\bf membrane\+\_\+t\+::t\+\_\+end\+\_\+force\+\_\+traits}}\hypertarget{classmembrane__t_a6e52d2cbbfa0781d7ce3aec95ce1a7ab}{}\label{classmembrane__t_a6e52d2cbbfa0781d7ce3aec95ce1a7ab}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!t\+\_\+end\+\_\+force\+\_\+type@{t\+\_\+end\+\_\+force\+\_\+type}}
+\index{t\+\_\+end\+\_\+force\+\_\+type@{t\+\_\+end\+\_\+force\+\_\+type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{t\+\_\+end\+\_\+force\+\_\+type}{t_end_force_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf xml\+\_\+schema\+::double\+\_\+} {\bf membrane\+\_\+t\+::t\+\_\+end\+\_\+force\+\_\+type}}\hypertarget{classmembrane__t_a9c464d55e3d8162b6bb521d9dd6d761d}{}\label{classmembrane__t_a9c464d55e3d8162b6bb521d9dd6d761d}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!type\+\_\+traits@{type\+\_\+traits}}
+\index{type\+\_\+traits@{type\+\_\+traits}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{type\+\_\+traits}{type_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf type\+\_\+type}, char $>$ {\bf membrane\+\_\+t\+::type\+\_\+traits}}\hypertarget{classmembrane__t_ac54c3884b125d2a162ce454e82f4da69}{}\label{classmembrane__t_ac54c3884b125d2a162ce454e82f4da69}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!type\+\_\+type@{type\+\_\+type}}
+\index{type\+\_\+type@{type\+\_\+type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{type\+\_\+type}{type_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf xml\+\_\+schema\+::int\+\_\+} {\bf membrane\+\_\+t\+::type\+\_\+type}}\hypertarget{classmembrane__t_a13eb0ee51a5a6018151503690e28e2fb}{}\label{classmembrane__t_a13eb0ee51a5a6018151503690e28e2fb}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!velocity\+\_\+traits@{velocity\+\_\+traits}}
+\index{velocity\+\_\+traits@{velocity\+\_\+traits}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity\+\_\+traits}{velocity_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf velocity\+\_\+type}, char $>$ {\bf membrane\+\_\+t\+::velocity\+\_\+traits}}\hypertarget{classmembrane__t_aa9cbbb0853e5efae969241a0bfe951b6}{}\label{classmembrane__t_aa9cbbb0853e5efae969241a0bfe951b6}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!velocity\+\_\+type@{velocity\+\_\+type}}
+\index{velocity\+\_\+type@{velocity\+\_\+type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity\+\_\+type}{velocity_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf vector\+\_\+t} {\bf membrane\+\_\+t\+::velocity\+\_\+type}}\hypertarget{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}{}\label{classmembrane__t_a41bad26c4626a8ceac158b3817306c62}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!membrane\+\_\+t@{membrane\+\_\+t}}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+t(const stiffness\+\_\+type \&, const r\+\_\+zero\+\_\+type \&, const coord\+\_\+type \&, const dimension\+\_\+type \&, const mesh\+\_\+type \&, const velocity\+\_\+type \&, const type\+\_\+type \&)}{membrane_t(const stiffness_type &, const r_zero_type &, const coord_type &, const dimension_type &, const mesh_type &, const velocity_type &, const type_type &)}}]{\setlength{\rightskip}{0pt plus 5cm}membrane\+\_\+t\+::membrane\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const {\bf stiffness\+\_\+type} \&}]{stiffness, }
+\item[{const {\bf r\+\_\+zero\+\_\+type} \&}]{r\+\_\+zero, }
+\item[{const {\bf coord\+\_\+type} \&}]{coord, }
+\item[{const {\bf dimension\+\_\+type} \&}]{dimension, }
+\item[{const {\bf mesh\+\_\+type} \&}]{mesh, }
+\item[{const {\bf velocity\+\_\+type} \&}]{velocity, }
+\item[{const {\bf type\+\_\+type} \&}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a9c2ab017a39b33ae616845439d7c3ff5}{}\label{classmembrane__t_a9c2ab017a39b33ae616845439d7c3ff5}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!membrane\+\_\+t@{membrane\+\_\+t}}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+t(const stiffness\+\_\+type \&, const r\+\_\+zero\+\_\+type \&,\+::std\+::unique\+\_\+ptr$<$ coord\+\_\+type $>$,\+::std\+::unique\+\_\+ptr$<$ dimension\+\_\+type $>$, const mesh\+\_\+type \&,\+::std\+::unique\+\_\+ptr$<$ velocity\+\_\+type $>$, const type\+\_\+type \&)}{membrane_t(const stiffness_type &, const r_zero_type &,::std::unique_ptr< coord_type >,::std::unique_ptr< dimension_type >, const mesh_type &,::std::unique_ptr< velocity_type >, const type_type &)}}]{\setlength{\rightskip}{0pt plus 5cm}membrane\+\_\+t\+::membrane\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const {\bf stiffness\+\_\+type} \&}]{stiffness, }
+\item[{const {\bf r\+\_\+zero\+\_\+type} \&}]{r\+\_\+zero, }
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf coord\+\_\+type} $>$}]{coord, }
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf dimension\+\_\+type} $>$}]{dimension, }
+\item[{const {\bf mesh\+\_\+type} \&}]{mesh, }
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf velocity\+\_\+type} $>$}]{velocity, }
+\item[{const {\bf type\+\_\+type} \&}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a8f5dcc9b15d78f2fa80c1c83399c2d8a}{}\label{classmembrane__t_a8f5dcc9b15d78f2fa80c1c83399c2d8a}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!membrane\+\_\+t@{membrane\+\_\+t}}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+t(const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{membrane_t(const ::xercesc::DOMElement &e,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}membrane\+\_\+t\+::membrane\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const \+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a5af5a8814d8386b7b24464e3d9bb29e4}{}\label{classmembrane__t_a5af5a8814d8386b7b24464e3d9bb29e4}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!membrane\+\_\+t@{membrane\+\_\+t}}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+t(const membrane\+\_\+t \&x,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{membrane_t(const membrane_t &x,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}membrane\+\_\+t\+::membrane\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const {\bf membrane\+\_\+t} \&}]{x, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_abf44e0aac152377e8cc2624b7560bcda}{}\label{classmembrane__t_abf44e0aac152377e8cc2624b7560bcda}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!````~membrane\+\_\+t@{$\sim$membrane\+\_\+t}}
+\index{````~membrane\+\_\+t@{$\sim$membrane\+\_\+t}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{$\sim$membrane\+\_\+t()}{~membrane_t()}}]{\setlength{\rightskip}{0pt plus 5cm}membrane\+\_\+t\+::$\sim$membrane\+\_\+t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classmembrane__t_a68d8b32d034e0d0fac195b59a0408ef1}{}\label{classmembrane__t_a68d8b32d034e0d0fac195b59a0408ef1}
+
+
+\subsection{Member Function Documentation}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!\+\_\+clone@{\+\_\+clone}}
+\index{\+\_\+clone@{\+\_\+clone}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{\+\_\+clone(\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0) const }{_clone(::xml_schema::flags f=0,::xml_schema::container *c=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t} $\ast$ membrane\+\_\+t\+::\+\_\+clone (
+\begin{DoxyParamCaption}
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classmembrane__t_a53cbb200e281a93e71cf736cc46c7b5a}{}\label{classmembrane__t_a53cbb200e281a93e71cf736cc46c7b5a}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord@{coord}}
+\index{coord@{coord}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord() const }{coord() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf membrane\+\_\+t\+::coord\+\_\+type} \& membrane\+\_\+t\+::coord (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmembrane__t_ae1af37f1ad61d584c7c937f714eb2143}{}\label{classmembrane__t_ae1af37f1ad61d584c7c937f714eb2143}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord@{coord}}
+\index{coord@{coord}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord()}{coord()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t\+::coord\+\_\+type} \& membrane\+\_\+t\+::coord (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a3f3bba04ce2e3ef4377c22438aceffa3}{}\label{classmembrane__t_a3f3bba04ce2e3ef4377c22438aceffa3}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord@{coord}}
+\index{coord@{coord}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord(const coord\+\_\+type \&x)}{coord(const coord_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::coord (
+\begin{DoxyParamCaption}
+\item[{const {\bf coord\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a371848cd38b967da540276a508738d14}{}\label{classmembrane__t_a371848cd38b967da540276a508738d14}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord@{coord}}
+\index{coord@{coord}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord(\+::std\+::unique\+\_\+ptr$<$ coord\+\_\+type $>$ p)}{coord(::std::unique_ptr< coord_type > p)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::coord (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf coord\+\_\+type} $>$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a82711d526f1a5be0f38d0158adb1f977}{}\label{classmembrane__t_a82711d526f1a5be0f38d0158adb1f977}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+force@{coord\+\_\+force}}
+\index{coord\+\_\+force@{coord\+\_\+force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+force() const }{coord_force() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf membrane\+\_\+t\+::coord\+\_\+force\+\_\+sequence} \& membrane\+\_\+t\+::coord\+\_\+force (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmembrane__t_a28c155d2af14f466f6cadd4ad2be09b6}{}\label{classmembrane__t_a28c155d2af14f466f6cadd4ad2be09b6}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+force@{coord\+\_\+force}}
+\index{coord\+\_\+force@{coord\+\_\+force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+force()}{coord_force()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t\+::coord\+\_\+force\+\_\+sequence} \& membrane\+\_\+t\+::coord\+\_\+force (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a5ecc300d611f56ad4c4aef1963a891fd}{}\label{classmembrane__t_a5ecc300d611f56ad4c4aef1963a891fd}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+force@{coord\+\_\+force}}
+\index{coord\+\_\+force@{coord\+\_\+force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+force(const coord\+\_\+force\+\_\+sequence \&s)}{coord_force(const coord_force_sequence &s)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::coord\+\_\+force (
+\begin{DoxyParamCaption}
+\item[{const {\bf coord\+\_\+force\+\_\+sequence} \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a1500c28ae9c1483bfcfa922b1cd1f895}{}\label{classmembrane__t_a1500c28ae9c1483bfcfa922b1cd1f895}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!dimension@{dimension}}
+\index{dimension@{dimension}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension() const }{dimension() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf membrane\+\_\+t\+::dimension\+\_\+type} \& membrane\+\_\+t\+::dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmembrane__t_a7e32345fb2d04840937a5943ac7a7070}{}\label{classmembrane__t_a7e32345fb2d04840937a5943ac7a7070}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!dimension@{dimension}}
+\index{dimension@{dimension}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension()}{dimension()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t\+::dimension\+\_\+type} \& membrane\+\_\+t\+::dimension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a279eb1c9154bcfa88346391dee4d2cc8}{}\label{classmembrane__t_a279eb1c9154bcfa88346391dee4d2cc8}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!dimension@{dimension}}
+\index{dimension@{dimension}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension(const dimension\+\_\+type \&x)}{dimension(const dimension_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::dimension (
+\begin{DoxyParamCaption}
+\item[{const {\bf dimension\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_aac3e97b8eab6473296ad03b6ee871e9a}{}\label{classmembrane__t_aac3e97b8eab6473296ad03b6ee871e9a}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!dimension@{dimension}}
+\index{dimension@{dimension}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension(\+::std\+::unique\+\_\+ptr$<$ dimension\+\_\+type $>$ p)}{dimension(::std::unique_ptr< dimension_type > p)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::dimension (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf dimension\+\_\+type} $>$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a63a682a09f95a84f2e068c77e031b190}{}\label{classmembrane__t_a63a682a09f95a84f2e068c77e031b190}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!force@{force}}
+\index{force@{force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{force() const }{force() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf membrane\+\_\+t\+::force\+\_\+optional} \& membrane\+\_\+t\+::force (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmembrane__t_a0746bbae2169a7afca45b7e2d10db24d}{}\label{classmembrane__t_a0746bbae2169a7afca45b7e2d10db24d}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!force@{force}}
+\index{force@{force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{force()}{force()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t\+::force\+\_\+optional} \& membrane\+\_\+t\+::force (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a6f0d435bd62b2b8b436589fcb5c1b7fb}{}\label{classmembrane__t_a6f0d435bd62b2b8b436589fcb5c1b7fb}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!force@{force}}
+\index{force@{force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{force(const force\+\_\+type \&x)}{force(const force_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::force (
+\begin{DoxyParamCaption}
+\item[{const {\bf force\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_ac6e5247264e0fb528a1e804b66782ff8}{}\label{classmembrane__t_ac6e5247264e0fb528a1e804b66782ff8}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!force@{force}}
+\index{force@{force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{force(const force\+\_\+optional \&x)}{force(const force_optional &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::force (
+\begin{DoxyParamCaption}
+\item[{const {\bf force\+\_\+optional} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_aae94af1cb55045583a9fa0d471c64cc4}{}\label{classmembrane__t_aae94af1cb55045583a9fa0d471c64cc4}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!force@{force}}
+\index{force@{force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{force(\+::std\+::unique\+\_\+ptr$<$ force\+\_\+type $>$ p)}{force(::std::unique_ptr< force_type > p)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::force (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf force\+\_\+type} $>$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a6bc29b3af98820be7dd1187c0c736e4d}{}\label{classmembrane__t_a6bc29b3af98820be7dd1187c0c736e4d}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!mesh@{mesh}}
+\index{mesh@{mesh}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh() const }{mesh() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf membrane\+\_\+t\+::mesh\+\_\+type} \& membrane\+\_\+t\+::mesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmembrane__t_afdf7f5ae5b5b1057e7c0cda79b33fbde}{}\label{classmembrane__t_afdf7f5ae5b5b1057e7c0cda79b33fbde}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!mesh@{mesh}}
+\index{mesh@{mesh}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh()}{mesh()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t\+::mesh\+\_\+type} \& membrane\+\_\+t\+::mesh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a9f1158a643e80ed0e813bd480fc8036a}{}\label{classmembrane__t_a9f1158a643e80ed0e813bd480fc8036a}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!mesh@{mesh}}
+\index{mesh@{mesh}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh(const mesh\+\_\+type \&x)}{mesh(const mesh_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::mesh (
+\begin{DoxyParamCaption}
+\item[{const {\bf mesh\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a3e9a65ce4a1891a7e3abd889f9b812be}{}\label{classmembrane__t_a3e9a65ce4a1891a7e3abd889f9b812be}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!operator=@{operator=}}
+\index{operator=@{operator=}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{operator=(const membrane\+\_\+t \&x)}{operator=(const membrane_t &x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t} \& membrane\+\_\+t\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf membrane\+\_\+t} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_ac3c55ad3e5298f4b30d32f10bf56eb64}{}\label{classmembrane__t_ac3c55ad3e5298f4b30d32f10bf56eb64}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!parse@{parse}}
+\index{parse@{parse}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{parse(\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::xml\+\_\+schema\+::flags)}{parse(::xsd::cxx::xml::dom::parser< char > &,::xml_schema::flags)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::parse (
+\begin{DoxyParamCaption}
+\item[{\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&}]{p, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_a159c8038fabf26e70fd5b0f41949c56c}{}\label{classmembrane__t_a159c8038fabf26e70fd5b0f41949c56c}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!r\+\_\+zero@{r\+\_\+zero}}
+\index{r\+\_\+zero@{r\+\_\+zero}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{r\+\_\+zero() const }{r_zero() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf membrane\+\_\+t\+::r\+\_\+zero\+\_\+type} \& membrane\+\_\+t\+::r\+\_\+zero (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmembrane__t_aa2e292d4f0aa5c09a75596c85c373ec3}{}\label{classmembrane__t_aa2e292d4f0aa5c09a75596c85c373ec3}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!r\+\_\+zero@{r\+\_\+zero}}
+\index{r\+\_\+zero@{r\+\_\+zero}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{r\+\_\+zero()}{r_zero()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t\+::r\+\_\+zero\+\_\+type} \& membrane\+\_\+t\+::r\+\_\+zero (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a859cf64e389832eada24f2776501e879}{}\label{classmembrane__t_a859cf64e389832eada24f2776501e879}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!r\+\_\+zero@{r\+\_\+zero}}
+\index{r\+\_\+zero@{r\+\_\+zero}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{r\+\_\+zero(const r\+\_\+zero\+\_\+type \&x)}{r_zero(const r_zero_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::r\+\_\+zero (
+\begin{DoxyParamCaption}
+\item[{const {\bf r\+\_\+zero\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_aca35bd2dc12a569910c52e9b4b5a4b53}{}\label{classmembrane__t_aca35bd2dc12a569910c52e9b4b5a4b53}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!stiffness@{stiffness}}
+\index{stiffness@{stiffness}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{stiffness() const }{stiffness() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf membrane\+\_\+t\+::stiffness\+\_\+type} \& membrane\+\_\+t\+::stiffness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmembrane__t_a798d5aac4ed960e2ad95d675c89e27a2}{}\label{classmembrane__t_a798d5aac4ed960e2ad95d675c89e27a2}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!stiffness@{stiffness}}
+\index{stiffness@{stiffness}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{stiffness()}{stiffness()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t\+::stiffness\+\_\+type} \& membrane\+\_\+t\+::stiffness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a3f9153cf9ac73898479bf5722b6531ef}{}\label{classmembrane__t_a3f9153cf9ac73898479bf5722b6531ef}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!stiffness@{stiffness}}
+\index{stiffness@{stiffness}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{stiffness(const stiffness\+\_\+type \&x)}{stiffness(const stiffness_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::stiffness (
+\begin{DoxyParamCaption}
+\item[{const {\bf stiffness\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_ae30350a7d27308cd43ebdef96e3a159c}{}\label{classmembrane__t_ae30350a7d27308cd43ebdef96e3a159c}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!t\+\_\+end\+\_\+force@{t\+\_\+end\+\_\+force}}
+\index{t\+\_\+end\+\_\+force@{t\+\_\+end\+\_\+force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{t\+\_\+end\+\_\+force() const }{t_end_force() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf membrane\+\_\+t\+::t\+\_\+end\+\_\+force\+\_\+optional} \& membrane\+\_\+t\+::t\+\_\+end\+\_\+force (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmembrane__t_ad3d07daa7aaa84cac85479dea684a281}{}\label{classmembrane__t_ad3d07daa7aaa84cac85479dea684a281}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!t\+\_\+end\+\_\+force@{t\+\_\+end\+\_\+force}}
+\index{t\+\_\+end\+\_\+force@{t\+\_\+end\+\_\+force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{t\+\_\+end\+\_\+force()}{t_end_force()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t\+::t\+\_\+end\+\_\+force\+\_\+optional} \& membrane\+\_\+t\+::t\+\_\+end\+\_\+force (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a937765794f5b3841397d876dfe433e45}{}\label{classmembrane__t_a937765794f5b3841397d876dfe433e45}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!t\+\_\+end\+\_\+force@{t\+\_\+end\+\_\+force}}
+\index{t\+\_\+end\+\_\+force@{t\+\_\+end\+\_\+force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{t\+\_\+end\+\_\+force(const t\+\_\+end\+\_\+force\+\_\+type \&x)}{t_end_force(const t_end_force_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::t\+\_\+end\+\_\+force (
+\begin{DoxyParamCaption}
+\item[{const {\bf t\+\_\+end\+\_\+force\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a9a35db0433da0b52cbe1c6a7d71cd064}{}\label{classmembrane__t_a9a35db0433da0b52cbe1c6a7d71cd064}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!t\+\_\+end\+\_\+force@{t\+\_\+end\+\_\+force}}
+\index{t\+\_\+end\+\_\+force@{t\+\_\+end\+\_\+force}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{t\+\_\+end\+\_\+force(const t\+\_\+end\+\_\+force\+\_\+optional \&x)}{t_end_force(const t_end_force_optional &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::t\+\_\+end\+\_\+force (
+\begin{DoxyParamCaption}
+\item[{const {\bf t\+\_\+end\+\_\+force\+\_\+optional} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_aaec36e48218d3eb6503c623038621f06}{}\label{classmembrane__t_aaec36e48218d3eb6503c623038621f06}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!type@{type}}
+\index{type@{type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{type() const }{type() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf membrane\+\_\+t\+::type\+\_\+type} \& membrane\+\_\+t\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmembrane__t_a18d695a7e6ec11e6e8ce2d3d3802a8bf}{}\label{classmembrane__t_a18d695a7e6ec11e6e8ce2d3d3802a8bf}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!type@{type}}
+\index{type@{type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{type()}{type()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t\+::type\+\_\+type} \& membrane\+\_\+t\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a3b77e8dc34f8b537c242ef10b4d3cf61}{}\label{classmembrane__t_a3b77e8dc34f8b537c242ef10b4d3cf61}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!type@{type}}
+\index{type@{type}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{type(const type\+\_\+type \&x)}{type(const type_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::type (
+\begin{DoxyParamCaption}
+\item[{const {\bf type\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a29a71237a98bcfe60c1e851ab4e15b55}{}\label{classmembrane__t_a29a71237a98bcfe60c1e851ab4e15b55}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!velocity@{velocity}}
+\index{velocity@{velocity}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity() const }{velocity() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf membrane\+\_\+t\+::velocity\+\_\+type} \& membrane\+\_\+t\+::velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classmembrane__t_a304ff6c1a44d26042b5920b9db085c38}{}\label{classmembrane__t_a304ff6c1a44d26042b5920b9db085c38}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!velocity@{velocity}}
+\index{velocity@{velocity}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity()}{velocity()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+t\+::velocity\+\_\+type} \& membrane\+\_\+t\+::velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a3699033c38dadaccfa27d0e2eec4e7c5}{}\label{classmembrane__t_a3699033c38dadaccfa27d0e2eec4e7c5}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!velocity@{velocity}}
+\index{velocity@{velocity}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity(const velocity\+\_\+type \&x)}{velocity(const velocity_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::velocity (
+\begin{DoxyParamCaption}
+\item[{const {\bf velocity\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_a793c74f8dfc98659f4a470320b745825}{}\label{classmembrane__t_a793c74f8dfc98659f4a470320b745825}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!velocity@{velocity}}
+\index{velocity@{velocity}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity(\+::std\+::unique\+\_\+ptr$<$ velocity\+\_\+type $>$ p)}{velocity(::std::unique_ptr< velocity_type > p)}}]{\setlength{\rightskip}{0pt plus 5cm}void membrane\+\_\+t\+::velocity (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf velocity\+\_\+type} $>$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classmembrane__t_afae91c26c573ff1d2b5990ff58e461c7}{}\label{classmembrane__t_afae91c26c573ff1d2b5990ff58e461c7}
+
+
+\subsection{Member Data Documentation}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+@{coord\+\_\+}}
+\index{coord\+\_\+@{coord\+\_\+}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+}{coord_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf coord\+\_\+type} $>$ membrane\+\_\+t\+::coord\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_a994d9dbd6a74611dbcf464f77ffcf413}{}\label{classmembrane__t_a994d9dbd6a74611dbcf464f77ffcf413}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!coord\+\_\+force\+\_\+@{coord\+\_\+force\+\_\+}}
+\index{coord\+\_\+force\+\_\+@{coord\+\_\+force\+\_\+}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{coord\+\_\+force\+\_\+}{coord_force_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf coord\+\_\+force\+\_\+sequence} membrane\+\_\+t\+::coord\+\_\+force\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_a4452b21f0eec366b16aeb3ffd5ef49a8}{}\label{classmembrane__t_a4452b21f0eec366b16aeb3ffd5ef49a8}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!dimension\+\_\+@{dimension\+\_\+}}
+\index{dimension\+\_\+@{dimension\+\_\+}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{dimension\+\_\+}{dimension_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf dimension\+\_\+type} $>$ membrane\+\_\+t\+::dimension\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_aa5fb7d3fefa37bd360d24cc7849bfea1}{}\label{classmembrane__t_aa5fb7d3fefa37bd360d24cc7849bfea1}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!force\+\_\+@{force\+\_\+}}
+\index{force\+\_\+@{force\+\_\+}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{force\+\_\+}{force_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf force\+\_\+optional} membrane\+\_\+t\+::force\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_a40f545e373f2c8625b14f77b1485221d}{}\label{classmembrane__t_a40f545e373f2c8625b14f77b1485221d}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!mesh\+\_\+@{mesh\+\_\+}}
+\index{mesh\+\_\+@{mesh\+\_\+}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{mesh\+\_\+}{mesh_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf mesh\+\_\+type} $>$ membrane\+\_\+t\+::mesh\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_ae5676c4d93bd425bebd47c9649defe45}{}\label{classmembrane__t_ae5676c4d93bd425bebd47c9649defe45}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!r\+\_\+zero\+\_\+@{r\+\_\+zero\+\_\+}}
+\index{r\+\_\+zero\+\_\+@{r\+\_\+zero\+\_\+}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{r\+\_\+zero\+\_\+}{r_zero_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf r\+\_\+zero\+\_\+type} $>$ membrane\+\_\+t\+::r\+\_\+zero\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_adfd88126f59646de24e2f7cbd181cdc6}{}\label{classmembrane__t_adfd88126f59646de24e2f7cbd181cdc6}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!stiffness\+\_\+@{stiffness\+\_\+}}
+\index{stiffness\+\_\+@{stiffness\+\_\+}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{stiffness\+\_\+}{stiffness_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf stiffness\+\_\+type} $>$ membrane\+\_\+t\+::stiffness\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_a7f034ef7743e351cf39eebc4e91609ca}{}\label{classmembrane__t_a7f034ef7743e351cf39eebc4e91609ca}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!t\+\_\+end\+\_\+force\+\_\+@{t\+\_\+end\+\_\+force\+\_\+}}
+\index{t\+\_\+end\+\_\+force\+\_\+@{t\+\_\+end\+\_\+force\+\_\+}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{t\+\_\+end\+\_\+force\+\_\+}{t_end_force_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+\_\+end\+\_\+force\+\_\+optional} membrane\+\_\+t\+::t\+\_\+end\+\_\+force\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_ac71b2beba26a9e7c9b69faf4da0de697}{}\label{classmembrane__t_ac71b2beba26a9e7c9b69faf4da0de697}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!type\+\_\+@{type\+\_\+}}
+\index{type\+\_\+@{type\+\_\+}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{type\+\_\+}{type_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf type\+\_\+type} $>$ membrane\+\_\+t\+::type\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_ad8a6936861e18527605ef23e0fe44939}{}\label{classmembrane__t_ad8a6936861e18527605ef23e0fe44939}
+\index{membrane\+\_\+t@{membrane\+\_\+t}!velocity\+\_\+@{velocity\+\_\+}}
+\index{velocity\+\_\+@{velocity\+\_\+}!membrane\+\_\+t@{membrane\+\_\+t}}
+\subsubsection[{\texorpdfstring{velocity\+\_\+}{velocity_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf velocity\+\_\+type} $>$ membrane\+\_\+t\+::velocity\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classmembrane__t_a22505f185660ba42d5fad386d6e1483e}{}\label{classmembrane__t_a22505f185660ba42d5fad386d6e1483e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/input/\hyperlink{particle__input_8h}{particle\+\_\+input.\+h}\item 
+src/input/\hyperlink{particle__input_8cpp}{particle\+\_\+input.\+cpp}\end{DoxyCompactItemize}

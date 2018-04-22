@@ -1,0 +1,171 @@
+\hypertarget{classUnstructuredGrid__t}{}\section{Unstructured\+Grid\+\_\+t Class Reference}
+\label{classUnstructuredGrid__t}\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+
+
+{\ttfamily \#include $<$vtk-\/unstructured.\+h$>$}
+
+Inheritance diagram for Unstructured\+Grid\+\_\+t\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUnstructuredGrid__t}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+::\hyperlink{classPieceUnstructuredGrid__t}{Piece\+Unstructured\+Grid\+\_\+t} \hyperlink{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}{Piece\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}{Piece\+\_\+type}, char $>$ \hyperlink{classUnstructuredGrid__t_a8a9bf012c364a5fbb78aac9a319a4dad}{Piece\+\_\+traits}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}{Piece\+\_\+type} \& \hyperlink{classUnstructuredGrid__t_a32fdd47d79cfdd2eb071cf674b7cc9ee}{Piece} () const 
+\item 
+\hyperlink{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}{Piece\+\_\+type} \& \hyperlink{classUnstructuredGrid__t_a66b7c6fc204fdc78b4611fd132771573}{Piece} ()
+\item 
+void \hyperlink{classUnstructuredGrid__t_a97ef3f79738631a4265c4fbeb170f04d}{Piece} (const \hyperlink{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}{Piece\+\_\+type} \&x)
+\item 
+void \hyperlink{classUnstructuredGrid__t_ab6746290ddee77043f5830b05d750972}{Piece} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}{Piece\+\_\+type} $>$ p)
+\item 
+\hyperlink{classUnstructuredGrid__t_a00bf6957ea7e3313e2890bd4c02f8981}{Unstructured\+Grid\+\_\+t} (const \hyperlink{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}{Piece\+\_\+type} \&)
+\item 
+\hyperlink{classUnstructuredGrid__t_a5335359377e3026191868e93675a5436}{Unstructured\+Grid\+\_\+t} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}{Piece\+\_\+type} $>$)
+\item 
+\hyperlink{classUnstructuredGrid__t_ad6fb3d97ad8d9443d53e1152a9fa6004}{Unstructured\+Grid\+\_\+t} (const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+\hyperlink{classUnstructuredGrid__t_a893b6debad8369f36a3cdc2aaa22b478}{Unstructured\+Grid\+\_\+t} (const \hyperlink{classUnstructuredGrid__t}{Unstructured\+Grid\+\_\+t} \&x,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+virtual \hyperlink{classUnstructuredGrid__t}{Unstructured\+Grid\+\_\+t} $\ast$ \hyperlink{classUnstructuredGrid__t_ae51f374b8650e990f30723bdcf181f2d}{\+\_\+clone} (\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0) const 
+\item 
+\hyperlink{classUnstructuredGrid__t}{Unstructured\+Grid\+\_\+t} \& \hyperlink{classUnstructuredGrid__t_ac33ad0177719bcab9caa4fdf0efc51ae}{operator=} (const \hyperlink{classUnstructuredGrid__t}{Unstructured\+Grid\+\_\+t} \&x)
+\item 
+virtual \hyperlink{classUnstructuredGrid__t_a6fb9239ab1215edd7e7822a66d3af53c}{$\sim$\+Unstructured\+Grid\+\_\+t} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classUnstructuredGrid__t_ae0663e380fcfcfd8b663a0a52241c034}{parse} (\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}{Piece\+\_\+type} $>$ \hyperlink{classUnstructuredGrid__t_aec675f4635fe96f8e4e5964e8220e0a0}{Piece\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Piece\+\_\+traits@{Piece\+\_\+traits}}
+\index{Piece\+\_\+traits@{Piece\+\_\+traits}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Piece\+\_\+traits}{Piece_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf Piece\+\_\+type}, char $>$ {\bf Unstructured\+Grid\+\_\+t\+::\+Piece\+\_\+traits}}\hypertarget{classUnstructuredGrid__t_a8a9bf012c364a5fbb78aac9a319a4dad}{}\label{classUnstructuredGrid__t_a8a9bf012c364a5fbb78aac9a319a4dad}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Piece\+\_\+type@{Piece\+\_\+type}}
+\index{Piece\+\_\+type@{Piece\+\_\+type}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Piece\+\_\+type}{Piece_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf Piece\+Unstructured\+Grid\+\_\+t} {\bf Unstructured\+Grid\+\_\+t\+::\+Piece\+\_\+type}}\hypertarget{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}{}\label{classUnstructuredGrid__t_a559913611314b34f4868027fc91e35bc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Unstructured\+Grid\+\_\+t(const Piece\+\_\+type \&)}{UnstructuredGrid_t(const Piece_type &)}}]{\setlength{\rightskip}{0pt plus 5cm}Unstructured\+Grid\+\_\+t\+::\+Unstructured\+Grid\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const {\bf Piece\+\_\+type} \&}]{Piece}
+\end{DoxyParamCaption}
+)}\hypertarget{classUnstructuredGrid__t_a00bf6957ea7e3313e2890bd4c02f8981}{}\label{classUnstructuredGrid__t_a00bf6957ea7e3313e2890bd4c02f8981}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Unstructured\+Grid\+\_\+t(\+::std\+::unique\+\_\+ptr$<$ Piece\+\_\+type $>$)}{UnstructuredGrid_t(::std::unique_ptr< Piece_type >)}}]{\setlength{\rightskip}{0pt plus 5cm}Unstructured\+Grid\+\_\+t\+::\+Unstructured\+Grid\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf Piece\+\_\+type} $>$}]{Piece}
+\end{DoxyParamCaption}
+)}\hypertarget{classUnstructuredGrid__t_a5335359377e3026191868e93675a5436}{}\label{classUnstructuredGrid__t_a5335359377e3026191868e93675a5436}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Unstructured\+Grid\+\_\+t(const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{UnstructuredGrid_t(const ::xercesc::DOMElement &e,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Unstructured\+Grid\+\_\+t\+::\+Unstructured\+Grid\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const \+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classUnstructuredGrid__t_ad6fb3d97ad8d9443d53e1152a9fa6004}{}\label{classUnstructuredGrid__t_ad6fb3d97ad8d9443d53e1152a9fa6004}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Unstructured\+Grid\+\_\+t(const Unstructured\+Grid\+\_\+t \&x,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{UnstructuredGrid_t(const UnstructuredGrid_t &x,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Unstructured\+Grid\+\_\+t\+::\+Unstructured\+Grid\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const {\bf Unstructured\+Grid\+\_\+t} \&}]{x, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classUnstructuredGrid__t_a893b6debad8369f36a3cdc2aaa22b478}{}\label{classUnstructuredGrid__t_a893b6debad8369f36a3cdc2aaa22b478}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!````~Unstructured\+Grid\+\_\+t@{$\sim$\+Unstructured\+Grid\+\_\+t}}
+\index{````~Unstructured\+Grid\+\_\+t@{$\sim$\+Unstructured\+Grid\+\_\+t}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{$\sim$\+Unstructured\+Grid\+\_\+t()}{~UnstructuredGrid_t()}}]{\setlength{\rightskip}{0pt plus 5cm}Unstructured\+Grid\+\_\+t\+::$\sim$\+Unstructured\+Grid\+\_\+t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classUnstructuredGrid__t_a6fb9239ab1215edd7e7822a66d3af53c}{}\label{classUnstructuredGrid__t_a6fb9239ab1215edd7e7822a66d3af53c}
+
+
+\subsection{Member Function Documentation}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!\+\_\+clone@{\+\_\+clone}}
+\index{\+\_\+clone@{\+\_\+clone}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{\+\_\+clone(\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0) const }{_clone(::xml_schema::flags f=0,::xml_schema::container *c=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unstructured\+Grid\+\_\+t} $\ast$ Unstructured\+Grid\+\_\+t\+::\+\_\+clone (
+\begin{DoxyParamCaption}
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classUnstructuredGrid__t_ae51f374b8650e990f30723bdcf181f2d}{}\label{classUnstructuredGrid__t_ae51f374b8650e990f30723bdcf181f2d}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!operator=@{operator=}}
+\index{operator=@{operator=}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{operator=(const Unstructured\+Grid\+\_\+t \&x)}{operator=(const UnstructuredGrid_t &x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unstructured\+Grid\+\_\+t} \& Unstructured\+Grid\+\_\+t\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Unstructured\+Grid\+\_\+t} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classUnstructuredGrid__t_ac33ad0177719bcab9caa4fdf0efc51ae}{}\label{classUnstructuredGrid__t_ac33ad0177719bcab9caa4fdf0efc51ae}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!parse@{parse}}
+\index{parse@{parse}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{parse(\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::xml\+\_\+schema\+::flags)}{parse(::xsd::cxx::xml::dom::parser< char > &,::xml_schema::flags)}}]{\setlength{\rightskip}{0pt plus 5cm}void Unstructured\+Grid\+\_\+t\+::parse (
+\begin{DoxyParamCaption}
+\item[{\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&}]{p, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classUnstructuredGrid__t_ae0663e380fcfcfd8b663a0a52241c034}{}\label{classUnstructuredGrid__t_ae0663e380fcfcfd8b663a0a52241c034}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Piece@{Piece}}
+\index{Piece@{Piece}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Piece() const }{Piece() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Unstructured\+Grid\+\_\+t\+::\+Piece\+\_\+type} \& Unstructured\+Grid\+\_\+t\+::\+Piece (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classUnstructuredGrid__t_a32fdd47d79cfdd2eb071cf674b7cc9ee}{}\label{classUnstructuredGrid__t_a32fdd47d79cfdd2eb071cf674b7cc9ee}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Piece@{Piece}}
+\index{Piece@{Piece}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Piece()}{Piece()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unstructured\+Grid\+\_\+t\+::\+Piece\+\_\+type} \& Unstructured\+Grid\+\_\+t\+::\+Piece (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classUnstructuredGrid__t_a66b7c6fc204fdc78b4611fd132771573}{}\label{classUnstructuredGrid__t_a66b7c6fc204fdc78b4611fd132771573}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Piece@{Piece}}
+\index{Piece@{Piece}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Piece(const Piece\+\_\+type \&x)}{Piece(const Piece_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void Unstructured\+Grid\+\_\+t\+::\+Piece (
+\begin{DoxyParamCaption}
+\item[{const {\bf Piece\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classUnstructuredGrid__t_a97ef3f79738631a4265c4fbeb170f04d}{}\label{classUnstructuredGrid__t_a97ef3f79738631a4265c4fbeb170f04d}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Piece@{Piece}}
+\index{Piece@{Piece}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Piece(\+::std\+::unique\+\_\+ptr$<$ Piece\+\_\+type $>$ p)}{Piece(::std::unique_ptr< Piece_type > p)}}]{\setlength{\rightskip}{0pt plus 5cm}void Unstructured\+Grid\+\_\+t\+::\+Piece (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf Piece\+\_\+type} $>$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classUnstructuredGrid__t_ab6746290ddee77043f5830b05d750972}{}\label{classUnstructuredGrid__t_ab6746290ddee77043f5830b05d750972}
+
+
+\subsection{Member Data Documentation}
+\index{Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}!Piece\+\_\+@{Piece\+\_\+}}
+\index{Piece\+\_\+@{Piece\+\_\+}!Unstructured\+Grid\+\_\+t@{Unstructured\+Grid\+\_\+t}}
+\subsubsection[{\texorpdfstring{Piece\+\_\+}{Piece_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf Piece\+\_\+type} $>$ Unstructured\+Grid\+\_\+t\+::\+Piece\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classUnstructuredGrid__t_aec675f4635fe96f8e4e5964e8220e0a0}{}\label{classUnstructuredGrid__t_aec675f4635fe96f8e4e5964e8220e0a0}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/output\+Writer/\hyperlink{vtk-unstructured_8h}{vtk-\/unstructured.\+h}\item 
+src/output\+Writer/\hyperlink{vtk-unstructured_8cpp}{vtk-\/unstructured.\+cpp}\end{DoxyCompactItemize}

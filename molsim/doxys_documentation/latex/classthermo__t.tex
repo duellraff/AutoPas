@@ -1,0 +1,317 @@
+\hypertarget{classthermo__t}{}\section{thermo\+\_\+t Class Reference}
+\label{classthermo__t}\index{thermo\+\_\+t@{thermo\+\_\+t}}
+
+
+{\ttfamily \#include $<$setting.\+h$>$}
+
+Inheritance diagram for thermo\+\_\+t\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classthermo__t}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+::\hyperlink{namespacexml__schema_ad7e04ab17bba0b3fdde43fb79ef6ed87}{xml\+\_\+schema\+::float\+\_\+} \hyperlink{classthermo__t_a3b889c80ce97870a6967ebee963438ed}{initial\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classthermo__t_a3b889c80ce97870a6967ebee963438ed}{initial\+\_\+type}, char $>$ \hyperlink{classthermo__t_a857c3d12cdb293a7ec3ea2e2ac52812c}{initial\+\_\+traits}
+\item 
+typedef \+::\hyperlink{namespacexml__schema_acfa24ac68e1a188e7f44c36f7a158bf4}{xml\+\_\+schema\+::int\+\_\+} \hyperlink{classthermo__t_a6895e9b201424e2fada14df933774b0c}{timestep\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classthermo__t_a6895e9b201424e2fada14df933774b0c}{timestep\+\_\+type}, char $>$ \hyperlink{classthermo__t_a22923d5493f01433df1b956905308222}{timestep\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classthermo__target__t}{thermo\+\_\+target\+\_\+t} \hyperlink{classthermo__t_a53d64092b110ebaf8c36a23a2c9c40ec}{heating\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::optional$<$ \hyperlink{classthermo__t_a53d64092b110ebaf8c36a23a2c9c40ec}{heating\+\_\+type} $>$ \hyperlink{classthermo__t_a07769e3087269c95ee4fc162c6bf4341}{heating\+\_\+optional}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classthermo__t_a53d64092b110ebaf8c36a23a2c9c40ec}{heating\+\_\+type}, char $>$ \hyperlink{classthermo__t_adb14cdd53e4543425bb71da6fbb034d5}{heating\+\_\+traits}
+\item 
+typedef \+::\hyperlink{namespacexml__schema_ae5ada4ec9c54b51765c3e4c0e9631bba}{xml\+\_\+schema\+::boolean} \hyperlink{classthermo__t_a20faf1f752e18e7d9e8f2f7b943fbf01}{ignore\+Y\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::optional$<$ \hyperlink{classthermo__t_a20faf1f752e18e7d9e8f2f7b943fbf01}{ignore\+Y\+\_\+type} $>$ \hyperlink{classthermo__t_a95e0efa769cf6e41e4851c821fde82a9}{ignore\+Y\+\_\+optional}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classthermo__t_a20faf1f752e18e7d9e8f2f7b943fbf01}{ignore\+Y\+\_\+type}, char $>$ \hyperlink{classthermo__t_a73de5c924d01c03f5d5dda8f571a2f9b}{ignore\+Y\+\_\+traits}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classthermo__t_a3b889c80ce97870a6967ebee963438ed}{initial\+\_\+type} \& \hyperlink{classthermo__t_a279984e2d428ca1cdc75b599647a1a13}{initial} () const 
+\item 
+\hyperlink{classthermo__t_a3b889c80ce97870a6967ebee963438ed}{initial\+\_\+type} \& \hyperlink{classthermo__t_a07569ef2c98506acafb4d45cf2ba3007}{initial} ()
+\item 
+void \hyperlink{classthermo__t_a4e612c1cc79e5b7910e5a8aab33769e8}{initial} (const \hyperlink{classthermo__t_a3b889c80ce97870a6967ebee963438ed}{initial\+\_\+type} \&x)
+\item 
+const \hyperlink{classthermo__t_a6895e9b201424e2fada14df933774b0c}{timestep\+\_\+type} \& \hyperlink{classthermo__t_a4eb690c69691f503eb8798729950a0bc}{timestep} () const 
+\item 
+\hyperlink{classthermo__t_a6895e9b201424e2fada14df933774b0c}{timestep\+\_\+type} \& \hyperlink{classthermo__t_aa0b0b27613dc49acab5e36bf23d75a62}{timestep} ()
+\item 
+void \hyperlink{classthermo__t_afcb6e9f9b2940fb8ac8bcd8d9e155101}{timestep} (const \hyperlink{classthermo__t_a6895e9b201424e2fada14df933774b0c}{timestep\+\_\+type} \&x)
+\item 
+const \hyperlink{classthermo__t_a07769e3087269c95ee4fc162c6bf4341}{heating\+\_\+optional} \& \hyperlink{classthermo__t_a969cfd3ae1e0384ef167460d6e7f49a4}{heating} () const 
+\item 
+\hyperlink{classthermo__t_a07769e3087269c95ee4fc162c6bf4341}{heating\+\_\+optional} \& \hyperlink{classthermo__t_a7d238a6312e96860cb90a4a4a9fc8c81}{heating} ()
+\item 
+void \hyperlink{classthermo__t_a6304d053b24451d70535b6c4a9e216b7}{heating} (const \hyperlink{classthermo__t_a53d64092b110ebaf8c36a23a2c9c40ec}{heating\+\_\+type} \&x)
+\item 
+void \hyperlink{classthermo__t_a1cf016365963f545536e19be13712bb3}{heating} (const \hyperlink{classthermo__t_a07769e3087269c95ee4fc162c6bf4341}{heating\+\_\+optional} \&x)
+\item 
+void \hyperlink{classthermo__t_ae78c9120bb615a064bc6b7d35ec0e852}{heating} (\+::std\+::unique\+\_\+ptr$<$ \hyperlink{classthermo__t_a53d64092b110ebaf8c36a23a2c9c40ec}{heating\+\_\+type} $>$ p)
+\item 
+const \hyperlink{classthermo__t_a95e0efa769cf6e41e4851c821fde82a9}{ignore\+Y\+\_\+optional} \& \hyperlink{classthermo__t_aefb4116e31e4dd7586b915cd68dcd4c0}{ignoreY} () const 
+\item 
+\hyperlink{classthermo__t_a95e0efa769cf6e41e4851c821fde82a9}{ignore\+Y\+\_\+optional} \& \hyperlink{classthermo__t_ae6ae1b900ac23e51131d1243f177c825}{ignoreY} ()
+\item 
+void \hyperlink{classthermo__t_a32ec95928025c06fa81693a9d2c3672a}{ignoreY} (const \hyperlink{classthermo__t_a20faf1f752e18e7d9e8f2f7b943fbf01}{ignore\+Y\+\_\+type} \&x)
+\item 
+void \hyperlink{classthermo__t_a8fc0c14a4f1f52341cefe7518fb10ed0}{ignoreY} (const \hyperlink{classthermo__t_a95e0efa769cf6e41e4851c821fde82a9}{ignore\+Y\+\_\+optional} \&x)
+\item 
+\hyperlink{classthermo__t_af1527d191e02d46a08f146feb12fcf74}{thermo\+\_\+t} (const \hyperlink{classthermo__t_a3b889c80ce97870a6967ebee963438ed}{initial\+\_\+type} \&, const \hyperlink{classthermo__t_a6895e9b201424e2fada14df933774b0c}{timestep\+\_\+type} \&)
+\item 
+\hyperlink{classthermo__t_a9d2453469c50d26154ad9126e93da768}{thermo\+\_\+t} (const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+\hyperlink{classthermo__t_a524ba6dfc3781a5ee2a86e674097ff00}{thermo\+\_\+t} (const \hyperlink{classthermo__t}{thermo\+\_\+t} \&x,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+virtual \hyperlink{classthermo__t}{thermo\+\_\+t} $\ast$ \hyperlink{classthermo__t_a879a6032b26ce6be5227b0f9841401c2}{\+\_\+clone} (\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0) const 
+\item 
+\hyperlink{classthermo__t}{thermo\+\_\+t} \& \hyperlink{classthermo__t_af17439150b657be91fdece5590d29877}{operator=} (const \hyperlink{classthermo__t}{thermo\+\_\+t} \&x)
+\item 
+virtual \hyperlink{classthermo__t_af1f580af388c6d697df6fe432928e7c3}{$\sim$thermo\+\_\+t} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classthermo__t_ad904ca357fb42ae48a78d887fecf1f00}{parse} (\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classthermo__t_a3b889c80ce97870a6967ebee963438ed}{initial\+\_\+type} $>$ \hyperlink{classthermo__t_a44b9944e39c14f6ad14dc4367b913e17}{initial\+\_\+}
+\item 
+\+::xsd\+::cxx\+::tree\+::one$<$ \hyperlink{classthermo__t_a6895e9b201424e2fada14df933774b0c}{timestep\+\_\+type} $>$ \hyperlink{classthermo__t_a81482a5b9787aef0293b763d929cfc31}{timestep\+\_\+}
+\item 
+\hyperlink{classthermo__t_a07769e3087269c95ee4fc162c6bf4341}{heating\+\_\+optional} \hyperlink{classthermo__t_a416f5bd41ef13d1b555d7c441e47ec94}{heating\+\_\+}
+\item 
+\hyperlink{classthermo__t_a95e0efa769cf6e41e4851c821fde82a9}{ignore\+Y\+\_\+optional} \hyperlink{classthermo__t_a25f092948e00faf10758e74c3930cbcf}{ignore\+Y\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!heating\+\_\+optional@{heating\+\_\+optional}}
+\index{heating\+\_\+optional@{heating\+\_\+optional}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{heating\+\_\+optional}{heating_optional}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::optional$<$ {\bf heating\+\_\+type} $>$ {\bf thermo\+\_\+t\+::heating\+\_\+optional}}\hypertarget{classthermo__t_a07769e3087269c95ee4fc162c6bf4341}{}\label{classthermo__t_a07769e3087269c95ee4fc162c6bf4341}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!heating\+\_\+traits@{heating\+\_\+traits}}
+\index{heating\+\_\+traits@{heating\+\_\+traits}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{heating\+\_\+traits}{heating_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf heating\+\_\+type}, char $>$ {\bf thermo\+\_\+t\+::heating\+\_\+traits}}\hypertarget{classthermo__t_adb14cdd53e4543425bb71da6fbb034d5}{}\label{classthermo__t_adb14cdd53e4543425bb71da6fbb034d5}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!heating\+\_\+type@{heating\+\_\+type}}
+\index{heating\+\_\+type@{heating\+\_\+type}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{heating\+\_\+type}{heating_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf thermo\+\_\+target\+\_\+t} {\bf thermo\+\_\+t\+::heating\+\_\+type}}\hypertarget{classthermo__t_a53d64092b110ebaf8c36a23a2c9c40ec}{}\label{classthermo__t_a53d64092b110ebaf8c36a23a2c9c40ec}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!ignore\+Y\+\_\+optional@{ignore\+Y\+\_\+optional}}
+\index{ignore\+Y\+\_\+optional@{ignore\+Y\+\_\+optional}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{ignore\+Y\+\_\+optional}{ignoreY_optional}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::optional$<$ {\bf ignore\+Y\+\_\+type} $>$ {\bf thermo\+\_\+t\+::ignore\+Y\+\_\+optional}}\hypertarget{classthermo__t_a95e0efa769cf6e41e4851c821fde82a9}{}\label{classthermo__t_a95e0efa769cf6e41e4851c821fde82a9}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!ignore\+Y\+\_\+traits@{ignore\+Y\+\_\+traits}}
+\index{ignore\+Y\+\_\+traits@{ignore\+Y\+\_\+traits}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{ignore\+Y\+\_\+traits}{ignoreY_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf ignore\+Y\+\_\+type}, char $>$ {\bf thermo\+\_\+t\+::ignore\+Y\+\_\+traits}}\hypertarget{classthermo__t_a73de5c924d01c03f5d5dda8f571a2f9b}{}\label{classthermo__t_a73de5c924d01c03f5d5dda8f571a2f9b}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!ignore\+Y\+\_\+type@{ignore\+Y\+\_\+type}}
+\index{ignore\+Y\+\_\+type@{ignore\+Y\+\_\+type}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{ignore\+Y\+\_\+type}{ignoreY_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf xml\+\_\+schema\+::boolean} {\bf thermo\+\_\+t\+::ignore\+Y\+\_\+type}}\hypertarget{classthermo__t_a20faf1f752e18e7d9e8f2f7b943fbf01}{}\label{classthermo__t_a20faf1f752e18e7d9e8f2f7b943fbf01}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!initial\+\_\+traits@{initial\+\_\+traits}}
+\index{initial\+\_\+traits@{initial\+\_\+traits}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{initial\+\_\+traits}{initial_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf initial\+\_\+type}, char $>$ {\bf thermo\+\_\+t\+::initial\+\_\+traits}}\hypertarget{classthermo__t_a857c3d12cdb293a7ec3ea2e2ac52812c}{}\label{classthermo__t_a857c3d12cdb293a7ec3ea2e2ac52812c}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!initial\+\_\+type@{initial\+\_\+type}}
+\index{initial\+\_\+type@{initial\+\_\+type}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{initial\+\_\+type}{initial_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf xml\+\_\+schema\+::float\+\_\+} {\bf thermo\+\_\+t\+::initial\+\_\+type}}\hypertarget{classthermo__t_a3b889c80ce97870a6967ebee963438ed}{}\label{classthermo__t_a3b889c80ce97870a6967ebee963438ed}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!timestep\+\_\+traits@{timestep\+\_\+traits}}
+\index{timestep\+\_\+traits@{timestep\+\_\+traits}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{timestep\+\_\+traits}{timestep_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf timestep\+\_\+type}, char $>$ {\bf thermo\+\_\+t\+::timestep\+\_\+traits}}\hypertarget{classthermo__t_a22923d5493f01433df1b956905308222}{}\label{classthermo__t_a22923d5493f01433df1b956905308222}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!timestep\+\_\+type@{timestep\+\_\+type}}
+\index{timestep\+\_\+type@{timestep\+\_\+type}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{timestep\+\_\+type}{timestep_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf xml\+\_\+schema\+::int\+\_\+} {\bf thermo\+\_\+t\+::timestep\+\_\+type}}\hypertarget{classthermo__t_a6895e9b201424e2fada14df933774b0c}{}\label{classthermo__t_a6895e9b201424e2fada14df933774b0c}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!thermo\+\_\+t@{thermo\+\_\+t}}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{thermo\+\_\+t(const initial\+\_\+type \&, const timestep\+\_\+type \&)}{thermo_t(const initial_type &, const timestep_type &)}}]{\setlength{\rightskip}{0pt plus 5cm}thermo\+\_\+t\+::thermo\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const {\bf initial\+\_\+type} \&}]{initial, }
+\item[{const {\bf timestep\+\_\+type} \&}]{timestep}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_af1527d191e02d46a08f146feb12fcf74}{}\label{classthermo__t_af1527d191e02d46a08f146feb12fcf74}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!thermo\+\_\+t@{thermo\+\_\+t}}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{thermo\+\_\+t(const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{thermo_t(const ::xercesc::DOMElement &e,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}thermo\+\_\+t\+::thermo\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const \+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_a9d2453469c50d26154ad9126e93da768}{}\label{classthermo__t_a9d2453469c50d26154ad9126e93da768}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!thermo\+\_\+t@{thermo\+\_\+t}}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{thermo\+\_\+t(const thermo\+\_\+t \&x,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{thermo_t(const thermo_t &x,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}thermo\+\_\+t\+::thermo\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const {\bf thermo\+\_\+t} \&}]{x, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_a524ba6dfc3781a5ee2a86e674097ff00}{}\label{classthermo__t_a524ba6dfc3781a5ee2a86e674097ff00}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!````~thermo\+\_\+t@{$\sim$thermo\+\_\+t}}
+\index{````~thermo\+\_\+t@{$\sim$thermo\+\_\+t}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{$\sim$thermo\+\_\+t()}{~thermo_t()}}]{\setlength{\rightskip}{0pt plus 5cm}thermo\+\_\+t\+::$\sim$thermo\+\_\+t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classthermo__t_af1f580af388c6d697df6fe432928e7c3}{}\label{classthermo__t_af1f580af388c6d697df6fe432928e7c3}
+
+
+\subsection{Member Function Documentation}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!\+\_\+clone@{\+\_\+clone}}
+\index{\+\_\+clone@{\+\_\+clone}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{\+\_\+clone(\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0) const }{_clone(::xml_schema::flags f=0,::xml_schema::container *c=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thermo\+\_\+t} $\ast$ thermo\+\_\+t\+::\+\_\+clone (
+\begin{DoxyParamCaption}
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classthermo__t_a879a6032b26ce6be5227b0f9841401c2}{}\label{classthermo__t_a879a6032b26ce6be5227b0f9841401c2}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!heating@{heating}}
+\index{heating@{heating}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{heating() const }{heating() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf thermo\+\_\+t\+::heating\+\_\+optional} \& thermo\+\_\+t\+::heating (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classthermo__t_a969cfd3ae1e0384ef167460d6e7f49a4}{}\label{classthermo__t_a969cfd3ae1e0384ef167460d6e7f49a4}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!heating@{heating}}
+\index{heating@{heating}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{heating()}{heating()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thermo\+\_\+t\+::heating\+\_\+optional} \& thermo\+\_\+t\+::heating (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_a7d238a6312e96860cb90a4a4a9fc8c81}{}\label{classthermo__t_a7d238a6312e96860cb90a4a4a9fc8c81}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!heating@{heating}}
+\index{heating@{heating}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{heating(const heating\+\_\+type \&x)}{heating(const heating_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void thermo\+\_\+t\+::heating (
+\begin{DoxyParamCaption}
+\item[{const {\bf heating\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_a6304d053b24451d70535b6c4a9e216b7}{}\label{classthermo__t_a6304d053b24451d70535b6c4a9e216b7}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!heating@{heating}}
+\index{heating@{heating}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{heating(const heating\+\_\+optional \&x)}{heating(const heating_optional &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void thermo\+\_\+t\+::heating (
+\begin{DoxyParamCaption}
+\item[{const {\bf heating\+\_\+optional} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_a1cf016365963f545536e19be13712bb3}{}\label{classthermo__t_a1cf016365963f545536e19be13712bb3}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!heating@{heating}}
+\index{heating@{heating}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{heating(\+::std\+::unique\+\_\+ptr$<$ heating\+\_\+type $>$ p)}{heating(::std::unique_ptr< heating_type > p)}}]{\setlength{\rightskip}{0pt plus 5cm}void thermo\+\_\+t\+::heating (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::unique\+\_\+ptr$<$ {\bf heating\+\_\+type} $>$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_ae78c9120bb615a064bc6b7d35ec0e852}{}\label{classthermo__t_ae78c9120bb615a064bc6b7d35ec0e852}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!ignoreY@{ignoreY}}
+\index{ignoreY@{ignoreY}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{ignore\+Y() const }{ignoreY() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf thermo\+\_\+t\+::ignore\+Y\+\_\+optional} \& thermo\+\_\+t\+::ignoreY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classthermo__t_aefb4116e31e4dd7586b915cd68dcd4c0}{}\label{classthermo__t_aefb4116e31e4dd7586b915cd68dcd4c0}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!ignoreY@{ignoreY}}
+\index{ignoreY@{ignoreY}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{ignore\+Y()}{ignoreY()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thermo\+\_\+t\+::ignore\+Y\+\_\+optional} \& thermo\+\_\+t\+::ignoreY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_ae6ae1b900ac23e51131d1243f177c825}{}\label{classthermo__t_ae6ae1b900ac23e51131d1243f177c825}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!ignoreY@{ignoreY}}
+\index{ignoreY@{ignoreY}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{ignore\+Y(const ignore\+Y\+\_\+type \&x)}{ignoreY(const ignoreY_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void thermo\+\_\+t\+::ignoreY (
+\begin{DoxyParamCaption}
+\item[{const {\bf ignore\+Y\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_a32ec95928025c06fa81693a9d2c3672a}{}\label{classthermo__t_a32ec95928025c06fa81693a9d2c3672a}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!ignoreY@{ignoreY}}
+\index{ignoreY@{ignoreY}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{ignore\+Y(const ignore\+Y\+\_\+optional \&x)}{ignoreY(const ignoreY_optional &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void thermo\+\_\+t\+::ignoreY (
+\begin{DoxyParamCaption}
+\item[{const {\bf ignore\+Y\+\_\+optional} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_a8fc0c14a4f1f52341cefe7518fb10ed0}{}\label{classthermo__t_a8fc0c14a4f1f52341cefe7518fb10ed0}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!initial@{initial}}
+\index{initial@{initial}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{initial() const }{initial() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf thermo\+\_\+t\+::initial\+\_\+type} \& thermo\+\_\+t\+::initial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classthermo__t_a279984e2d428ca1cdc75b599647a1a13}{}\label{classthermo__t_a279984e2d428ca1cdc75b599647a1a13}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!initial@{initial}}
+\index{initial@{initial}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{initial()}{initial()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thermo\+\_\+t\+::initial\+\_\+type} \& thermo\+\_\+t\+::initial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_a07569ef2c98506acafb4d45cf2ba3007}{}\label{classthermo__t_a07569ef2c98506acafb4d45cf2ba3007}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!initial@{initial}}
+\index{initial@{initial}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{initial(const initial\+\_\+type \&x)}{initial(const initial_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void thermo\+\_\+t\+::initial (
+\begin{DoxyParamCaption}
+\item[{const {\bf initial\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_a4e612c1cc79e5b7910e5a8aab33769e8}{}\label{classthermo__t_a4e612c1cc79e5b7910e5a8aab33769e8}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!operator=@{operator=}}
+\index{operator=@{operator=}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{operator=(const thermo\+\_\+t \&x)}{operator=(const thermo_t &x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thermo\+\_\+t} \& thermo\+\_\+t\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf thermo\+\_\+t} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_af17439150b657be91fdece5590d29877}{}\label{classthermo__t_af17439150b657be91fdece5590d29877}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!parse@{parse}}
+\index{parse@{parse}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{parse(\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::xml\+\_\+schema\+::flags)}{parse(::xsd::cxx::xml::dom::parser< char > &,::xml_schema::flags)}}]{\setlength{\rightskip}{0pt plus 5cm}void thermo\+\_\+t\+::parse (
+\begin{DoxyParamCaption}
+\item[{\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&}]{p, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classthermo__t_ad904ca357fb42ae48a78d887fecf1f00}{}\label{classthermo__t_ad904ca357fb42ae48a78d887fecf1f00}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!timestep@{timestep}}
+\index{timestep@{timestep}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{timestep() const }{timestep() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf thermo\+\_\+t\+::timestep\+\_\+type} \& thermo\+\_\+t\+::timestep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classthermo__t_a4eb690c69691f503eb8798729950a0bc}{}\label{classthermo__t_a4eb690c69691f503eb8798729950a0bc}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!timestep@{timestep}}
+\index{timestep@{timestep}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{timestep()}{timestep()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf thermo\+\_\+t\+::timestep\+\_\+type} \& thermo\+\_\+t\+::timestep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_aa0b0b27613dc49acab5e36bf23d75a62}{}\label{classthermo__t_aa0b0b27613dc49acab5e36bf23d75a62}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!timestep@{timestep}}
+\index{timestep@{timestep}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{timestep(const timestep\+\_\+type \&x)}{timestep(const timestep_type &x)}}]{\setlength{\rightskip}{0pt plus 5cm}void thermo\+\_\+t\+::timestep (
+\begin{DoxyParamCaption}
+\item[{const {\bf timestep\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classthermo__t_afcb6e9f9b2940fb8ac8bcd8d9e155101}{}\label{classthermo__t_afcb6e9f9b2940fb8ac8bcd8d9e155101}
+
+
+\subsection{Member Data Documentation}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!heating\+\_\+@{heating\+\_\+}}
+\index{heating\+\_\+@{heating\+\_\+}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{heating\+\_\+}{heating_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf heating\+\_\+optional} thermo\+\_\+t\+::heating\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classthermo__t_a416f5bd41ef13d1b555d7c441e47ec94}{}\label{classthermo__t_a416f5bd41ef13d1b555d7c441e47ec94}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!ignore\+Y\+\_\+@{ignore\+Y\+\_\+}}
+\index{ignore\+Y\+\_\+@{ignore\+Y\+\_\+}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{ignore\+Y\+\_\+}{ignoreY_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ignore\+Y\+\_\+optional} thermo\+\_\+t\+::ignore\+Y\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classthermo__t_a25f092948e00faf10758e74c3930cbcf}{}\label{classthermo__t_a25f092948e00faf10758e74c3930cbcf}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!initial\+\_\+@{initial\+\_\+}}
+\index{initial\+\_\+@{initial\+\_\+}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{initial\+\_\+}{initial_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf initial\+\_\+type} $>$ thermo\+\_\+t\+::initial\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classthermo__t_a44b9944e39c14f6ad14dc4367b913e17}{}\label{classthermo__t_a44b9944e39c14f6ad14dc4367b913e17}
+\index{thermo\+\_\+t@{thermo\+\_\+t}!timestep\+\_\+@{timestep\+\_\+}}
+\index{timestep\+\_\+@{timestep\+\_\+}!thermo\+\_\+t@{thermo\+\_\+t}}
+\subsubsection[{\texorpdfstring{timestep\+\_\+}{timestep_}}]{\setlength{\rightskip}{0pt plus 5cm}\+::xsd\+::cxx\+::tree\+::one$<$ {\bf timestep\+\_\+type} $>$ thermo\+\_\+t\+::timestep\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classthermo__t_a81482a5b9787aef0293b763d929cfc31}{}\label{classthermo__t_a81482a5b9787aef0293b763d929cfc31}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/setting/\hyperlink{setting_8h}{setting.\+h}\item 
+src/setting/\hyperlink{setting_8cpp}{setting.\+cpp}\end{DoxyCompactItemize}

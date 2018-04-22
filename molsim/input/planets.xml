@@ -1,0 +1,90 @@
+<particle_input>
+  <types_input>
+    <id>0</id>
+    <mass>1</mass>
+    <epsilon>5</epsilon>
+    <sigma>1</sigma>
+  </types_input>
+ 
+ <types_input>
+    <id>1</id>
+    <mass>3.0e-6</mass>
+    <epsilon>5</epsilon>
+    <sigma>1</sigma>
+  </types_input>
+ 
+ <types_input>
+    <id>2</id>
+    <mass>9.55e-4</mass>
+    <epsilon>5</epsilon>
+    <sigma>1</sigma>
+  </types_input>
+
+  <types_input>
+    <id>3</id>
+    <mass>1.0e-14</mass>
+    <epsilon>5</epsilon>
+    <sigma>1</sigma>
+  </types_input>
+
+  <single_input>
+    <coord>
+      <x>100.0</x>
+      <y>100.0</y>
+      <z>100.0</z>
+    </coord>
+    <velocity>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </velocity>
+    <type>0</type>
+  </single_input>
+
+  <single_input>
+    <coord>
+      <x>100.0</x>
+      <y>101.0</y>
+      <z>100.0</z>
+    </coord>
+    <velocity>
+      <x>-1.0</x>
+      <y>0</y>
+      <z>0</z>
+    </velocity>
+    <type>1</type>
+  </single_input>
+
+  <single_input>
+    <coord>
+      <x>100.0</x>
+      <y>105.36</y>
+      <z>100.0</z>
+    </coord>
+    <velocity>
+      <x>-0.425</x>
+      <y>0</y>
+      <z>0</z>
+    </velocity>
+    <type>2</type>
+  </single_input>
+
+  <single_input>
+    <coord>
+      <x>134.75</x>
+      <y>100.0</y>
+      <z>100</z>
+    </coord>
+    <velocity>
+      <x>0</x>
+      <y>0.0296</y>
+      <z>0</z>
+    </velocity>
+    <type>3</type>
+  </single_input>
+
+</particle_input>
+
+
+
+

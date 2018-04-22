@@ -1,0 +1,49 @@
+<particle_input>
+  <types_input>
+    <id>0</id>
+    <mass>1</mass>
+    <epsilon>5</epsilon>
+    <sigma>1</sigma>
+  </types_input>
+
+  <cuboid_input>
+    <coord>
+      <x>10.0</x>
+      <y>10.0</y>
+      <z>5</z>
+    </coord>
+    <dimension>
+      <x>40</x>
+      <y>8</y>
+      <z>1</z>
+    </dimension>
+    <mesh>1.1225</mesh>
+    <velocity>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </velocity>
+    <type>0</type>
+  </cuboid_input>
+
+  <cuboid_input>
+    <coord>
+      <x>25.0</x>
+      <y>25.0</y>
+      <z>5</z>
+    </coord>
+    <dimension>
+      <x>8</x>
+      <y>8</y>
+      <z>1</z>
+    </dimension>
+    <mesh>1.1225</mesh>
+    <velocity>
+      <x>0</x>
+      <y>-10.0</y>
+      <z>0</z>
+    </velocity>
+    <type>0</type>
+  </cuboid_input>
+
+</particle_input>

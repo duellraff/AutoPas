@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<setting>
+
+  <outputname>output/MD_vtk</outputname>
+  <inputfiles>input/liquid.xml</inputfiles>
+  <frequency>200</frequency>
+  <delta_t>0.0005</delta_t>
+  <t_end>100</t_end>
+  <b_factor>0.1</b_factor>
+  <g_grav_x>0</g_grav_x>
+  <g_grav_y>0</g_grav_y>
+  <g_grav_z>0</g_grav_z>
+  <domainX>60.0</domainX>
+  <domainY>40.0</domainY>
+  <domainZ>51.0</domainZ>
+  <r_cutoff>3.45</r_cutoff>
+  <ContainerType>1</ContainerType>
+  <ForceComputationMethod>1</ForceComputationMethod>
+  <bc_left>2</bc_left>
+  <bc_lower>1</bc_lower>
+  <bc_upper>1</bc_upper>
+  <bc_right>2</bc_right>
+  <bc_front>2</bc_front>
+  <bc_back>2</bc_back>
+
+  <thermostat>
+    <initial>40</initial>
+    <timestep>1000</timestep>
+  </thermostat>
+  
+</setting>

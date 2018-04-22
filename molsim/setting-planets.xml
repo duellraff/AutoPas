@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<setting>
+
+  <outputname>output/MD_vtk</outputname>
+  <inputfiles>input/planets.xml</inputfiles>
+  <frequency>1000</frequency>
+  <delta_t>0.001</delta_t>
+  <t_end>1000</t_end>
+  <b_factor>0</b_factor>
+  <g_grav_x>0</g_grav_x>
+  <g_grav_y>0</g_grav_y>
+  <g_grav_z>0</g_grav_z>
+  <domainX>200</domainX>
+  <domainY>200</domainY>
+  <domainZ>200</domainZ>
+  <r_cutoff>200</r_cutoff>
+  <ContainerType>0</ContainerType>
+  <ForceComputationMethod>2</ForceComputationMethod>
+  <bc_left>0</bc_left>
+  <bc_lower>0</bc_lower>
+  <bc_upper>0</bc_upper>
+  <bc_right>0</bc_right>
+  <bc_front>0</bc_front>
+  <bc_back>0</bc_back>
+  
+</setting>

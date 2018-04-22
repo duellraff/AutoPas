@@ -1,0 +1,548 @@
+\hypertarget{classParticleContainer}{}\section{Particle\+Container Class Reference}
+\label{classParticleContainer}\index{Particle\+Container@{Particle\+Container}}
+
+
+Class to hold a set of particles.  
+
+
+
+
+{\ttfamily \#include $<$Particle\+Container.\+h$>$}
+
+Inheritance diagram for Particle\+Container\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classParticleContainer}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8}{Force\+Method} \{ \hyperlink{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8aafc56f60001e371709e979276a58ead8}{Gravity}, 
+\hyperlink{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8ada3883b657ac8c6a175c7946f0514e8e}{Lennard\+Jones}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classParticleContainer_a64a701a902e5a4e97ae04acb9d63e20a}{Particle\+Container} (\hyperlink{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8}{Force\+Method} \hyperlink{classParticleContainer_a839c3ff474bfece04fcbb0ca3fe9a0f8}{fm}, double timestep=0.\+014, double \hyperlink{classParticleContainer_a64e8a768554b5b6126755e8a8e85f2f5}{Brownian\+Factor}=0.\+1)
+\item 
+virtual \hyperlink{classParticleContainer_a9629a8d31a3aa8c2fe944307c1263b66}{$\sim$\+Particle\+Container} ()
+\item 
+void \hyperlink{classParticleContainer_aac74c7e039e9c6342bcbab8b20dd1b06}{set\+DeltaT} (double timestep)
+\item 
+virtual void \hyperlink{classParticleContainer_af7fe938fddd10136945f99625e141149}{set\+Gravity} (\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ g)
+\item 
+virtual void \hyperlink{classParticleContainer_abdd289393fe11f1192a9eb79b01b2680}{set\+Membrane} (double stiff, double r\+\_\+zero, bool status, double tend)
+\item 
+virtual void \hyperlink{classParticleContainer_ae3f61f4d99b06782cfd978779ccc13bf}{set\+List} (std\+::list$<$ \hyperlink{classParticle}{Particle} $>$ plist)
+\item 
+virtual \hyperlink{classParticle}{Particle} $\ast$ \hyperlink{classParticleContainer_a13b860c91defffff1404e8e3c12766a8}{add\+Particle} (\hyperlink{classParticle}{Particle} \&p)
+\item 
+virtual void \hyperlink{classParticleContainer_a27c73f4106a4e38382dbf461e03bb5f1}{delete\+Particle} (\hyperlink{classParticle}{Particle} \&p)
+\item 
+virtual void \hyperlink{classParticleContainer_ae132e846bb2763712d4acca3095bcbfc}{test\+Force\+End} (double time)
+\item 
+virtual std\+::list$<$ \hyperlink{classParticle}{Particle} $>$ \& \hyperlink{classParticleContainer_a5b96e023a5b3c2507766cefa8f006c65}{get\+All} ()
+\item 
+virtual std\+::list$<$ \hyperlink{classParticle}{Particle} $\ast$ $>$ \hyperlink{classParticleContainer_a52ebfc06d0daa96fbeef945b43e4fe00}{get\+All\+Pointer} ()
+\item 
+virtual void \hyperlink{classParticleContainer_af5626526d41510605c20161df34de71b}{f\+Reset} ()
+\item 
+virtual void \hyperlink{classParticleContainer_a329f1c21166cb9722553a1845f9be4d0}{calculateF} ()
+\item 
+virtual void \hyperlink{classParticleContainer_abfe567934c1e3319a03377ebf7da2369}{calculateX} ()
+\item 
+virtual void \hyperlink{classParticleContainer_a7b436c3226f9eb05e86d895a7eab8b41}{calculateV} ()
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classParticleContainer_a902a63a3c7758262aaec851a61557424}{calcF} (\hyperlink{classParticle}{Particle} \&p1, \hyperlink{classParticle}{Particle} \&p2)
+\item 
+void \hyperlink{classParticleContainer_a76b73383fadd0c6605bc44910357b5cd}{Harmonic\+Potential} (double k, double r\+\_\+zero)
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classParticleContainer_a672e44d2fe6c69fd9f1e15b5aa3897f1}{calc\+Gravity} (\hyperlink{classParticle}{Particle} \&p1, \hyperlink{classParticle}{Particle} \&p2)
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ \hyperlink{classParticleContainer_a8c64e42668cc829b2bc7bd7f12692c8c}{calc\+Lennard\+Jones} (\hyperlink{classParticle}{Particle} \&p1, \hyperlink{classParticle}{Particle} \&p2)
+\item 
+void \hyperlink{classParticleContainer_a5bd493f8fcdb9d4cf1f21c9a1108548f}{generate\+Cuboid} (int \hyperlink{classtype}{type}, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ pos, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ int, 3 $>$ dim, double h, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ v)
+\item 
+void \hyperlink{classParticleContainer_a1cddd777f83656d0593775612cf56af8}{generate\+Membrane} (int \hyperlink{classtype}{type}, double \hyperlink{classParticleContainer_a3a00b0487e24b68b5cedc29087221f00}{stiffness}, double r\+\_\+zero, double t\+\_\+end, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ force, std\+::list$<$ \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ int, 3 $>$$>$ coord\+\_\+force, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ pos, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ int, 3 $>$ dim, double h, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ v)
+\item 
+void \hyperlink{classParticleContainer_aa51fcd453b6fac96026ce942fe674454}{generate\+Sphere} (int \hyperlink{classtype}{type}, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ pos, int r, double h, \hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$ v)
+\item 
+void \hyperlink{classParticleContainer_a7861f4a36ac905683eb741e4afe2e4b1}{set\+Temperature} (float T, bool ignoreY)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ \hyperlink{classParticle}{Particle} $>$ \hyperlink{classParticleContainer_aad341e230fc4533690e0db8a4c9126f4}{partlist}
+\item 
+double \hyperlink{classParticleContainer_a00ee8dcd9a5c11b54e8fc731d38b45fa}{delta\+\_\+t}
+\item 
+\hyperlink{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8}{Force\+Method} \hyperlink{classParticleContainer_a839c3ff474bfece04fcbb0ca3fe9a0f8}{fm}
+\item 
+\hyperlink{classutils_1_1Vector}{utils\+::\+Vector}$<$ double, 3 $>$(Particle\+Container\+::$\ast$ \hyperlink{classParticleContainer_a3827ee46dac1ac38cc1312c6e7dae493}{calc\+F\+Function} )(\hyperlink{classParticle}{Particle} \&, \hyperlink{classParticle}{Particle} \&)
+\item 
+double \hyperlink{classParticleContainer_a64e8a768554b5b6126755e8a8e85f2f5}{Brownian\+Factor}
+\item 
+double \hyperlink{classParticleContainer_a3a00b0487e24b68b5cedc29087221f00}{stiffness} = 0
+\item 
+double \hyperlink{classParticleContainer_a50a0c62bf198ef1e37fe5c4d64a4a95a}{r0} = 0
+\item 
+bool \hyperlink{classParticleContainer_a9a051bfdd0e558ad4637335406c14fad}{membrane\+\_\+active} = false
+\item 
+double \hyperlink{classParticleContainer_aaa12218c40cf5d8f2421d5cc09fcafc0}{t\+\_\+end\+\_\+force} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to hold a set of particles. 
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{Particle\+Container@{Particle\+Container}!Force\+Method@{Force\+Method}}
+\index{Force\+Method@{Force\+Method}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{Force\+Method}{ForceMethod}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Particle\+Container\+::\+Force\+Method}}\hypertarget{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8}{}\label{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Gravity@{Gravity}!Particle\+Container@{Particle\+Container}}\index{Particle\+Container@{Particle\+Container}!Gravity@{Gravity}}\item[{\em 
+Gravity\hypertarget{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8aafc56f60001e371709e979276a58ead8}{}\label{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8aafc56f60001e371709e979276a58ead8}
+}]\index{Lennard\+Jones@{Lennard\+Jones}!Particle\+Container@{Particle\+Container}}\index{Particle\+Container@{Particle\+Container}!Lennard\+Jones@{Lennard\+Jones}}\item[{\em 
+Lennard\+Jones\hypertarget{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8ada3883b657ac8c6a175c7946f0514e8e}{}\label{classParticleContainer_a2457078eafdf0fdd9eeb977e63aed6e8ada3883b657ac8c6a175c7946f0514e8e}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Particle\+Container@{Particle\+Container}!Particle\+Container@{Particle\+Container}}
+\index{Particle\+Container@{Particle\+Container}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{Particle\+Container(\+Force\+Method fm, double timestep=0.\+014, double Brownian\+Factor=0.\+1)}{ParticleContainer(ForceMethod fm, double timestep=0.014, double BrownianFactor=0.1)}}]{\setlength{\rightskip}{0pt plus 5cm}Particle\+Container\+::\+Particle\+Container (
+\begin{DoxyParamCaption}
+\item[{enum {\bf Particle\+Container\+::\+Force\+Method}}]{fm, }
+\item[{double}]{timestep = {\ttfamily 0.014}, }
+\item[{double}]{Brownian\+Factor = {\ttfamily 0.1}}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticleContainer_a64a701a902e5a4e97ae04acb9d63e20a}{}\label{classParticleContainer_a64a701a902e5a4e97ae04acb9d63e20a}
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em f} & Function function to calculate the force between two particles \\
+\hline
+{\em timestep} & step between each step \\
+\hline
+{\em Brownian\+Factor} & the brownian Factor \\
+\hline
+\end{DoxyParams}
+\index{Particle\+Container@{Particle\+Container}!````~Particle\+Container@{$\sim$\+Particle\+Container}}
+\index{````~Particle\+Container@{$\sim$\+Particle\+Container}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{$\sim$\+Particle\+Container()}{~ParticleContainer()}}]{\setlength{\rightskip}{0pt plus 5cm}Particle\+Container\+::$\sim$\+Particle\+Container (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_a9629a8d31a3aa8c2fe944307c1263b66}{}\label{classParticleContainer_a9629a8d31a3aa8c2fe944307c1263b66}
+
+
+\subsection{Member Function Documentation}
+\index{Particle\+Container@{Particle\+Container}!add\+Particle@{add\+Particle}}
+\index{add\+Particle@{add\+Particle}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{add\+Particle(\+Particle \&p)}{addParticle(Particle &p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Particle} $\ast$ Particle\+Container\+::add\+Particle (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_a13b860c91defffff1404e8e3c12766a8}{}\label{classParticleContainer_a13b860c91defffff1404e8e3c12766a8}
+add one particle to the container 
+\begin{DoxyParams}{Parameters}
+{\em p} & the particle to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the newly created particle 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_ac1987c930d49b2300a0f3509e282f2f1}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!calcF@{calcF}}
+\index{calcF@{calcF}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{calc\+F(\+Particle \&p1, Particle \&p2)}{calcF(Particle &p1, Particle &p2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$ double, 3 $>$ Particle\+Container\+::calcF (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{p1, }
+\item[{{\bf Particle} \&}]{p2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classParticleContainer_a902a63a3c7758262aaec851a61557424}{}\label{classParticleContainer_a902a63a3c7758262aaec851a61557424}
+calculate forces using selected function 
+\begin{DoxyParams}{Parameters}
+{\em p1} & first particle \\
+\hline
+{\em p2} & second particle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector containing forces 
+\end{DoxyReturn}
+\index{Particle\+Container@{Particle\+Container}!calc\+Gravity@{calc\+Gravity}}
+\index{calc\+Gravity@{calc\+Gravity}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{calc\+Gravity(\+Particle \&p1, Particle \&p2)}{calcGravity(Particle &p1, Particle &p2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$ double, 3 $>$ Particle\+Container\+::calc\+Gravity (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{p1, }
+\item[{{\bf Particle} \&}]{p2}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticleContainer_a672e44d2fe6c69fd9f1e15b5aa3897f1}{}\label{classParticleContainer_a672e44d2fe6c69fd9f1e15b5aa3897f1}
+calculate forces using gravity 
+\begin{DoxyParams}{Parameters}
+{\em p1} & first particle \\
+\hline
+{\em p2} & second particle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector containing forces 
+\end{DoxyReturn}
+\index{Particle\+Container@{Particle\+Container}!calc\+Lennard\+Jones@{calc\+Lennard\+Jones}}
+\index{calc\+Lennard\+Jones@{calc\+Lennard\+Jones}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{calc\+Lennard\+Jones(\+Particle \&p1, Particle \&p2)}{calcLennardJones(Particle &p1, Particle &p2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$ double, 3 $>$ Particle\+Container\+::calc\+Lennard\+Jones (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{p1, }
+\item[{{\bf Particle} \&}]{p2}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticleContainer_a8c64e42668cc829b2bc7bd7f12692c8c}{}\label{classParticleContainer_a8c64e42668cc829b2bc7bd7f12692c8c}
+calculate forces using Lennard-\/\+Jones Potential 
+\begin{DoxyParams}{Parameters}
+{\em p1} & first particle \\
+\hline
+{\em p2} & second particle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector containing forces 
+\end{DoxyReturn}
+\index{Particle\+Container@{Particle\+Container}!calculateF@{calculateF}}
+\index{calculateF@{calculateF}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{calculate\+F()}{calculateF()}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::calculateF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_a329f1c21166cb9722553a1845f9be4d0}{}\label{classParticleContainer_a329f1c21166cb9722553a1845f9be4d0}
+calculate the force for all particles 
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_aaccb110aaed18cb2986a51e970e86fa4}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!calculateV@{calculateV}}
+\index{calculateV@{calculateV}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{calculate\+V()}{calculateV()}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::calculateV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_a7b436c3226f9eb05e86d895a7eab8b41}{}\label{classParticleContainer_a7b436c3226f9eb05e86d895a7eab8b41}
+calculate the position for all particles using the Velocity-\/\+Stoermer-\/\+Verlet-\/\+Algorithm 
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_a5b9a6d9b726bda76160aaf7fbaffa821}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!calculateX@{calculateX}}
+\index{calculateX@{calculateX}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{calculate\+X()}{calculateX()}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::calculateX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_abfe567934c1e3319a03377ebf7da2369}{}\label{classParticleContainer_abfe567934c1e3319a03377ebf7da2369}
+calculate the position for all particles using the Velocity-\/\+Stoermer-\/\+Verlet-\/\+Algorithm 
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_ad2862569c3377347adfc06964ab7d966}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!delete\+Particle@{delete\+Particle}}
+\index{delete\+Particle@{delete\+Particle}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{delete\+Particle(\+Particle \&p)}{deleteParticle(Particle &p)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::delete\+Particle (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_a27c73f4106a4e38382dbf461e03bb5f1}{}\label{classParticleContainer_a27c73f4106a4e38382dbf461e03bb5f1}
+remove a particle from the container 
+\begin{DoxyParams}{Parameters}
+{\em p} & the particle to remove \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_a6466835bf54973f4c7ec916c9b1f089b}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!f\+Reset@{f\+Reset}}
+\index{f\+Reset@{f\+Reset}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{f\+Reset()}{fReset()}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::f\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_af5626526d41510605c20161df34de71b}{}\label{classParticleContainer_af5626526d41510605c20161df34de71b}
+set the force to all particles according to gravity force 
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_ae2ebc865c7e07122e2ab5985182d82bc}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!generate\+Cuboid@{generate\+Cuboid}}
+\index{generate\+Cuboid@{generate\+Cuboid}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{generate\+Cuboid(int type, utils\+::\+Vector$<$ double, 3 $>$ pos, utils\+::\+Vector$<$ int, 3 $>$ dim, double h, utils\+::\+Vector$<$ double, 3 $>$ v)}{generateCuboid(int type, utils::Vector< double, 3 > pos, utils::Vector< int, 3 > dim, double h, utils::Vector< double, 3 > v)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::generate\+Cuboid (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{pos, }
+\item[{{\bf utils\+::\+Vector}$<$ int, 3 $>$}]{dim, }
+\item[{double}]{h, }
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticleContainer_a5bd493f8fcdb9d4cf1f21c9a1108548f}{}\label{classParticleContainer_a5bd493f8fcdb9d4cf1f21c9a1108548f}
+generates a cuboid of particles 
+\begin{DoxyParams}{Parameters}
+{\em type} & type of each particle \\
+\hline
+{\em pos} & coordinates of lower left front-\/side corner \\
+\hline
+{\em dim} & number of particles in each dimension \\
+\hline
+{\em h} & mesh width \\
+\hline
+{\em v} & velocity of each particle \\
+\hline
+\end{DoxyParams}
+\index{Particle\+Container@{Particle\+Container}!generate\+Membrane@{generate\+Membrane}}
+\index{generate\+Membrane@{generate\+Membrane}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{generate\+Membrane(int type, double stiffness, double r\+\_\+zero, double t\+\_\+end, utils\+::\+Vector$<$ double, 3 $>$ force, std\+::list$<$ utils\+::\+Vector$<$ int, 3 $>$$>$ coord\+\_\+force, utils\+::\+Vector$<$ double, 3 $>$ pos, utils\+::\+Vector$<$ int, 3 $>$ dim, double h, utils\+::\+Vector$<$ double, 3 $>$ v)}{generateMembrane(int type, double stiffness, double r_zero, double t_end, utils::Vector< double, 3 > force, std::list< utils::Vector< int, 3 >> coord_force, utils::Vector< double, 3 > pos, utils::Vector< int, 3 > dim, double h, utils::Vector< double, 3 > v)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::generate\+Membrane (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{double}]{stiffness, }
+\item[{double}]{r\+\_\+zero, }
+\item[{double}]{t\+\_\+end, }
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{force, }
+\item[{std\+::list$<$ {\bf utils\+::\+Vector}$<$ int, 3 $>$$>$}]{coord\+\_\+force, }
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{pos, }
+\item[{{\bf utils\+::\+Vector}$<$ int, 3 $>$}]{dim, }
+\item[{double}]{h, }
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticleContainer_a1cddd777f83656d0593775612cf56af8}{}\label{classParticleContainer_a1cddd777f83656d0593775612cf56af8}
+generates a cuboid of membrane particles 
+\begin{DoxyParams}{Parameters}
+{\em stiffness} & stiffness k of the membrane \\
+\hline
+{\em r\+\_\+zero} & average bond length of a molecule pair \\
+\hline
+{\em t\+\_\+end} & time when the force up should disappear \\
+\hline
+{\em force} & force acting on certain particles in the membrane \\
+\hline
+{\em force\+\_\+coord} & list of mesh coordinates of the particles supporting an external force \\
+\hline
+{\em type} & type of each particle \\
+\hline
+{\em pos} & coordinates of lower left front-\/side corner \\
+\hline
+{\em dim} & number of particles in each dimension \\
+\hline
+{\em h} & mesh width \\
+\hline
+{\em v} & velocity of each particle \\
+\hline
+\end{DoxyParams}
+\index{Particle\+Container@{Particle\+Container}!generate\+Sphere@{generate\+Sphere}}
+\index{generate\+Sphere@{generate\+Sphere}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{generate\+Sphere(int type, utils\+::\+Vector$<$ double, 3 $>$ pos, int r, double h, utils\+::\+Vector$<$ double, 3 $>$ v)}{generateSphere(int type, utils::Vector< double, 3 > pos, int r, double h, utils::Vector< double, 3 > v)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::generate\+Sphere (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{pos, }
+\item[{int}]{r, }
+\item[{double}]{h, }
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticleContainer_aa51fcd453b6fac96026ce942fe674454}{}\label{classParticleContainer_aa51fcd453b6fac96026ce942fe674454}
+generates a sphere of particles 
+\begin{DoxyParams}{Parameters}
+{\em type} & type of each particle \\
+\hline
+{\em pos} & coordinates of the center of sphere \\
+\hline
+{\em r} & number of particles as radius \\
+\hline
+{\em h} & mesh width \\
+\hline
+{\em m} & mass of each particle \\
+\hline
+{\em v} & velocity of each particle \\
+\hline
+\end{DoxyParams}
+\index{Particle\+Container@{Particle\+Container}!get\+All@{get\+All}}
+\index{get\+All@{get\+All}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{get\+All()}{getAll()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ {\bf Particle} $>$ \& Particle\+Container\+::get\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_a5b96e023a5b3c2507766cefa8f006c65}{}\label{classParticleContainer_a5b96e023a5b3c2507766cefa8f006c65}
+get a list of all particle in the container \begin{DoxyReturn}{Returns}
+list of all particles 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_a33feabbd2ffc9f8cb34ec237e057b7bc}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!get\+All\+Pointer@{get\+All\+Pointer}}
+\index{get\+All\+Pointer@{get\+All\+Pointer}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{get\+All\+Pointer()}{getAllPointer()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ {\bf Particle} $\ast$ $>$ Particle\+Container\+::get\+All\+Pointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_a52ebfc06d0daa96fbeef945b43e4fe00}{}\label{classParticleContainer_a52ebfc06d0daa96fbeef945b43e4fe00}
+get a list of pointer to all particle in the container \begin{DoxyReturn}{Returns}
+list of all particles 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_a0b3b6c216a529189b58b05991079bb21}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!Harmonic\+Potential@{Harmonic\+Potential}}
+\index{Harmonic\+Potential@{Harmonic\+Potential}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{Harmonic\+Potential(double k, double r\+\_\+zero)}{HarmonicPotential(double k, double r_zero)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::\+Harmonic\+Potential (
+\begin{DoxyParamCaption}
+\item[{double}]{k, }
+\item[{double}]{r\+\_\+zero}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticleContainer_a76b73383fadd0c6605bc44910357b5cd}{}\label{classParticleContainer_a76b73383fadd0c6605bc44910357b5cd}
+Calculate forces acting in a membrane 
+\begin{DoxyParams}{Parameters}
+{\em p} & particle \\
+\hline
+{\em k} & Stiffness of the membrane \\
+\hline
+{\em r0} & average bond length \\
+\hline
+\end{DoxyParams}
+\index{Particle\+Container@{Particle\+Container}!set\+DeltaT@{set\+DeltaT}}
+\index{set\+DeltaT@{set\+DeltaT}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{set\+Delta\+T(double timestep)}{setDeltaT(double timestep)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::set\+DeltaT (
+\begin{DoxyParamCaption}
+\item[{double}]{timestep}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticleContainer_aac74c7e039e9c6342bcbab8b20dd1b06}{}\label{classParticleContainer_aac74c7e039e9c6342bcbab8b20dd1b06}
+set the timestep 
+\begin{DoxyParams}{Parameters}
+{\em timestep} & time between steps \\
+\hline
+\end{DoxyParams}
+\index{Particle\+Container@{Particle\+Container}!set\+Gravity@{set\+Gravity}}
+\index{set\+Gravity@{set\+Gravity}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{set\+Gravity(utils\+::\+Vector$<$ double, 3 $>$ g)}{setGravity(utils::Vector< double, 3 > g)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::set\+Gravity (
+\begin{DoxyParamCaption}
+\item[{{\bf utils\+::\+Vector}$<$ double, 3 $>$}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_af7fe938fddd10136945f99625e141149}{}\label{classParticleContainer_af7fe938fddd10136945f99625e141149}
+set the gravitational force 
+\begin{DoxyParams}{Parameters}
+{\em g} & the gravitational acceleration \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_a25d0ac927ce692ae3bf944a67f86682a}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!set\+List@{set\+List}}
+\index{set\+List@{set\+List}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{set\+List(std\+::list$<$ Particle $>$ plist)}{setList(std::list< Particle > plist)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::set\+List (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ {\bf Particle} $>$}]{plist}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_ae3f61f4d99b06782cfd978779ccc13bf}{}\label{classParticleContainer_ae3f61f4d99b06782cfd978779ccc13bf}
+define all particles in the container 
+\begin{DoxyParams}{Parameters}
+{\em plist} & the list to fill container \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_a0c54230125a031821a99fc39b15e6d60}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!set\+Membrane@{set\+Membrane}}
+\index{set\+Membrane@{set\+Membrane}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{set\+Membrane(double stiff, double r\+\_\+zero, bool status, double tend)}{setMembrane(double stiff, double r_zero, bool status, double tend)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::set\+Membrane (
+\begin{DoxyParamCaption}
+\item[{double}]{stiff, }
+\item[{double}]{r\+\_\+zero, }
+\item[{bool}]{status, }
+\item[{double}]{tend}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_abdd289393fe11f1192a9eb79b01b2680}{}\label{classParticleContainer_abdd289393fe11f1192a9eb79b01b2680}
+sets the membrane parameters 
+\begin{DoxyParams}{Parameters}
+{\em stiff} & membrane stiffness \\
+\hline
+{\em r\+\_\+zero} & average bond lenght \\
+\hline
+{\em status} & whether the membrane is active or not \\
+\hline
+{\em tend} & force t\+\_\+end \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_a831a33f6b4f90f71396474a99f985575}{Linked\+Cells\+Container}.
+
+\index{Particle\+Container@{Particle\+Container}!set\+Temperature@{set\+Temperature}}
+\index{set\+Temperature@{set\+Temperature}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{set\+Temperature(float T, bool ignore\+Y)}{setTemperature(float T, bool ignoreY)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::set\+Temperature (
+\begin{DoxyParamCaption}
+\item[{float}]{T, }
+\item[{bool}]{ignoreY}
+\end{DoxyParamCaption}
+)}\hypertarget{classParticleContainer_a7861f4a36ac905683eb741e4afe2e4b1}{}\label{classParticleContainer_a7861f4a36ac905683eb741e4afe2e4b1}
+add a thermostat which regulate the temperature to T 
+\begin{DoxyParams}{Parameters}
+{\em T} & new temperature \\
+\hline
+{\em ignoreY} & true if y-\/component is ignored \\
+\hline
+\end{DoxyParams}
+\index{Particle\+Container@{Particle\+Container}!test\+Force\+End@{test\+Force\+End}}
+\index{test\+Force\+End@{test\+Force\+End}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{test\+Force\+End(double time)}{testForceEnd(double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Container\+::test\+Force\+End (
+\begin{DoxyParamCaption}
+\item[{double}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classParticleContainer_ae132e846bb2763712d4acca3095bcbfc}{}\label{classParticleContainer_ae132e846bb2763712d4acca3095bcbfc}
+tests if the force up should be switched of 
+\begin{DoxyParams}{Parameters}
+{\em time} & current simulation time \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classLinkedCellsContainer_a0dc45c921ad11aa2424b49ada44a0dfe}{Linked\+Cells\+Container}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Particle\+Container@{Particle\+Container}!Brownian\+Factor@{Brownian\+Factor}}
+\index{Brownian\+Factor@{Brownian\+Factor}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{Brownian\+Factor}{BrownianFactor}}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\+Container\+::\+Brownian\+Factor\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classParticleContainer_a64e8a768554b5b6126755e8a8e85f2f5}{}\label{classParticleContainer_a64e8a768554b5b6126755e8a8e85f2f5}
+\index{Particle\+Container@{Particle\+Container}!calc\+F\+Function@{calc\+F\+Function}}
+\index{calc\+F\+Function@{calc\+F\+Function}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{calc\+F\+Function}{calcFFunction}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utils\+::\+Vector}$<$double,3$>$(Particle\+Container\+::$\ast$ Particle\+Container\+::calc\+F\+Function) ({\bf Particle} \&, {\bf Particle} \&)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classParticleContainer_a3827ee46dac1ac38cc1312c6e7dae493}{}\label{classParticleContainer_a3827ee46dac1ac38cc1312c6e7dae493}
+\index{Particle\+Container@{Particle\+Container}!delta\+\_\+t@{delta\+\_\+t}}
+\index{delta\+\_\+t@{delta\+\_\+t}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{delta\+\_\+t}{delta_t}}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\+Container\+::delta\+\_\+t\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classParticleContainer_a00ee8dcd9a5c11b54e8fc731d38b45fa}{}\label{classParticleContainer_a00ee8dcd9a5c11b54e8fc731d38b45fa}
+\index{Particle\+Container@{Particle\+Container}!fm@{fm}}
+\index{fm@{fm}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{fm}{fm}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Force\+Method} Particle\+Container\+::fm\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classParticleContainer_a839c3ff474bfece04fcbb0ca3fe9a0f8}{}\label{classParticleContainer_a839c3ff474bfece04fcbb0ca3fe9a0f8}
+\index{Particle\+Container@{Particle\+Container}!membrane\+\_\+active@{membrane\+\_\+active}}
+\index{membrane\+\_\+active@{membrane\+\_\+active}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+active}{membrane_active}}]{\setlength{\rightskip}{0pt plus 5cm}bool Particle\+Container\+::membrane\+\_\+active = false\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classParticleContainer_a9a051bfdd0e558ad4637335406c14fad}{}\label{classParticleContainer_a9a051bfdd0e558ad4637335406c14fad}
+\index{Particle\+Container@{Particle\+Container}!partlist@{partlist}}
+\index{partlist@{partlist}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{partlist}{partlist}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<${\bf Particle}$>$ Particle\+Container\+::partlist\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classParticleContainer_aad341e230fc4533690e0db8a4c9126f4}{}\label{classParticleContainer_aad341e230fc4533690e0db8a4c9126f4}
+\index{Particle\+Container@{Particle\+Container}!r0@{r0}}
+\index{r0@{r0}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{r0}{r0}}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\+Container\+::r0 = 0\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classParticleContainer_a50a0c62bf198ef1e37fe5c4d64a4a95a}{}\label{classParticleContainer_a50a0c62bf198ef1e37fe5c4d64a4a95a}
+\index{Particle\+Container@{Particle\+Container}!stiffness@{stiffness}}
+\index{stiffness@{stiffness}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{stiffness}{stiffness}}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\+Container\+::stiffness = 0\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classParticleContainer_a3a00b0487e24b68b5cedc29087221f00}{}\label{classParticleContainer_a3a00b0487e24b68b5cedc29087221f00}
+\index{Particle\+Container@{Particle\+Container}!t\+\_\+end\+\_\+force@{t\+\_\+end\+\_\+force}}
+\index{t\+\_\+end\+\_\+force@{t\+\_\+end\+\_\+force}!Particle\+Container@{Particle\+Container}}
+\subsubsection[{\texorpdfstring{t\+\_\+end\+\_\+force}{t_end_force}}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\+Container\+::t\+\_\+end\+\_\+force = 0\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classParticleContainer_aaa12218c40cf5d8f2421d5cc09fcafc0}{}\label{classParticleContainer_aaa12218c40cf5d8f2421d5cc09fcafc0}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{ParticleContainer_8h}{Particle\+Container.\+h}\item 
+src/\hyperlink{ParticleContainer_8cpp}{Particle\+Container.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,396 @@
+\hypertarget{classinput__t}{}\section{input\+\_\+t Class Reference}
+\label{classinput__t}\index{input\+\_\+t@{input\+\_\+t}}
+
+
+{\ttfamily \#include $<$particle\+\_\+input.\+h$>$}
+
+Inheritance diagram for input\+\_\+t\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classinput__t}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+::\hyperlink{classparticletype__t}{particletype\+\_\+t} \hyperlink{classinput__t_a516c75c9426ee0026078ebe9ee6f50ea}{types\+\_\+input\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ \hyperlink{classinput__t_a516c75c9426ee0026078ebe9ee6f50ea}{types\+\_\+input\+\_\+type} $>$ \hyperlink{classinput__t_a48f5b9f6b00c9d3749caf0e3a0eac5a7}{types\+\_\+input\+\_\+sequence}
+\item 
+typedef types\+\_\+input\+\_\+sequence\+::iterator \hyperlink{classinput__t_a830eb55890cdf67c70880536db78be04}{types\+\_\+input\+\_\+iterator}
+\item 
+typedef types\+\_\+input\+\_\+sequence\+::const\+\_\+iterator \hyperlink{classinput__t_a7fddef7619e8c4dd76b1c6448c42bfc0}{types\+\_\+input\+\_\+const\+\_\+iterator}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classinput__t_a516c75c9426ee0026078ebe9ee6f50ea}{types\+\_\+input\+\_\+type}, char $>$ \hyperlink{classinput__t_a7ab3dea1712373b005d910f827cd9753}{types\+\_\+input\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classsingle__t}{single\+\_\+t} \hyperlink{classinput__t_af24fd90c4a0fa092c577776efca1c750}{single\+\_\+input\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ \hyperlink{classinput__t_af24fd90c4a0fa092c577776efca1c750}{single\+\_\+input\+\_\+type} $>$ \hyperlink{classinput__t_a1296075494d97da854dc2be8b1022061}{single\+\_\+input\+\_\+sequence}
+\item 
+typedef single\+\_\+input\+\_\+sequence\+::iterator \hyperlink{classinput__t_a001a8bb6bb06d71002249f491bc628fa}{single\+\_\+input\+\_\+iterator}
+\item 
+typedef single\+\_\+input\+\_\+sequence\+::const\+\_\+iterator \hyperlink{classinput__t_ac6c5ac99d56764bfdf61d747cd2c2074}{single\+\_\+input\+\_\+const\+\_\+iterator}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classinput__t_af24fd90c4a0fa092c577776efca1c750}{single\+\_\+input\+\_\+type}, char $>$ \hyperlink{classinput__t_aa3a5fc9d04df805785a23a89248fa924}{single\+\_\+input\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classcuboid__t}{cuboid\+\_\+t} \hyperlink{classinput__t_ab3172aa59d0cc9b2d4c5380d9cec72c3}{cuboid\+\_\+input\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ \hyperlink{classinput__t_ab3172aa59d0cc9b2d4c5380d9cec72c3}{cuboid\+\_\+input\+\_\+type} $>$ \hyperlink{classinput__t_a5aef33216e01e60c197cea604a519ab4}{cuboid\+\_\+input\+\_\+sequence}
+\item 
+typedef cuboid\+\_\+input\+\_\+sequence\+::iterator \hyperlink{classinput__t_aa4ecd719f9c1e557f73c163c723259f2}{cuboid\+\_\+input\+\_\+iterator}
+\item 
+typedef cuboid\+\_\+input\+\_\+sequence\+::const\+\_\+iterator \hyperlink{classinput__t_aab1823936b590269cb0f4de2f0a0a4fa}{cuboid\+\_\+input\+\_\+const\+\_\+iterator}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classinput__t_ab3172aa59d0cc9b2d4c5380d9cec72c3}{cuboid\+\_\+input\+\_\+type}, char $>$ \hyperlink{classinput__t_a6d747b3e200566247dcf36dd80109730}{cuboid\+\_\+input\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classmembrane__t}{membrane\+\_\+t} \hyperlink{classinput__t_aa72abd8e01641f20e6fdb3d5d0bf99ca}{membrane\+\_\+input\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ \hyperlink{classinput__t_aa72abd8e01641f20e6fdb3d5d0bf99ca}{membrane\+\_\+input\+\_\+type} $>$ \hyperlink{classinput__t_a455e36bc8b009abdbd13c6d167864cfe}{membrane\+\_\+input\+\_\+sequence}
+\item 
+typedef membrane\+\_\+input\+\_\+sequence\+::iterator \hyperlink{classinput__t_a2a9ad5a60f532541071c8432e3f3333b}{membrane\+\_\+input\+\_\+iterator}
+\item 
+typedef membrane\+\_\+input\+\_\+sequence\+::const\+\_\+iterator \hyperlink{classinput__t_ad9f1a19dff09cac44dc94fd97b3ab778}{membrane\+\_\+input\+\_\+const\+\_\+iterator}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classinput__t_aa72abd8e01641f20e6fdb3d5d0bf99ca}{membrane\+\_\+input\+\_\+type}, char $>$ \hyperlink{classinput__t_a7d8560c1644f93d6491d5aad368aeddb}{membrane\+\_\+input\+\_\+traits}
+\item 
+typedef \+::\hyperlink{classsphere__t}{sphere\+\_\+t} \hyperlink{classinput__t_a75628386280268669a4cc94066bd8547}{sphere\+\_\+input\+\_\+type}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ \hyperlink{classinput__t_a75628386280268669a4cc94066bd8547}{sphere\+\_\+input\+\_\+type} $>$ \hyperlink{classinput__t_aa968afe5c55f7cc3031e6196adddcae5}{sphere\+\_\+input\+\_\+sequence}
+\item 
+typedef sphere\+\_\+input\+\_\+sequence\+::iterator \hyperlink{classinput__t_ab8ba0d1f12d650cf8f5db6b8262baa0e}{sphere\+\_\+input\+\_\+iterator}
+\item 
+typedef sphere\+\_\+input\+\_\+sequence\+::const\+\_\+iterator \hyperlink{classinput__t_aa281fd31856422d1cb3934608b8e0185}{sphere\+\_\+input\+\_\+const\+\_\+iterator}
+\item 
+typedef \+::xsd\+::cxx\+::tree\+::traits$<$ \hyperlink{classinput__t_a75628386280268669a4cc94066bd8547}{sphere\+\_\+input\+\_\+type}, char $>$ \hyperlink{classinput__t_afb3a266016b34553b5f045eaddf78031}{sphere\+\_\+input\+\_\+traits}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classinput__t_a48f5b9f6b00c9d3749caf0e3a0eac5a7}{types\+\_\+input\+\_\+sequence} \& \hyperlink{classinput__t_aad81ec0c8587d9ed3c0390cc9ba75bb0}{types\+\_\+input} () const 
+\item 
+\hyperlink{classinput__t_a48f5b9f6b00c9d3749caf0e3a0eac5a7}{types\+\_\+input\+\_\+sequence} \& \hyperlink{classinput__t_a70e55b1ecc015b3e00101928dfbe5464}{types\+\_\+input} ()
+\item 
+void \hyperlink{classinput__t_a8a371e78d74ad9f67271745117ad478a}{types\+\_\+input} (const \hyperlink{classinput__t_a48f5b9f6b00c9d3749caf0e3a0eac5a7}{types\+\_\+input\+\_\+sequence} \&s)
+\item 
+const \hyperlink{classinput__t_a1296075494d97da854dc2be8b1022061}{single\+\_\+input\+\_\+sequence} \& \hyperlink{classinput__t_a23df17feba2a762f381167fbd900e3e2}{single\+\_\+input} () const 
+\item 
+\hyperlink{classinput__t_a1296075494d97da854dc2be8b1022061}{single\+\_\+input\+\_\+sequence} \& \hyperlink{classinput__t_abf4899015034fd15a532960d94af0388}{single\+\_\+input} ()
+\item 
+void \hyperlink{classinput__t_a76b473ba9a3a25f8d2c7ed2c02489c2d}{single\+\_\+input} (const \hyperlink{classinput__t_a1296075494d97da854dc2be8b1022061}{single\+\_\+input\+\_\+sequence} \&s)
+\item 
+const \hyperlink{classinput__t_a5aef33216e01e60c197cea604a519ab4}{cuboid\+\_\+input\+\_\+sequence} \& \hyperlink{classinput__t_a59b8093194c770faf0efcf86eb7a7383}{cuboid\+\_\+input} () const 
+\item 
+\hyperlink{classinput__t_a5aef33216e01e60c197cea604a519ab4}{cuboid\+\_\+input\+\_\+sequence} \& \hyperlink{classinput__t_af66b8c90f49b958d6e5f2b236abad9b2}{cuboid\+\_\+input} ()
+\item 
+void \hyperlink{classinput__t_a4d1a25864dfaf5d4ab006425538b1125}{cuboid\+\_\+input} (const \hyperlink{classinput__t_a5aef33216e01e60c197cea604a519ab4}{cuboid\+\_\+input\+\_\+sequence} \&s)
+\item 
+const \hyperlink{classinput__t_a455e36bc8b009abdbd13c6d167864cfe}{membrane\+\_\+input\+\_\+sequence} \& \hyperlink{classinput__t_adba6d36e90b80fe27862a3f7fc5fbf2a}{membrane\+\_\+input} () const 
+\item 
+\hyperlink{classinput__t_a455e36bc8b009abdbd13c6d167864cfe}{membrane\+\_\+input\+\_\+sequence} \& \hyperlink{classinput__t_a921b08f23c98a6c2aa7f4fb0c707a3ea}{membrane\+\_\+input} ()
+\item 
+void \hyperlink{classinput__t_a790aa48e13cbc7b014a70109a5942903}{membrane\+\_\+input} (const \hyperlink{classinput__t_a455e36bc8b009abdbd13c6d167864cfe}{membrane\+\_\+input\+\_\+sequence} \&s)
+\item 
+const \hyperlink{classinput__t_aa968afe5c55f7cc3031e6196adddcae5}{sphere\+\_\+input\+\_\+sequence} \& \hyperlink{classinput__t_abb6b015f0faa92bff850d921d4aad2b7}{sphere\+\_\+input} () const 
+\item 
+\hyperlink{classinput__t_aa968afe5c55f7cc3031e6196adddcae5}{sphere\+\_\+input\+\_\+sequence} \& \hyperlink{classinput__t_a3173f5cec229bff952ac6d965135d0ca}{sphere\+\_\+input} ()
+\item 
+void \hyperlink{classinput__t_acf44523ff6b17315300e30fbebe9f6db}{sphere\+\_\+input} (const \hyperlink{classinput__t_aa968afe5c55f7cc3031e6196adddcae5}{sphere\+\_\+input\+\_\+sequence} \&s)
+\item 
+\hyperlink{classinput__t_acd30ace524c19489ac1076e29e29c4cf}{input\+\_\+t} ()
+\item 
+\hyperlink{classinput__t_ad5e6bb4ad3034e6072766d292a9b2f06}{input\+\_\+t} (const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+\hyperlink{classinput__t_aa61c09ee6e6c8849e08296ea0ce9cdf9}{input\+\_\+t} (const \hyperlink{classinput__t}{input\+\_\+t} \&x,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0)
+\item 
+virtual \hyperlink{classinput__t}{input\+\_\+t} $\ast$ \hyperlink{classinput__t_a5113f4bf339b6e9f325fa1c0dc2a03de}{\+\_\+clone} (\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags} f=0,\+::\hyperlink{namespacexml__schema_ada9aa30dc722e93ee2ed7243085402a5}{xml\+\_\+schema\+::container} $\ast$c=0) const 
+\item 
+\hyperlink{classinput__t}{input\+\_\+t} \& \hyperlink{classinput__t_ac0f3874f508379a49375e681699ffdc2}{operator=} (const \hyperlink{classinput__t}{input\+\_\+t} \&x)
+\item 
+virtual \hyperlink{classinput__t_adec69a9fb0ede4506dda7414275639c2}{$\sim$input\+\_\+t} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classinput__t_af3861aa840c8d80dbbde88fae9b3db72}{parse} (\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::\hyperlink{namespacexml__schema_a0612287d030cb2732d31a45b258fdc87}{xml\+\_\+schema\+::flags})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classinput__t_a48f5b9f6b00c9d3749caf0e3a0eac5a7}{types\+\_\+input\+\_\+sequence} \hyperlink{classinput__t_af064e28d005941bce91337b136403cce}{types\+\_\+input\+\_\+}
+\item 
+\hyperlink{classinput__t_a1296075494d97da854dc2be8b1022061}{single\+\_\+input\+\_\+sequence} \hyperlink{classinput__t_a1f8f19b740102f74acb4dea4733350e4}{single\+\_\+input\+\_\+}
+\item 
+\hyperlink{classinput__t_a5aef33216e01e60c197cea604a519ab4}{cuboid\+\_\+input\+\_\+sequence} \hyperlink{classinput__t_af00e51fceddd64f134b3e7cd8707d692}{cuboid\+\_\+input\+\_\+}
+\item 
+\hyperlink{classinput__t_a455e36bc8b009abdbd13c6d167864cfe}{membrane\+\_\+input\+\_\+sequence} \hyperlink{classinput__t_a58ff5d3539fbe50257614d106dbf9dc4}{membrane\+\_\+input\+\_\+}
+\item 
+\hyperlink{classinput__t_aa968afe5c55f7cc3031e6196adddcae5}{sphere\+\_\+input\+\_\+sequence} \hyperlink{classinput__t_af9cafaeb8d3c98067e4a27edf2c2339e}{sphere\+\_\+input\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{input\+\_\+t@{input\+\_\+t}!cuboid\+\_\+input\+\_\+const\+\_\+iterator@{cuboid\+\_\+input\+\_\+const\+\_\+iterator}}
+\index{cuboid\+\_\+input\+\_\+const\+\_\+iterator@{cuboid\+\_\+input\+\_\+const\+\_\+iterator}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+input\+\_\+const\+\_\+iterator}{cuboid_input_const_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef cuboid\+\_\+input\+\_\+sequence\+::const\+\_\+iterator {\bf input\+\_\+t\+::cuboid\+\_\+input\+\_\+const\+\_\+iterator}}\hypertarget{classinput__t_aab1823936b590269cb0f4de2f0a0a4fa}{}\label{classinput__t_aab1823936b590269cb0f4de2f0a0a4fa}
+\index{input\+\_\+t@{input\+\_\+t}!cuboid\+\_\+input\+\_\+iterator@{cuboid\+\_\+input\+\_\+iterator}}
+\index{cuboid\+\_\+input\+\_\+iterator@{cuboid\+\_\+input\+\_\+iterator}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+input\+\_\+iterator}{cuboid_input_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef cuboid\+\_\+input\+\_\+sequence\+::iterator {\bf input\+\_\+t\+::cuboid\+\_\+input\+\_\+iterator}}\hypertarget{classinput__t_aa4ecd719f9c1e557f73c163c723259f2}{}\label{classinput__t_aa4ecd719f9c1e557f73c163c723259f2}
+\index{input\+\_\+t@{input\+\_\+t}!cuboid\+\_\+input\+\_\+sequence@{cuboid\+\_\+input\+\_\+sequence}}
+\index{cuboid\+\_\+input\+\_\+sequence@{cuboid\+\_\+input\+\_\+sequence}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+input\+\_\+sequence}{cuboid_input_sequence}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ {\bf cuboid\+\_\+input\+\_\+type} $>$ {\bf input\+\_\+t\+::cuboid\+\_\+input\+\_\+sequence}}\hypertarget{classinput__t_a5aef33216e01e60c197cea604a519ab4}{}\label{classinput__t_a5aef33216e01e60c197cea604a519ab4}
+\index{input\+\_\+t@{input\+\_\+t}!cuboid\+\_\+input\+\_\+traits@{cuboid\+\_\+input\+\_\+traits}}
+\index{cuboid\+\_\+input\+\_\+traits@{cuboid\+\_\+input\+\_\+traits}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+input\+\_\+traits}{cuboid_input_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf cuboid\+\_\+input\+\_\+type}, char $>$ {\bf input\+\_\+t\+::cuboid\+\_\+input\+\_\+traits}}\hypertarget{classinput__t_a6d747b3e200566247dcf36dd80109730}{}\label{classinput__t_a6d747b3e200566247dcf36dd80109730}
+\index{input\+\_\+t@{input\+\_\+t}!cuboid\+\_\+input\+\_\+type@{cuboid\+\_\+input\+\_\+type}}
+\index{cuboid\+\_\+input\+\_\+type@{cuboid\+\_\+input\+\_\+type}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+input\+\_\+type}{cuboid_input_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf cuboid\+\_\+t} {\bf input\+\_\+t\+::cuboid\+\_\+input\+\_\+type}}\hypertarget{classinput__t_ab3172aa59d0cc9b2d4c5380d9cec72c3}{}\label{classinput__t_ab3172aa59d0cc9b2d4c5380d9cec72c3}
+\index{input\+\_\+t@{input\+\_\+t}!membrane\+\_\+input\+\_\+const\+\_\+iterator@{membrane\+\_\+input\+\_\+const\+\_\+iterator}}
+\index{membrane\+\_\+input\+\_\+const\+\_\+iterator@{membrane\+\_\+input\+\_\+const\+\_\+iterator}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+input\+\_\+const\+\_\+iterator}{membrane_input_const_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef membrane\+\_\+input\+\_\+sequence\+::const\+\_\+iterator {\bf input\+\_\+t\+::membrane\+\_\+input\+\_\+const\+\_\+iterator}}\hypertarget{classinput__t_ad9f1a19dff09cac44dc94fd97b3ab778}{}\label{classinput__t_ad9f1a19dff09cac44dc94fd97b3ab778}
+\index{input\+\_\+t@{input\+\_\+t}!membrane\+\_\+input\+\_\+iterator@{membrane\+\_\+input\+\_\+iterator}}
+\index{membrane\+\_\+input\+\_\+iterator@{membrane\+\_\+input\+\_\+iterator}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+input\+\_\+iterator}{membrane_input_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef membrane\+\_\+input\+\_\+sequence\+::iterator {\bf input\+\_\+t\+::membrane\+\_\+input\+\_\+iterator}}\hypertarget{classinput__t_a2a9ad5a60f532541071c8432e3f3333b}{}\label{classinput__t_a2a9ad5a60f532541071c8432e3f3333b}
+\index{input\+\_\+t@{input\+\_\+t}!membrane\+\_\+input\+\_\+sequence@{membrane\+\_\+input\+\_\+sequence}}
+\index{membrane\+\_\+input\+\_\+sequence@{membrane\+\_\+input\+\_\+sequence}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+input\+\_\+sequence}{membrane_input_sequence}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ {\bf membrane\+\_\+input\+\_\+type} $>$ {\bf input\+\_\+t\+::membrane\+\_\+input\+\_\+sequence}}\hypertarget{classinput__t_a455e36bc8b009abdbd13c6d167864cfe}{}\label{classinput__t_a455e36bc8b009abdbd13c6d167864cfe}
+\index{input\+\_\+t@{input\+\_\+t}!membrane\+\_\+input\+\_\+traits@{membrane\+\_\+input\+\_\+traits}}
+\index{membrane\+\_\+input\+\_\+traits@{membrane\+\_\+input\+\_\+traits}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+input\+\_\+traits}{membrane_input_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf membrane\+\_\+input\+\_\+type}, char $>$ {\bf input\+\_\+t\+::membrane\+\_\+input\+\_\+traits}}\hypertarget{classinput__t_a7d8560c1644f93d6491d5aad368aeddb}{}\label{classinput__t_a7d8560c1644f93d6491d5aad368aeddb}
+\index{input\+\_\+t@{input\+\_\+t}!membrane\+\_\+input\+\_\+type@{membrane\+\_\+input\+\_\+type}}
+\index{membrane\+\_\+input\+\_\+type@{membrane\+\_\+input\+\_\+type}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+input\+\_\+type}{membrane_input_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf membrane\+\_\+t} {\bf input\+\_\+t\+::membrane\+\_\+input\+\_\+type}}\hypertarget{classinput__t_aa72abd8e01641f20e6fdb3d5d0bf99ca}{}\label{classinput__t_aa72abd8e01641f20e6fdb3d5d0bf99ca}
+\index{input\+\_\+t@{input\+\_\+t}!single\+\_\+input\+\_\+const\+\_\+iterator@{single\+\_\+input\+\_\+const\+\_\+iterator}}
+\index{single\+\_\+input\+\_\+const\+\_\+iterator@{single\+\_\+input\+\_\+const\+\_\+iterator}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{single\+\_\+input\+\_\+const\+\_\+iterator}{single_input_const_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef single\+\_\+input\+\_\+sequence\+::const\+\_\+iterator {\bf input\+\_\+t\+::single\+\_\+input\+\_\+const\+\_\+iterator}}\hypertarget{classinput__t_ac6c5ac99d56764bfdf61d747cd2c2074}{}\label{classinput__t_ac6c5ac99d56764bfdf61d747cd2c2074}
+\index{input\+\_\+t@{input\+\_\+t}!single\+\_\+input\+\_\+iterator@{single\+\_\+input\+\_\+iterator}}
+\index{single\+\_\+input\+\_\+iterator@{single\+\_\+input\+\_\+iterator}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{single\+\_\+input\+\_\+iterator}{single_input_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef single\+\_\+input\+\_\+sequence\+::iterator {\bf input\+\_\+t\+::single\+\_\+input\+\_\+iterator}}\hypertarget{classinput__t_a001a8bb6bb06d71002249f491bc628fa}{}\label{classinput__t_a001a8bb6bb06d71002249f491bc628fa}
+\index{input\+\_\+t@{input\+\_\+t}!single\+\_\+input\+\_\+sequence@{single\+\_\+input\+\_\+sequence}}
+\index{single\+\_\+input\+\_\+sequence@{single\+\_\+input\+\_\+sequence}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{single\+\_\+input\+\_\+sequence}{single_input_sequence}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ {\bf single\+\_\+input\+\_\+type} $>$ {\bf input\+\_\+t\+::single\+\_\+input\+\_\+sequence}}\hypertarget{classinput__t_a1296075494d97da854dc2be8b1022061}{}\label{classinput__t_a1296075494d97da854dc2be8b1022061}
+\index{input\+\_\+t@{input\+\_\+t}!single\+\_\+input\+\_\+traits@{single\+\_\+input\+\_\+traits}}
+\index{single\+\_\+input\+\_\+traits@{single\+\_\+input\+\_\+traits}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{single\+\_\+input\+\_\+traits}{single_input_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf single\+\_\+input\+\_\+type}, char $>$ {\bf input\+\_\+t\+::single\+\_\+input\+\_\+traits}}\hypertarget{classinput__t_aa3a5fc9d04df805785a23a89248fa924}{}\label{classinput__t_aa3a5fc9d04df805785a23a89248fa924}
+\index{input\+\_\+t@{input\+\_\+t}!single\+\_\+input\+\_\+type@{single\+\_\+input\+\_\+type}}
+\index{single\+\_\+input\+\_\+type@{single\+\_\+input\+\_\+type}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{single\+\_\+input\+\_\+type}{single_input_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf single\+\_\+t} {\bf input\+\_\+t\+::single\+\_\+input\+\_\+type}}\hypertarget{classinput__t_af24fd90c4a0fa092c577776efca1c750}{}\label{classinput__t_af24fd90c4a0fa092c577776efca1c750}
+\index{input\+\_\+t@{input\+\_\+t}!sphere\+\_\+input\+\_\+const\+\_\+iterator@{sphere\+\_\+input\+\_\+const\+\_\+iterator}}
+\index{sphere\+\_\+input\+\_\+const\+\_\+iterator@{sphere\+\_\+input\+\_\+const\+\_\+iterator}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{sphere\+\_\+input\+\_\+const\+\_\+iterator}{sphere_input_const_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef sphere\+\_\+input\+\_\+sequence\+::const\+\_\+iterator {\bf input\+\_\+t\+::sphere\+\_\+input\+\_\+const\+\_\+iterator}}\hypertarget{classinput__t_aa281fd31856422d1cb3934608b8e0185}{}\label{classinput__t_aa281fd31856422d1cb3934608b8e0185}
+\index{input\+\_\+t@{input\+\_\+t}!sphere\+\_\+input\+\_\+iterator@{sphere\+\_\+input\+\_\+iterator}}
+\index{sphere\+\_\+input\+\_\+iterator@{sphere\+\_\+input\+\_\+iterator}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{sphere\+\_\+input\+\_\+iterator}{sphere_input_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef sphere\+\_\+input\+\_\+sequence\+::iterator {\bf input\+\_\+t\+::sphere\+\_\+input\+\_\+iterator}}\hypertarget{classinput__t_ab8ba0d1f12d650cf8f5db6b8262baa0e}{}\label{classinput__t_ab8ba0d1f12d650cf8f5db6b8262baa0e}
+\index{input\+\_\+t@{input\+\_\+t}!sphere\+\_\+input\+\_\+sequence@{sphere\+\_\+input\+\_\+sequence}}
+\index{sphere\+\_\+input\+\_\+sequence@{sphere\+\_\+input\+\_\+sequence}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{sphere\+\_\+input\+\_\+sequence}{sphere_input_sequence}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ {\bf sphere\+\_\+input\+\_\+type} $>$ {\bf input\+\_\+t\+::sphere\+\_\+input\+\_\+sequence}}\hypertarget{classinput__t_aa968afe5c55f7cc3031e6196adddcae5}{}\label{classinput__t_aa968afe5c55f7cc3031e6196adddcae5}
+\index{input\+\_\+t@{input\+\_\+t}!sphere\+\_\+input\+\_\+traits@{sphere\+\_\+input\+\_\+traits}}
+\index{sphere\+\_\+input\+\_\+traits@{sphere\+\_\+input\+\_\+traits}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{sphere\+\_\+input\+\_\+traits}{sphere_input_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf sphere\+\_\+input\+\_\+type}, char $>$ {\bf input\+\_\+t\+::sphere\+\_\+input\+\_\+traits}}\hypertarget{classinput__t_afb3a266016b34553b5f045eaddf78031}{}\label{classinput__t_afb3a266016b34553b5f045eaddf78031}
+\index{input\+\_\+t@{input\+\_\+t}!sphere\+\_\+input\+\_\+type@{sphere\+\_\+input\+\_\+type}}
+\index{sphere\+\_\+input\+\_\+type@{sphere\+\_\+input\+\_\+type}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{sphere\+\_\+input\+\_\+type}{sphere_input_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf sphere\+\_\+t} {\bf input\+\_\+t\+::sphere\+\_\+input\+\_\+type}}\hypertarget{classinput__t_a75628386280268669a4cc94066bd8547}{}\label{classinput__t_a75628386280268669a4cc94066bd8547}
+\index{input\+\_\+t@{input\+\_\+t}!types\+\_\+input\+\_\+const\+\_\+iterator@{types\+\_\+input\+\_\+const\+\_\+iterator}}
+\index{types\+\_\+input\+\_\+const\+\_\+iterator@{types\+\_\+input\+\_\+const\+\_\+iterator}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{types\+\_\+input\+\_\+const\+\_\+iterator}{types_input_const_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef types\+\_\+input\+\_\+sequence\+::const\+\_\+iterator {\bf input\+\_\+t\+::types\+\_\+input\+\_\+const\+\_\+iterator}}\hypertarget{classinput__t_a7fddef7619e8c4dd76b1c6448c42bfc0}{}\label{classinput__t_a7fddef7619e8c4dd76b1c6448c42bfc0}
+\index{input\+\_\+t@{input\+\_\+t}!types\+\_\+input\+\_\+iterator@{types\+\_\+input\+\_\+iterator}}
+\index{types\+\_\+input\+\_\+iterator@{types\+\_\+input\+\_\+iterator}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{types\+\_\+input\+\_\+iterator}{types_input_iterator}}]{\setlength{\rightskip}{0pt plus 5cm}typedef types\+\_\+input\+\_\+sequence\+::iterator {\bf input\+\_\+t\+::types\+\_\+input\+\_\+iterator}}\hypertarget{classinput__t_a830eb55890cdf67c70880536db78be04}{}\label{classinput__t_a830eb55890cdf67c70880536db78be04}
+\index{input\+\_\+t@{input\+\_\+t}!types\+\_\+input\+\_\+sequence@{types\+\_\+input\+\_\+sequence}}
+\index{types\+\_\+input\+\_\+sequence@{types\+\_\+input\+\_\+sequence}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{types\+\_\+input\+\_\+sequence}{types_input_sequence}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::sequence$<$ {\bf types\+\_\+input\+\_\+type} $>$ {\bf input\+\_\+t\+::types\+\_\+input\+\_\+sequence}}\hypertarget{classinput__t_a48f5b9f6b00c9d3749caf0e3a0eac5a7}{}\label{classinput__t_a48f5b9f6b00c9d3749caf0e3a0eac5a7}
+\index{input\+\_\+t@{input\+\_\+t}!types\+\_\+input\+\_\+traits@{types\+\_\+input\+\_\+traits}}
+\index{types\+\_\+input\+\_\+traits@{types\+\_\+input\+\_\+traits}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{types\+\_\+input\+\_\+traits}{types_input_traits}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::xsd\+::cxx\+::tree\+::traits$<$ {\bf types\+\_\+input\+\_\+type}, char $>$ {\bf input\+\_\+t\+::types\+\_\+input\+\_\+traits}}\hypertarget{classinput__t_a7ab3dea1712373b005d910f827cd9753}{}\label{classinput__t_a7ab3dea1712373b005d910f827cd9753}
+\index{input\+\_\+t@{input\+\_\+t}!types\+\_\+input\+\_\+type@{types\+\_\+input\+\_\+type}}
+\index{types\+\_\+input\+\_\+type@{types\+\_\+input\+\_\+type}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{types\+\_\+input\+\_\+type}{types_input_type}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::{\bf particletype\+\_\+t} {\bf input\+\_\+t\+::types\+\_\+input\+\_\+type}}\hypertarget{classinput__t_a516c75c9426ee0026078ebe9ee6f50ea}{}\label{classinput__t_a516c75c9426ee0026078ebe9ee6f50ea}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{input\+\_\+t@{input\+\_\+t}!input\+\_\+t@{input\+\_\+t}}
+\index{input\+\_\+t@{input\+\_\+t}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{input\+\_\+t()}{input_t()}}]{\setlength{\rightskip}{0pt plus 5cm}input\+\_\+t\+::input\+\_\+t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_acd30ace524c19489ac1076e29e29c4cf}{}\label{classinput__t_acd30ace524c19489ac1076e29e29c4cf}
+\index{input\+\_\+t@{input\+\_\+t}!input\+\_\+t@{input\+\_\+t}}
+\index{input\+\_\+t@{input\+\_\+t}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{input\+\_\+t(const \+::xercesc\+::\+D\+O\+M\+Element \&e,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{input_t(const ::xercesc::DOMElement &e,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}input\+\_\+t\+::input\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const \+::xercesc\+::\+D\+O\+M\+Element \&}]{e, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_ad5e6bb4ad3034e6072766d292a9b2f06}{}\label{classinput__t_ad5e6bb4ad3034e6072766d292a9b2f06}
+\index{input\+\_\+t@{input\+\_\+t}!input\+\_\+t@{input\+\_\+t}}
+\index{input\+\_\+t@{input\+\_\+t}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{input\+\_\+t(const input\+\_\+t \&x,\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0)}{input_t(const input_t &x,::xml_schema::flags f=0,::xml_schema::container *c=0)}}]{\setlength{\rightskip}{0pt plus 5cm}input\+\_\+t\+::input\+\_\+t (
+\begin{DoxyParamCaption}
+\item[{const {\bf input\+\_\+t} \&}]{x, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_aa61c09ee6e6c8849e08296ea0ce9cdf9}{}\label{classinput__t_aa61c09ee6e6c8849e08296ea0ce9cdf9}
+\index{input\+\_\+t@{input\+\_\+t}!````~input\+\_\+t@{$\sim$input\+\_\+t}}
+\index{````~input\+\_\+t@{$\sim$input\+\_\+t}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{$\sim$input\+\_\+t()}{~input_t()}}]{\setlength{\rightskip}{0pt plus 5cm}input\+\_\+t\+::$\sim$input\+\_\+t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classinput__t_adec69a9fb0ede4506dda7414275639c2}{}\label{classinput__t_adec69a9fb0ede4506dda7414275639c2}
+
+
+\subsection{Member Function Documentation}
+\index{input\+\_\+t@{input\+\_\+t}!\+\_\+clone@{\+\_\+clone}}
+\index{\+\_\+clone@{\+\_\+clone}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{\+\_\+clone(\+::xml\+\_\+schema\+::flags f=0,\+::xml\+\_\+schema\+::container $\ast$c=0) const }{_clone(::xml_schema::flags f=0,::xml_schema::container *c=0) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf input\+\_\+t} $\ast$ input\+\_\+t\+::\+\_\+clone (
+\begin{DoxyParamCaption}
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f = {\ttfamily 0}, }
+\item[{\+::{\bf xml\+\_\+schema\+::container} $\ast$}]{c = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classinput__t_a5113f4bf339b6e9f325fa1c0dc2a03de}{}\label{classinput__t_a5113f4bf339b6e9f325fa1c0dc2a03de}
+\index{input\+\_\+t@{input\+\_\+t}!cuboid\+\_\+input@{cuboid\+\_\+input}}
+\index{cuboid\+\_\+input@{cuboid\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+input() const }{cuboid_input() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf input\+\_\+t\+::cuboid\+\_\+input\+\_\+sequence} \& input\+\_\+t\+::cuboid\+\_\+input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classinput__t_a59b8093194c770faf0efcf86eb7a7383}{}\label{classinput__t_a59b8093194c770faf0efcf86eb7a7383}
+\index{input\+\_\+t@{input\+\_\+t}!cuboid\+\_\+input@{cuboid\+\_\+input}}
+\index{cuboid\+\_\+input@{cuboid\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+input()}{cuboid_input()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf input\+\_\+t\+::cuboid\+\_\+input\+\_\+sequence} \& input\+\_\+t\+::cuboid\+\_\+input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_af66b8c90f49b958d6e5f2b236abad9b2}{}\label{classinput__t_af66b8c90f49b958d6e5f2b236abad9b2}
+\index{input\+\_\+t@{input\+\_\+t}!cuboid\+\_\+input@{cuboid\+\_\+input}}
+\index{cuboid\+\_\+input@{cuboid\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+input(const cuboid\+\_\+input\+\_\+sequence \&s)}{cuboid_input(const cuboid_input_sequence &s)}}]{\setlength{\rightskip}{0pt plus 5cm}void input\+\_\+t\+::cuboid\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const {\bf cuboid\+\_\+input\+\_\+sequence} \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_a4d1a25864dfaf5d4ab006425538b1125}{}\label{classinput__t_a4d1a25864dfaf5d4ab006425538b1125}
+\index{input\+\_\+t@{input\+\_\+t}!membrane\+\_\+input@{membrane\+\_\+input}}
+\index{membrane\+\_\+input@{membrane\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+input() const }{membrane_input() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf input\+\_\+t\+::membrane\+\_\+input\+\_\+sequence} \& input\+\_\+t\+::membrane\+\_\+input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classinput__t_adba6d36e90b80fe27862a3f7fc5fbf2a}{}\label{classinput__t_adba6d36e90b80fe27862a3f7fc5fbf2a}
+\index{input\+\_\+t@{input\+\_\+t}!membrane\+\_\+input@{membrane\+\_\+input}}
+\index{membrane\+\_\+input@{membrane\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+input()}{membrane_input()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf input\+\_\+t\+::membrane\+\_\+input\+\_\+sequence} \& input\+\_\+t\+::membrane\+\_\+input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_a921b08f23c98a6c2aa7f4fb0c707a3ea}{}\label{classinput__t_a921b08f23c98a6c2aa7f4fb0c707a3ea}
+\index{input\+\_\+t@{input\+\_\+t}!membrane\+\_\+input@{membrane\+\_\+input}}
+\index{membrane\+\_\+input@{membrane\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+input(const membrane\+\_\+input\+\_\+sequence \&s)}{membrane_input(const membrane_input_sequence &s)}}]{\setlength{\rightskip}{0pt plus 5cm}void input\+\_\+t\+::membrane\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const {\bf membrane\+\_\+input\+\_\+sequence} \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_a790aa48e13cbc7b014a70109a5942903}{}\label{classinput__t_a790aa48e13cbc7b014a70109a5942903}
+\index{input\+\_\+t@{input\+\_\+t}!operator=@{operator=}}
+\index{operator=@{operator=}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{operator=(const input\+\_\+t \&x)}{operator=(const input_t &x)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf input\+\_\+t} \& input\+\_\+t\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf input\+\_\+t} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_ac0f3874f508379a49375e681699ffdc2}{}\label{classinput__t_ac0f3874f508379a49375e681699ffdc2}
+\index{input\+\_\+t@{input\+\_\+t}!parse@{parse}}
+\index{parse@{parse}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{parse(\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&,\+::xml\+\_\+schema\+::flags)}{parse(::xsd::cxx::xml::dom::parser< char > &,::xml_schema::flags)}}]{\setlength{\rightskip}{0pt plus 5cm}void input\+\_\+t\+::parse (
+\begin{DoxyParamCaption}
+\item[{\+::xsd\+::cxx\+::xml\+::dom\+::parser$<$ char $>$ \&}]{p, }
+\item[{\+::{\bf xml\+\_\+schema\+::flags}}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinput__t_af3861aa840c8d80dbbde88fae9b3db72}{}\label{classinput__t_af3861aa840c8d80dbbde88fae9b3db72}
+\index{input\+\_\+t@{input\+\_\+t}!single\+\_\+input@{single\+\_\+input}}
+\index{single\+\_\+input@{single\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{single\+\_\+input() const }{single_input() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf input\+\_\+t\+::single\+\_\+input\+\_\+sequence} \& input\+\_\+t\+::single\+\_\+input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classinput__t_a23df17feba2a762f381167fbd900e3e2}{}\label{classinput__t_a23df17feba2a762f381167fbd900e3e2}
+\index{input\+\_\+t@{input\+\_\+t}!single\+\_\+input@{single\+\_\+input}}
+\index{single\+\_\+input@{single\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{single\+\_\+input()}{single_input()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf input\+\_\+t\+::single\+\_\+input\+\_\+sequence} \& input\+\_\+t\+::single\+\_\+input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_abf4899015034fd15a532960d94af0388}{}\label{classinput__t_abf4899015034fd15a532960d94af0388}
+\index{input\+\_\+t@{input\+\_\+t}!single\+\_\+input@{single\+\_\+input}}
+\index{single\+\_\+input@{single\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{single\+\_\+input(const single\+\_\+input\+\_\+sequence \&s)}{single_input(const single_input_sequence &s)}}]{\setlength{\rightskip}{0pt plus 5cm}void input\+\_\+t\+::single\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const {\bf single\+\_\+input\+\_\+sequence} \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_a76b473ba9a3a25f8d2c7ed2c02489c2d}{}\label{classinput__t_a76b473ba9a3a25f8d2c7ed2c02489c2d}
+\index{input\+\_\+t@{input\+\_\+t}!sphere\+\_\+input@{sphere\+\_\+input}}
+\index{sphere\+\_\+input@{sphere\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{sphere\+\_\+input() const }{sphere_input() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf input\+\_\+t\+::sphere\+\_\+input\+\_\+sequence} \& input\+\_\+t\+::sphere\+\_\+input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classinput__t_abb6b015f0faa92bff850d921d4aad2b7}{}\label{classinput__t_abb6b015f0faa92bff850d921d4aad2b7}
+\index{input\+\_\+t@{input\+\_\+t}!sphere\+\_\+input@{sphere\+\_\+input}}
+\index{sphere\+\_\+input@{sphere\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{sphere\+\_\+input()}{sphere_input()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf input\+\_\+t\+::sphere\+\_\+input\+\_\+sequence} \& input\+\_\+t\+::sphere\+\_\+input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_a3173f5cec229bff952ac6d965135d0ca}{}\label{classinput__t_a3173f5cec229bff952ac6d965135d0ca}
+\index{input\+\_\+t@{input\+\_\+t}!sphere\+\_\+input@{sphere\+\_\+input}}
+\index{sphere\+\_\+input@{sphere\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{sphere\+\_\+input(const sphere\+\_\+input\+\_\+sequence \&s)}{sphere_input(const sphere_input_sequence &s)}}]{\setlength{\rightskip}{0pt plus 5cm}void input\+\_\+t\+::sphere\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const {\bf sphere\+\_\+input\+\_\+sequence} \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_acf44523ff6b17315300e30fbebe9f6db}{}\label{classinput__t_acf44523ff6b17315300e30fbebe9f6db}
+\index{input\+\_\+t@{input\+\_\+t}!types\+\_\+input@{types\+\_\+input}}
+\index{types\+\_\+input@{types\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{types\+\_\+input() const }{types_input() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf input\+\_\+t\+::types\+\_\+input\+\_\+sequence} \& input\+\_\+t\+::types\+\_\+input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classinput__t_aad81ec0c8587d9ed3c0390cc9ba75bb0}{}\label{classinput__t_aad81ec0c8587d9ed3c0390cc9ba75bb0}
+\index{input\+\_\+t@{input\+\_\+t}!types\+\_\+input@{types\+\_\+input}}
+\index{types\+\_\+input@{types\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{types\+\_\+input()}{types_input()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf input\+\_\+t\+::types\+\_\+input\+\_\+sequence} \& input\+\_\+t\+::types\+\_\+input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_a70e55b1ecc015b3e00101928dfbe5464}{}\label{classinput__t_a70e55b1ecc015b3e00101928dfbe5464}
+\index{input\+\_\+t@{input\+\_\+t}!types\+\_\+input@{types\+\_\+input}}
+\index{types\+\_\+input@{types\+\_\+input}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{types\+\_\+input(const types\+\_\+input\+\_\+sequence \&s)}{types_input(const types_input_sequence &s)}}]{\setlength{\rightskip}{0pt plus 5cm}void input\+\_\+t\+::types\+\_\+input (
+\begin{DoxyParamCaption}
+\item[{const {\bf types\+\_\+input\+\_\+sequence} \&}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classinput__t_a8a371e78d74ad9f67271745117ad478a}{}\label{classinput__t_a8a371e78d74ad9f67271745117ad478a}
+
+
+\subsection{Member Data Documentation}
+\index{input\+\_\+t@{input\+\_\+t}!cuboid\+\_\+input\+\_\+@{cuboid\+\_\+input\+\_\+}}
+\index{cuboid\+\_\+input\+\_\+@{cuboid\+\_\+input\+\_\+}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{cuboid\+\_\+input\+\_\+}{cuboid_input_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cuboid\+\_\+input\+\_\+sequence} input\+\_\+t\+::cuboid\+\_\+input\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinput__t_af00e51fceddd64f134b3e7cd8707d692}{}\label{classinput__t_af00e51fceddd64f134b3e7cd8707d692}
+\index{input\+\_\+t@{input\+\_\+t}!membrane\+\_\+input\+\_\+@{membrane\+\_\+input\+\_\+}}
+\index{membrane\+\_\+input\+\_\+@{membrane\+\_\+input\+\_\+}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{membrane\+\_\+input\+\_\+}{membrane_input_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf membrane\+\_\+input\+\_\+sequence} input\+\_\+t\+::membrane\+\_\+input\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinput__t_a58ff5d3539fbe50257614d106dbf9dc4}{}\label{classinput__t_a58ff5d3539fbe50257614d106dbf9dc4}
+\index{input\+\_\+t@{input\+\_\+t}!single\+\_\+input\+\_\+@{single\+\_\+input\+\_\+}}
+\index{single\+\_\+input\+\_\+@{single\+\_\+input\+\_\+}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{single\+\_\+input\+\_\+}{single_input_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf single\+\_\+input\+\_\+sequence} input\+\_\+t\+::single\+\_\+input\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinput__t_a1f8f19b740102f74acb4dea4733350e4}{}\label{classinput__t_a1f8f19b740102f74acb4dea4733350e4}
+\index{input\+\_\+t@{input\+\_\+t}!sphere\+\_\+input\+\_\+@{sphere\+\_\+input\+\_\+}}
+\index{sphere\+\_\+input\+\_\+@{sphere\+\_\+input\+\_\+}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{sphere\+\_\+input\+\_\+}{sphere_input_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sphere\+\_\+input\+\_\+sequence} input\+\_\+t\+::sphere\+\_\+input\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinput__t_af9cafaeb8d3c98067e4a27edf2c2339e}{}\label{classinput__t_af9cafaeb8d3c98067e4a27edf2c2339e}
+\index{input\+\_\+t@{input\+\_\+t}!types\+\_\+input\+\_\+@{types\+\_\+input\+\_\+}}
+\index{types\+\_\+input\+\_\+@{types\+\_\+input\+\_\+}!input\+\_\+t@{input\+\_\+t}}
+\subsubsection[{\texorpdfstring{types\+\_\+input\+\_\+}{types_input_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf types\+\_\+input\+\_\+sequence} input\+\_\+t\+::types\+\_\+input\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classinput__t_af064e28d005941bce91337b136403cce}{}\label{classinput__t_af064e28d005941bce91337b136403cce}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/input/\hyperlink{particle__input_8h}{particle\+\_\+input.\+h}\item 
+src/input/\hyperlink{particle__input_8cpp}{particle\+\_\+input.\+cpp}\end{DoxyCompactItemize}

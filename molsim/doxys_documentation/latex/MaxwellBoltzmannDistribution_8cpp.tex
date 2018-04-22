@@ -1,0 +1,33 @@
+\hypertarget{MaxwellBoltzmannDistribution_8cpp}{}\section{src/\+Maxwell\+Boltzmann\+Distribution.cpp File Reference}
+\label{MaxwellBoltzmannDistribution_8cpp}\index{src/\+Maxwell\+Boltzmann\+Distribution.\+cpp@{src/\+Maxwell\+Boltzmann\+Distribution.\+cpp}}
+{\ttfamily \#include \char`\"{}Maxwell\+Boltzmann\+Distribution.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{MaxwellBoltzmannDistribution_8cpp_a190ff362d45c730aede85bea9359ae2e}{Gauss\+Deviate} ()
+\item 
+void \hyperlink{MaxwellBoltzmannDistribution_8cpp_a916086c618022af760c579d14add55e4}{Maxwell\+Boltzmann\+Distribution} (\hyperlink{classParticle}{Particle} \&p, double factor, int dimensions)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Maxwell\+Boltzmann\+Distribution.\+cpp@{Maxwell\+Boltzmann\+Distribution.\+cpp}!Gauss\+Deviate@{Gauss\+Deviate}}
+\index{Gauss\+Deviate@{Gauss\+Deviate}!Maxwell\+Boltzmann\+Distribution.\+cpp@{Maxwell\+Boltzmann\+Distribution.\+cpp}}
+\subsubsection[{\texorpdfstring{Gauss\+Deviate()}{GaussDeviate()}}]{\setlength{\rightskip}{0pt plus 5cm}static double Gauss\+Deviate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{MaxwellBoltzmannDistribution_8cpp_a190ff362d45c730aede85bea9359ae2e}{}\label{MaxwellBoltzmannDistribution_8cpp_a190ff362d45c730aede85bea9359ae2e}
+helper function for \hyperlink{MaxwellBoltzmannDistribution_8cpp_a916086c618022af760c579d14add55e4}{Maxwell\+Boltzmann\+Distribution()}. Generates a gauss deviate, i.\+e. values according to the normal distribution. \index{Maxwell\+Boltzmann\+Distribution.\+cpp@{Maxwell\+Boltzmann\+Distribution.\+cpp}!Maxwell\+Boltzmann\+Distribution@{Maxwell\+Boltzmann\+Distribution}}
+\index{Maxwell\+Boltzmann\+Distribution@{Maxwell\+Boltzmann\+Distribution}!Maxwell\+Boltzmann\+Distribution.\+cpp@{Maxwell\+Boltzmann\+Distribution.\+cpp}}
+\subsubsection[{\texorpdfstring{Maxwell\+Boltzmann\+Distribution(\+Particle \&p, double factor, int dimensions)}{MaxwellBoltzmannDistribution(Particle &p, double factor, int dimensions)}}]{\setlength{\rightskip}{0pt plus 5cm}void Maxwell\+Boltzmann\+Distribution (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{p, }
+\item[{double}]{factor, }
+\item[{int}]{dimensions}
+\end{DoxyParamCaption}
+)}\hypertarget{MaxwellBoltzmannDistribution_8cpp_a916086c618022af760c579d14add55e4}{}\label{MaxwellBoltzmannDistribution_8cpp_a916086c618022af760c579d14add55e4}
+add a random velocity according to the Maxwell-\/\+Boltzmann distribution to the particles, with a given mean velocity.
+
+{\ttfamily the} particle to initialize  the mean velocity of the brownian motion for the particle  the number of dimensions to initialize (2 or 3) 

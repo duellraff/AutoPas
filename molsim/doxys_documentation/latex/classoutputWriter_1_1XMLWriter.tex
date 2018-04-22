@@ -1,0 +1,89 @@
+\hypertarget{classoutputWriter_1_1XMLWriter}{}\section{output\+Writer\+:\+:X\+M\+L\+Writer Class Reference}
+\label{classoutputWriter_1_1XMLWriter}\index{output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}}
+
+
+{\ttfamily \#include $<$X\+M\+L\+Writer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classoutputWriter_1_1XMLWriter_ab8b88d72ae8f03771346c10c3b42f014}{X\+M\+L\+Writer} ()
+\item 
+virtual \hyperlink{classoutputWriter_1_1XMLWriter_a155a75536811aeb1a0d87d9677b04f0e}{$\sim$\+X\+M\+L\+Writer} ()
+\item 
+void \hyperlink{classoutputWriter_1_1XMLWriter_ae263500bf16da212016fe61a2f28bff7}{initialize\+Output} ()
+\item 
+void \hyperlink{classoutputWriter_1_1XMLWriter_a0ca78cf991cb34d48ae73420bc37ff08}{plot\+Particle} (\hyperlink{classParticle}{Particle} \&p)
+\item 
+void \hyperlink{classoutputWriter_1_1XMLWriter_adcccb8d6c33ae7e6408597a55bfa7f7a}{write\+File} (const std\+::string \&filename)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classinput__t}{input\+\_\+t} $\ast$ \hyperlink{classoutputWriter_1_1XMLWriter_ad9f7b00f811d520043497bbe15b5c078}{input\+File}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}!X\+M\+L\+Writer@{X\+M\+L\+Writer}}
+\index{X\+M\+L\+Writer@{X\+M\+L\+Writer}!output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}}
+\subsubsection[{\texorpdfstring{X\+M\+L\+Writer()}{XMLWriter()}}]{\setlength{\rightskip}{0pt plus 5cm}output\+Writer\+::\+X\+M\+L\+Writer\+::\+X\+M\+L\+Writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classoutputWriter_1_1XMLWriter_ab8b88d72ae8f03771346c10c3b42f014}{}\label{classoutputWriter_1_1XMLWriter_ab8b88d72ae8f03771346c10c3b42f014}
+\index{output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}!````~X\+M\+L\+Writer@{$\sim$\+X\+M\+L\+Writer}}
+\index{````~X\+M\+L\+Writer@{$\sim$\+X\+M\+L\+Writer}!output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}}
+\subsubsection[{\texorpdfstring{$\sim$\+X\+M\+L\+Writer()}{~XMLWriter()}}]{\setlength{\rightskip}{0pt plus 5cm}output\+Writer\+::\+X\+M\+L\+Writer\+::$\sim$\+X\+M\+L\+Writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classoutputWriter_1_1XMLWriter_a155a75536811aeb1a0d87d9677b04f0e}{}\label{classoutputWriter_1_1XMLWriter_a155a75536811aeb1a0d87d9677b04f0e}
+
+
+\subsection{Member Function Documentation}
+\index{output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}!initialize\+Output@{initialize\+Output}}
+\index{initialize\+Output@{initialize\+Output}!output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}}
+\subsubsection[{\texorpdfstring{initialize\+Output()}{initializeOutput()}}]{\setlength{\rightskip}{0pt plus 5cm}void output\+Writer\+::\+X\+M\+L\+Writer\+::initialize\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classoutputWriter_1_1XMLWriter_ae263500bf16da212016fe61a2f28bff7}{}\label{classoutputWriter_1_1XMLWriter_ae263500bf16da212016fe61a2f28bff7}
+set up internal data structures and prepare to plot a particle. \index{output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}!plot\+Particle@{plot\+Particle}}
+\index{plot\+Particle@{plot\+Particle}!output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}}
+\subsubsection[{\texorpdfstring{plot\+Particle(\+Particle \&p)}{plotParticle(Particle &p)}}]{\setlength{\rightskip}{0pt plus 5cm}void output\+Writer\+::\+X\+M\+L\+Writer\+::plot\+Particle (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classoutputWriter_1_1XMLWriter_a0ca78cf991cb34d48ae73420bc37ff08}{}\label{classoutputWriter_1_1XMLWriter_a0ca78cf991cb34d48ae73420bc37ff08}
+plot type, mass, position, velocity and force of a particle.
+
+\begin{DoxyNote}{Note}
+\+: \hyperlink{classoutputWriter_1_1XMLWriter_ae263500bf16da212016fe61a2f28bff7}{initialize\+Output()} must have been called before. 
+\end{DoxyNote}
+\index{output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}!write\+File@{write\+File}}
+\index{write\+File@{write\+File}!output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}}
+\subsubsection[{\texorpdfstring{write\+File(const std\+::string \&filename)}{writeFile(const std::string &filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void output\+Writer\+::\+X\+M\+L\+Writer\+::write\+File (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classoutputWriter_1_1XMLWriter_adcccb8d6c33ae7e6408597a55bfa7f7a}{}\label{classoutputWriter_1_1XMLWriter_adcccb8d6c33ae7e6408597a55bfa7f7a}
+writes the final output file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file to be written. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}!input\+File@{input\+File}}
+\index{input\+File@{input\+File}!output\+Writer\+::\+X\+M\+L\+Writer@{output\+Writer\+::\+X\+M\+L\+Writer}}
+\subsubsection[{\texorpdfstring{input\+File}{inputFile}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf input\+\_\+t}$\ast$ output\+Writer\+::\+X\+M\+L\+Writer\+::input\+File\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classoutputWriter_1_1XMLWriter_ad9f7b00f811d520043497bbe15b5c078}{}\label{classoutputWriter_1_1XMLWriter_ad9f7b00f811d520043497bbe15b5c078}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/output\+Writer/\hyperlink{XMLWriter_8h}{X\+M\+L\+Writer.\+h}\item 
+src/output\+Writer/\hyperlink{XMLWriter_8cpp}{X\+M\+L\+Writer.\+cpp}\end{DoxyCompactItemize}

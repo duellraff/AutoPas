@@ -1,0 +1,234 @@
+\hypertarget{classutils_1_1Vector}{}\section{utils\+:\+:Vector$<$ type, length $>$ Class Template Reference}
+\label{classutils_1_1Vector}\index{utils\+::\+Vector$<$ type, length $>$@{utils\+::\+Vector$<$ type, length $>$}}
+
+
+{\ttfamily \#include $<$Vector.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classutils_1_1Vector_a71b42b489a54eb7eae82cff54fae0e12}{Vector} ()
+\item 
+\hyperlink{classutils_1_1Vector_a5f7d3385f6db28e1376d16e46f1a485f}{Vector} (\hyperlink{classtype}{type} arg)
+\item 
+\hyperlink{classutils_1_1Vector_a61a6f07c23829b70273ab4578bbb2332}{Vector} (\hyperlink{classtype}{type} args\mbox{[}length\mbox{]})
+\item 
+\hyperlink{classutils_1_1Vector_abb684db142444c4b19e6cd854db1a0d8}{Vector} (const \hyperlink{classutils_1_1Vector}{Vector} \&other)
+\item 
+\hyperlink{classutils_1_1Vector}{Vector} \hyperlink{classutils_1_1Vector_aeb0edeaa6b74a48839892e16623b0949}{operator+} (const \hyperlink{classutils_1_1Vector}{Vector} \&rhs) const 
+\item 
+\hyperlink{classutils_1_1Vector}{Vector} \& \hyperlink{classutils_1_1Vector_aa98dd61c4277e7e203292fcda5e68a69}{operator+=} (const \hyperlink{classutils_1_1Vector}{Vector} \&rhs)
+\item 
+\hyperlink{classutils_1_1Vector}{Vector} \hyperlink{classutils_1_1Vector_ad6e42a80810a58993f39e1d876eb5716}{operator-\/} (const \hyperlink{classutils_1_1Vector}{Vector} \&rhs) const 
+\item 
+\hyperlink{classutils_1_1Vector}{Vector} \& \hyperlink{classutils_1_1Vector_abe90a3569989271093c64363707d9cad}{operator-\/=} (const \hyperlink{classutils_1_1Vector}{Vector} \&rhs)
+\item 
+\hyperlink{classutils_1_1Vector}{Vector} \hyperlink{classutils_1_1Vector_a655ed48c281bfb1c87901313eb1896bb}{operator$\ast$} (double scalar) const 
+\item 
+double \hyperlink{classutils_1_1Vector_aa54009b6a76a8059de0eccbe43524d0c}{L2\+Norm} () const 
+\item 
+double \hyperlink{classutils_1_1Vector_a25528c8e0124efc579ab798edcb59935}{L2\+Norm\+Sqr} () const 
+\item 
+int \hyperlink{classutils_1_1Vector_a4ed4172f5831a876dd9bd14f63dafd79}{size} () const 
+\item 
+bool \hyperlink{classutils_1_1Vector_a761ff3d4c09a533535452b2a20038782}{equals} (const \hyperlink{classutils_1_1Vector}{Vector} \&rhs) const 
+\item 
+\hyperlink{classutils_1_1Vector}{Vector} \& \hyperlink{classutils_1_1Vector_a16812f2bf90d9e79b58fd42860c111e7}{operator=} (const \hyperlink{classutils_1_1Vector}{Vector} \&rhs)
+\item 
+\hyperlink{classutils_1_1Vector}{Vector} \& \hyperlink{classutils_1_1Vector_a5c1cfa1d42abdd9a90b4913892608386}{operator=} (double rhs)
+\item 
+\hyperlink{classtype}{type} \& \hyperlink{classutils_1_1Vector_a391fe7cbc2441879439fbc191ec4ef03}{operator\mbox{[}$\,$\mbox{]}} (int i)
+\item 
+const \hyperlink{classtype}{type} \& \hyperlink{classutils_1_1Vector_a3b965c400abae02fcad3751cf4b79309}{operator\mbox{[}$\,$\mbox{]}} (int i) const 
+\item 
+bool \hyperlink{classutils_1_1Vector_a04ceba4a8df8a367205d1c57063ec3f8}{operator==} (const \hyperlink{classutils_1_1Vector}{Vector} \&rhs) const 
+\item 
+std\+::string \hyperlink{classutils_1_1Vector_ab71fcfc3a0e80ee4a7d2c0fc76fed9a0}{to\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtype}{type} \hyperlink{classutils_1_1Vector_ab391d67eb8f8563b4dd4b80390a4631a}{content} \mbox{[}length\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classutils_1_1Vector_a49b910c983e6c91855b55ab04d401e4f}{operator} (std\+::ostream \&stream, const \hyperlink{classutils_1_1Vector}{Vector} \&v)
+\item 
+\hyperlink{classutils_1_1Vector}{Vector} \hyperlink{classutils_1_1Vector_a45c43d96a8bbe774870183ff33079584}{operator$\ast$} (double scalar, const \hyperlink{classutils_1_1Vector}{Vector} \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename type, int length$>$\\*
+class utils\+::\+Vector$<$ type, length $>$}
+
+\hyperlink{classutils_1_1Vector}{Vector} class definition 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{Vector()}{Vector()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf Vector} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a71b42b489a54eb7eae82cff54fae0e12}{}\label{classutils_1_1Vector_a71b42b489a54eb7eae82cff54fae0e12}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{Vector(type arg)}{Vector(type arg)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf Vector} (
+\begin{DoxyParamCaption}
+\item[{{\bf type}}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a5f7d3385f6db28e1376d16e46f1a485f}{}\label{classutils_1_1Vector_a5f7d3385f6db28e1376d16e46f1a485f}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{Vector(type args[length])}{Vector(type args[length])}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf Vector} (
+\begin{DoxyParamCaption}
+\item[{{\bf type}}]{args\mbox{[}length\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a61a6f07c23829b70273ab4578bbb2332}{}\label{classutils_1_1Vector_a61a6f07c23829b70273ab4578bbb2332}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{Vector(const Vector \&other)}{Vector(const Vector &other)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf Vector} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ {\bf type}, length $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_abb684db142444c4b19e6cd854db1a0d8}{}\label{classutils_1_1Vector_abb684db142444c4b19e6cd854db1a0d8}
+
+
+\subsection{Member Function Documentation}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!equals@{equals}}
+\index{equals@{equals}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{equals(const Vector \&rhs) const }{equals(const Vector &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ bool {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::equals (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ {\bf type}, length $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a761ff3d4c09a533535452b2a20038782}{}\label{classutils_1_1Vector_a761ff3d4c09a533535452b2a20038782}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!L2\+Norm@{L2\+Norm}}
+\index{L2\+Norm@{L2\+Norm}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{L2\+Norm() const }{L2Norm() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ double {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::L2\+Norm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_aa54009b6a76a8059de0eccbe43524d0c}{}\label{classutils_1_1Vector_aa54009b6a76a8059de0eccbe43524d0c}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!L2\+Norm\+Sqr@{L2\+Norm\+Sqr}}
+\index{L2\+Norm\+Sqr@{L2\+Norm\+Sqr}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{L2\+Norm\+Sqr() const }{L2NormSqr() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ double {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::L2\+Norm\+Sqr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a25528c8e0124efc579ab798edcb59935}{}\label{classutils_1_1Vector_a25528c8e0124efc579ab798edcb59935}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator$\ast$(double scalar) const }{operator*(double scalar) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf Vector} {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf operator}$\ast$ (
+\begin{DoxyParamCaption}
+\item[{double}]{scalar}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a655ed48c281bfb1c87901313eb1896bb}{}\label{classutils_1_1Vector_a655ed48c281bfb1c87901313eb1896bb}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator+@{operator+}}
+\index{operator+@{operator+}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator+(const Vector \&rhs) const }{operator+(const Vector &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf Vector} {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf operator}+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ {\bf type}, length $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_aeb0edeaa6b74a48839892e16623b0949}{}\label{classutils_1_1Vector_aeb0edeaa6b74a48839892e16623b0949}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator+=(const Vector \&rhs)}{operator+=(const Vector &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf Vector}\& {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf operator}+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ {\bf type}, length $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_aa98dd61c4277e7e203292fcda5e68a69}{}\label{classutils_1_1Vector_aa98dd61c4277e7e203292fcda5e68a69}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator-\/(const Vector \&rhs) const }{operator-(const Vector &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf Vector} {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf operator}-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ {\bf type}, length $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_ad6e42a80810a58993f39e1d876eb5716}{}\label{classutils_1_1Vector_ad6e42a80810a58993f39e1d876eb5716}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator-\/=(const Vector \&rhs)}{operator-=(const Vector &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf Vector}\& {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf operator}-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ {\bf type}, length $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_abe90a3569989271093c64363707d9cad}{}\label{classutils_1_1Vector_abe90a3569989271093c64363707d9cad}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator=@{operator=}}
+\index{operator=@{operator=}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator=(const Vector \&rhs)}{operator=(const Vector &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf Vector}\& {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf operator}= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ {\bf type}, length $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a16812f2bf90d9e79b58fd42860c111e7}{}\label{classutils_1_1Vector_a16812f2bf90d9e79b58fd42860c111e7}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator=@{operator=}}
+\index{operator=@{operator=}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator=(double rhs)}{operator=(double rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf Vector}\& {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf operator}= (
+\begin{DoxyParamCaption}
+\item[{double}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a5c1cfa1d42abdd9a90b4913892608386}{}\label{classutils_1_1Vector_a5c1cfa1d42abdd9a90b4913892608386}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator==@{operator==}}
+\index{operator==@{operator==}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator==(const Vector \&rhs) const }{operator==(const Vector &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ bool {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf operator}== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ {\bf type}, length $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a04ceba4a8df8a367205d1c57063ec3f8}{}\label{classutils_1_1Vector_a04ceba4a8df8a367205d1c57063ec3f8}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator[](int i)}{operator[](int i)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf type}\& {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf operator}\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a391fe7cbc2441879439fbc191ec4ef03}{}\label{classutils_1_1Vector_a391fe7cbc2441879439fbc191ec4ef03}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator[](int i) const }{operator[](int i) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ const {\bf type}\& {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::{\bf operator}\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a3b965c400abae02fcad3751cf4b79309}{}\label{classutils_1_1Vector_a3b965c400abae02fcad3751cf4b79309}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!size@{size}}
+\index{size@{size}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{size() const }{size() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ int {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_a4ed4172f5831a876dd9bd14f63dafd79}{}\label{classutils_1_1Vector_a4ed4172f5831a876dd9bd14f63dafd79}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{to\+String() const }{toString() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ std\+::string {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classutils_1_1Vector_ab71fcfc3a0e80ee4a7d2c0fc76fed9a0}{}\label{classutils_1_1Vector_ab71fcfc3a0e80ee4a7d2c0fc76fed9a0}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator@{operator}}
+\index{operator@{operator}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator}{operator}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ std\+::ostream\& operator (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{stream, }
+\item[{const {\bf Vector}$<$ {\bf type}, length $>$ \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classutils_1_1Vector_a49b910c983e6c91855b55ab04d401e4f}{}\label{classutils_1_1Vector_a49b910c983e6c91855b55ab04d401e4f}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{operator$\ast$}{operator*}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf Vector} {\bf operator}$\ast$ (
+\begin{DoxyParamCaption}
+\item[{double}]{scalar, }
+\item[{const {\bf Vector}$<$ {\bf type}, length $>$ \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classutils_1_1Vector_a45c43d96a8bbe774870183ff33079584}{}\label{classutils_1_1Vector_a45c43d96a8bbe774870183ff33079584}
+
+
+\subsection{Member Data Documentation}
+\index{utils\+::\+Vector@{utils\+::\+Vector}!content@{content}}
+\index{content@{content}!utils\+::\+Vector@{utils\+::\+Vector}}
+\subsubsection[{\texorpdfstring{content}{content}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename type, int length$>$ {\bf type} {\bf utils\+::\+Vector}$<$ {\bf type}, length $>$\+::content\mbox{[}length\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classutils_1_1Vector_ab391d67eb8f8563b4dd4b80390a4631a}{}\label{classutils_1_1Vector_ab391d67eb8f8563b4dd4b80390a4631a}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/\hyperlink{Vector_8h}{Vector.\+h}\end{DoxyCompactItemize}

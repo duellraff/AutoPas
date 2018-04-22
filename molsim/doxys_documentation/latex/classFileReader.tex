@@ -1,0 +1,59 @@
+\hypertarget{classFileReader}{}\section{File\+Reader Class Reference}
+\label{classFileReader}\index{File\+Reader@{File\+Reader}}
+
+
+{\ttfamily \#include $<$File\+Reader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFileReader_a615dcb2443cad1f2ca123c7c0c334480}{File\+Reader} ()
+\item 
+virtual \hyperlink{classFileReader_a1382969e8f1468f3b04ad4b44ab39dee}{$\sim$\+File\+Reader} ()
+\item 
+void \hyperlink{classFileReader_a6392ce87a42739faa0ebd8bda06d5c2c}{read\+File} (\hyperlink{classParticleContainer}{Particle\+Container} $\ast$particles, const char $\ast$filename, double Rcutoff)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{File\+Reader@{File\+Reader}!File\+Reader@{File\+Reader}}
+\index{File\+Reader@{File\+Reader}!File\+Reader@{File\+Reader}}
+\subsubsection[{\texorpdfstring{File\+Reader()}{FileReader()}}]{\setlength{\rightskip}{0pt plus 5cm}File\+Reader\+::\+File\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFileReader_a615dcb2443cad1f2ca123c7c0c334480}{}\label{classFileReader_a615dcb2443cad1f2ca123c7c0c334480}
+\index{File\+Reader@{File\+Reader}!````~File\+Reader@{$\sim$\+File\+Reader}}
+\index{````~File\+Reader@{$\sim$\+File\+Reader}!File\+Reader@{File\+Reader}}
+\subsubsection[{\texorpdfstring{$\sim$\+File\+Reader()}{~FileReader()}}]{\setlength{\rightskip}{0pt plus 5cm}File\+Reader\+::$\sim$\+File\+Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFileReader_a1382969e8f1468f3b04ad4b44ab39dee}{}\label{classFileReader_a1382969e8f1468f3b04ad4b44ab39dee}
+
+
+\subsection{Member Function Documentation}
+\index{File\+Reader@{File\+Reader}!read\+File@{read\+File}}
+\index{read\+File@{read\+File}!File\+Reader@{File\+Reader}}
+\subsubsection[{\texorpdfstring{read\+File(\+Particle\+Container $\ast$particles, const char $\ast$filename, double Rcutoff)}{readFile(ParticleContainer *particles, const char *filename, double Rcutoff)}}]{\setlength{\rightskip}{0pt plus 5cm}void File\+Reader\+::read\+File (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle\+Container} $\ast$}]{particles, }
+\item[{const char $\ast$}]{filename, }
+\item[{double}]{Rcutoff}
+\end{DoxyParamCaption}
+)}\hypertarget{classFileReader_a6392ce87a42739faa0ebd8bda06d5c2c}{}\label{classFileReader_a6392ce87a42739faa0ebd8bda06d5c2c}
+Fill a particle container with particles from a xml-\/file 
+\begin{DoxyParams}{Parameters}
+{\em particles} & the container to fill \\
+\hline
+{\em filename} & the path to the xml-\/file containing information to generate the particles \\
+\hline
+{\em Rcutoff} & distance to set the truncation distance of the L\+J-\/calculation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/input/\hyperlink{FileReader_8h}{File\+Reader.\+h}\item 
+src/input/\hyperlink{FileReader_8cpp}{File\+Reader.\+cpp}\end{DoxyCompactItemize}

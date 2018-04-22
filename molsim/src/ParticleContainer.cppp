@@ -1,0 +1,483 @@
+/*
+ * ParticleContainer.cpp
+ *
+ *  Created on: Oct 31, 2017
+ *      Author: raffi
+ */
+
+#include "ParticleContainer.h"
+#include "MaxwellBoltzmannDistribution.h"
+#include <assert.h>
+#include <log4cxx/logger.h>
+
+using namespace log4cxx;
+
+static LoggerPtr logger(Logger::getLogger("ParticleContainer"));
+
+#define Dimensions 3
+#define Sqrt2 1.4145135
+#define for_it(it, list) for (auto it = (list).begin(); it != (list).end(); it++)
+
+ParticleContainer::ParticleContainer(enum ParticleContainer::ForceMethod fm, double timestep, double BrownianFactor) {
+	this->fm = fm;
+	switch (fm){
+		case ParticleContainer::Gravity:
+			calcFFunction = &ParticleContainer::calcGravity;
+			break;
+		case ParticleContainer::LennardJones:
+			calcFFunction = &ParticleContainer::calcLennardJones;
+			break;
+	}
+
+	delta_t = timestep;
+	this->BrownianFactor = BrownianFactor;
+}
+
+ParticleContainer::~ParticleContainer() {
+	// TODO Auto-generated destructor stub
+}
+
+void ParticleContainer::setDeltaT(double timestep) {
+	delta_t = timestep;
+}
+
+void ParticleContainer::setGravity(utils::Vector<double,3> g) {
+	// for all particles
+	for (Particle& p : partlist) {
+		p.getConstF() += p.getM()*g;
+		p.getGrav() = g;
+	}
+}
+
+void ParticleContainer::setList(std::list<Particle> plist) {
+	// clear container
+	partlist.clear();
+
+	// fill container with all particles in plist
+	for (Particle& p : plist) {
+		partlist.push_back(p);
+	}
+}
+
+void ParticleContainer::setMembrane(double stiff, double r_zero, bool status, double tend){
+	stiffness = stiff;
+	r0 = r_zero;
+	membrane_active = status;
+	t_end_force = tend;
+}
+
+Particle* ParticleContainer::addParticle(Particle& p){
+
+	//check if particle already exists
+	for (Particle& pother : partlist){
+		if (p == pother){
+			LOG4CXX_DEBUG(logger, "Particle already in partlist");
+			return &pother;
+		}
+	}
+
+	partlist.push_back(p);
+
+	LOG4CXX_DEBUG(logger, "particle added to Particle Container");
+
+
+	return &partlist.back();
+}
+
+void ParticleContainer::deleteParticle(Particle& p){
+	// look for particle to remove
+	for_it (it, partlist){
+		if (p == *it){
+			// remove found particle
+			partlist.erase(it);
+			return;
+		}
+	}
+}
+
+std::list<Particle>& ParticleContainer::getAll(){
+	return partlist;
+}
+
+std::list<Particle*> ParticleContainer::getAllPointer(){
+	std::list<Particle*> pointers;
+	for (Particle& p : partlist){
+			pointers.push_back(&p);
+	}
+
+	return pointers;
+}
+
+void ParticleContainer::testForceEnd(double time){
+	if (membrane_active && t_end_force < time){
+		// for all cells
+		for (Particle& p : partlist){
+			p.getConstF()= 0.0;
+			p.getConstF() = p.getM()*p.getGrav();
+		}
+	}
+}
+
+void ParticleContainer::fReset(){
+	// for all particles
+	for (Particle& p1 : partlist){
+		// save old F
+		p1.getOldF() = p1.getF();
+		// set current F according to the constant force
+		for(int i=0; i<3;++i){
+			if(std::isnan(p1.getConstF()[i])){
+				LOG4CXX_INFO(logger, "const_f has a nan element: "<<p1.getConstF().toString());
+				p1.getConstF()[i]=0;
+			}
+		}
+		p1.getF() = p1.getConstF();
+	}
+}
+
+void ParticleContainer::calculateF() {
+	// set all forces according to gravity
+	fReset();
+
+	HarmonicPotential(stiffness, r0);
+
+	// for all particles
+	for_it (iterator, partlist) {
+		Particle& p1 = *iterator;
+		utils::Vector<double, 3>& p1f = p1.getF();
+
+		// for all particles following the outer particle
+		std::list<Particle>::iterator innerIterator = iterator;
+		innerIterator++;
+		for (;innerIterator != partlist.end(); innerIterator++) {
+			Particle& p2 = *innerIterator;
+			utils::Vector<double, 3>& p2f = p2.getF();
+
+			// Apply the occurring forces between both particles
+			utils::Vector<double, 3> f = calcF(p1, p2);
+			assert(!std::isnan(f[0]) && !std::isnan(f[1]) && !std::isnan(f[2]));
+
+			p1f = p1f + f;
+			p2f = p2f - f;
+		}
+	}
+}
+
+void ParticleContainer::calculateX() {
+	// for all particles
+	for (Particle& p : partlist){
+		if (p.getFixed()) {
+			continue;
+		}
+
+		utils::Vector<double, 3>& x = p.getX();
+
+		// calculate the position in the next step
+		x += delta_t * p.getV() + (delta_t * delta_t / (2 * p.getM())) * p.getF();
+
+		assert(!std::isnan(x[0]) && !std::isnan(x[1]) && !std::isnan(x[2]));
+	}
+}
+
+void ParticleContainer::calculateV() {
+	// for all particles
+	for (Particle& p : partlist){
+		if (p.getFixed()) {
+			continue;
+		}
+
+		utils::Vector<double, 3>& v = p.getV();
+
+		// calculate the velocity in the next step
+		v += (delta_t / (2 * p.getM())) * (p.getOldF() + p.getF());
+		assert(!std::isnan(v[0]) && !std::isnan(v[1]) && !std::isnan(v[2]));
+	}
+}
+
+void ParticleContainer::HarmonicPotential(double k, double r_zero ){
+	//initialize membrane force and direction vector
+	utils::Vector<double,3> f(0.0);
+	utils::Vector<double,3> dir(0.0);
+
+	// for all particles
+	for (Particle& p : partlist){
+		// apply potential to direct neighbours
+		for(int n=0; n<2; n++){
+			if(p.getDirectNeighbours()[n] != NULL){
+				Particle& pother = *p.getDirectNeighbours()[n];
+
+				//compute direct potential
+				dir = p.getX() - pother.getX();
+				double norm2 = dir.L2Norm();
+				f = k*(1 - r_zero / norm2) * dir;
+
+				//add the new force
+				p.getF() -= f;
+				pother.getF() += f;
+			}
+		}
+
+		// apply potentail to diagonal neighbours
+		for(int n=0; n<2; n++){
+			if(p.getDiagonalNeighbours()[n] != NULL){
+				Particle& pother = *p.getDiagonalNeighbours()[n];
+
+				//compute diagonal potential
+				dir = p.getX() - pother.getX();
+				double norm2 = dir.L2Norm();
+				f = k*(1 - Sqrt2*r_zero/ norm2) * dir;
+
+				//add the new force
+				p.getF() -= f;
+				pother.getF() += f;
+			}
+		}
+	}
+}
+
+utils::Vector<double,3> ParticleContainer::calcGravity(Particle& p1, Particle& p2){
+	utils::Vector<double, 3> r = p2.getX() - p1.getX();
+	assert(!(r==0.0));
+	double rabs = r.L2Norm();
+	double rabs3 = rabs * rabs * rabs;
+
+	return (p1.getM()*p2.getM() / rabs3) * r;
+}
+
+utils::Vector<double,3> ParticleContainer::calcLennardJones(Particle& p1, Particle& p2){
+	utils::Vector<double, 3> r = p2.getX() - p1.getX();
+	double sigma = (p1.getSigma() + p2.getSigma()) / 2;
+	double epsilon = ParticleType::getEpsilon(p1.getTypeID(), p2.getTypeID());
+
+    assert(!(r==0.0));
+	double rabs2 = r.L2NormSqr();
+	double fraction = sigma * sigma / rabs2;
+	double fraction3 = fraction * fraction * fraction;
+	double fraction6 = fraction3 * fraction3;
+
+	return 24 * epsilon / rabs2 * (fraction3 - 2 * fraction6) * r;
+}
+
+void ParticleContainer::generateCuboid(int type,
+                                       utils::Vector<double,3> pos,
+                                       utils::Vector<int,3> dim,
+                                       double h,
+                                       utils::Vector<double,3> v) {
+	LOG4CXX_DEBUG(logger, "Generate cuboid");
+
+	// for each step in each dimension
+	for (int x = 0; x < dim[0]; x++){
+		for (int y = 0; y < dim[1]; y++) {
+			for (int z = 0; z < dim[2]; z++) {
+
+				// create a particle and add to container
+				Particle p = Particle(type);
+
+				p.getX()[0] = pos[0] + x*h;
+				p.getX()[1] = pos[1] + y*h;
+				p.getX()[2] = pos[2] + z*h;
+
+				p.getV() = v;
+
+				MaxwellBoltzmannDistribution(p, BrownianFactor, Dimensions);
+
+				Particle* t = addParticle(p);
+			}
+		}
+	}
+}
+
+void ParticleContainer::generateMembrane(int type, double k,
+									   double r_zero, double t_end,
+									   utils::Vector<double, 3> force,
+									   std::list<utils::Vector<int,3>> coord_force,
+                                       utils::Vector<double,3> pos,
+                                       utils::Vector<int,3> dim,
+                                       double h,
+                                       utils::Vector<double,3> v) {
+	LOG4CXX_DEBUG(logger, "Generate membrane");
+
+	//set the membrane parameters
+	setMembrane(k, r_zero, true, t_end);
+
+	// for each step in each dimension
+	for (int z = 0; z < dim[2]; z++){
+
+		int i = 0;
+
+		std::vector<Particle*> index;
+		for (int y = 0; y < dim[1]; y++) {
+			for (int x = 0; x < dim[0]; x++) {
+
+				//get actual mesh coordinates in vector
+
+				utils::Vector<int, 3> meshcoord;
+				meshcoord[0] = x;
+				meshcoord[1] = y;
+				meshcoord[2] = z;
+
+				// create a particle and add to container
+				Particle p = Particle(type);
+
+				p.getX()[0] = pos[0] + x*h;
+				p.getX()[1] = pos[1] + y*h;
+				p.getX()[2] = pos[2] + z*h;
+
+				p.getV() = v;
+
+				MaxwellBoltzmannDistribution(p, BrownianFactor, Dimensions);
+
+				//add external force on certain particles
+				for(std::list<utils::Vector<int,3>>::iterator c = coord_force.begin(); c != coord_force.end(); ++c){
+					if (*c == meshcoord){
+						p.getConstF() = force;
+					}
+				}
+
+				//add to the container
+				index.push_back(addParticle(p));
+
+				if(index[i] == nullptr){
+					continue;
+					i++;
+				}
+				Particle& actual = *index[i];
+
+
+				//complete neighbour vectors
+				//all except the lower row
+				if (i >= dim[0]){
+					actual.getDirectNeighbours()[3] = index[i - dim[0]];
+					actual.getDirectNeighbours()[3]->getDirectNeighbours()[1] = &actual;
+
+					//ignore the left side
+					if (i % dim[0] != 0){
+						actual.getDirectNeighbours()[0] = index[i - 1];
+						actual.getDiagonalNeighbours()[3] = index[i - dim[0] - 1];
+						actual.getDirectNeighbours()[0]->getDirectNeighbours()[2] = &actual;
+						actual.getDiagonalNeighbours()[3]->getDiagonalNeighbours()[1] = &actual;
+					}
+					//ignore the right side
+					if ((i+1) % dim[0] != 0){
+						actual.getDiagonalNeighbours()[2] = index[i - dim[0] + 1];
+						actual.getDiagonalNeighbours()[2]->getDiagonalNeighbours()[0] = &actual;
+					}
+				}
+				//fill the lower row
+				else if (i > 0){
+					actual.getDirectNeighbours()[0] = index[i - 1];
+					actual.getDirectNeighbours()[0]->getDirectNeighbours()[2] = &actual;
+				}
+
+				++i;
+			}
+		}
+	}
+}
+
+void ParticleContainer::generateSphere(int type,
+                                       utils::Vector<double,3> pos,
+                                       int r,
+                                       double h,
+                                       utils::Vector<double,3> v) {
+	int r_sqr = r*r;
+
+	// for each step in each dimension
+	for (int x = -r; x < r; x++){
+		int x_sqr = x*x;
+		for (int y = -r; y < r; y++) {
+			int y_sqr = y*y;
+			for (int z = 0; z <= r; z++) {
+				int z_sqr = z*z;
+
+				if (x_sqr + y_sqr + z_sqr < r_sqr) {
+					// create a particle and add to container
+					Particle p = Particle(type);
+
+					p.getX()[0] = pos[0] + x*h;
+					p.getX()[1] = pos[1] + y*h;
+					p.getX()[2] = pos[2] + z*h;
+
+					p.getV() = v;
+
+					MaxwellBoltzmannDistribution(p, BrownianFactor, Dimensions);
+
+					addParticle(p);
+
+
+				}
+			}
+		}
+	}
+}
+
+void ParticleContainer::setTemperature(float T_target, bool ignoreY){
+
+	std::list<Particle*> plist = getAllPointer();
+
+	if (ignoreY) {
+		double T = 0;
+		int count = 0;
+
+		// get sum of velocity squared in xz and count non-fix particles
+		for (Particle*& pp : plist) {
+			Particle& p = *pp;
+
+			if (p.getFixed()) {
+				continue;
+			}
+
+			utils::Vector<double, 3> v = p.getV();
+			double v_xz_sqr = v[0]*v[0] + v[2]*v[2];
+
+			T += p.getM() * v_xz_sqr;
+			count++;
+		}
+
+		T /= Dimensions * count;
+		double beta = sqrt(T_target / T);
+
+		// scale xz-velocity of all non-fix particles
+		for (Particle*& pp : plist) {
+			Particle& p = *pp;
+
+			if (p.getFixed()) {
+				continue;
+			}
+
+			utils::Vector<double, 3> v = p.getV();
+			p.getV()[0] *= beta;
+			p.getV()[2] *= beta;
+		}
+	}
+	else
+	{
+		double T = 0;
+		int count = 0;
+
+		// get sum of velocity squared and count non-fix particles
+		for (Particle*& pp : plist) {
+			Particle& p = *pp;
+			if (p.getFixed()) {
+				continue;
+			}
+
+			T += p.getM() * p.getV().L2NormSqr();
+			count++;
+		}
+
+		T /= Dimensions * count;
+		double beta = sqrt(T_target / T);
+
+		// scale velocity of all non-fix particles
+		for (Particle*& pp : plist) {
+			Particle& p = *pp;
+
+			if (p.getFixed()) {
+				continue;
+			}
+
+			p.getV() = p.getV() * beta;
+		}
+	}
+}
+

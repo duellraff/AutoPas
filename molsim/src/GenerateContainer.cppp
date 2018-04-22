@@ -1,0 +1,250 @@
+
+#include "GenerateContainer.h"
+
+namespace autopas{
+
+	template<typename Container, typename Functor>
+	ContProperties Generate(Container* cont, double timestep,
+						   double BrownianFactor, Functor* fm,
+						   double Rcutoff, double domainX, double domainY,double domainZ,
+						   utils::Vector<int, 6> boundary,
+						   int threads){
+		cont->init();
+		std::array<double, 3> BoxMax({0,0,0});
+		std::array<double, 3> BoxMin({domainX, domainY, domainZ});
+		cont->setBoxMin(BoxMin);
+		cont->setBoxMax(BoxMax);
+		cont->setCutoff(Rcutoff);
+
+		return ContProperties(cont, fm, boundary, timestep, BrownianFactor);
+
+	}
+
+	template<typename Container>
+	void generateCuboid(Container* cont, ContProperties &prop, int type,
+						   std::array<double,3> pos,
+						   std::array<int,3> dim,
+						   double h,
+						   std::array<double,3> v) {
+		LOG4CXX_DEBUG(logger, "Generate cuboid");
+
+		// for each step in each dimension
+		for (int x = 0; x < dim[0]; x++){
+			for (int y = 0; y < dim[1]; y++) {
+				for (int z = 0; z < dim[2]; z++) {
+
+					// create a particle and add to container
+					ParticleMS p = ParticleMS(type);
+
+					p.getR()[0] = pos[0] + x*h;
+					p.getR()[1] = pos[1] + y*h;
+					p.getR()[2] = pos[2] + z*h;
+
+					p.getV() = v;
+
+					MaxwellBoltzmannDistribution(p, prop.getBF(), 3);
+
+					cont->addParticle(p);
+				}
+			}
+		}
+	}
+
+	template<class Container>
+	void generateMembrane(Container* cont, ContProperties &prop, int type, double k,
+										   double r_zero, double t_end,
+										   std::array<double, 3> force,
+										   std::list<std::array<int,3>> coord_force,
+										   std::array<double,3> pos,
+										   std::array<int,3> dim,
+										   double h,
+										   std::array<double,3> v) {
+		LOG4CXX_DEBUG(logger, "Generate membrane");
+
+		//set the membrane parameter
+		prop.setMembrane(k, r_zero, true, t_end);
+
+		// for each step in each dimension
+		for (int z = 0; z < dim[2]; z++){
+
+			int i = 0;
+
+			std::vector<Particle*> index;
+			for (int y = 0; y < dim[1]; y++) {
+				for (int x = 0; x < dim[0]; x++) {
+
+					//get actual mesh coordinates in vector
+
+					std::array<int, 3> meshcoord;
+					meshcoord[0] = x;
+					meshcoord[1] = y;
+					meshcoord[2] = z;
+
+					// create a particle and add to container
+					ParticleMS p = Particle(type);
+
+					p.getR()[0] = pos[0] + x*h;
+					p.getR()[1] = pos[1] + y*h;
+					p.getR()[2] = pos[2] + z*h;
+
+					p.getV() = v;
+
+					MaxwellBoltzmannDistribution(p, prop.getBF(), 3);
+
+					//add external force on certain particles
+					for(std::list<std::array<int,3>>::iterator c = coord_force.begin(); c != coord_force.end(); ++c){
+						if (*c == meshcoord){
+							p.getConstF() = force;
+						}
+					}
+
+					//add to the container
+					cont->addParticle(p);
+					index.push_back(&p);
+
+					if(index[i] == nullptr){
+						continue;
+						i++;
+					}
+					ParticleMS& actual = *index[i];
+
+
+					//complete neighbour vectors
+					//all except the lower row
+					if (i >= dim[0]){
+						actual.getDirectNeighbours()[3] = index[i - dim[0]];
+						actual.getDirectNeighbours()[3]->getDirectNeighbours()[1] = &actual;
+
+						//ignore the left side
+						if (i % dim[0] != 0){
+							actual.getDirectNeighbours()[0] = index[i - 1];
+							actual.getDiagonalNeighbours()[3] = index[i - dim[0] - 1];
+							actual.getDirectNeighbours()[0]->getDirectNeighbours()[2] = &actual;
+							actual.getDiagonalNeighbours()[3]->getDiagonalNeighbours()[1] = &actual;
+						}
+						//ignore the right side
+						if ((i+1) % dim[0] != 0){
+							actual.getDiagonalNeighbours()[2] = index[i - dim[0] + 1];
+							actual.getDiagonalNeighbours()[2]->getDiagonalNeighbours()[0] = &actual;
+						}
+					}
+					//fill the lower row
+					else if (i > 0){
+						actual.getDirectNeighbours()[0] = index[i - 1];
+						actual.getDirectNeighbours()[0]->getDirectNeighbours()[2] = &actual;
+					}
+
+					++i;
+				}
+			}
+		}
+	}
+	template<typename Container>
+	void generateSphere(Container* cont, ContProperties &prop, int type,
+										   std::array<double,3> pos,
+										   int r, double h, std::array<double,3> v) {
+		int r_sqr = r*r;
+
+		// for each step in each dimension
+		for (int x = -r; x < r; x++){
+			int x_sqr = x*x;
+			for (int y = -r; y < r; y++) {
+				int y_sqr = y*y;
+				for (int z = 0; z <= r; z++) {
+					int z_sqr = z*z;
+
+					if (x_sqr + y_sqr + z_sqr < r_sqr) {
+						// create a particle and add to container
+						ParticleMS p = Particle(type);
+
+						p.getR()[0] = pos[0] + x*h;
+						p.getR()[1] = pos[1] + y*h;
+						p.getR()[2] = pos[2] + z*h;
+
+						p.getV() = v;
+
+						MaxwellBoltzmannDistribution(p, prop.getBF(), 3);
+
+						cont->addParticle(p);
+
+
+					}
+				}
+			}
+		}
+	}
+	template<class Container, class Particle>
+	void setTemperature(Container* cont, float T_target, bool ignoreY){
+
+
+		if (ignoreY) {
+			double T = 0;
+			int count = 0;
+
+			// get sum of velocity squared in xz and count non-fix particles
+			for (typename Container::iterator pp = cont->begin(); pp.isValid(); ++pp ){
+
+				Particle& p = *pp;
+
+				if (p.getFixed()) {
+					continue;
+				}
+
+				std::array<double, 3> v = p.getV();
+				double v_xz_sqr = v[0]*v[0] + v[2]*v[2];
+
+				T += p.getM() * v_xz_sqr;
+				count++;
+			}
+
+			T /= 3 * count;
+			double beta = sqrt(T_target / T);
+
+			// scale xz-velocity of all non-fix particles
+			for (typename Container::iterator pp = cont->begin(); pp.isValid(); ++pp) {
+				ParticleMS& p = *pp;
+
+				if (p.getFixed()) {
+					continue;
+				}
+
+				std::array<double, 3> v = p.getV();
+				p.getV()[0] *= beta;
+				p.getV()[2] *= beta;
+			}
+		}
+		else
+		{
+			double T = 0;
+			int count = 0;
+
+			// get sum of velocity squared and count non-fix particles
+			for (typename Container::iterator pp = cont->begin(); pp.isValid(); ++pp) {
+				ParticleMS& p = *pp;
+				if (p.getFixed()) {
+					continue;
+				}
+
+				std::array<double, 3> vel = p.getV();
+				double Vnormsqr = vel[0]*vel[0] + vel[1]*vel[1] + vel[2]*vel[2];
+				T += p.getM() * Vnormsqr;
+				count++;
+			}
+
+			T /= 3 * count;
+			double beta = sqrt(T_target / T);
+
+			// scale velocity of all non-fix particles
+			for (typename Container::iterator pp = cont->begin(); pp.isValid(); ++pp) {
+				ParticleMS& p = *pp;
+
+				if (p.getFixed()) {
+					continue;
+				}
+
+				p.setV(arrayMath::mulScalar(p.getV(), beta));
+			}
+		}
+	}
+}
+

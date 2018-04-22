@@ -1,0 +1,110 @@
+\hypertarget{src_2input_2FileReader_8cpp}{}\section{src/input/\+File\+Reader.cpp File Reference}
+\label{src_2input_2FileReader_8cpp}\index{src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}}
+{\ttfamily \#include \char`\"{}File\+Reader.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils/\+Vector.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}input/particle\+\_\+input.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$log4cxx/logger.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Logger\+Ptr \hyperlink{src_2input_2FileReader_8cpp_a51b9b8c68aa915273fc0bb4d2c8f1216}{logger} (Logger\+::get\+Logger(\char`\"{}Mol\+Sim.\+File\+Reader\char`\"{}))
+\item 
+void \hyperlink{src_2input_2FileReader_8cpp_a4c5cb85deedd3f9921db09d935cd1e4d}{parse\+Vector} (\hyperlink{classvector__t}{vector\+\_\+t} src, double dest\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{src_2input_2FileReader_8cpp_a7ad8bdaa75cb598474ede5d05bfb41c1}{parse\+Int\+Vector} (\hyperlink{classint__vector__t}{int\+\_\+vector\+\_\+t} src, int dest\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{src_2input_2FileReader_8cpp_a7de8438d9a262830e629335fc29a16c1}{read\+Single\+Particle} (\hyperlink{classParticleContainer}{Particle\+Container} $\ast$particles, const auto\+\_\+ptr$<$ \hyperlink{classinput__t}{input\+\_\+t} $>$ \&pinput)
+\item 
+void \hyperlink{src_2input_2FileReader_8cpp_ac251063fecf0ea672afc35d1bec187f8}{read\+Cuboid} (\hyperlink{classParticleContainer}{Particle\+Container} $\ast$particles, const auto\+\_\+ptr$<$ \hyperlink{classinput__t}{input\+\_\+t} $>$ \&pinput)
+\item 
+void \hyperlink{src_2input_2FileReader_8cpp_abca9a7df5dc7682f43f6f7e1c382e555}{read\+Sphere} (\hyperlink{classParticleContainer}{Particle\+Container} $\ast$particles, const auto\+\_\+ptr$<$ \hyperlink{classinput__t}{input\+\_\+t} $>$ \&pinput)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}!logger@{logger}}
+\index{logger@{logger}!src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}}
+\subsubsection[{\texorpdfstring{logger(\+Logger\+::get\+Logger(""Mol\+Sim.\+File\+Reader""))}{logger(Logger::getLogger("MolSim.FileReader"))}}]{\setlength{\rightskip}{0pt plus 5cm}static Logger\+Ptr logger (
+\begin{DoxyParamCaption}
+\item[{Logger\+::get\+Logger(\char`\"{}Mol\+Sim.\+File\+Reader\char`\"{})}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{src_2input_2FileReader_8cpp_a51b9b8c68aa915273fc0bb4d2c8f1216}{}\label{src_2input_2FileReader_8cpp_a51b9b8c68aa915273fc0bb4d2c8f1216}
+\index{src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}!parse\+Int\+Vector@{parse\+Int\+Vector}}
+\index{parse\+Int\+Vector@{parse\+Int\+Vector}!src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}}
+\subsubsection[{\texorpdfstring{parse\+Int\+Vector(int\+\_\+vector\+\_\+t src, int dest[])}{parseIntVector(int_vector_t src, int dest[])}}]{\setlength{\rightskip}{0pt plus 5cm}void parse\+Int\+Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf int\+\_\+vector\+\_\+t}}]{src, }
+\item[{int}]{dest\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{src_2input_2FileReader_8cpp_a7ad8bdaa75cb598474ede5d05bfb41c1}{}\label{src_2input_2FileReader_8cpp_a7ad8bdaa75cb598474ede5d05bfb41c1}
+Parse a int \hyperlink{classvector__t}{vector\+\_\+t} element into an array 
+\begin{DoxyParams}{Parameters}
+{\em src} & \hyperlink{classvector__t}{vector\+\_\+t} xml-\/element \\
+\hline
+{\em dest} & output array \\
+\hline
+\end{DoxyParams}
+\index{src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}!parse\+Vector@{parse\+Vector}}
+\index{parse\+Vector@{parse\+Vector}!src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}}
+\subsubsection[{\texorpdfstring{parse\+Vector(vector\+\_\+t src, double dest[])}{parseVector(vector_t src, double dest[])}}]{\setlength{\rightskip}{0pt plus 5cm}void parse\+Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf vector\+\_\+t}}]{src, }
+\item[{double}]{dest\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{src_2input_2FileReader_8cpp_a4c5cb85deedd3f9921db09d935cd1e4d}{}\label{src_2input_2FileReader_8cpp_a4c5cb85deedd3f9921db09d935cd1e4d}
+Parse a \hyperlink{classvector__t}{vector\+\_\+t} element into an array 
+\begin{DoxyParams}{Parameters}
+{\em src} & \hyperlink{classvector__t}{vector\+\_\+t} xml-\/element \\
+\hline
+{\em dest} & output array \\
+\hline
+\end{DoxyParams}
+\index{src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}!read\+Cuboid@{read\+Cuboid}}
+\index{read\+Cuboid@{read\+Cuboid}!src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+Cuboid(\+Particle\+Container $\ast$particles, const auto\+\_\+ptr$<$ input\+\_\+t $>$ \&pinput)}{readCuboid(ParticleContainer *particles, const auto_ptr< input_t > &pinput)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Cuboid (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle\+Container} $\ast$}]{particles, }
+\item[{const auto\+\_\+ptr$<$ {\bf input\+\_\+t} $>$ \&}]{pinput}
+\end{DoxyParamCaption}
+)}\hypertarget{src_2input_2FileReader_8cpp_ac251063fecf0ea672afc35d1bec187f8}{}\label{src_2input_2FileReader_8cpp_ac251063fecf0ea672afc35d1bec187f8}
+Read cuboids of particles from a xml node 
+\begin{DoxyParams}{Parameters}
+{\em particles} & the container to add the particles \\
+\hline
+{\em pinput} & xml node containting cuboid\+\_\+t-\/elements \\
+\hline
+\end{DoxyParams}
+\index{src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}!read\+Single\+Particle@{read\+Single\+Particle}}
+\index{read\+Single\+Particle@{read\+Single\+Particle}!src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+Single\+Particle(\+Particle\+Container $\ast$particles, const auto\+\_\+ptr$<$ input\+\_\+t $>$ \&pinput)}{readSingleParticle(ParticleContainer *particles, const auto_ptr< input_t > &pinput)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Single\+Particle (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle\+Container} $\ast$}]{particles, }
+\item[{const auto\+\_\+ptr$<$ {\bf input\+\_\+t} $>$ \&}]{pinput}
+\end{DoxyParamCaption}
+)}\hypertarget{src_2input_2FileReader_8cpp_a7de8438d9a262830e629335fc29a16c1}{}\label{src_2input_2FileReader_8cpp_a7de8438d9a262830e629335fc29a16c1}
+Read single particles from a xml node 
+\begin{DoxyParams}{Parameters}
+{\em particles} & the container to add the particles \\
+\hline
+{\em pinput} & xml node containing single\+\_\+t-\/elements \\
+\hline
+\end{DoxyParams}
+\index{src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}!read\+Sphere@{read\+Sphere}}
+\index{read\+Sphere@{read\+Sphere}!src/input/\+File\+Reader.\+cpp@{src/input/\+File\+Reader.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+Sphere(\+Particle\+Container $\ast$particles, const auto\+\_\+ptr$<$ input\+\_\+t $>$ \&pinput)}{readSphere(ParticleContainer *particles, const auto_ptr< input_t > &pinput)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+Sphere (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle\+Container} $\ast$}]{particles, }
+\item[{const auto\+\_\+ptr$<$ {\bf input\+\_\+t} $>$ \&}]{pinput}
+\end{DoxyParamCaption}
+)}\hypertarget{src_2input_2FileReader_8cpp_abca9a7df5dc7682f43f6f7e1c382e555}{}\label{src_2input_2FileReader_8cpp_abca9a7df5dc7682f43f6f7e1c382e555}
+Read sphere of particles from a xml node 
+\begin{DoxyParams}{Parameters}
+{\em particles} & the container to add the particles \\
+\hline
+{\em pinput} & xml node containting sphere\+\_\+t-\/elements \\
+\hline
+\end{DoxyParams}
