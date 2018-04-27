@@ -17,21 +17,19 @@
 using namespace autopas;
 
 	/** Generate a container
-	 * @param cont ParticleContainer to be used
+	 * @param autopasMS ParticleContainer to be used
 	 * @param timestep time betweech each step
 	 * @param BrownianFactor
 	 * @param functor to be used
 	 * @param Rcutoff only calculate forces between two particles if the distance is smaller than Rcutoff
-	 * @param domainX x dimension of domain
-	 * @param domainY y dimension of domain
-	 * @param domainZ z dimension of domain
+	 * @param array with the dimensions of the box
 	 * @param boundary boundary conditions to be applied
 	 * @param threads number of threads used for calculation (not used)
 	 * @return the properties of the generated Container
 	 */
 
-template<typename Container, typename Functor>
-ContProperties Generate(Container* cont, double timestep,
+template<typename autopasClass, typename Functor>
+ContProperties<autopasClass, Functor> Generate(autopasClass* autopasMS, double timestep,
 					   double BrownianFactor, Functor* fm,
 					   double Rcutoff, std::array<double, 3> Boxlimits,
 					   std::array<int, 6> boundary,
@@ -39,11 +37,8 @@ ContProperties Generate(Container* cont, double timestep,
 
 	std::array<double, 3> BoxMin({0,0,0});
 	std::array<double, 3> BoxMax({Boxlimits});
-	cont->setBoxMin(BoxMin);
-	cont->setBoxMax(BoxMax);
-	cont->setCutoff(Rcutoff);
 
-	return ContProperties(cont, fm, boundary, timestep, BrownianFactor);
+	return ContProperties<autopasClass, Functor>(autopasMS, fm, boundary, timestep, BrownianFactor);
 
 }
 
@@ -58,8 +53,8 @@ ContProperties Generate(Container* cont, double timestep,
  * @Param properties of the container
  * @param v velocity of each particle
  */
-template<typename Container>
-unsigned long generateCuboid(Container* cont, ContProperties &prop, int type,
+template<class autopasClass, class ContProp >
+unsigned long generateCuboid(autopasClass* autopasMS, ContProp &prop, int type,
                     std::array<double,3> pos,
 					std::array<int,3> dim,
 					double h,
@@ -80,8 +75,7 @@ unsigned long generateCuboid(Container* cont, ContProperties &prop, int type,
 
 
 				MaxwellBoltzmannDistribution(p, prop.getBF(), 3);
-
-				cont->addParticle(p);
+				autopasMS->addParticle(p);
 				++index;
 			}
 		}
@@ -92,7 +86,7 @@ unsigned long generateCuboid(Container* cont, ContProperties &prop, int type,
 
 /**
  * generates a cuboid of membrane particles
- * @param Container to which the particle shall be put
+ * @param autopasClass to which the particle shall be put
  * @param properties of the container
  * @param stiffness stiffness k of the membrane
  * @param r_zero average bond length of a molecule pair
@@ -107,8 +101,8 @@ unsigned long generateCuboid(Container* cont, ContProperties &prop, int type,
  * @param v velocity of each particle
  */
 
-template<typename Container>
-unsigned long generateMembrane(Container* cont, ContProperties &prop, int type, double stiffness,
+template<class autopasClass, class ContProp >
+unsigned long generateMembrane(autopasClass* autopasMS, ContProp &prop, int type, double stiffness,
 				   double r_zero, double t_end,
 				   std::array<double, 3> force,
 				   std::list<std::array<int,3>> coord_force,
@@ -154,7 +148,7 @@ unsigned long generateMembrane(Container* cont, ContProperties &prop, int type, 
 				}
 
 				//add to the container
-				cont->addParticle(p);
+				autopasMS->addParticle(p);
 				++index;
 				PartIndex.push_back(&p);
 
@@ -210,8 +204,8 @@ unsigned long generateMembrane(Container* cont, ContProperties &prop, int type, 
  * @param v velocity of each particle
  */
 
-template<typename Container>
-unsigned long generateSphere(Container* cont, ContProperties &prop, int type,
+template<typename autopasClass, class ContProp >
+unsigned long generateSphere(autopasClass* autopasMS, ContProp &prop, int type,
                     std::array<double,3> pos,
 					int r, double h,
 					std::array<double,3> v, unsigned long index) {
@@ -236,7 +230,7 @@ unsigned long generateSphere(Container* cont, ContProperties &prop, int type,
 
 					MaxwellBoltzmannDistribution(p, prop.getBF(), 3);
 					++index;
-					cont->addParticle(p);
+					autopasMS->addParticle(p);
 
 
 				}
@@ -254,8 +248,8 @@ unsigned long generateSphere(Container* cont, ContProperties &prop, int type,
  * @param ignoreY true if y-component is ignored
  */
 
-template<typename Container>
-void setTemperature(Container* cont, float T_target, bool ignoreY){
+template<typename autopasClass>
+void setTemperature(autopasClass* autopasMS, float T_target, bool ignoreY){
 
 
 	if (ignoreY) {
@@ -263,7 +257,7 @@ void setTemperature(Container* cont, float T_target, bool ignoreY){
 		int count = 0;
 
 		// get sum of velocity squared in xz and count non-fix particles
-		for (auto pp = cont->begin(); pp.isValid(); ++pp ){
+		for (auto pp = autopasMS->begin(); pp.isValid(); ++pp ){
 
 			ParticleMS& p = *pp;
 
@@ -282,7 +276,7 @@ void setTemperature(Container* cont, float T_target, bool ignoreY){
 		double beta = sqrt(T_target / T);
 
 		// scale xz-velocity of all non-fix particles
-		for (auto pp = cont->begin(); pp.isValid(); ++pp) {
+		for (auto pp = autopasMS->begin(); pp.isValid(); ++pp) {
 			ParticleMS& p = *pp;
 
 			if (p.getFixed()) {
@@ -293,6 +287,7 @@ void setTemperature(Container* cont, float T_target, bool ignoreY){
 			v[0] *= beta;
 			v[2] *= beta;
 			p.setV(v);
+
 		}
 	}
 	else
@@ -301,7 +296,7 @@ void setTemperature(Container* cont, float T_target, bool ignoreY){
 		int count = 0;
 
 		// get sum of velocity squared and count non-fix particles
-		for (auto pp = cont->begin(); pp.isValid(); ++pp) {
+		for (auto pp = autopasMS->begin(); pp.isValid(); ++pp) {
 			ParticleMS& p = *pp;
 			if (p.getFixed()) {
 				continue;
@@ -317,7 +312,7 @@ void setTemperature(Container* cont, float T_target, bool ignoreY){
 		double beta = sqrt(T_target / T);
 
 		// scale velocity of all non-fix particles
-		for (auto pp = cont->begin(); pp.isValid(); ++pp) {
+		for (auto pp = autopasMS->begin(); pp.isValid(); ++pp) {
 			ParticleMS& p = *pp;
 
 			if (p.getFixed()) {

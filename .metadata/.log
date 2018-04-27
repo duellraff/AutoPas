@@ -1,0 +1,35 @@
+!SESSION 2018-04-23 15:34:29.500 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_162
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -data /home/raffi/Documents/Bachelorarbeit/AutoPas -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 4 77 2018-04-23 15:37:05.545
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2018-04-23 15:37:05.547
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2018-04-23 15:37:05.550
+!MESSAGE /home/raffi/Documents/Bachelorarbeit/AutoPas overlaps the workspace location: /home/raffi/Documents/Bachelorarbeit/AutoPas
+!SESSION 2018-04-23 15:42:01.281 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_162
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 4 77 2018-04-23 15:48:17.036
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2018-04-23 15:48:17.036
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2018-04-23 15:48:17.036
+!MESSAGE /home/raffi/Documents/Bachelorarbeit/AutoPas overlaps the workspace location: /home/raffi/Documents/Bachelorarbeit/AutoPas
+
+!ENTRY org.eclipse.core.resources 4 77 2018-04-23 15:49:24.325
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2018-04-23 15:49:24.325
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2018-04-23 15:49:24.325
+!MESSAGE /home/raffi/Documents/Bachelorarbeit/AutoPas overlaps the workspace location: /home/raffi/Documents/Bachelorarbeit/AutoPas

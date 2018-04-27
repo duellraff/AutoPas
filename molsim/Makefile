@@ -125,33 +125,6 @@ MolSim/fast:
 	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/build
 .PHONY : MolSim/fast
 
-src/GravityFunctor.o: src/GravityFunctor.cpp.o
-
-.PHONY : src/GravityFunctor.o
-
-# target to build an object file
-src/GravityFunctor.cpp.o:
-	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/GravityFunctor.cpp.o
-.PHONY : src/GravityFunctor.cpp.o
-
-src/GravityFunctor.i: src/GravityFunctor.cpp.i
-
-.PHONY : src/GravityFunctor.i
-
-# target to preprocess a source file
-src/GravityFunctor.cpp.i:
-	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/GravityFunctor.cpp.i
-.PHONY : src/GravityFunctor.cpp.i
-
-src/GravityFunctor.s: src/GravityFunctor.cpp.s
-
-.PHONY : src/GravityFunctor.s
-
-# target to generate assembly for a file
-src/GravityFunctor.cpp.s:
-	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/GravityFunctor.cpp.s
-.PHONY : src/GravityFunctor.cpp.s
-
 src/LennardJonesFunctor.o: src/LennardJonesFunctor.cpp.o
 
 .PHONY : src/LennardJonesFunctor.o
@@ -314,33 +287,6 @@ src/ParticleType.cpp.s:
 	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/ParticleType.cpp.s
 .PHONY : src/ParticleType.cpp.s
 
-src/input/FileReader.o: src/input/FileReader.cpp.o
-
-.PHONY : src/input/FileReader.o
-
-# target to build an object file
-src/input/FileReader.cpp.o:
-	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/input/FileReader.cpp.o
-.PHONY : src/input/FileReader.cpp.o
-
-src/input/FileReader.i: src/input/FileReader.cpp.i
-
-.PHONY : src/input/FileReader.i
-
-# target to preprocess a source file
-src/input/FileReader.cpp.i:
-	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/input/FileReader.cpp.i
-.PHONY : src/input/FileReader.cpp.i
-
-src/input/FileReader.s: src/input/FileReader.cpp.s
-
-.PHONY : src/input/FileReader.s
-
-# target to generate assembly for a file
-src/input/FileReader.cpp.s:
-	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/input/FileReader.cpp.s
-.PHONY : src/input/FileReader.cpp.s
-
 src/input/particle_input.o: src/input/particle_input.cpp.o
 
 .PHONY : src/input/particle_input.o
@@ -367,33 +313,6 @@ src/input/particle_input.s: src/input/particle_input.cpp.s
 src/input/particle_input.cpp.s:
 	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/input/particle_input.cpp.s
 .PHONY : src/input/particle_input.cpp.s
-
-src/outputWriter/CSVWriter.o: src/outputWriter/CSVWriter.cpp.o
-
-.PHONY : src/outputWriter/CSVWriter.o
-
-# target to build an object file
-src/outputWriter/CSVWriter.cpp.o:
-	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/outputWriter/CSVWriter.cpp.o
-.PHONY : src/outputWriter/CSVWriter.cpp.o
-
-src/outputWriter/CSVWriter.i: src/outputWriter/CSVWriter.cpp.i
-
-.PHONY : src/outputWriter/CSVWriter.i
-
-# target to preprocess a source file
-src/outputWriter/CSVWriter.cpp.i:
-	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/outputWriter/CSVWriter.cpp.i
-.PHONY : src/outputWriter/CSVWriter.cpp.i
-
-src/outputWriter/CSVWriter.s: src/outputWriter/CSVWriter.cpp.s
-
-.PHONY : src/outputWriter/CSVWriter.s
-
-# target to generate assembly for a file
-src/outputWriter/CSVWriter.cpp.s:
-	cd /home/raffi/Documents/Bachelorarbeit/AutoPas && $(MAKE) -f molsim/CMakeFiles/MolSim.dir/build.make molsim/CMakeFiles/MolSim.dir/src/outputWriter/CSVWriter.cpp.s
-.PHONY : src/outputWriter/CSVWriter.cpp.s
 
 src/outputWriter/VTKWriter.o: src/outputWriter/VTKWriter.cpp.o
 
@@ -539,9 +458,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MolSim"
-	@echo "... src/GravityFunctor.o"
-	@echo "... src/GravityFunctor.i"
-	@echo "... src/GravityFunctor.s"
 	@echo "... src/LennardJonesFunctor.o"
 	@echo "... src/LennardJonesFunctor.i"
 	@echo "... src/LennardJonesFunctor.s"
@@ -560,15 +476,9 @@ help:
 	@echo "... src/ParticleType.o"
 	@echo "... src/ParticleType.i"
 	@echo "... src/ParticleType.s"
-	@echo "... src/input/FileReader.o"
-	@echo "... src/input/FileReader.i"
-	@echo "... src/input/FileReader.s"
 	@echo "... src/input/particle_input.o"
 	@echo "... src/input/particle_input.i"
 	@echo "... src/input/particle_input.s"
-	@echo "... src/outputWriter/CSVWriter.o"
-	@echo "... src/outputWriter/CSVWriter.i"
-	@echo "... src/outputWriter/CSVWriter.s"
 	@echo "... src/outputWriter/VTKWriter.o"
 	@echo "... src/outputWriter/VTKWriter.i"
 	@echo "... src/outputWriter/VTKWriter.s"

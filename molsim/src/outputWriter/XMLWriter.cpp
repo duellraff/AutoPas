@@ -14,8 +14,6 @@
 
 using namespace std;
 
-static autopas::log::Logger logg(log::Info, "../../molsim");
-
 namespace outputWriter {
 
 XMLWriter::XMLWriter() {
@@ -43,7 +41,7 @@ void XMLWriter::initializeOutput() {
 
 void XMLWriter::writeFile(const std::string& filename) {
 
-	logg.debug() <<"Started xml file writer"<<endl;
+	AutoPasLogger->debug("Started xml file writer");
 	std::ofstream file (filename.c_str());
 	particle_input(file, *inputFile);
 	delete inputFile;

@@ -8,6 +8,7 @@
 #include "ContainerProperties.h"
 #include "ParticleMS.h"
 #include "MolSimFunctors.h"
+#include "RMMParticleCellMS.h"
 
 #include <list>
 #include <cstring>
@@ -19,24 +20,25 @@
 #include <cppunit/ui/text/TestRunner.h>
 #include "setting/setting.h"
 
-#include "../mdutils.h"
 #include "autopasIncludes.h"
+#include "../../AutoPas/src/AutoPas.h"
 
 #include <omp.h>
 
 using namespace std;
 using namespace autopas;
 
-/**** forward declaration ****/
-template<typename Container> void plotParticles(int iteration, Container* partcont);
-template<typename Container> void plotParticlesXML(Container* partcont, string filename);
-template<typename Container> void plotParticlesProfile(Container* partcont, int bucketNum, float sizeX, int iteration);
+/************************ forward declaration *************************/
 
-template<typename Container> void calculateR(Container* cont);
-template<typename Container> void calculateV(Container* cont);
-template<typename Container> void resetF(Container* cont);
+template<typename autopasClass> void plotParticles(int iteration, autopasClass* partcont);
+template<typename autopasClass> void plotParticlesXML(autopasClass* partcont, string filename);
+template<typename autopasClass> void plotParticlesProfile(autopasClass* partcont, int bucketNum, float sizeX, int iteration);
 
-template<class Container> void testEndaddForce(Container* cont, bool membrane_status, double time, double endtime);
+template<typename autopasClass> void calculateR(autopasClass* cont);
+template<typename autopasClass> void calculateV(autopasClass* cont);
+template<typename autopasClass> void resetF(autopasClass* cont);
+
+template<class autopasClass> void testEndaddForce(autopasClass* cont, bool membrane_status, double time, double endtime);
 
 double start_time = 0;
 double end_time = 1000;
@@ -47,8 +49,6 @@ int ForceComputationMethod = 1;
 
 string outputname = "output/MD_vtk";
 string profileFile = "";
-
-static log::Logger logg(log::Info, "../molsim");
 
 #define PROFILE_Y_INTERVAL 10000
 
@@ -178,17 +178,27 @@ on the number of threads used. The configuration file used was setting-liquid.xm
 */
 
 
+/*******************************MAIN************************************/
 
 int main(int argc, char* argsv[]) {
 
+	//set main class AutoPasMS
+	typedef RMMParticleCellMS<ParticleMS, RMMParticleCellMSIterator<ParticleMS>> CellType;
+	//AutoPas<ParticleMS, FullParticleCell<ParticleMS, ParticleCellIterator>> AutoPasMS;
+	 AutoPas<ParticleMS,CellType > AutoPasMS;
 
-	logg.info() <<"Hello from MolSim for PSE!"<<std::endl;
+	//Initialize logger
+	 logger::create(std::cout);
+	 AutoPasLogger->set_level(spdlog::level::info);
+
+
+	AutoPasLogger->info("Hello from MolSim for PSE!");
 	if ((argc>1)&&(string(argsv[1]) == "-test")){           // arguments: -test [TestSuite]
 		string testsuite = "";
 		if (argc>2){
 			testsuite = argsv[2];
 		}
-		logg.info() <<"Start Tests:"<<std::endl;
+		AutoPasLogger->info("Start Tests:");
 		CppUnit::TextUi::TestRunner runner;
 		//runner.addTest(ParticleContainerTest::suite());
 		//runner.addTest(LinkedContainerTest::suite());
@@ -196,13 +206,14 @@ int main(int argc, char* argsv[]) {
 		return 0;
 	}
 	else if (argc != 2) {  // if invalid arguments
-		logg.info() <<"Errounous programme call! "<<std::endl;
-		logg.info() << "./molsym xml-file"<<std::endl;
-		logg.info() << "./molsym -test [TestSuite]"<<std::endl;
+		AutoPasLogger->info("Errounous programme call! ");
+		AutoPasLogger->info("./molsym xml-file");
+		AutoPasLogger->info("./molsym -test [TestSuite]");
 		return 1;
 	}
 
-	logg.info() <<"Read setting-file..."<<std::endl;
+	//read from input file
+	AutoPasLogger->info("Read setting-file...");
 	unique_ptr<setting_t> s (setting (argsv[1], xml_schema::flags::dont_validate));
 	delta_t = s->delta_t();
 	end_time = s->t_end();
@@ -212,7 +223,7 @@ int main(int argc, char* argsv[]) {
 	float domainX = s->domainX();
 	float domainY = s->domainY();
 	float domainZ = s->domainZ();
-	float r_cutoff = s->r_cutoff();
+	double r_cutoff = s->r_cutoff();
 
 	std::array<int, 6> BoundCond;
 
@@ -235,7 +246,7 @@ int main(int argc, char* argsv[]) {
 	if ((BoundCond[0] == 2) != (BoundCond[2] == 2) ||
 			(BoundCond[1] == 2) != (BoundCond[3] == 2) ||
 			(BoundCond[4] == 2) != (BoundCond[5] == 2)) {
-		logg.info() <<"Error: Opposite sides must also be set to periodic"<<std::endl;
+		AutoPasLogger->info("Error: Opposite sides must also be set to periodic");
 		return 1;
 	}
 
@@ -251,7 +262,7 @@ int main(int argc, char* argsv[]) {
 	int profileBucketsX = 0;
 	if (s->profileFile().present()) {
 		profileFile = s->profileFile().get();
-		logg.info() <<"Parse y-velocity profile into " << profileFile<<std::endl;
+		AutoPasLogger->info("Parse y-velocity profile into ", profileFile);
 
 		if (s->profileBucketsX().present()) {
 			profileBucketsX = s->profileBucketsX().get();
@@ -289,11 +300,11 @@ int main(int argc, char* argsv[]) {
 	#endif
 
 	//Functor declarations
-	GravityFunctor<ParticleMS, FullParticleCell<ParticleMS>> fgravity(r_cutoff);
-	LennardJonesFunctor<ParticleMS, FullParticleCell<ParticleMS>> fLJ(r_cutoff);
+	GravityFunctor<ParticleMS, CellType> fgravity(r_cutoff);
+	LennardJonesFunctor<ParticleMS, CellType> fLJ(r_cutoff);
 
 
-	Functor<ParticleMS, FullParticleCell<ParticleMS>> *func;
+	Functor<ParticleMS, CellType> *func;
 
 	if (ForceComputationMethod == 2){
 		func = &fgravity;
@@ -301,35 +312,37 @@ int main(int argc, char* argsv[]) {
 	else{
 		func = &fLJ;
 	}
-	MembraneFunctor<ParticleMS, FullParticleCell<ParticleMS>> fmembrane();
+	MembraneFunctor<ParticleMS, CellType> fmembrane();
 
 
 	std::array<double,3> BoxMin = {0.0, 0.0, 0.0};
 	std::array<double,3> BoxMax = {domainX, domainY, domainZ};
 
-	ParticleContainer<ParticleMS, FullParticleCell<ParticleMS>> *particles;
-	DirectSum<ParticleMS, FullParticleCell<ParticleMS>> partDS(BoxMin, BoxMax, r_cutoff);
-	LinkedCells<ParticleMS, FullParticleCell<ParticleMS>> partLC(BoxMin, BoxMax, r_cutoff);
 
 	//chose the underlying data structure
 	if (ContainerAlgorithm == 0){
-		particles = &partDS;
+		AutoPasMS.init(BoxMin, BoxMax, r_cutoff, directSum);
 	}
 	else{
-		particles = &partLC;
+		AutoPasMS.init(BoxMin, BoxMax, r_cutoff, linkedCells);
 	}
+
+
 	//generate the particle container and the corresponding properties
-	ContProperties particlesprop = Generate(particles, delta_t, b_factor, &fLJ, r_cutoff, BoxMax, BoundCond, threads);
+	auto particlesprop =
+			Generate(&AutoPasMS, delta_t, b_factor, &fLJ, r_cutoff, BoxMax, BoundCond, threads);
 
 
-	logg.info() <<"Read input files:"<<std::endl;
+	AutoPasLogger->info("Read input files:");
+
 	FileReader fileReader;
+
 	for (setting_t::inputfiles_const_iterator i (s->inputfiles().begin());
 	         i != s->inputfiles().end();
 	         ++i)
 	{
 		const char* filename = (*i).c_str();
-		logg.info() <<"Read " << filename << "..."<<std::endl;
+		AutoPasLogger->info("Read ",filename ,"...");
 		fileReader.readFile(&particlesprop,  filename, r_cutoff);
 	}
 
@@ -339,18 +352,18 @@ int main(int argc, char* argsv[]) {
 	g[2] = s->g_grav_z();
 	particlesprop.setGravity(g);
 
-	logg.info() <<"Total number: " << particlesprop.getNumParticles()<<std::endl;
+	AutoPasLogger->info("Total number: ", particlesprop.getNumParticles());
 
 	double current_time = start_time;
 
 	int iteration = 0;
 	if (!isnan(temperature)) {
-			setTemperature(particles, temperature, T_ignoreY);
+			setTemperature(&AutoPasMS, temperature, T_ignoreY);
 	}
-	plotParticles(iteration, particles);
+	plotParticles(iteration, &AutoPasMS);
 
 	// calculate the forces once at the beginning
-	particles->iteratePairwiseAoS(func);
+	AutoPasMS.iteratePairwise(func, soa);
 
 	//time measurement
 
@@ -363,21 +376,21 @@ int main(int argc, char* argsv[]) {
 	while (current_time < end_time) {
 
 		// calculate new x
-		calculateR(particles);
+		calculateR(&AutoPasMS);
 
 		//update container (important for LinkedCells)
-		particles->updateContainer();
+		//AutoPasMS.updateContainer();
 
 		// calculate new f
-		resetF(particles);
-		particles->iteratePairwiseAoS(func);
+		resetF(&AutoPasMS);
+		AutoPasMS.iteratePairwise(func, soa);
 
 		// calculate new v
-		calculateV(particles);
+		calculateV(&AutoPasMS);
 
 		// test end of force up (only used in membrane simulation)
 
-		testEndaddForce(particles, particlesprop.getMembraneStatus(), current_time, particlesprop.getTEndForce()) ;
+		testEndaddForce(&AutoPasMS, particlesprop.getMembraneStatus(), current_time, particlesprop.getTEndForce()) ;
 
 		//adjust velocities according to thermostat
 		if (!isnan(TT_target) && temperature != TT_target)
@@ -393,19 +406,19 @@ int main(int argc, char* argsv[]) {
 
 		if (!isnan(temperature)) {
 			if (iteration % T_timestep == 0) {
-				setTemperature(particles, temperature, T_ignoreY);
+				setTemperature(&AutoPasMS, temperature, T_ignoreY);
 			}
 		}
 
 		if (profileBucketsX > 0 && iteration % PROFILE_Y_INTERVAL == 0) {
-			plotParticlesProfile(particles, profileBucketsX, domainX, iteration);
+			plotParticlesProfile(&AutoPasMS, profileBucketsX, domainX, iteration);
 		}
 
 		iteration++;
-		logg.debug() <<"Iteration " << iteration << " at time "<<current_time<<" finished."<<std::endl;
+		AutoPasLogger->debug("Iteration ", iteration ," at time ",current_time," finished.");
 		if (iteration % frequency == 0) {
-			logg.info() <<"Plot iteration " << iteration<<std::endl;
-			plotParticles(iteration, particles);
+			AutoPasLogger->info("Plot iteration ",iteration);
+			plotParticles(iteration, &AutoPasMS);
 		}
 
 		current_time += delta_t;
@@ -417,15 +430,15 @@ int main(int argc, char* argsv[]) {
 
 	//get Molecule update rate per second
 	double MUPS = 1000000.0*(iteration * particlesprop.getNumParticles())/computation_usec;
-	logg.info() <<"Molecule update rate per second: " << MUPS<<std::endl;
-	logg.info() <<"Runtime: " << (computation_usec / 1000.0) << "s"<<std::endl;
+	AutoPasLogger->info("Molecule update rate per second: ", MUPS);
+	AutoPasLogger->info("Runtime: ", (computation_usec / 1000.0), "s");
 
 
 	if (endfile.compare("")) {
-		plotParticlesXML(particles, endfile);
+		plotParticlesXML(&AutoPasMS, endfile);
 	}
 
-	logg.info() <<"output written. Terminating..."<<std::endl;
+	AutoPasLogger->info("output written. Terminating...");
 	return 0;
 }
 
@@ -433,8 +446,8 @@ int main(int argc, char* argsv[]) {
  * plot the y-profile to a csv file
  */
 template<typename Container> void plotParticlesProfile(Container* particles, int bucketNum, float sizeX, int iteration) {
-	outputWriter::CSVWriter writer(bucketNum, sizeX);
 
+	outputWriter::CSVWriter writer(bucketNum, sizeX);
 	writer.plotParticles(particles, profileFile, iteration);
 }
 
@@ -455,7 +468,6 @@ template<typename Container> void plotParticles(int iteration, Container* partic
 		ParticleMS& p = *iterator;
 
 		writer.plotParticle(p);
-
 		++iterator;
 	}
 

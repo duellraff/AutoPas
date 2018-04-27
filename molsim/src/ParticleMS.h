@@ -101,7 +101,7 @@ public:
 	bool getFixed();
 
 	int getType();
-	int getTypeID();
+	int& getTypeID();
 
 	std::array<ParticleMS*,4>& getDirectNeighbours();
 
@@ -110,6 +110,12 @@ public:
 	bool operator==(ParticleMS& other);
 
 	std::string toString();
+
+    enum AttributeNames : int { id, posX, posY, posZ, velX, velY, velZ, forceX, forceY, forceZ,
+    	oldforceX, oldforceY, oldforceZ, constforceX, constforceY, constforceZ, ggravX, ggravY, ggravZ,
+		directNeigh1, directNeigh2, directNeigh3, directNeigh4,
+		diagonalNeigh1, diagonalNeigh2, diagonalNeigh3, diagonalNeigh4, typeID};
+
 };
 
 std::ostream& operator<<(std::ostream& stream, ParticleMS& p);
@@ -173,7 +179,7 @@ inline int ParticleMS::getType() {
 	return type;
 }
 
-inline int ParticleMS::getTypeID() {
+inline int& ParticleMS::getTypeID() {
 	return type_id;
 }
 

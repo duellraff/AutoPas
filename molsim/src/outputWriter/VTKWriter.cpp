@@ -14,8 +14,6 @@
 
 using namespace std;
 
-static autopas::log::Logger logg(log::Info, "../../molsim");
-
 namespace outputWriter {
 
 VTKWriter::VTKWriter() {
@@ -60,7 +58,7 @@ void VTKWriter::initializeOutput(int numParticles) {
 
 void VTKWriter::writeFile(const std::string& filename, int iteration) {
 
-	logg.debug() <<"Started file writer"<<std::endl;
+	AutoPasLogger->debug("Started file writer");
 	stringstream strstr;
 	strstr << filename << "_" << (iteration < 10 ? "000" : (iteration < 100 ? "00" : ( iteration < 1000 ? "0" : "") )) << iteration << ".vtu";
 
@@ -71,9 +69,9 @@ void VTKWriter::writeFile(const std::string& filename, int iteration) {
 void VTKWriter::plotParticle(ParticleMS& p) {
 
 	if (vtkFile->UnstructuredGrid().present()) {
-		logg.debug() << "UnstructuredGrid is present"<<std::endl;
+		AutoPasLogger->debug("UnstructuredGrid is present");
 	} else {
-		logg.error() <<"ERROR: No UnstructuredGrid present"<<std::endl;
+		AutoPasLogger->error("ERROR: No UnstructuredGrid present");
 	}
 
 	PointData::DataArray_sequence& pointDataSequence = vtkFile->UnstructuredGrid()->Piece().PointData().DataArray();

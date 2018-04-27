@@ -40,7 +40,7 @@ void XYZWriter::plotParticles(Container* particles, const std::string& filename,
 	typename Container::iterator iterator = particles->begin();
 	while (iterator.isValid()) {
 		ParticleMS& p = *iterator;
-		utils::Vector<double, 3> x = p.getR();
+		std::array<double, 3> x = p.getR();
 		file << "Ar ";
 		file.setf(ios_base::showpoint);
 

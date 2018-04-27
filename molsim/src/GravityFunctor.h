@@ -89,7 +89,12 @@ public:
 	   * @param soa  Structure of arrays from where the data is loaded.
 	   */
 	  void SoAExtractor(ParticleCell *cell, SoA *soa) {}
+
+	  bool allowsNewton3() override { return true; }
+
+	  bool allowsNonNewton3() override { return false; }
 private:
+
 	  double r_cutoff;
 	  double r_cutoff_square;
 };

@@ -249,6 +249,9 @@ MolSim_BINARY_DIR:STATIC=/home/raffi/Documents/Bachelorarbeit/AutoPas/molsim
 //Value Computed by CMake
 MolSim_SOURCE_DIR:STATIC=/home/raffi/Documents/Bachelorarbeit/AutoPas/molsim
 
+//OPENMP
+OPENMP:BOOL=OFF
+
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/home/raffi/Documents/Bachelorarbeit/AutoPas
 
@@ -262,7 +265,10 @@ USE_VECTORIZATION:BOOL=ON
 VECTOR_INSTRUCTIONS:STRING=NATIVE
 
 //Dependencies for the target
-autopas_LIB_DEPENDS:STATIC=general;rt;
+autopas_LIB_DEPENDS:STATIC=general;rt;general;-lpthread;
+
+//The directory containing a CMake configuration file for spdlog.
+spdlog_DIR:PATH=spdlog_DIR-NOTFOUND
 
 
 ########################
@@ -353,7 +359,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.5
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
